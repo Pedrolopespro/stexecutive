@@ -1,0 +1,1153 @@
+{
+  "_meta": {
+    "project": "ST Executive",
+    "source_language": "pt-BR",
+    "target_languages": [
+      "en",
+      "es",
+      "fr",
+      "de",
+      "ja",
+      "zh"
+    ],
+    "generated": "2026-05-06",
+    "notes": "Japanese locale structure created with English fallback pending final human/AI translation. All keys preserved.",
+    "language": "ja"
+  },
+  "nav": {
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "fleet": "Fleet",
+      "how_it_works": "How it works",
+      "about": "About",
+      "faq": "FAQ"
+    },
+    "services_dropdown": {
+      "van_executiva": "Executive Van",
+      "van_executiva_desc": "Groups, teams and airport transfers.",
+      "suv_executiva": "Executive Sedan/SUV",
+      "suv_executiva_desc": "Executives and special guests.",
+      "transfer_aeroporto": "Airport Transfer",
+      "transfer_aeroporto_desc": "Punctual departures and arrivals.",
+      "van_eventos": "Event Van Service",
+      "van_eventos_desc": "Weddings, concerts and corporate events."
+    },
+    "cta_button": "Request a quote",
+    "whatsapp_button": "Request a quote on WhatsApp",
+    "whatsapp_subtext": "Fast service for companies, events and groups."
+  },
+  "footer": {
+    "brand_description": "Executive transportation in Brasília for companies, events, groups and airport transfers.",
+    "sections": {
+      "services": "Services",
+      "company": "Company",
+      "contact": "Contact"
+    },
+    "services_links": {
+      "van_brasilia": "Van Rental in Brasília",
+      "transporte_executivo": "Executive Transportation",
+      "transfer_aeroporto": "Airport Transfer",
+      "van_eventos": "Event Van Service"
+    },
+    "company_links": {
+      "about": "About",
+      "fleet": "Fleet",
+      "how_it_works": "How it works",
+      "faq": "FAQ"
+    },
+    "contact": {
+      "whatsapp_label": "WhatsApp",
+      "phone": "(61) 9 8409-7971",
+      "location": "Brasília — DF"
+    },
+    "copyright": "ST Executive. All rights reserved.",
+    "tagline": "Executive transportation in Brasília since 2011."
+  },
+  "common": {
+    "badge_eyebrow": "ST Executive",
+    "whatsapp_message": "Hello, I came from the ST Executive website and would like a quote",
+    "sections": {
+      "o_servico": "The service",
+      "frota": "Fleet",
+      "diferenciais": "Differentials",
+      "processo": "Process",
+      "cobertura": "Coverage",
+      "duvidas": "Questions",
+      "investimento": "Investment",
+      "comparativo": "Comparison",
+      "atendimento": "Service"
+    },
+    "faq_section": {
+      "title": "Frequently asked questions"
+    },
+    "differentials_shared": {
+      "motorista_profissional": "Professional driver",
+      "motorista_profissional_desc": "Licensed, uniformed and trained for executive service.",
+      "pontualidade": "Guaranteed punctuality",
+      "pontualidade_desc": "Route and schedule planning for every trip.",
+      "veiculos_climatizados": "Air-conditioned vehicles",
+      "veiculos_climatizados_desc": "Executive vans in good condition, clean and comfortable.",
+      "atendimento_rapido": "Fast service",
+      "atendimento_rapido_desc": "Personalized quote via WhatsApp in just a few minutes."
+    },
+    "cta_buttons": {
+      "solicitar_orcamento": "Request a quote",
+      "solicitar_orcamento_whatsapp": "Request a quote via WhatsApp",
+      "falar_whatsapp": "Talk on WhatsApp",
+      "solicitar_van": "Request a van quote",
+      "consultar_disponibilidade": "Check availability",
+      "consultar_frota": "Check available fleet",
+      "perguntar_whatsapp": "Ask on WhatsApp",
+      "conhecer_servicos": "View services"
+    },
+    "locations_shared": {
+      "asa_sul": "Asa Sul",
+      "asa_norte": "Asa Norte",
+      "lago_sul": "Lago Sul",
+      "lago_norte": "Lago Norte",
+      "sudoeste": "Sudoeste",
+      "noroeste": "Noroeste",
+      "aguas_claras": "Águas Claras",
+      "taguatinga": "Taguatinga",
+      "guara": "Guará",
+      "aeroporto": "Brasília Airport",
+      "hoteis_eventos": "Hotels and event venues",
+      "setor_hoteleiro": "Hotel Sector",
+      "aeroporto_internacional": "Brasília International Airport"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "ST Executive",
+      "h1_line1": "Executive transportation in",
+      "h1_highlight": "Brasília.",
+      "subtitle": "Corporate events, concerts, embassies, companies and special operations.",
+      "support_text": "Executive vans, SUVs and professional drivers for trips that require punctuality, safety and organization.",
+      "cta_primary": "Request a quote",
+      "cta_secondary": "View services",
+      "hint": "Provide the date, route and number of passengers."
+    },
+    "clients_bar": {
+      "label": "Who has trusted ST Executive"
+    },
+    "services_section": {
+      "eyebrow": "Services",
+      "title": "Solutions for every operation",
+      "subtitle": "Choose the ideal service for your company, event or trip."
+    },
+    "services": {
+      "van_executiva": {
+        "title": "Executive Van",
+        "short_text": "Transportation for groups, teams, guests and events.",
+        "description": "Vans with professional drivers for events, airport transfers, companies and planned trips.",
+        "highlights": [
+          "Groups and teams",
+          "Events and conferences",
+          "Transfer aeroporto"
+        ],
+        "cta": "Request an executive van"
+      },
+      "suv_executiva": {
+        "title": "Executive SUV",
+        "short_text": "Comfort and discretion for executives and special guests.",
+        "description": "Executive SUVs for meetings, client reception, corporate schedules and individual trips.",
+        "highlights": [
+          "Executives and guests",
+          "Meetings and schedules",
+          "Individual service"
+        ],
+        "cta": "Check executive SUV"
+      },
+      "transfer_aeroporto": {
+        "title": "Airport Transfer",
+        "short_text": "Punctual transfer for departures and arrivals.",
+        "description": "Scheduled service to Brasília Airport, with a professional driver and schedule planning.",
+        "highlights": [
+          "Departures and arrivals",
+          "Scheduled time",
+          "Luggage space"
+        ],
+        "cta": "Request transfer"
+      },
+      "eventos": {
+        "title": "Events",
+        "short_text": "Transportation logistics for corporate events, concerts and groups.",
+        "description": "Organization of outbound, return and multiple trips for guests, teams, staff and participants.",
+        "highlights": [
+          "Corporate events",
+          "Concerts and productions",
+          "Planned round trips"
+        ],
+        "cta": "Quote event transportation"
+      },
+      "embaixadas": {
+        "title": "Embassies and Authorities",
+        "short_text": "Discreet service for sensitive operations.",
+        "description": "Executive transportation focused on discretion, punctuality and professional presentation.",
+        "highlights": [
+          "Discretion and confidentiality",
+          "Guaranteed punctuality",
+          "Prepared driver"
+        ],
+        "cta": "Talk to the team"
+      },
+      "onibus": {
+        "title": "Buses and Minibuses",
+        "short_text": "Solutions upon request for larger groups.",
+        "description": "Options for operations with a larger number of passengers, subject to availability and needs.",
+        "highlights": [
+          "Larger groups",
+          "Events and excursions",
+          "Solution upon request"
+        ],
+        "cta": "Request a proposal"
+      }
+    },
+    "vans_section": {
+      "badge": "We are specialists",
+      "title": "Executive vans for groups in Brasília",
+      "description": "The ideal solution for companies, events and airport transfers that need to move people with comfort, safety and punctuality.",
+      "features": [
+        "Groups and teams",
+        "Events and conferences",
+        "Transfer aeroporto",
+        "Professional driver",
+        "Air-conditioned vehicles",
+        "Planned route"
+      ],
+      "cta": "Request a van quote"
+    },
+    "fleet_section": {
+      "badge": "Executive fleet",
+      "title": "Executive fleet for different needs",
+      "subtitle": "Vehicles suited for groups, executives, events and corporate operations.",
+      "cta": "Check available fleet",
+      "vehicles": {
+        "van": {
+          "label": "Executive Van",
+          "desc": "For groups, events and airport transfers."
+        },
+        "suv": {
+          "label": "Executive SUV",
+          "desc": "For executives, guests and individual trips."
+        },
+        "carro": {
+          "label": "Executive Car",
+          "desc": "For meetings, receptions and corporate schedules."
+        },
+        "microonibus": {
+          "label": "Minibus",
+          "desc": "For larger groups, upon request."
+        }
+      }
+    },
+    "testimonials_section": {
+      "eyebrow": "Testimonials",
+      "title": "Trust in real operations",
+      "subtitle": "ST Executive serves companies, events, artists, institutions and special guests in Brasília.",
+      "items": [
+        {
+          "text": "We needed to transport guests with punctuality and organization. The operation was smooth from start to finish.",
+          "author": "Event manager"
+        },
+        {
+          "text": "Professional service, comfortable vehicle and a prepared driver. It was exactly the standard our company needed.",
+          "author": "Corporate company"
+        },
+        {
+          "text": "ST Executive helped us organize group transportation without delays or improvisation.",
+          "author": "Event production company"
+        }
+      ]
+    },
+    "audience_section": {
+      "eyebrow": "Who we serve",
+      "title": "Service for companies, events and special guests",
+      "items": {
+        "empresas": {
+          "title": "Companies",
+          "text": "Transportation for teams, clients and corporate schedules."
+        },
+        "eventos_corp": {
+          "title": "Corporate events",
+          "text": "Solutions for conferences, trade shows and conventions."
+        },
+        "shows": {
+          "title": "Concerts and productions",
+          "text": "Transportation for artists, staff and guests."
+        },
+        "embaixadas": {
+          "title": "Embassies",
+          "text": "Discreet and professional service."
+        },
+        "aeroporto": {
+          "title": "Airport",
+          "text": "Transfer for departures and arrivals."
+        },
+        "hoteis": {
+          "title": "Hotels and groups",
+          "text": "Reception and transportation of guests."
+        }
+      }
+    },
+    "process_section": {
+      "eyebrow": "Process",
+      "title": "How to book",
+      "subtitle": "Four steps. Fast and hassle-free.",
+      "cta": "Talk on WhatsApp",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Send your request",
+          "text": "Provide the date, route and number of passengers."
+        },
+        {
+          "number": "02",
+          "title": "Receive the proposal",
+          "text": "The team recommends the ideal vehicle."
+        },
+        {
+          "number": "03",
+          "title": "Confirm the service",
+          "text": "The operation is organized in advance."
+        },
+        {
+          "number": "04",
+          "title": "Transportation completed",
+          "text": "Driver and vehicle at the agreed time."
+        }
+      ]
+    },
+    "about_section": {
+      "badge": "About the company",
+      "since_label": "Since",
+      "since_city": "Brasília",
+      "title": "In Brasília since 2011",
+      "description": "ST Executive provides executive transportation for companies, events, groups and special operations. Its service combines an executive fleet, professional drivers and planned support.",
+      "cta_primary": "Request a quote",
+      "cta_secondary": "View services"
+    },
+    "faq_section": {
+      "eyebrow": "FAQ",
+      "title": "Frequently asked questions",
+      "subtitle": "If you cannot find what you need, contact us on WhatsApp.",
+      "cta": "Ask on WhatsApp",
+      "items": [
+        {
+          "question": "Does ST Executive offer executive van service in Brasília?",
+          "answer": "Yes. The company offers executive vans with drivers for companies, events, groups and airport transfers."
+        },
+        {
+          "question": "Does the service include a driver?",
+          "answer": "Yes. All services are provided with a professional driver."
+        },
+        {
+          "question": "Do you serve corporate events?",
+          "answer": "Yes. ST Executive serves corporate events, concerts, conferences, productions and groups."
+        },
+        {
+          "question": "Do you provide transfer to Brasília Airport?",
+          "answer": "Yes. The service can be scheduled for departures and arrivals."
+        },
+        {
+          "question": "Do you serve embassies and special guests?",
+          "answer": "Yes. The company provides discreet and personalized service."
+        },
+        {
+          "question": "How can I request a quote?",
+          "answer": "Via WhatsApp, providing date, route, time and number of passengers."
+        }
+      ]
+    },
+    "cta_final": {
+      "title": "Need to organize transportation in Brasília?",
+      "subtitle": "Talk to ST Executive and receive a personalized proposal.",
+      "cta": "Request a quote via WhatsApp",
+      "microcopy": "Service for companies, events, groups and special operations."
+    }
+  },
+  "aluguel_de_van": {
+    "hero": {
+      "badge": "ST Executive",
+      "h1_line1": "Van Rental in",
+      "h1_highlight": "Brasília",
+      "h1_line2": "with Driver",
+      "subtitle": "Executive van for companies, events, groups and airport transfers. Professional driver, punctuality and service throughout the Federal District.",
+      "cta": "Request a quote on WhatsApp",
+      "hint": "Fast quote · Service for groups and companies"
+    },
+    "what_is": {
+      "eyebrow": "The service",
+      "title": "What is van rental with driver?",
+      "description": "Van rental with driver is an executive transportation service for groups that need to travel with comfort, organization and punctuality. ST Executive offers this service in Brasília and the Federal District for companies, events and special operations."
+    },
+    "fleet": {
+      "eyebrow": "Fleet",
+      "title": "Executive van with everything included",
+      "description": "Vehicles suited for groups, with a professional driver and space for passenger comfort.",
+      "cta": "Check availability",
+      "specs": {
+        "capacidade": {
+          "spec": "Capacity",
+          "value": "Up to 15 passengers"
+        },
+        "climatizacao": {
+          "spec": "Climate control",
+          "value": "Air conditioning"
+        },
+        "motorista": {
+          "spec": "Driver",
+          "value": "Professional included"
+        },
+        "bagageiro": {
+          "spec": "Luggage compartment",
+          "value": "Luggage space"
+        },
+        "cobertura": {
+          "spec": "Coverage",
+          "value": "All Federal District"
+        },
+        "agendamento": {
+          "spec": "Booking",
+          "value": "Via WhatsApp"
+        }
+      }
+    },
+    "for_who": {
+      "eyebrow": "Service",
+      "title": "Who is executive van rental for?",
+      "subtitle": "Solutions for different transportation needs in Brasília.",
+      "items": [
+        {
+          "label": "Companies and corporate",
+          "desc": "Transportation for teams, clients and executives with punctuality and presentation."
+        },
+        {
+          "label": "Events and conferences",
+          "desc": "Transportation logistics for participants, staff and guests."
+        },
+        {
+          "label": "Transfer aeroporto",
+          "desc": "Traslado agendado para embarques e desembarques no Aeroporto de Brasília."
+        },
+        {
+          "label": "Weddings and graduations",
+          "desc": "Organized transportation for guests and family members."
+        },
+        {
+          "label": "Concerts and productions",
+          "desc": "Transportation for artists, technical teams and special guests."
+        },
+        {
+          "label": "Groups and excursions",
+          "desc": "Planned routes with comfort and safety for larger groups."
+        }
+      ]
+    },
+    "differentials": {
+      "eyebrow": "Differentials",
+      "title": "Why choose ST Executive?",
+      "subtitle": "More than transportation — planned and professional operation.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Professional driver",
+          "desc": "Licensed, uniformed and trained for executive service."
+        },
+        {
+          "number": "02",
+          "title": "Guaranteed punctuality",
+          "desc": "Route and schedule planning for every trip."
+        },
+        {
+          "number": "03",
+          "title": "Air-conditioned vehicles",
+          "desc": "Executive vans in good condition, clean and comfortable."
+        },
+        {
+          "number": "04",
+          "title": "Fast service",
+          "desc": "Personalized quote via WhatsApp in just a few minutes."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "How to book the executive van",
+      "subtitle": "Simple and fast — from contact to execution.",
+      "cta": "Talk on WhatsApp",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Talk on WhatsApp",
+          "text": "Provide the date, route and number of passengers."
+        },
+        {
+          "number": "02",
+          "title": "Receive the quote",
+          "text": "Personalized proposal for your trip."
+        },
+        {
+          "number": "03",
+          "title": "Confirm the service",
+          "text": "The operation is organized in advance."
+        },
+        {
+          "number": "04",
+          "title": "Van on site",
+          "text": "Driver and vehicle ready at the agreed time."
+        }
+      ]
+    },
+    "gallery": {
+      "eyebrow": "Operation",
+      "title": "Executive transportation in action"
+    },
+    "coverage": {
+      "eyebrow": "Coverage",
+      "title": "Van rental throughout Brasília and the Federal District",
+      "description": "We serve any point in the Federal District, including hotels, the airport and event venues."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Does van rental include a driver?",
+          "answer": "Yes. All ST Executive services include a professional driver."
+        },
+        {
+          "question": "How many people fit in the executive van?",
+          "answer": "On average up to 15 passengers, with comfortable luggage space."
+        },
+        {
+          "question": "Do you serve companies and corporate events?",
+          "answer": "Yes. We serve companies, conferences, events, teams and corporate trips."
+        },
+        {
+          "question": "Do you provide transfers to Brasília Airport?",
+          "answer": "Yes. The service can be scheduled for departures and arrivals with schedule planning."
+        },
+        {
+          "question": "Do you serve the entire Federal District?",
+          "answer": "Yes. We serve all Brasília and the Federal District, including hotels and event venues."
+        },
+        {
+          "question": "How can I request a quote?",
+          "answer": "Via WhatsApp, providing date, time, route and number of passengers."
+        }
+      ]
+    },
+    "cta_final": {
+      "title": "Need a van with driver in Brasília?",
+      "subtitle": "Talk to ST Executive and receive a proposal for your group.",
+      "cta": "Request a quote via WhatsApp",
+      "microcopy": "Service for companies, events, groups and airport transfers."
+    }
+  },
+  "transfer_aeroporto": {
+    "hero": {
+      "badge": "ST Executive",
+      "h1_line1": "Airport Transfer",
+      "h1_highlight": "in Brasília",
+      "subtitle": "Van with professional driver for departures and arrivals at Brasília International Airport. Punctual, safe and organized.",
+      "cta": "Request transfer on WhatsApp",
+      "hint": "Fast confirmation · Immediate service"
+    },
+    "what_is": {
+      "eyebrow": "The service",
+      "title": "What is airport transfer?",
+      "description": "Airport transfer is a scheduled transportation service that takes passengers from one point to the airport — or from the airport to their final destination. Unlike apps, the transfer is planned in advance, ensuring punctuality and helping avoid flight delays."
+    },
+    "when_to_use": {
+      "eyebrow": "When to book",
+      "title": "Which situations is it recommended for?",
+      "subtitle": "Transfer is the best choice when punctuality and comfort are not optional.",
+      "items": [
+        {
+          "label": "Scheduled departures",
+          "desc": "Advance planning to ensure punctuality for the flight."
+        },
+        {
+          "label": "Airport arrivals",
+          "desc": "Pickup at arrivals with adjustment in case of flight delay."
+        },
+        {
+          "label": "Group transportation",
+          "desc": "Executive van for groups with luggage, comfortable and organized."
+        },
+        {
+          "label": "Corporate travel",
+          "desc": "Professional standard for executives and teams."
+        },
+        {
+          "label": "Client reception",
+          "desc": "Transportation for guests and VIP clients with discretion."
+        }
+      ]
+    },
+    "differentials": {
+      "eyebrow": "Differentials",
+      "title": "Why choose ST Executive?",
+      "subtitle": "Planned transfer, professional driver and flight monitoring.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Guaranteed punctuality",
+          "desc": "Planejamento de rota e horário para cada embarque ou desembarque."
+        },
+        {
+          "number": "02",
+          "title": "Flight monitoring",
+          "desc": "We monitor the flight status and adjust the schedule in case of delay."
+        },
+        {
+          "number": "03",
+          "title": "Professional driver",
+          "desc": "Habilitado, uniformizado e preparado para atendimento executivo."
+        },
+        {
+          "number": "04",
+          "title": "Comfort for travel",
+          "desc": "Luggage space and air conditioning for passengers."
+        }
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Comparison",
+      "title": "Transfer or app: which is better?",
+      "subtitle": "Understand when transfer is the right choice.",
+      "transfer_label": "ST Executive Transfer",
+      "app_label": "Apps",
+      "transfer_pros": [
+        "Booking confirmed in advance",
+        "No cancellation risk",
+        "Flight monitoring included",
+        "Professional and punctual driver",
+        "Ideal for groups with luggage"
+      ],
+      "app_cons": [
+        "Variable availability",
+        "Last-minute cancellations",
+        "No flight monitoring",
+        "Unpredictable pricing",
+        "Limited luggage space"
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "How the transfer works",
+      "subtitle": "From booking to destination — simple and predictable.",
+      "cta": "Request transfer price",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Talk on WhatsApp",
+          "text": "Provide date, flight time and origin or destination address."
+        },
+        {
+          "number": "02",
+          "title": "Receive the quote",
+          "text": "Personalized proposal sent quickly."
+        },
+        {
+          "number": "03",
+          "title": "Schedule the service",
+          "text": "Guaranteed confirmation — no last-minute cancellations."
+        },
+        {
+          "number": "04",
+          "title": "Transfer completed",
+          "text": "Driver at the agreed location, at the right time."
+        }
+      ]
+    },
+    "fleet": {
+      "eyebrow": "Fleet",
+      "title": "The right vehicle for each transfer",
+      "description": "Executive vans with luggage space, air conditioning and a professional driver — for individual passengers or groups.",
+      "for_who_label": "Who it is for",
+      "cta": "Check availability",
+      "for_who": [
+        {
+          "label": "Executives",
+          "desc": "Punctual and discreet transportation for appointments."
+        },
+        {
+          "label": "Tourists",
+          "desc": "Arrival and departure without transportation concerns."
+        },
+        {
+          "label": "Families",
+          "desc": "Comfort and luggage space for families."
+        },
+        {
+          "label": "Grupos",
+          "desc": "Executive van for organized group transportation."
+        },
+        {
+          "label": "Companies",
+          "desc": "Reception and transfer of clients and teams."
+        }
+      ]
+    },
+    "price": {
+      "eyebrow": "Investment",
+      "title": "How much does airport transfer cost in Brasília?",
+      "subtitle": "The quote is personalized. Request it via WhatsApp in minutes.",
+      "cta": "Request transfer price on WhatsApp",
+      "factors": [
+        "Distance to the airport",
+        "Number of passengers",
+        "Type of vehicle",
+        "Service time"
+      ]
+    },
+    "coverage": {
+      "eyebrow": "Coverage",
+      "title": "Transfers from all over Brasília",
+      "description": "We pick up from anywhere in the Federal District and take passengers directly to Brasília International Airport."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Is the airport transfer punctual?",
+          "answer": "Yes. The service is planned in advance to ensure arrival in time for the flight."
+        },
+        {
+          "question": "Do you monitor the flight?",
+          "answer": "Yes. We monitor the flight status to adjust the schedule in case of delay."
+        },
+        {
+          "question": "Do you serve arrivals?",
+          "answer": "Yes. We pick up at the airport and take passengers to their final destination."
+        },
+        {
+          "question": "How many people fit in the van?",
+          "answer": "On average up to 15 passengers, with adequate luggage space."
+        },
+        {
+          "question": "How to book?",
+          "answer": "Via WhatsApp, providing date, flight time and origin or destination address."
+        }
+      ]
+    },
+    "cta_final": {
+      "title": "Need airport transfer in Brasília?",
+      "subtitle": "Schedule now and secure your time safely.",
+      "cta": "Message on WhatsApp",
+      "microcopy": "Fast confirmation · Service for groups and companies."
+    }
+  },
+  "transporte_executivo": {
+    "hero": {
+      "badge": "ST Executive",
+      "h1_line1": "Executive Transportation",
+      "h1_highlight": "in Brasília",
+      "subtitle": "Professional driver and corporate service for companies, executives and special guests. Punctuality, discretion and premium standard.",
+      "cta": "Request service on WhatsApp",
+      "hint": "Fast service · Guaranteed professionalism"
+    },
+    "what_is": {
+      "eyebrow": "The service",
+      "title": "What is executive transportation?",
+      "description": "Executive transportation is a mobility service for clients who need more than just a ride. It involves punctuality, discretion, comfort and a professional service standard — widely used by companies, executives and corporate events."
+    },
+    "applications": {
+      "eyebrow": "Applications",
+      "title": "Main uses of executive transportation",
+      "subtitle": "Solutions for every corporate need in Brasília.",
+      "items": [
+        {
+          "label": "Business meetings",
+          "desc": "Punctual and discreet transportation for corporate appointments."
+        },
+        {
+          "label": "Recurring transportation",
+          "desc": "Customized plans for companies with ongoing demand."
+        },
+        {
+          "label": "Executive transfer",
+          "desc": "Airport, hotels and offices with a professional standard."
+        },
+        {
+          "label": "Business events",
+          "desc": "Logistics for conferences, launches and conventions."
+        },
+        {
+          "label": "VIP client service",
+          "desc": "Reception and transportation of clients and special guests."
+        },
+        {
+          "label": "Embassies and authorities",
+          "desc": "Discreet operations with a high presentation standard."
+        }
+      ]
+    },
+    "differentials": {
+      "eyebrow": "Differentials",
+      "title": "The ST Executive standard",
+      "subtitle": "Professional operation from first contact to execution.",
+      "items": [
+        {
+          "number": "01",
+          "title": "Uniformed drivers",
+          "desc": "Trained and prepared for executive and corporate service."
+        },
+        {
+          "number": "02",
+          "title": "Strict punctuality",
+          "desc": "Route and schedule planning for every trip."
+        },
+        {
+          "number": "03",
+          "title": "Executive fleet",
+          "desc": "Executive vans and SUVs in excellent condition."
+        },
+        {
+          "number": "04",
+          "title": "Ideal for companies",
+          "desc": "Recurring plans and personalized corporate service."
+        }
+      ]
+    },
+    "company_benefits": {
+      "eyebrow": "For companies",
+      "title": "Benefits for your company",
+      "description": "Hiring executive transportation elevates the experience of your clients and partners, while organizing corporate transportation logistics.",
+      "cta": "Request corporate proposal",
+      "items": [
+        {
+          "title": "Client experience",
+          "desc": "Transportation that represents your company well."
+        },
+        {
+          "title": "Logistics organization",
+          "desc": "Trips planned and confirmed in advance."
+        },
+        {
+          "title": "Reduced unexpected issues",
+          "desc": "No cancellations, delays or last-minute problems."
+        },
+        {
+          "title": "Professional image",
+          "desc": "The right vehicle and a presentable driver for every operation."
+        }
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Comparison",
+      "title": "Executive transportation or app?",
+      "subtitle": "Understand when executive transportation is the right choice.",
+      "executive_label": "Executive transportation",
+      "app_label": "Apps",
+      "executive_pros": [
+        "Guaranteed professional standard",
+        "Uniformed and trained driver",
+        "Full service predictability",
+        "Ideal for corporate clients",
+        "Advance planning and confirmation"
+      ],
+      "app_cons": [
+        "Informal and variable standard",
+        "Driver without specific training",
+        "Unstable price and availability",
+        "Does not represent the company's image",
+        "Last-minute cancellations"
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "How to book the service",
+      "subtitle": "From first contact to execution — planned and confirmed.",
+      "cta": "Request corporate proposal on WhatsApp",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Contact via WhatsApp",
+          "text": "Talk to the team and share your need."
+        },
+        {
+          "number": "02",
+          "title": "Assessment",
+          "text": "We understand whether it is one-time or recurring and which vehicle is ideal."
+        },
+        {
+          "number": "03",
+          "title": "Proposal",
+          "text": "Personalized quote sent quickly."
+        },
+        {
+          "number": "04",
+          "title": "Confirmation",
+          "text": "Service scheduled and guaranteed."
+        },
+        {
+          "number": "05",
+          "title": "Execution",
+          "text": "Professional driver at the agreed location and time."
+        }
+      ]
+    },
+    "price": {
+      "eyebrow": "Investment",
+      "title": "How much does executive transportation cost in Brasília?",
+      "subtitle": "One-time or recurring plans — personalized quote for each demand.",
+      "recurring_note": "Companies can hire recurring plans with personalized conditions.",
+      "cta": "Request corporate proposal",
+      "factors": [
+        "Vehicle type (van or executive SUV)",
+        "Usage time",
+        "Service frequency — one-time or recurring",
+        "Operation complexity"
+      ]
+    },
+    "coverage": {
+      "eyebrow": "Coverage",
+      "title": "Service throughout Brasília and the Federal District",
+      "description": "We serve companies, hotels, the airport and any point in the Federal District."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What makes executive transportation different?",
+          "answer": "The service standard, punctuality and professional profile of the driver and vehicle."
+        },
+        {
+          "question": "Do you serve companies with recurring demand?",
+          "answer": "Yes. We offer customized plans for companies with ongoing transportation needs."
+        },
+        {
+          "question": "Can it be hired monthly?",
+          "answer": "Yes. We work with contracts and recurring plans with personalized conditions."
+        },
+        {
+          "question": "Do you provide airport transfer?",
+          "answer": "Yes. We include executive transfer for departures and arrivals at Brasília Airport."
+        },
+        {
+          "question": "Do you serve embassies and authorities?",
+          "answer": "Yes. We carry out discreet operations with a high standard of presentation and punctuality."
+        },
+        {
+          "question": "How can I request a corporate proposal?",
+          "answer": "Via WhatsApp, providing service type, frequency and number of passengers."
+        }
+      ]
+    },
+    "cta_final": {
+      "title": "Need executive transportation in Brasília?",
+      "subtitle": "Professional service for companies and executives.",
+      "cta": "Talk on WhatsApp",
+      "microcopy": "One-time and recurring plans for companies, events and special operations."
+    }
+  },
+  "van_para_eventos": {
+    "hero": {
+      "badge": "ST Executive",
+      "h1_line1": "Event Van Service in Brasília",
+      "h1_highlight": "with Driver",
+      "subtitle": "Group transportation for weddings, corporate events and concerts. Service throughout the Federal District with punctuality and organization.",
+      "cta": "Request a quote on WhatsApp",
+      "hint": "Immediate service · Fast quote"
+    },
+    "what_is": {
+      "eyebrow": "The service",
+      "title": "What is an event van service?",
+      "description": "Event van service is transportation for groups that need to travel together to a specific event. It ensures everyone arrives at the same time, comfortably and without parking or logistics concerns."
+    },
+    "event_types": {
+      "eyebrow": "Events served",
+      "title": "Which event do you need transportation for?",
+      "subtitle": "We serve groups at different types of events in Brasília and the Federal District.",
+      "items": [
+        {
+          "label": "Weddings",
+          "desc": "Transportation for guests and couples with comfort and punctuality."
+        },
+        {
+          "label": "Corporate events",
+          "desc": "Teams, clients and participants with planned logistics."
+        },
+        {
+          "label": "Conferences and trade shows",
+          "desc": "Group transportation for large business events."
+        },
+        {
+          "label": "Concerts and parties",
+          "desc": "Groups for concerts, festivals and celebrations."
+        },
+        {
+          "label": "Graduations",
+          "desc": "Special transportation for ceremonies and receptions."
+        },
+        {
+          "label": "Religious events",
+          "desc": "Groups for masses, retreats and celebrations."
+        }
+      ]
+    },
+    "benefits": {
+      "eyebrow": "Why choose a van",
+      "title": "Benefits of group transportation",
+      "subtitle": "More organization for your event, from start to finish.",
+      "items": [
+        {
+          "title": "Everyone arrives together",
+          "desc": "No dispersion or individual delays."
+        },
+        {
+          "title": "Less stress",
+          "desc": "Avoids parking and traffic problems."
+        },
+        {
+          "title": "More comfort",
+          "desc": "Air-conditioned and spacious vehicles."
+        },
+        {
+          "title": "Simplified logistics",
+          "desc": "A single control point for the whole group."
+        },
+        {
+          "title": "Punctuality",
+          "desc": "Professional driver with route planning."
+        },
+        {
+          "title": "Shared cost",
+          "desc": "More economical than several separate cars."
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "How the service works",
+      "subtitle": "From first contact to execution — simple and fast.",
+      "cta": "Talk on WhatsApp",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Contact via WhatsApp",
+          "text": "Talk to the team and share the event details."
+        },
+        {
+          "number": "02",
+          "title": "Information submission",
+          "text": "Date, time, location, number of passengers and route."
+        },
+        {
+          "number": "03",
+          "title": "Planning",
+          "text": "ST Executive organizes the full transportation logistics."
+        },
+        {
+          "number": "04",
+          "title": "Orçamento",
+          "text": "Receive a personalized proposal for your event."
+        },
+        {
+          "number": "05",
+          "title": "Execution",
+          "text": "Driver and van at the agreed location and time."
+        }
+      ]
+    },
+    "fleet": {
+      "eyebrow": "Fleet",
+      "title": "Executive vans for your event",
+      "description": "Vehicles suited for groups, with comfort, air conditioning and space for all passengers.",
+      "cta": "Check availability",
+      "features": [
+        "Air-conditioned executive vans",
+        "Average capacity of up to 15 passengers",
+        "Space for luggage and belongings",
+        "Professional and uniformed driver"
+      ]
+    },
+    "price": {
+      "eyebrow": "Investment",
+      "title": "How much does event van service cost in Brasília?",
+      "subtitle": "The quote is personalized according to your event needs.",
+      "note": "Each event has a specific need — the quote is sent after contact.",
+      "cta": "Request event quote",
+      "factors": [
+        "Event duration",
+        "Route distance",
+        "Number of passengers",
+        "Schedules — round trip or multiple trips"
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Comparison",
+      "title": "Event van or separate cars?",
+      "subtitle": "Centralizing transportation is always the most efficient choice.",
+      "van_label": "Executive van",
+      "cars_label": "Separate cars",
+      "van_pros": [
+        "Everyone arrives together and on time",
+        "Centralized logistics",
+        "Lower total cost",
+        "No parking problems",
+        "Responsible professional driver"
+      ],
+      "cars_cons": [
+        "Frequent individual delays",
+        "Fragmented logistics",
+        "Higher combined cost",
+        "Parking difficulties",
+        "No person responsible for the group"
+      ]
+    },
+    "common_situations": {
+      "eyebrow": "Situations",
+      "title": "Most common situations",
+      "items": [
+        "Guest transportation at weddings",
+        "Teams at corporate events",
+        "Groups going to concerts",
+        "Transportation at trade shows and conferences"
+      ]
+    },
+    "coverage": {
+      "eyebrow": "Coverage",
+      "title": "Service throughout Brasília and region",
+      "description": "We serve events anywhere in the Federal District, including hotels and event venues."
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Do you serve weddings?",
+          "answer": "Yes. We provide transportation for guests and couples with comfort and punctuality."
+        },
+        {
+          "question": "Do you provide round-trip transportation?",
+          "answer": "Yes. We plan outbound, return and multiple trips according to the event needs."
+        },
+        {
+          "question": "How many people fit in the van?",
+          "answer": "On average up to 15 passengers, with space for comfort and luggage."
+        },
+        {
+          "question": "Do you serve corporate events?",
+          "answer": "Yes. We serve companies, conferences, trade shows and any business event."
+        },
+        {
+          "question": "How to book?",
+          "answer": "Via WhatsApp with fast service. Provide date, route and number of passengers."
+        }
+      ]
+    },
+    "cta_final": {
+      "title": "Need a van for an event in Brasília?",
+      "subtitle": "Organize your group's transportation with comfort and punctuality.",
+      "cta": "Talk on WhatsApp",
+      "microcopy": "Service for weddings, companies, concerts and groups."
+    }
+  }
+}

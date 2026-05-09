@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 351.42 154.25">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .24em;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Raleway-Regular, Raleway;
+      }
+
+      .cls-2 {
+        letter-spacing: .25em;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: Raleway-Black, Raleway;
+        font-weight: 800;
+      }
+
+      .cls-4 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #2563eb;
+      }
+
+      .cls-6 {
+        font-size: 39px;
+      }
+    </style>
+  </defs>
+  <g id="Camada_1-2" data-name="Camada 1">
+    <g>
+      <g>
+        <path class="cls-5" d="M215.52.07c.1.39-.16.45-.34.68-1.6,2.09-4.63,4.58-6.54,6.58-3.01,3.15-5.86,6.55-8.84,9.71-3.15,3.33-6.47,6.5-9.5,9.95l-104.76,1.22c-4.96.06-7.52-5.86-4.11-9.47.03-.03.06-.06.09-.1,5.81-6.17,14.37-17.19,23.75-17.19L215.52.07Z"/>
+        <path class="cls-5" d="M304.24,0c-7.64,9.56-15.43,18.97-23.32,28.27-30.2-.43-60.41-.86-90.61-1.29,7.71-9,15.42-17.99,23.13-26.99h90.8Z"/>
+        <path class="cls-5" d="M141.27,44.45c7.06,0,10.71,8.42,5.89,13.57h0c-3.41,3.64-6.79,7.4-10.26,10.97-.95.98-3.35,3.73-4.63,3.73H40.05c-.19,0-.28-.22-.15-.36,7.58-8.06,15.17-16.13,22.75-24.19,1.5-1.33,5.36-3.73,7.34-3.73h71.28Z"/>
+        <path class="cls-5" d="M221.02,36.39c-11.71,12.11-23.42,24.22-35.13,36.33h-39.24l2.04-2.82,33.09-33.51h39.24Z"/>
+      </g>
+      <text class="cls-6" transform="translate(0 143.95)"><tspan class="cls-3" x="0" y="0">S</tspan><tspan class="cls-4" x="24.06" y="0">T</tspan><tspan class="cls-3" x="47.31" y="0"> </tspan><tspan class="cls-2" x="56.08" y="0">EX</tspan><tspan class="cls-1" x="123.98" y="0">E</tspan><tspan class="cls-2" x="156.93" y="0">CUTIVE</tspan></text>
+    </g>
+  </g>
+</svg>
