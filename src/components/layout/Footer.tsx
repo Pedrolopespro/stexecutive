@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Phone, MessageCircle } from "lucide-react";
+import { AtSign, MapPin, Phone, MessageCircle } from "lucide-react";
 import { SERVICE_PAGES, WHATSAPP_URL } from "@/lib/constants";
 
 export default function Footer() {
@@ -85,6 +85,15 @@ export default function Footer() {
               <li className="flex items-center gap-2 text-sm text-white/60">
                 <Phone className="w-4 h-4 text-gold-500 shrink-0" />
                 <span>(61) 9 8409-7971</span>
+              </li>
+              <li className="flex items-center gap-2 text-sm text-white/60">
+                <AtSign className="w-4 h-4 text-gold-500 shrink-0" />
+                <a
+                  href="mailto:stexecutivebsb@hotmail.com"
+                  className="hover:text-surface-white transition-colors"
+                >
+                  stexecutivebsb@hotmail.com
+                </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
