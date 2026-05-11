@@ -10,7 +10,7 @@ export const WHATSAPP_MESSAGE = encodeURIComponent(
 
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 
-export const CONTACT_EMAIL = "saulotransportes@hotmail.com";
+export const CONTACT_EMAIL = "stexecutivebsb@hotmail.com";
 export const CONTACT_PHONE_DISPLAY = "(61) 9 8409-7971";
 
 export const NAV_LINKS = [
