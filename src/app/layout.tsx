@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "ejiWTOXEFJ1GCK3Ezg1M6DiewNW7EbTiRWuTNddwc1Q",
+  },
   title: "Transporte Executivo em Brasília | ST Executive",
   description:
     "Transporte executivo em Brasília para empresas, eventos, grupos, embaixadas e transfer aeroporto. Vans, SUVs executivas e motoristas profissionais.",

@@ -484,13 +484,16 @@ export default function HomePage() {
                     <p className="text-sm text-white/45 leading-relaxed flex-1">{v.desc}</p>
 
                     {/* Botão Saiba mais */}
-                    <a
-                      href={v.href}
-                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-400 hover:text-gold-300 transition-colors mt-auto pt-1"
-                    >
-                      Saiba mais
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <div className="flex justify-end mt-2">
+                      <Button
+                        variant="secondary"
+                        size="sm"
+                        href={v.href}
+                        icon={<ArrowRight className="w-4 h-4" />}
+                      >
+                        Saiba mais
+                      </Button>
+                    </div>
                   </div>
                 </div>
               ))}
