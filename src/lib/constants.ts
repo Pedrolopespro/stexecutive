@@ -14,7 +14,7 @@ export const CONTACT_EMAIL = "stexecutivebsb@hotmail.com";
 export const CONTACT_PHONE_DISPLAY = "(61) 9 8409-7971";
 
 export const NAV_LINKS = [
-  { label: "Início", href: "#" },
+  { label: "Início", href: "/" },
   { label: "Serviços", href: "#servicos" },
   { label: "Frota", href: "#frota" },
   { label: "Como funciona", href: "#como-funciona" },

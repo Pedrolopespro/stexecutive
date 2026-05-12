@@ -2,6 +2,7 @@
 
 import React from "react";
 import {
+  ArrowRight,
   Car,
   Plane,
   BriefcaseBusiness,
@@ -12,6 +13,7 @@ import {
   Mic2,
   ShieldCheck,
   Quote,
+  Users,
 } from "lucide-react";
 
 import Header from "@/components/layout/Header";
@@ -106,33 +108,51 @@ const SERVICES = [
 const FLEET = [
   {
     src: "/images/content/van.png",
-    label: "Van Executiva",
-    desc: "Para grupos, eventos e transfer aeroporto.",
+    label: "Van Executiva em Brasília",
+    capacity: "15 a 20 passageiros",
+    model: "Mercedes-Benz Sprinter",
+    desc: "Van executiva com motorista para grupos, transfer aeroporto, eventos corporativos e operações em Brasília.",
+    href: "/aluguel-de-van-brasilia",
   },
   {
     src: "/images/content/mini van.png",
     label: "Mini Van Executiva",
-    desc: "Para pequenos grupos e deslocamentos corporativos.",
+    capacity: "7 a 8 passageiros",
+    model: "Mercedes-Benz Vito ou similar",
+    desc: "Mini van executiva ideal para pequenos grupos, recepção de convidados e deslocamentos corporativos em Brasília.",
+    href: "/contato",
   },
   {
     src: "/images/content/seda executivo.png",
     label: "Sedan Executivo",
-    desc: "Para reuniões, recepções e agendas corporativas.",
+    capacity: "3 a 4 passageiros",
+    model: "Toyota Corolla ou similar",
+    desc: "Sedan executivo para reuniões, recepções de clientes, agendas corporativas e deslocamentos individuais em Brasília.",
+    href: "/transporte-executivo-brasilia",
   },
   {
     src: "/images/content/comanders.png",
     label: "SUV Executiva",
-    desc: "Para executivos, convidados e deslocamentos individuais.",
+    capacity: "4 a 6 passageiros",
+    model: "Jeep Commander ou similar",
+    desc: "SUV executiva com espaço, conforto e discrição para executivos, convidados especiais e embaixadas em Brasília.",
+    href: "/transporte-executivo-brasilia",
   },
   {
     src: "/images/content/micro onibus.png",
-    label: "Micro-ônibus",
-    desc: "Para grupos maiores, sob consulta.",
+    label: "Micro-ônibus Executivo",
+    capacity: "20 a 30 passageiros",
+    model: "Capacidade varia conforme configuração",
+    desc: "Micro-ônibus executivo para grupos médios, eventos corporativos, excursões e operações planejadas em Brasília.",
+    href: "/van-para-eventos-brasilia",
   },
   {
     src: "/images/content/onibus.png",
-    label: "Ônibus",
-    desc: "Para grandes grupos, excursões e operações de alto volume.",
+    label: "Ônibus Executivo",
+    capacity: "42 a 56 passageiros",
+    model: "Ônibus padrão ou Double Decker",
+    desc: "Ônibus executivo para grandes grupos, shows, congressos e operações de alto volume de passageiros em Brasília.",
+    href: "/van-para-eventos-brasilia",
   },
 ];
 
@@ -429,22 +449,48 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {FLEET.map((v, i) => (
                 <div
                   key={i}
-                  className="group rounded-xl overflow-hidden bg-navy-800 border border-white/8 hover:border-white/20 transition-all duration-300"
+                  className="group rounded-2xl overflow-hidden bg-navy-800 border border-white/8 hover:border-gold-400/30 transition-all duration-300 flex flex-col"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  {/* Imagem */}
+                  <div className="aspect-[16/9] overflow-hidden shrink-0">
                     <img
                       src={v.src}
-                      alt={v.label}
+                      alt={`${v.label} — transporte executivo em Brasília`}
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-3 lg:p-4">
-                    <p className="text-sm font-semibold text-surface-white">{v.label}</p>
-                    <p className="mt-0.5 text-xs text-white/45 leading-snug">{v.desc}</p>
+
+                  {/* Conteúdo */}
+                  <div className="p-4 lg:p-5 flex flex-col flex-1 gap-3">
+                    <h3 className="text-base font-bold text-surface-white leading-snug">{v.label}</h3>
+
+                    {/* Capacidade + Modelo */}
+                    <div className="flex flex-col gap-1.5">
+                      <div className="flex items-center gap-2 text-sm text-white/60">
+                        <Users className="w-4 h-4 text-gold-400 shrink-0" />
+                        <span>{v.capacity}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-white/60">
+                        <Car className="w-4 h-4 text-gold-400 shrink-0" />
+                        <span>{v.model}</span>
+                      </div>
+                    </div>
+
+                    {/* Descrição SEO */}
+                    <p className="text-sm text-white/45 leading-relaxed flex-1">{v.desc}</p>
+
+                    {/* Botão Saiba mais */}
+                    <a
+                      href={v.href}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold-400 hover:text-gold-300 transition-colors mt-auto pt-1"
+                    >
+                      Saiba mais
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
                   </div>
                 </div>
               ))}
