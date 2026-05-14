@@ -66,20 +66,19 @@ export default function ContatoPage() {
     setStatus("sending");
 
     try {
-      // Formspree: crie uma conta em formspree.io e substitua o ID abaixo
-      const res = await fetch("https://formspree.io/f/COLOQUE_SEU_ID", {
+      const res = await fetch("/mail.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          Nome: form.nome,
-          Empresa: form.empresa || "—",
-          Email: form.email,
-          Telefone: form.telefone,
-          "Tipo de serviço": form.tipoServico,
-          "Motorista bilíngue": form.motoristaBilingue,
-          "Local de embarque": form.localEmbarque || "—",
-          "Local de desembarque": form.localDesembarque || "—",
-          Observação: form.observacao || "—",
+          nome: form.nome,
+          empresa: form.empresa || "—",
+          email: form.email,
+          telefone: form.telefone,
+          tipoServico: form.tipoServico,
+          motoristaBilingue: form.motoristaBilingue,
+          localEmbarque: form.localEmbarque || "—",
+          localDesembarque: form.localDesembarque || "—",
+          observacao: form.observacao || "—",
         }),
       });
 

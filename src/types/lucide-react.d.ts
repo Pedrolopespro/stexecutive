@@ -20,6 +20,7 @@ declare module "lucide-react" {
   export const Calendar: LucideIcon;
   export const Car: LucideIcon;
   export const ChevronDown: LucideIcon;
+  export const Clock: LucideIcon;
   export const Globe: LucideIcon;
   export const Hotel: LucideIcon;
   export const MapPin: LucideIcon;

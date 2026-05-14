@@ -63,6 +63,27 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Google Ads — Conversão: Enviar formulário de lead */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': 'AW-18160577429/qaJ_CIyCrKwcEJXX0dND',
+                  'value': 1.0,
+                  'currency': 'BRL',
+                  'event_callback': callback
+                });
+                return false;
+              }
+            `,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

@@ -4,6 +4,8 @@ import React from "react";
 import {
   ArrowRight,
   Car,
+  Clock,
+  MapPin,
   Plane,
   BriefcaseBusiness,
   PartyPopper,
@@ -296,20 +298,21 @@ export default function HomePage() {
 
                 {/* H1 */}
                 <h1 className="text-[36px] sm:text-[50px] lg:text-[64px] font-extrabold leading-[1.05] tracking-tight text-surface-white">
-                  Transporte executivo em{" "}
-                  <span className="italic text-white/90">Brasília.</span>
+                  Transporte Executivo<br />
+                  Premium em{" "}
+                  <span className="italic text-gold-400">Brasília</span>
                 </h1>
 
                 {/* Subheadline */}
                 <p className="mt-5 text-base sm:text-lg leading-relaxed text-white/70 max-w-lg">
-                  Eventos corporativos, shows, embaixadas, empresas e operações especiais.
+                  Atendimento para empresas, eventos, aeroportos, hotéis, embaixadas e turismo executivo.
                 </p>
 
                 <div className="gold-line mt-5" />
 
                 {/* Apoio */}
                 <p className="mt-4 text-sm text-white/55 max-w-md">
-                  Vans, SUVs executivas e motoristas profissionais para deslocamentos que exigem pontualidade, segurança e organização.
+                  Vans executivas, carros premium e motoristas profissionais com atendimento 24h, pontualidade, conforto e segurança.
                 </p>
 
                 {/* CTAs */}
@@ -327,14 +330,39 @@ export default function HomePage() {
                   <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
                     Solicitar orçamento
                   </Button>
-                  <Button variant="secondary" size="lg" href="#servicos">
+                  <Button variant="secondary" size="lg" href="#servicos" icon={<ArrowRight className="w-4 h-4" />}>
                     Conhecer serviços
                   </Button>
                 </div>
 
                 <p className="mt-3 text-xs text-white/35">
-                  Informe data, trajeto e quantidade de passageiros.
+                  Informe data, horário, trajeto e quantidade de passageiros.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Barra de features (glass) ── */}
+          <div className="relative z-10 w-full">
+            <div className="bg-white/5 backdrop-blur-md border-t border-white/10">
+              <div className="container-st py-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+                  {[
+                    { icon: <Clock className="w-5 h-5" />, title: "Atendimento 24h", sub: "Todos os dias da semana" },
+                    { icon: <ShieldCheck className="w-5 h-5" />, title: "Segurança e Pontualidade", sub: "Compromisso com seu tempo" },
+                    { icon: <Users className="w-5 h-5" />, title: "Motoristas Profissionais", sub: "Experientes e certificados" },
+                    { icon: <Car className="w-5 h-5" />, title: "Frota Premium", sub: "Vans e carros executivos" },
+                    { icon: <MapPin className="w-5 h-5" />, title: "Atuação em Brasília", sub: "E região do DF" },
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                      <div className="text-gold-400 shrink-0">{item.icon}</div>
+                      <div>
+                        <p className="text-sm font-semibold text-surface-white leading-tight">{item.title}</p>
+                        <p className="text-xs text-white/50 mt-0.5">{item.sub}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
