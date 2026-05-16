@@ -32,6 +32,8 @@ declare module "lucide-react" {
   export const Plane: LucideIcon;
   export const Quote: LucideIcon;
   export const ShieldCheck: LucideIcon;
+  export const Star: LucideIcon;
+  export const Headphones: LucideIcon;
   export const Users: LucideIcon;
   export const X: LucideIcon;
 }

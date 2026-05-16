@@ -5,6 +5,7 @@ import {
   ArrowRight,
   Car,
   Clock,
+  Headphones,
   MapPin,
   Plane,
   BriefcaseBusiness,
@@ -15,6 +16,7 @@ import {
   Mic2,
   ShieldCheck,
   Quote,
+  Star,
   Users,
 } from "lucide-react";
 
@@ -161,15 +163,18 @@ const FLEET = [
 const TESTIMONIALS = [
   {
     text: "Precisávamos transportar convidados com pontualidade e organização. A operação foi tranquila do início ao fim.",
-    author: "Gestor de eventos",
+    name: "Gestor de Eventos",
+    company: "Empresa de Eventos Corporativos",
   },
   {
     text: "Atendimento profissional, veículo confortável e motorista preparado. Foi exatamente o padrão que nossa empresa precisava.",
-    author: "Empresa corporativa",
+    name: "Empresa Corporativa",
+    company: "Setor de Tecnologia",
   },
   {
-    text: "A ST Executive nos ajudou a organizar o transporte do grupo sem atrasos e sem improviso.",
-    author: "Produtora de eventos",
+    text: "A ST Executive nos ajudou a organizar o transporte do grupo sem atrasos e sem imprevistos.",
+    name: "Produtora de Eventos",
+    company: "Produção de Shows e Concertos",
   },
 ];
 
@@ -447,6 +452,9 @@ export default function HomePage() {
                 <video
                   className="w-full h-full object-cover"
                   poster="/images/content/van.png"
+                  autoPlay
+                  muted
+                  loop
                   controls
                   playsInline
                 >
@@ -473,8 +481,35 @@ export default function HomePage() {
                 Frota executiva para diferentes demandas
               </h2>
               <p className="mt-3 text-sm sm:text-base text-white/55">
-                Veículos adequados para grupos, executivos, eventos e operações corporativas.
+                Veículos adequados para{" "}
+                <span className="text-gold-400 font-semibold">grupos</span>,{" "}
+                <span className="text-gold-400 font-semibold">executivos</span>,{" "}
+                <span className="text-gold-400 font-semibold">eventos</span> e{" "}
+                <span className="text-gold-400 font-semibold">operações corporativas</span>.
               </p>
+            </div>
+
+            {/* ── Diferenciais da frota ── */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
+              {[
+                { icon: <Users className="w-5 h-5" />, title: "Veículos revisados", sub: "e higienizados" },
+                { icon: <ShieldCheck className="w-5 h-5" />, title: "Seguro total", sub: "para passageiros" },
+                { icon: <BriefcaseBusiness className="w-5 h-5" />, title: "Conforto e espaço", sub: "para cada necessidade" },
+                { icon: <Clock className="w-5 h-5" />, title: "Pontualidade", sub: "em todos os trajetos" },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 bg-navy-800/60 border border-white/8 rounded-2xl px-4 py-4"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-gold-400/10 flex items-center justify-center text-gold-400 shrink-0">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-surface-white leading-tight">{item.title}</p>
+                    <p className="text-xs text-white/45 mt-0.5">{item.sub}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -540,22 +575,84 @@ export default function HomePage() {
         ══════════════════════════════════ */}
         <section className="section-padding bg-surface-off">
           <div className="container-st">
+
+            {/* Cabeçalho */}
             <SectionHeader
               eyebrow="Depoimentos"
               title="Confiança em operações reais"
               subtitle="A ST Executive atende empresas, eventos, artistas, instituições e convidados especiais em Brasília."
             />
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
-              {TESTIMONIALS.map((t, i) => (
-                <div key={i} className="bg-surface-white rounded-[20px] border border-gray-200/60 p-6 shadow-soft flex flex-col gap-4">
-                  <Quote className="w-6 h-6 text-gold-400 shrink-0" />
-                  <p className="text-sm leading-relaxed text-gray-700 flex-1">
-                    {t.text}
-                  </p>
-                  <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{t.author}</p>
+
+            {/* ── Stats ── */}
+            <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200/70 border border-gray-200/70 rounded-2xl overflow-hidden bg-white shadow-soft">
+              {[
+                { icon: <ShieldCheck className="w-5 h-5" />, title: "Mais de 10 anos", sub: "de experiência" },
+                { icon: <Users className="w-5 h-5" />, title: "Centenas de clientes", sub: "atendidos" },
+                { icon: <Star className="w-5 h-5" />, title: "Avaliação 5 estrelas", sub: "no Google" },
+                { icon: <ShieldCheck className="w-5 h-5" />, title: "Compromisso com", sub: "segurança e excelência" },
+              ].map((s, i) => (
+                <div key={i} className="flex items-center gap-3 px-5 py-4">
+                  <div className="text-gold-500 shrink-0">{s.icon}</div>
+                  <div>
+                    <p className="text-sm font-bold text-navy-950 leading-tight">{s.title}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">{s.sub}</p>
+                  </div>
                 </div>
               ))}
             </div>
+
+            {/* ── Cards de depoimentos ── */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+              {TESTIMONIALS.map((t, i) => (
+                <div key={i} className="bg-white rounded-2xl border border-gray-200/60 p-6 shadow-soft flex flex-col gap-4">
+                  {/* Aspas */}
+                  <Quote className="w-7 h-7 text-gold-400 shrink-0" />
+
+                  {/* Texto */}
+                  <p className="text-sm leading-relaxed text-gray-700 flex-1">{t.text}</p>
+
+                  {/* Divisor dourado */}
+                  <div className="w-8 h-0.5 bg-gold-400 rounded-full" />
+
+                  {/* Autor */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-navy-950 flex items-center justify-center shrink-0">
+                      <Users className="w-5 h-5 text-gold-400" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-navy-950 leading-tight">{t.name}</p>
+                      <p className="text-xs text-gray-400 mt-0.5">{t.company}</p>
+                    </div>
+                  </div>
+
+                  {/* Estrelas */}
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: 5 }).map((_, s) => (
+                      <Star key={s} className="w-4 h-4 text-gold-400 fill-gold-400" />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* ── Barra de features inferior ── */}
+            <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200/70 border border-gray-200/70 rounded-2xl overflow-hidden bg-white shadow-soft">
+              {[
+                { icon: <Clock className="w-5 h-5" />, title: "Pontualidade Garantida", sub: "Compromisso com horários" },
+                { icon: <Car className="w-5 h-5" />, title: "Veículos Confortáveis", sub: "Frota nova e higienizada" },
+                { icon: <Users className="w-5 h-5" />, title: "Motoristas Experientes", sub: "Treinados e uniformizados" },
+                { icon: <Headphones className="w-5 h-5" />, title: "Atendimento Personalizado", sub: "Soluções sob medida" },
+              ].map((f, i) => (
+                <div key={i} className="flex items-center gap-3 px-5 py-4">
+                  <div className="text-gold-500 shrink-0">{f.icon}</div>
+                  <div>
+                    <p className="text-sm font-bold text-navy-950 leading-tight">{f.title}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">{f.sub}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
           </div>
         </section>
 
@@ -617,47 +714,90 @@ export default function HomePage() {
         {/* ══════════════════════════════════
             9. SOBRE
         ══════════════════════════════════ */}
-        <section id="sobre" className="section-padding">
+        <section id="sobre" className="section-padding bg-surface-off">
           <div className="container-st">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Imagem */}
+
+            {/* ── Grid foto + texto ── */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+              {/* Foto com badge "Desde 2011" */}
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-card">
                   <img
                     src="/images/content/PASSAGEIRO 01.png"
-                    alt="Motorista profissional ST Executive"
-                    className="w-full h-72 sm:h-80 object-cover object-center"
+                    alt="Passageiro executivo ST Executive — Brasília"
+                    className="w-full h-72 sm:h-96 object-cover object-center"
                   />
                 </div>
-                <div className="absolute -top-4 -right-4 bg-navy-950 rounded-2xl shadow-card p-4 border border-white/10 text-center">
-                  <p className="text-[10px] font-medium text-white/45 uppercase tracking-wider">Desde</p>
-                  <p className="text-3xl font-extrabold leading-none text-gold-400">2011</p>
-                  <p className="text-[10px] font-medium text-white/45 uppercase tracking-wider mt-0.5">Brasília</p>
+                {/* Badge sobreposto */}
+                <div className="absolute top-4 right-4 bg-navy-950/90 backdrop-blur-sm rounded-2xl shadow-premium p-4 border border-white/10 text-center min-w-[90px]">
+                  <p className="text-[10px] font-semibold text-white/50 uppercase tracking-widest">Desde</p>
+                  <p className="text-4xl font-extrabold leading-none text-gold-400 mt-0.5">2011</p>
+                  <p className="text-[10px] font-semibold text-white/50 uppercase tracking-widest mt-1">Em Brasília</p>
                 </div>
               </div>
 
               {/* Texto */}
               <div>
-                <Badge variant="navy">Sobre a empresa</Badge>
-                <h2 className="mt-4 text-[24px] sm:text-[30px] font-bold leading-tight text-navy-950">
+                <Badge variant="gold">Sobre a empresa</Badge>
+                <h2 className="mt-4 text-[28px] sm:text-[36px] font-extrabold leading-tight tracking-tight text-navy-950">
                   Desde 2011 em Brasília
                 </h2>
                 <div className="gold-line mt-4" />
-                <p className="mt-4 text-[15px] leading-relaxed text-gray-600">
-                  A ST Executive oferece transporte executivo para empresas, eventos, grupos e
-                  operações especiais. A atuação combina frota executiva, motoristas profissionais
-                  e atendimento planejado.
+                <p className="mt-5 text-[15px] leading-relaxed text-gray-600">
+                  A ST Executive oferece transporte executivo para empresas, eventos, grupos e operações especiais.
                 </p>
-                <div className="mt-7 flex flex-wrap gap-3">
+                <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
+                  Atuação com frota executiva moderna, motoristas profissionais e atendimento planejado para garantir conforto, segurança e pontualidade em cada trajeto.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
                   <Button variant="primary" size="md" href={WHATSAPP_URL} showWhatsAppIcon>
                     Solicitar orçamento
                   </Button>
-                  <Button variant="outline" size="md" href="#servicos">
+                  <Button variant="outline" size="md" href="#servicos" icon={<ArrowRight className="w-4 h-4" />}>
                     Conhecer serviços
                   </Button>
                 </div>
               </div>
             </div>
+
+            {/* ── Barra de diferenciais ── */}
+            <div className="mt-10 grid grid-cols-2 lg:grid-cols-5 gap-3">
+              {[
+                { icon: <ShieldCheck className="w-5 h-5" />, title: "Experiência e Confiança", sub: "Mais de 10 anos de atuação em transporte executivo." },
+                { icon: <Car className="w-5 h-5" />, title: "Frota Premium", sub: "Veículos novos, revisados e com padrão executivo." },
+                { icon: <Clock className="w-5 h-5" />, title: "Pontualidade Garantida", sub: "Compromisso com horários e roteiros." },
+                { icon: <Headphones className="w-5 h-5" />, title: "Atendimento 24h", sub: "Suporte todos os dias da semana." },
+                { icon: <ShieldCheck className="w-5 h-5" />, title: "Segurança e Discrição", sub: "Motoristas qualificados e treinados." },
+              ].map((f, i) => (
+                <div key={i} className="flex flex-col gap-2 bg-white border border-gray-200/70 rounded-2xl px-4 py-4 shadow-soft">
+                  <div className="text-gold-500">{f.icon}</div>
+                  <p className="text-sm font-bold text-navy-950 leading-tight">{f.title}</p>
+                  <p className="text-xs text-gray-400 leading-snug">{f.sub}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* ── CTA bar ── */}
+            <div className="mt-8 bg-navy-950 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-5">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-gold-400/10 flex items-center justify-center shrink-0">
+                  <BriefcaseBusiness className="w-5 h-5 text-gold-400" />
+                </div>
+                <div>
+                  <p className="text-base font-bold text-surface-white leading-tight">
+                    Precisa de transporte executivo para sua empresa ou evento?
+                  </p>
+                  <p className="text-sm text-white/50 mt-0.5">
+                    Fale com nossa equipe e receba uma proposta personalizada.
+                  </p>
+                </div>
+              </div>
+              <Button variant="primary" size="md" href={WHATSAPP_URL} showWhatsAppIcon className="shrink-0">
+                Solicitar orçamento
+              </Button>
+            </div>
+
           </div>
         </section>
 
