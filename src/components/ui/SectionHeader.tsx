@@ -4,7 +4,7 @@ import Badge from "./Badge";
 interface SectionHeaderProps {
   eyebrow?: string;
   title: string;
-  subtitle?: string;
+  subtitle?: React.ReactNode;
   align?: "left" | "center";
   theme?: "light" | "dark";
   className?: string;

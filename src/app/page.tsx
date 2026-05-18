@@ -182,32 +182,38 @@ const AUDIENCE = [
   {
     icon: <Building2 className="w-5 h-5" />,
     title: "Empresas",
-    text: "Transporte para equipes, clientes e agendas corporativas.",
+    text: "Transporte para equipes, clientes e agendas corporativas com conforto e discrição.",
+    bullets: ["Reuniões e visitas", "Transporte de funcionários", "Contratos corporativos"],
   },
   {
     icon: <BriefcaseBusiness className="w-5 h-5" />,
     title: "Eventos corporativos",
-    text: "Soluções para congressos, feiras e convenções.",
+    text: "Soluções para congressos, feiras, convenções e eventos empresariais de todos os portes.",
+    bullets: ["Congressos e feiras", "Convidados e palestrantes", "Logística de transporte"],
   },
   {
     icon: <Mic2 className="w-5 h-5" />,
     title: "Shows e produções",
-    text: "Transporte para artistas, staff e convidados.",
+    text: "Transporte para artistas, equipes, staff e convidados com total segurança e sigilo.",
+    bullets: ["Artistas e bandas", "Staff e produção", "Infraestrutura completa"],
   },
   {
     icon: <ShieldCheck className="w-5 h-5" />,
     title: "Embaixadas",
-    text: "Atendimento discreto e profissional.",
+    text: "Atendimento discreto e profissional para autoridades e representantes internacionais.",
+    bullets: ["Autoridades e diplomatas", "Segurança e privacidade", "Motoristas especializados"],
   },
   {
     icon: <Plane className="w-5 h-5" />,
     title: "Aeroporto",
-    text: "Transfer para embarque e desembarque.",
+    text: "Transfer para embarques e desembarques com pontualidade e acompanhamento de voo.",
+    bullets: ["Transfer in/out", "Acompanhamento de voo", "Meet & Greet"],
   },
   {
     icon: <Hotel className="w-5 h-5" />,
     title: "Hotéis e grupos",
-    text: "Recepção e deslocamento de hóspedes.",
+    text: "Recepção e deslocamento de hóspedes, turistas e grupos com conforto e agilidade.",
+    bullets: ["Hospedagens e turismo", "City tour e passeios", "Grupos e excursões"],
   },
 ];
 
@@ -659,19 +665,47 @@ export default function HomePage() {
         {/* ══════════════════════════════════
             7. PARA QUEM ATENDEMOS
         ══════════════════════════════════ */}
-        <section className="section-padding">
+        <section className="section-padding bg-surface-off">
           <div className="container-st">
             <SectionHeader
               eyebrow="Para quem atendemos"
               title="Atendimento para empresas, eventos e convidados especiais"
+              subtitle={
+                <>
+                  Soluções de transporte executivo com pontualidade, conforto e segurança
+                  para atender diferentes necessidades em{" "}
+                  <strong className="text-navy-950 font-bold">Brasília e região.</strong>
+                </>
+              }
             />
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 lg:gap-5">
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {AUDIENCE.map((item, i) => (
-                <Card key={i} variant="white" hover padding="md">
-                  <IconBadge icon={item.icon} />
-                  <h3 className="mt-3 text-[14px] font-bold text-navy-950">{item.title}</h3>
-                  <p className="mt-1.5 text-xs leading-relaxed text-gray-500">{item.text}</p>
-                </Card>
+                <div
+                  key={i}
+                  className="bg-white rounded-2xl border border-gray-200/60 shadow-soft p-6 flex flex-col gap-4 hover:shadow-card hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  {/* Ícone */}
+                  <div className="w-12 h-12 rounded-2xl bg-navy-950 flex items-center justify-center text-gold-400 shrink-0">
+                    {item.icon}
+                  </div>
+
+                  {/* Título + descrição */}
+                  <div>
+                    <h3 className="text-base font-bold text-navy-950">{item.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-gray-500">{item.text}</p>
+                  </div>
+
+                  {/* Bullets */}
+                  <ul className="flex flex-col gap-1.5 mt-auto">
+                    {item.bullets.map((b, j) => (
+                      <li key={j} className="flex items-center gap-2 text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
@@ -703,9 +737,23 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="mt-10 text-center">
-              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
-                Falar no WhatsApp
+            {/* CTA bar */}
+            <div className="mt-10 bg-navy-950 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-5">
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                  <BriefcaseBusiness className="w-5 h-5 text-gold-400" />
+                </div>
+                <div>
+                  <p className="text-base font-bold text-surface-white leading-tight">
+                    Precisa de um transporte executivo para sua empresa ou evento?
+                  </p>
+                  <p className="text-sm text-white/50 mt-0.5">
+                    Fale com nossa equipe e receba uma proposta personalizada.
+                  </p>
+                </div>
+              </div>
+              <Button variant="primary" size="md" href={WHATSAPP_URL} showWhatsAppIcon className="shrink-0 sm:ml-4">
+                Solicitar orçamento
               </Button>
             </div>
           </div>
@@ -724,8 +772,8 @@ export default function HomePage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-card">
                   <img
-                    src="/images/content/PASSAGEIRO 01.png"
-                    alt="Passageiro executivo ST Executive — Brasília"
+                    src="/images/content/stquemsomos.jpeg"
+                    alt="ST Executive — Transporte executivo em Brasília desde 2011"
                     className="w-full h-72 sm:h-96 object-cover object-center"
                   />
                 </div>
@@ -745,10 +793,10 @@ export default function HomePage() {
                 </h2>
                 <div className="gold-line mt-4" />
                 <p className="mt-5 text-[15px] leading-relaxed text-gray-600">
-                  A ST Executive oferece transporte executivo para empresas, eventos, grupos e operações especiais.
+                  A ST Executive oferece transporte executivo em Brasília para empresas, aeroportos, eventos, casamentos, viagens e grupos, com atendimento personalizado e foco em excelência.
                 </p>
                 <p className="mt-3 text-[15px] leading-relaxed text-gray-600">
-                  Atuação com frota executiva moderna, motoristas profissionais e atendimento planejado para garantir conforto, segurança e pontualidade em cada trajeto.
+                  Contamos com frota moderna, incluindo carros executivos, Mercedes Vito, vans, micro-ônibus e ônibus, além de motoristas experientes para garantir conforto, segurança, discrição e pontualidade em cada trajeto.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Button variant="primary" size="md" href={WHATSAPP_URL} showWhatsAppIcon>
