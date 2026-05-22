@@ -135,7 +135,7 @@ const FLEET = [
     href: "/transporte-executivo-brasilia",
   },
   {
-    src: "/images/content/comanders.png",
+    src: "/images/content/commander.png",
     label: "SUV Executiva",
     capacity: "4 a 6 passageiros",
     model: "Jeep Commander ou similar",
@@ -525,11 +525,11 @@ export default function HomePage() {
                   className="group rounded-2xl overflow-hidden bg-navy-800 border border-white/8 hover:border-gold-400/30 transition-all duration-300 flex flex-col"
                 >
                   {/* Imagem */}
-                  <div className="aspect-[16/9] overflow-hidden shrink-0">
+                  <div className="bg-navy-900 overflow-hidden shrink-0">
                     <img
                       src={v.src}
                       alt={`${v.label} — transporte executivo em Brasília`}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 

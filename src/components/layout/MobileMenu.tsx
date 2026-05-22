@@ -5,10 +5,15 @@ import Button from "@/components/ui/Button";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
 
 const SERVICE_LINKS = [
-  { label: "Van Executiva",     href: "/aluguel-de-van-brasilia" },
-  { label: "Sedan/SUV Executivo",     href: "/transporte-executivo-brasilia" },
-  { label: "Transfer Aeroporto", href: "/transfer-aeroporto-brasilia" },
-  { label: "Van para Eventos",  href: "/van-para-eventos-brasilia" },
+  { label: "Van Executiva",          href: "/aluguel-de-van-brasilia" },
+  { label: "Minivan Executiva",      href: "/minivan-executiva-brasilia" },
+  { label: "Sedan/SUV Executivo",    href: "/transporte-executivo-brasilia" },
+  { label: "Carros Blindados",       href: "/carros-blindados-brasilia" },
+  { label: "Transfer Aeroporto",     href: "/transfer-aeroporto-brasilia" },
+  { label: "Van para Eventos",       href: "/van-para-eventos-brasilia" },
+  { label: "Micro-ônibus Executivo", href: "/micro-onibus-executivo-brasilia" },
+  { label: "Ônibus Executivo",       href: "/onibus-executivo-brasilia" },
+  { label: "City Tour Brasília",     href: "/city-tour-brasilia" },
 ];
 
 interface MobileMenuProps {
@@ -91,7 +96,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       <div
                         className={[
                           "overflow-hidden transition-all duration-200",
-                          servicesExpanded ? "max-h-64 opacity-100" : "max-h-0 opacity-0",
+                          servicesExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0",
                         ].join(" ")}
                       >
                         <ul className="flex flex-col gap-0.5 pl-4 pt-1 pb-2">

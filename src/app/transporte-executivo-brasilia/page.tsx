@@ -119,7 +119,7 @@ export default function TransporteExecutivoPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/comanders.png"
+              src="/images/content/commander.png"
               alt="Transporte executivo em Brasília — ST Executive"
               className="w-full h-full object-cover object-center"
             />

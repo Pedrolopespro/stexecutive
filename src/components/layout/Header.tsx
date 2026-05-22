@@ -14,9 +14,19 @@ const SERVICE_LINKS = [
     href: "/aluguel-de-van-brasilia",
   },
   {
+    label: "Minivan Executiva",
+    desc: "Pequenos grupos e deslocamentos VIP.",
+    href: "/minivan-executiva-brasilia",
+  },
+  {
     label: "Sedan/SUV Executivo",
     desc: "Executivos e convidados especiais.",
     href: "/transporte-executivo-brasilia",
+  },
+  {
+    label: "Carros Blindados",
+    desc: "Segurança e discrição para autoridades.",
+    href: "/carros-blindados-brasilia",
   },
   {
     label: "Transfer Aeroporto",
@@ -27,6 +37,21 @@ const SERVICE_LINKS = [
     label: "Van para Eventos",
     desc: "Casamentos, shows e eventos corporativos.",
     href: "/van-para-eventos-brasilia",
+  },
+  {
+    label: "Micro-ônibus Executivo",
+    desc: "Grupos médios e excursões corporativas.",
+    href: "/micro-onibus-executivo-brasilia",
+  },
+  {
+    label: "Ônibus Executivo",
+    desc: "Grandes grupos e eventos de grande porte.",
+    href: "/onibus-executivo-brasilia",
+  },
+  {
+    label: "City Tour Brasília",
+    desc: "Passeio pelos monumentos da capital.",
+    href: "/city-tour-brasilia",
   },
 ];
 
@@ -121,27 +146,29 @@ export default function Header() {
                       <div
                         onMouseLeave={() => setServicesOpen(false)}
                         className={[
-                          "absolute left-0 top-full pt-2 w-64 z-50",
+                          "absolute left-0 top-full pt-2 w-[540px] z-50",
                           "transition-all duration-150 origin-top-left",
                           servicesOpen
                             ? "opacity-100 scale-100 pointer-events-auto"
                             : "opacity-0 scale-95 pointer-events-none",
                         ].join(" ")}
                       >
-                        <div className="bg-surface-white rounded-2xl shadow-premium border border-gray-100 overflow-hidden py-1.5">
-                          {SERVICE_LINKS.map((s) => (
-                            <a
-                              key={s.href}
-                              href={s.href}
-                              onClick={() => setServicesOpen(false)}
-                              className="flex flex-col gap-0.5 px-4 py-3 hover:bg-gray-50 transition-colors duration-100 group"
-                            >
-                              <span className="text-sm font-semibold text-navy-950 group-hover:text-gold-600 transition-colors">
-                                {s.label}
-                              </span>
-                              <span className="text-xs text-gray-500">{s.desc}</span>
-                            </a>
-                          ))}
+                        <div className="bg-surface-white rounded-2xl shadow-premium border border-gray-100 overflow-hidden p-2">
+                          <div className="grid grid-cols-2 gap-0.5">
+                            {SERVICE_LINKS.map((s) => (
+                              <a
+                                key={s.href}
+                                href={s.href}
+                                onClick={() => setServicesOpen(false)}
+                                className="flex flex-col gap-0.5 px-4 py-3 rounded-xl hover:bg-gray-50 transition-colors duration-100 group"
+                              >
+                                <span className="text-sm font-semibold text-navy-950 group-hover:text-gold-600 transition-colors">
+                                  {s.label}
+                                </span>
+                                <span className="text-xs text-gray-500">{s.desc}</span>
+                              </a>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </li>

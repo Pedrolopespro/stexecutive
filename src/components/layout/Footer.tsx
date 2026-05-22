@@ -30,6 +30,11 @@ export default function Footer() {
                 { label: "Transporte Executivo", href: SERVICE_PAGES.executivo },
                 { label: "Transfer Aeroporto", href: SERVICE_PAGES.transfer },
                 { label: "Van para Eventos", href: SERVICE_PAGES.eventos },
+                { label: "Minivan Executiva", href: SERVICE_PAGES.minivan },
+                { label: "Micro-ônibus Executivo", href: SERVICE_PAGES.microOnibus },
+                { label: "Ônibus Executivo", href: SERVICE_PAGES.onibus },
+                { label: "Carros Blindados", href: SERVICE_PAGES.blindados },
+                { label: "City Tour Brasília", href: SERVICE_PAGES.cityTour },
               ].map((item) => (
                 <li key={item.href}>
                   <a

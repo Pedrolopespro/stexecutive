@@ -28,4 +28,9 @@ export const SERVICE_PAGES = {
   transfer: "/transfer-aeroporto-brasilia",
   executivo: "/transporte-executivo-brasilia",
   eventos: "/van-para-eventos-brasilia",
+  minivan: "/minivan-executiva-brasilia",
+  microOnibus: "/micro-onibus-executivo-brasilia",
+  onibus: "/onibus-executivo-brasilia",
+  blindados: "/carros-blindados-brasilia",
+  cityTour: "/city-tour-brasilia",
 } as const;

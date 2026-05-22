@@ -33,7 +33,7 @@ export const IMAGES = {
     sedanBlindada: "/images/content/sedan blindada .png",
     sedaExecutivo: "/images/content/seda executivo.png",
     royalTulip: "/images/content/roayl tulip.png",
-    commanders: "/images/content/comanders.png",
+    commanders: "/images/content/commander.png",
   },
 
   icons: {
