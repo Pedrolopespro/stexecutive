@@ -133,7 +133,7 @@ export default function CityTourBrasiliaPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/hero site.png"
+              src="/images/content/SUV wild.png"
               alt="City tour em Brasília com motorista executivo — ST Executive"
               className="w-full h-full object-cover object-center"
             />

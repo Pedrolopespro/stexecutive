@@ -118,7 +118,7 @@ export default function VanParaEventosPage() {
           {/* Background */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/van.png"
+              src="/images/content/van wild.png"
               alt="Van para eventos em Brasília — ST Executive"
               className="w-full h-full object-cover object-center"
             />

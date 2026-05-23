@@ -132,7 +132,7 @@ export default function MicroOnibusExecutivoBrasiliaPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/micro onibus.png"
+              src="/images/content/onibus wild.png"
               alt="Micro-ônibus executivo em Brasília com motorista — ST Executive"
               className="w-full h-full object-cover object-center"
             />

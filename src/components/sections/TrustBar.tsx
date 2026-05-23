@@ -11,7 +11,7 @@ const trustItems = [
   },
   {
     icon: <Calendar className="w-5 h-5" />,
-    title: "Desde 2011",
+    title: "Mais de 15 anos",
     text: "Experiência em transporte executivo em Brasília para diferentes perfis de clientes.",
   },
   {

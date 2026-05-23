@@ -132,7 +132,7 @@ export default function MinivanExecutivaBrasiliaPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/mini van.png"
+              src="/images/content/mini van wild .png"
               alt="Minivan executiva em Brasília com motorista — ST Executive"
               className="w-full h-full object-cover object-center"
             />

@@ -19,8 +19,8 @@ export const NAV_LINKS = [
   { label: "Frota", href: "#frota" },
   { label: "Como funciona", href: "#como-funciona" },
   { label: "Sobre", href: "#sobre" },
-  { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "/contato" },
+  { label: "Guia Brasília", href: "/guia-brasilia" },
 ] as const;
 
 export const SERVICE_PAGES = {
@@ -34,3 +34,5 @@ export const SERVICE_PAGES = {
   blindados: "/carros-blindados-brasilia",
   cityTour: "/city-tour-brasilia",
 } as const;
+
+export const GUIA_BRASILIA_PATH = "/guia-brasilia";

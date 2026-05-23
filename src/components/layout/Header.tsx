@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
 import MobileMenu from "./MobileMenu";
@@ -175,6 +175,26 @@ export default function Header() {
                   );
                 }
 
+                // "Guia Brasília" — destaque editorial
+                if (link.label === "Guia Brasília") {
+                  return (
+                    <li key={link.href}>
+                      <a
+                        href={link.href}
+                        className={[
+                          "px-3 py-2 rounded-lg text-sm font-semibold",
+                          "transition-colors duration-[var(--motion-fast)]",
+                          isScrolled
+                            ? "text-gold-500 hover:text-navy-950 hover:bg-gray-100 border border-gold-500/30"
+                            : "text-gold-300 hover:text-surface-white hover:bg-white/10 border border-gold-300/30",
+                        ].join(" ")}
+                      >
+                        Guia Brasília
+                      </a>
+                    </li>
+                  );
+                }
+
                 // Links normais
                 return (
                   <li key={link.href}>
@@ -203,13 +223,9 @@ export default function Header() {
                   ? "text-navy-950 hover:bg-gray-100"
                   : "text-surface-white hover:bg-white/10",
               ].join(" ")}
-              aria-label={isMobileOpen ? "Fechar menu" : "Abrir menu"}
+              aria-label="Abrir menu"
             >
-              {isMobileOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              <Menu className="w-6 h-6" />
             </button>
           </nav>
         </div>

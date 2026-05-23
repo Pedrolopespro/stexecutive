@@ -114,7 +114,7 @@ export default function TransferAeroportoPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/PASSAGEIRO 01.png"
+              src="/images/content/aeroporto wild.png"
               alt="Transfer aeroporto Brasília com motorista — ST Executive"
               className="w-full h-full object-cover object-center"
             />

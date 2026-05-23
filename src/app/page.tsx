@@ -592,7 +592,7 @@ export default function HomePage() {
             {/* ── Stats ── */}
             <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200/70 border border-gray-200/70 rounded-2xl overflow-hidden bg-white shadow-soft">
               {[
-                { icon: <ShieldCheck className="w-5 h-5" />, title: "Mais de 10 anos", sub: "de experiência" },
+                { icon: <ShieldCheck className="w-5 h-5" />, title: "Mais de 15 anos", sub: "de experiência" },
                 { icon: <Users className="w-5 h-5" />, title: "Centenas de clientes", sub: "atendidos" },
                 { icon: <Star className="w-5 h-5" />, title: "Avaliação 5 estrelas", sub: "no Google" },
                 { icon: <ShieldCheck className="w-5 h-5" />, title: "Compromisso com", sub: "segurança e excelência" },
@@ -779,9 +779,9 @@ export default function HomePage() {
                 </div>
                 {/* Badge sobreposto */}
                 <div className="absolute top-4 right-4 bg-navy-950/90 backdrop-blur-sm rounded-2xl shadow-premium p-4 border border-white/10 text-center min-w-[90px]">
-                  <p className="text-[10px] font-semibold text-white/50 uppercase tracking-widest">Desde</p>
-                  <p className="text-4xl font-extrabold leading-none text-gold-400 mt-0.5">2011</p>
-                  <p className="text-[10px] font-semibold text-white/50 uppercase tracking-widest mt-1">Em Brasília</p>
+                  <p className="text-4xl font-extrabold leading-none text-gold-400">+15</p>
+                  <p className="text-[10px] font-semibold text-white/50 uppercase tracking-widest mt-1">Anos no</p>
+                  <p className="text-[10px] font-semibold text-white/50 uppercase tracking-widest">Mercado</p>
                 </div>
               </div>
 
@@ -789,7 +789,7 @@ export default function HomePage() {
               <div>
                 <Badge variant="gold">Sobre a empresa</Badge>
                 <h2 className="mt-4 text-[28px] sm:text-[36px] font-extrabold leading-tight tracking-tight text-navy-950">
-                  Desde 2011 em Brasília
+                  +15 Anos no Mercado
                 </h2>
                 <div className="gold-line mt-4" />
                 <p className="mt-5 text-[15px] leading-relaxed text-gray-600">
@@ -812,7 +812,7 @@ export default function HomePage() {
             {/* ── Barra de diferenciais ── */}
             <div className="mt-10 grid grid-cols-2 lg:grid-cols-5 gap-3">
               {[
-                { icon: <ShieldCheck className="w-5 h-5" />, title: "Experiência e Confiança", sub: "Mais de 10 anos de atuação em transporte executivo." },
+                { icon: <ShieldCheck className="w-5 h-5" />, title: "Experiência e Confiança", sub: "Mais de 15 anos de atuação em transporte executivo." },
                 { icon: <Car className="w-5 h-5" />, title: "Frota Premium", sub: "Veículos novos, revisados e com padrão executivo." },
                 { icon: <Clock className="w-5 h-5" />, title: "Pontualidade Garantida", sub: "Compromisso com horários e roteiros." },
                 { icon: <Headphones className="w-5 h-5" />, title: "Atendimento 24h", sub: "Suporte todos os dias da semana." },

@@ -14,14 +14,19 @@ declare module "lucide-react" {
 
   export const ArrowRight: LucideIcon;
   export const AtSign: LucideIcon;
+  export const BookOpen: LucideIcon;
+  export const Briefcase: LucideIcon;
   export const BriefcaseBusiness: LucideIcon;
   export const Building2: LucideIcon;
   export const Bus: LucideIcon;
   export const Calendar: LucideIcon;
   export const Car: LucideIcon;
   export const ChevronDown: LucideIcon;
+  export const CircleCheck: LucideIcon;
   export const Clock: LucideIcon;
   export const Globe: LucideIcon;
+  export const Headphones: LucideIcon;
+  export const Home: LucideIcon;
   export const Hotel: LucideIcon;
   export const MapPin: LucideIcon;
   export const Menu: LucideIcon;
@@ -31,9 +36,10 @@ declare module "lucide-react" {
   export const Phone: LucideIcon;
   export const Plane: LucideIcon;
   export const Quote: LucideIcon;
+  export const Shield: LucideIcon;
   export const ShieldCheck: LucideIcon;
   export const Star: LucideIcon;
-  export const Headphones: LucideIcon;
+  export const User: LucideIcon;
   export const Users: LucideIcon;
   export const X: LucideIcon;
 }

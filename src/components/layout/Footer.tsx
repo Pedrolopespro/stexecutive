@@ -1,6 +1,6 @@
 import React from "react";
 import { AtSign, MapPin, Phone, MessageCircle } from "lucide-react";
-import { SERVICE_PAGES, WHATSAPP_URL } from "@/lib/constants";
+import { SERVICE_PAGES, GUIA_BRASILIA_PATH, WHATSAPP_URL } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -59,6 +59,7 @@ export default function Footer() {
                 { label: "Frota", href: "#frota" },
                 { label: "Como funciona", href: "#como-funciona" },
                 { label: "FAQ", href: "#faq" },
+                { label: "Guia Brasília", href: GUIA_BRASILIA_PATH },
               ].map((item) => (
                 <li key={item.href}>
                   <a
@@ -115,7 +116,7 @@ export default function Footer() {
             reservados.
           </p>
           <p className="text-xs text-white/40">
-            Transporte executivo em Brasília desde 2011.
+            Mais de 15 anos de transporte executivo em Brasília.
           </p>
         </div>
       </div>
