@@ -273,11 +273,11 @@ export default function HomePage() {
         {/* ══════════════════════════════════
             1. HERO
         ══════════════════════════════════ */}
-        <section className="relative min-h-screen flex flex-col overflow-hidden bg-navy-950">
+        <section className="relative min-h-[62vh] sm:min-h-screen flex flex-col overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             {/* Vídeo de fundo — poster = imagem mobile como fallback */}
             <video
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-bottom sm:object-center"
               poster="/images/content/hero site mobile.png"
               autoPlay
               muted
@@ -297,7 +297,12 @@ export default function HomePage() {
 
           <div className="relative z-10 flex-1 flex flex-col container-st">
             <div className="h-20 lg:h-24 shrink-0" />
-            <div className="flex-1 flex flex-col justify-center py-12 lg:py-16">
+
+            {/* Mobile: justify-between → badge+título no topo, botões na base */}
+            {/* Desktop: justify-center → bloco único centrado */}
+            <div className="flex-1 flex flex-col justify-between sm:justify-center pb-7 sm:py-12 lg:py-16">
+
+              {/* ── Grupo TOPO: badge + título ── */}
               <div className="max-w-2xl lg:max-w-3xl">
                 {/* Eyebrow badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-400/40 bg-gold-400/10 backdrop-blur-sm mb-5">
@@ -314,29 +319,19 @@ export default function HomePage() {
                   <span className="italic text-gold-400">Brasília</span>
                 </h1>
 
-                {/* Subheadline */}
-                <p className="mt-5 text-base sm:text-lg leading-relaxed text-white/70 max-w-lg">
+                {/* Subheadline — oculto no mobile */}
+                <p className="hidden sm:block mt-5 text-base sm:text-lg leading-relaxed text-white/70 max-w-lg">
                   Atendimento para empresas, eventos, aeroportos, hotéis, embaixadas e turismo executivo.
                 </p>
 
-                <div className="gold-line mt-5" />
+                <div className="hidden sm:block gold-line mt-5" />
 
-                {/* Apoio */}
-                <p className="mt-4 text-sm text-white/55 max-w-md">
+                {/* Apoio — oculto no mobile */}
+                <p className="hidden sm:block mt-4 text-sm text-white/55 max-w-md">
                   Vans executivas, carros premium e motoristas profissionais com atendimento 24h, pontualidade, conforto e segurança.
                 </p>
 
-                {/* CTAs */}
-                {/* Mobile: lado a lado, texto curto */}
-                <div className="mt-14 flex flex-row sm:hidden gap-3">
-                  <Button variant="secondary" size="lg" href="#servicos" className="flex-1 justify-center">
-                    Serviços
-                  </Button>
-                  <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="flex-1 justify-center">
-                    Orçamento
-                  </Button>
-                </div>
-                {/* Desktop: coluna, texto completo */}
+                {/* Desktop CTAs — ocultos no mobile */}
                 <div className="hidden sm:flex flex-row gap-3 mt-14">
                   <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
                     Solicitar orçamento
@@ -346,38 +341,55 @@ export default function HomePage() {
                   </Button>
                 </div>
 
+                <p className="hidden sm:block mt-3 text-xs text-white/35">
+                  Informe data, horário, trajeto e quantidade de passageiros.
+                </p>
+              </div>
+
+              {/* ── Grupo BASE: botões mobile ── */}
+              <div className="sm:hidden">
+                <div className="flex flex-row gap-3">
+                  <Button variant="secondary" size="lg" href="#servicos" className="flex-1 justify-center">
+                    Serviços
+                  </Button>
+                  <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="flex-1 justify-center">
+                    Orçamento
+                  </Button>
+                </div>
                 <p className="mt-3 text-xs text-white/35">
                   Informe data, horário, trajeto e quantidade de passageiros.
                 </p>
               </div>
+
             </div>
           </div>
 
-          {/* ── Barra de features (glass) ── */}
-          <div className="relative z-10 w-full">
-            <div className="bg-white/5 backdrop-blur-md border-t border-white/10">
-              <div className="container-st py-4">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
-                  {[
-                    { icon: <Clock className="w-5 h-5" />, title: "Atendimento 24h", sub: "Todos os dias da semana" },
-                    { icon: <ShieldCheck className="w-5 h-5" />, title: "Segurança e Pontualidade", sub: "Compromisso com seu tempo" },
-                    { icon: <Users className="w-5 h-5" />, title: "Motoristas Profissionais", sub: "Experientes e certificados" },
-                    { icon: <Car className="w-5 h-5" />, title: "Frota Premium", sub: "Vans e carros executivos" },
-                    { icon: <MapPin className="w-5 h-5" />, title: "Atuação em Brasília", sub: "E região do DF" },
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                      <div className="text-gold-400 shrink-0">{item.icon}</div>
-                      <div>
-                        <p className="text-sm font-semibold text-surface-white leading-tight">{item.title}</p>
-                        <p className="text-xs text-white/50 mt-0.5">{item.sub}</p>
-                      </div>
+        </section>
+
+        {/* ── Barra de features ── */}
+        <div className="relative z-20 -mt-[6vh] sm:mt-0">
+          <div className="bg-navy-950 sm:bg-white/5 sm:backdrop-blur-md border-t border-white/10">
+            <div className="container-st py-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+                {[
+                  { icon: <Clock className="w-5 h-5" />, title: "Atendimento 24h", sub: "Todos os dias da semana" },
+                  { icon: <ShieldCheck className="w-5 h-5" />, title: "Segurança e Pontualidade", sub: "Compromisso com seu tempo" },
+                  { icon: <Users className="w-5 h-5" />, title: "Motoristas Profissionais", sub: "Experientes e certificados" },
+                  { icon: <Car className="w-5 h-5" />, title: "Frota Premium", sub: "Vans e carros executivos" },
+                  { icon: <MapPin className="w-5 h-5" />, title: "Atuação em Brasília", sub: "E região do DF" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 lg:px-6 first:lg:pl-0 last:lg:pr-0">
+                    <div className="text-gold-400 shrink-0">{item.icon}</div>
+                    <div>
+                      <p className="text-sm font-semibold text-surface-white leading-tight">{item.title}</p>
+                      <p className="text-xs text-white/50 mt-0.5">{item.sub}</p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* ══════════════════════════════════
             2. LOGOS DE CLIENTES
