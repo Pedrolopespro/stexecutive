@@ -368,7 +368,7 @@ export default function HomePage() {
 
         {/* ── Barra de features ── */}
         <div className="relative z-20 -mt-[6vh] sm:mt-0">
-          <div className="bg-navy-950 sm:bg-white/5 sm:backdrop-blur-md border-t border-white/10">
+          <div className="bg-navy-950 border-t border-white/10">
             <div className="container-st py-4">
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
                 {[
