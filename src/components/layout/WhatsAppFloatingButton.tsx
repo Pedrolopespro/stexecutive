@@ -43,7 +43,7 @@ export default function WhatsAppFloatingButton() {
         ].join(" ")}
       >
         <img src="/images/icons/whatsapp.svg" alt="WhatsApp" className="w-5 h-5 shrink-0" />
-        <span className="text-sm font-semibold hidden sm:inline">
+        <span className="text-sm font-semibold">
           Atendimento imediato
         </span>
       </a>
