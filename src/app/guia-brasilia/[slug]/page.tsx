@@ -269,8 +269,8 @@ export default async function GuiaArtigoPage({
       <WhatsAppFloatingButton />
 
       {/* ── Hero ── */}
-      <section style={{ paddingTop: "80px" }}>
-        <div style={{ position: "relative", height: "clamp(280px, 40vw, 480px)" }}>
+      <section>
+        <div style={{ position: "relative", height: "clamp(360px, 50vw, 560px)" }}>
           <Image
             src={artigo.image}
             alt={artigo.imageAlt}
@@ -295,6 +295,7 @@ export default async function GuiaArtigoPage({
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-end",
+              paddingTop: "80px",
               paddingBottom: "48px",
             }}
           >
@@ -335,14 +336,7 @@ export default async function GuiaArtigoPage({
       {/* ── Article body ── */}
       <section style={{ background: "#FFFFFF", padding: "56px 0 80px" }}>
         <div className="container-st">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "minmax(0,1fr) 300px",
-              gap: "64px",
-              alignItems: "start",
-            }}
-          >
+          <div className="guia-article-grid">
             {/* Main content */}
             <div style={{ maxWidth: "720px" }}>
               {/* Lead */}
@@ -367,15 +361,7 @@ export default async function GuiaArtigoPage({
             </div>
 
             {/* Sidebar */}
-            <aside
-              style={{
-                position: "sticky",
-                top: "100px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "24px",
-              }}
-            >
+            <aside className="guia-sidebar">
               {/* Service CTA */}
               {artigo.relatedServiceHref && (
                 <div
