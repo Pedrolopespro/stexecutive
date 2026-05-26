@@ -112,6 +112,7 @@ const SERVICES = [
 const FLEET = [
   {
     src: "/images/content/van.png",
+    imgPos: "object-center",
     label: "Van Executiva em Brasília",
     capacity: "15 a 20 passageiros",
     model: "Mercedes-Benz Sprinter",
@@ -120,6 +121,7 @@ const FLEET = [
   },
   {
     src: "/images/content/mini van.png",
+    imgPos: "object-center",
     label: "Mini Van Executiva",
     capacity: "7 a 8 passageiros",
     model: "Mercedes-Benz Vito ou similar",
@@ -128,6 +130,7 @@ const FLEET = [
   },
   {
     src: "/images/content/seda executivo.png",
+    imgPos: "object-center",
     label: "Sedan Executivo",
     capacity: "3 a 4 passageiros",
     model: "Toyota Corolla ou similar",
@@ -136,6 +139,7 @@ const FLEET = [
   },
   {
     src: "/images/content/commander.png",
+    imgPos: "object-center",
     label: "SUV Executiva",
     capacity: "4 a 6 passageiros",
     model: "Jeep Commander ou similar",
@@ -144,6 +148,7 @@ const FLEET = [
   },
   {
     src: "/images/content/micro onibus.png",
+    imgPos: "object-center",
     label: "Micro-ônibus Executivo",
     capacity: "20 a 30 passageiros",
     model: "Capacidade varia conforme configuração",
@@ -152,6 +157,7 @@ const FLEET = [
   },
   {
     src: "/images/content/onibus.png",
+    imgPos: "[object-position:50%_60%]",
     label: "Ônibus Executivo",
     capacity: "42 a 56 passageiros",
     model: "Ônibus padrão ou Double Decker",
@@ -537,11 +543,11 @@ export default function HomePage() {
                   className="group rounded-2xl overflow-hidden bg-navy-800 border border-white/8 hover:border-gold-400/30 transition-all duration-300 flex flex-col"
                 >
                   {/* Imagem */}
-                  <div className="bg-navy-900 overflow-hidden shrink-0">
+                  <div className="bg-navy-900 overflow-hidden shrink-0 h-80">
                     <img
                       src={v.src}
                       alt={`${v.label} — transporte executivo em Brasília`}
-                      className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full object-cover ${v.imgPos} group-hover:scale-105 transition-transform duration-500`}
                     />
                   </div>
 
