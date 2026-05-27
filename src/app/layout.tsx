@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "ST Executive",
     images: [
       {
-        url: "https://stexecutive.com.br/images/content/hero%20site.png",
+        url: "https://stexecutive.com.br/images/content/social.jpeg",
         width: 1200,
         height: 630,
         alt: "ST Executive — Transporte Executivo em Brasília",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Transporte Executivo em Brasília | ST Executive",
     description:
       "Transporte executivo em Brasília para empresas, eventos, grupos, embaixadas e transfer aeroporto.",
-    images: ["https://stexecutive.com.br/images/content/hero%20site.png"],
+    images: ["https://stexecutive.com.br/images/content/social.jpeg"],
   },
 };
 
