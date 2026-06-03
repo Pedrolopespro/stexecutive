@@ -1,5 +1,5 @@
 import React from "react";
-import { AtSign, MapPin, Phone, MessageCircle, Instagram } from "lucide-react";
+import { AtSign, MapPin, Phone, MessageCircle } from "lucide-react";
 import { SERVICE_PAGES, GUIA_BRASILIA_PATH, WHATSAPP_URL } from "@/lib/constants";
 
 export default function Footer() {
@@ -106,7 +106,11 @@ export default function Footer() {
                 <span>Brasília — DF</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/60">
-                <Instagram className="w-4 h-4 text-gold-500 shrink-0" />
+                <svg className="w-4 h-4 text-gold-500 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                </svg>
                 <a
                   href="https://instagram.com/stexecutive"
                   target="_blank"
