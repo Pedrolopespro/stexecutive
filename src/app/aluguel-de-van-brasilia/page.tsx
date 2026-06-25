@@ -132,7 +132,7 @@ export default function AluguelDeVanBrasiliaPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/van wild.png"
+              src="/images/content/van wild.webp"
               alt="Aluguel de van executiva em Brasília com motorista — ST Executive"
               className="w-full h-full object-cover object-center"
             />
@@ -339,7 +339,7 @@ export default function AluguelDeVanBrasiliaPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { src: "/van executiva content/van 02.jpeg", alt: "Van executiva ST Executive em Brasília" },
-                { src: "/images/content/van 06.jpg", alt: "Transporte executivo para grupos em Brasília" },
+                { src: "/images/content/van 06.webp", alt: "Transporte executivo para grupos em Brasília" },
                 { src: "/van executiva content/van 04.jpeg", alt: "Van com motorista profissional Brasília" },
               ].map((img, i) => (
                 <div key={i} className="rounded-2xl overflow-hidden aspect-[4/3] shadow-soft">

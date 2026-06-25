@@ -19,20 +19,20 @@ export const IMAGES = {
   },
 
   content: {
-    hero: "/images/content/hero site.png",
-    heroMobile: "/images/content/hero site mobile.png",
-    passenger1: "/images/content/PASSAGEIRO 01.png",
-    passenger2: "/images/content/PASSAGEIRO 02.png",
-    passenger3: "/images/content/PASSAGEIRO 03.png",
+    hero: "/images/content/hero site.webp",
+    heroMobile: "/images/content/hero site mobile.webp",
+    passenger1: "/images/content/PASSAGEIRO 01.webp",
+    passenger2: "/images/content/PASSAGEIRO 02.webp",
+    passenger3: "/images/content/PASSAGEIRO 03.webp",
   },
 
   fleet: {
     van: "/images/content/van.webp",
-    miniVan: "/images/content/mini van.png",
+    miniVan: "/images/content/mini van.webp",
     bus: "/images/content/onibus.webp",
-    sedanBlindada: "/images/content/sedan blindada .png",
-    sedaExecutivo: "/images/content/seda executivo.png",
-    royalTulip: "/images/content/roayl tulip.png",
+    sedanBlindada: "/images/content/sedan blindada .webp",
+    sedaExecutivo: "/images/content/seda executivo.webp",
+    royalTulip: "/images/content/roayl tulip.webp",
     commanders: "/images/content/commander.webp",
   },
 

@@ -114,7 +114,7 @@ export default function TransferAeroportoPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/aeroporto wild.png"
+              src="/images/content/aeroporto wild.webp"
               alt="Transfer aeroporto Brasília com motorista — ST Executive"
               className="w-full h-full object-cover object-center"
             />
@@ -323,7 +323,7 @@ export default function TransferAeroportoPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-premium aspect-[4/3]">
                 <img
-                  src="/images/content/PASSAGEIRO 02.png"
+                  src="/images/content/PASSAGEIRO 02.webp"
                   alt="Van executiva para transfer aeroporto Brasília"
                   className="w-full h-full object-cover"
                 />

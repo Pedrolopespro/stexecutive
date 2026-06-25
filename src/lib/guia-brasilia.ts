@@ -47,7 +47,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     title: "Primeira vez em Brasília: guia com dicas de chegada, hospedagem e deslocamento",
     summary:
       "Visitar Brasília pela primeira vez? Entenda como a cidade funciona, onde ficar, como chegar pelo Aeroporto JK e como planejar os deslocamentos.",
-    image: "/images/content/aeroporto wild.png",
+    image: "/images/content/aeroporto wild.webp",
     imageAlt: "Aeroporto Internacional de Brasília JK — chegada e desembarque",
     relatedSlugs: ["onde-ficar-em-brasilia", "o-que-fazer-em-brasilia-em-poucas-horas", "viagem-a-trabalho-para-brasilia"],
     relatedServiceHref: "/transfer-aeroporto-brasilia",
@@ -180,7 +180,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     title: "Onde ficar em Brasília: como escolher hotel pensando em localização e deslocamento",
     summary:
       "A localização do hotel pode facilitar ou dificultar toda a sua agenda em Brasília. Veja como escolher a melhor região conforme o objetivo da viagem.",
-    image: "/images/content/hero site.png",
+    image: "/images/content/hero site.webp",
     imageAlt: "Brasília — vista aérea com Esplanada dos Ministérios ao fundo",
     relatedSlugs: ["primeira-vez-em-brasilia", "eventos-em-brasilia", "viagem-a-trabalho-para-brasilia"],
     relatedServiceHref: "/transfer-aeroporto-brasilia",
@@ -268,7 +268,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     title: "Viagem a trabalho para Brasília: guia de hotéis, reuniões e deslocamento",
     summary:
       "A capital recebe executivos, advogados e equipes corporativas todos os dias. Veja como planejar chegada, hotel, reuniões e logística para uma agenda produtiva.",
-    image: "/images/content/SUV wild.png",
+    image: "/images/content/SUV wild.webp",
     imageAlt: "SUV executivo em Brasília para viagem corporativa — ST Executive",
     relatedSlugs: ["onde-ficar-em-brasilia", "eventos-em-brasilia"],
     relatedServiceHref: "/transporte-executivo-brasilia",
@@ -378,7 +378,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     title: "Eventos em Brasília: guia para planejar chegada, hotel e deslocamento",
     summary:
       "Brasília recebe congressos, feiras, eventos corporativos e institucionais durante todo o ano. Veja como planejar logística, hospedagem e transporte para participar sem imprevistos.",
-    image: "/images/content/van wild.png",
+    image: "/images/content/van wild.webp",
     imageAlt: "Van executiva para eventos em Brasília — ST Executive",
     relatedSlugs: ["onde-ficar-em-brasilia", "viagem-a-trabalho-para-brasilia"],
     relatedServiceHref: "/van-para-eventos-brasilia",
@@ -473,7 +473,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     title: "O que fazer em Brasília em poucas horas: roteiro rápido para visitantes",
     summary:
       "Entre reuniões ou antes do voo de volta? Com planejamento é possível conhecer os principais cartões-postais de Brasília mesmo em pouco tempo.",
-    image: "/images/content/corolla wild.png",
+    image: "/images/content/corolla wild.webp",
     imageAlt: "Roteiro turístico em Brasília — pontos turísticos e deslocamento",
     relatedSlugs: ["primeira-vez-em-brasilia", "onde-ficar-em-brasilia"],
     relatedServiceHref: "/city-tour-brasilia",

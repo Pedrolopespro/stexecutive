@@ -119,7 +119,7 @@ export default function TransporteExecutivoPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/SUV wild.png"
+              src="/images/content/SUV wild.webp"
               alt="Transporte executivo em Brasília — ST Executive"
               className="w-full h-full object-cover object-center"
             />
@@ -240,7 +240,7 @@ export default function TransporteExecutivoPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-premium aspect-[4/3]">
                 <img
-                  src="/images/content/seda executivo.png"
+                  src="/images/content/seda executivo.webp"
                   alt="Frota executiva ST Executive em Brasília"
                   className="w-full h-full object-cover"
                 />

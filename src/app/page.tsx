@@ -120,7 +120,7 @@ const FLEET = [
     href: "/aluguel-de-van-brasilia",
   },
   {
-    src: "/images/content/mini van.png",
+    src: "/images/content/mini van.webp",
     imgPos: "object-center",
     label: "Mini Van Executiva",
     capacity: "7 a 8 passageiros",
@@ -129,7 +129,7 @@ const FLEET = [
     href: "/contato",
   },
   {
-    src: "/images/content/seda executivo.png",
+    src: "/images/content/seda executivo.webp",
     imgPos: "object-center",
     label: "Sedan Executivo",
     capacity: "3 a 4 passageiros",
@@ -147,7 +147,7 @@ const FLEET = [
     href: "/transporte-executivo-brasilia",
   },
   {
-    src: "/images/content/micro onibus.png",
+    src: "/images/content/micro onibus.webp",
     imgPos: "object-center",
     label: "Micro-ônibus Executivo",
     capacity: "20 a 30 passageiros",
@@ -259,11 +259,11 @@ const FAQ_ITEMS = [
 
 const CLIENT_LOGOS = [
   { src: "/images/cliente/Samsung_Orig_Wordmark_BLACK_RGB.webp", alt: "Samsung" },
-  { src: "/images/cliente/katty peery.png", alt: "Katy Perry" },
-  { src: "/images/cliente/guns and rose.png", alt: "Guns N' Roses" },
-  { src: "/images/cliente/gov rj.png", alt: "Governo do Estado do Rio de Janeiro" },
+  { src: "/images/cliente/katty peery.webp", alt: "Katy Perry" },
+  { src: "/images/cliente/guns and rose.webp", alt: "Guns N' Roses" },
+  { src: "/images/cliente/gov rj.webp", alt: "Governo do Estado do Rio de Janeiro" },
   { src: "/images/cliente/ws-logo.webp", alt: "Wesley Safadão" },
-  { src: "/images/cliente/emb argentina.png", alt: "Embajada Argentina en Brasil" },
+  { src: "/images/cliente/emb argentina.webp", alt: "Embajada Argentina en Brasil" },
 ];
 
 // ─────────────────────────────────────────────
@@ -284,7 +284,7 @@ export default function HomePage() {
             {/* Vídeo de fundo — poster = imagem mobile como fallback */}
             <video
               className="w-full h-full object-cover object-bottom sm:object-center"
-              poster="/images/content/hero site mobile.png"
+              poster="/images/content/hero site mobile.webp"
               autoPlay
               muted
               loop
@@ -293,7 +293,7 @@ export default function HomePage() {
               <source src="/images/content/veide hero.mp4" type="video/mp4" />
               {/* Fallback estático se o browser não suportar vídeo */}
               <img
-                src="/images/content/hero site.png"
+                src="/images/content/hero site.webp"
                 alt="ST Executive — Transporte executivo em Brasília"
                 className="w-full h-full object-cover object-center"
               />
@@ -482,7 +482,7 @@ export default function HomePage() {
                   controls
                   playsInline
                 >
-                  <source src="/images/content/st excutive video.mp4" type="video/mp4" />
+                  <source src="/images/content/video st vans.mp4" type="video/mp4" />
                   <img
                     src="/images/content/van.webp"
                     alt="Van executiva ST Executive"
