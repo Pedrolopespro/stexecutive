@@ -279,7 +279,7 @@ export default function VanParaEventosPage() {
               {/* Imagem */}
               <div className="relative rounded-2xl overflow-hidden shadow-premium aspect-[4/3]">
                 <img
-                  src="/images/content/van.png"
+                  src="/images/content/van.webp"
                   alt="Van executiva para eventos em Brasília"
                   className="w-full h-full object-cover"
                 />

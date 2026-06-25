@@ -40,7 +40,7 @@ export default function GuiaBrasiliaPage() {
       <section style={{ position: "relative", height: "clamp(380px, 50vw, 560px)" }}>
         {/* Imagem de fundo */}
         <Image
-          src="/images/content/brasilia.jpg"
+          src="/images/content/brasilia.webp"
           alt="Vista aérea de Brasília — Guia da capital federal"
           fill
           priority

@@ -111,7 +111,7 @@ const SERVICES = [
 
 const FLEET = [
   {
-    src: "/images/content/van.png",
+    src: "/images/content/van.webp",
     imgPos: "object-center",
     label: "Van Executiva em Brasília",
     capacity: "15 a 20 passageiros",
@@ -138,7 +138,7 @@ const FLEET = [
     href: "/transporte-executivo-brasilia",
   },
   {
-    src: "/images/content/commander.png",
+    src: "/images/content/commander.webp",
     imgPos: "object-center",
     label: "SUV Executiva",
     capacity: "4 a 6 passageiros",
@@ -156,7 +156,7 @@ const FLEET = [
     href: "/van-para-eventos-brasilia",
   },
   {
-    src: "/images/content/onibus.png",
+    src: "/images/content/onibus.webp",
     imgPos: "[object-position:50%_60%]",
     label: "Ônibus Executivo",
     capacity: "42 a 56 passageiros",
@@ -258,11 +258,11 @@ const FAQ_ITEMS = [
 ];
 
 const CLIENT_LOGOS = [
-  { src: "/images/cliente/Samsung_Orig_Wordmark_BLACK_RGB.png", alt: "Samsung" },
+  { src: "/images/cliente/Samsung_Orig_Wordmark_BLACK_RGB.webp", alt: "Samsung" },
   { src: "/images/cliente/katty peery.png", alt: "Katy Perry" },
   { src: "/images/cliente/guns and rose.png", alt: "Guns N' Roses" },
   { src: "/images/cliente/gov rj.png", alt: "Governo do Estado do Rio de Janeiro" },
-  { src: "/images/cliente/ws-logo.png", alt: "Wesley Safadão" },
+  { src: "/images/cliente/ws-logo.webp", alt: "Wesley Safadão" },
   { src: "/images/cliente/emb argentina.png", alt: "Embajada Argentina en Brasil" },
 ];
 
@@ -475,7 +475,7 @@ export default function HomePage() {
               <div className="relative rounded-2xl overflow-hidden shadow-premium bg-navy-950" style={{ aspectRatio: "4/5" }}>
                 <video
                   className="w-full h-full object-cover"
-                  poster="/images/content/van.png"
+                  poster="/images/content/van.webp"
                   autoPlay
                   muted
                   loop
@@ -484,7 +484,7 @@ export default function HomePage() {
                 >
                   <source src="/images/content/st excutive video.mp4" type="video/mp4" />
                   <img
-                    src="/images/content/van.png"
+                    src="/images/content/van.webp"
                     alt="Van executiva ST Executive"
                     className="w-full h-full object-cover"
                   />
@@ -803,7 +803,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-card">
                   <img
-                    src="/images/content/stquemsomos.jpeg"
+                    src="/images/content/stquemsomos.webp"
                     alt="ST Executive — Transporte executivo em Brasília desde 2011"
                     className="w-full h-72 sm:h-96 object-cover object-center"
                   />

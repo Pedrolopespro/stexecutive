@@ -27,13 +27,13 @@ export const IMAGES = {
   },
 
   fleet: {
-    van: "/images/content/van.png",
+    van: "/images/content/van.webp",
     miniVan: "/images/content/mini van.png",
-    bus: "/images/content/onibus.png",
+    bus: "/images/content/onibus.webp",
     sedanBlindada: "/images/content/sedan blindada .png",
     sedaExecutivo: "/images/content/seda executivo.png",
     royalTulip: "/images/content/roayl tulip.png",
-    commanders: "/images/content/commander.png",
+    commanders: "/images/content/commander.webp",
   },
 
   icons: {
