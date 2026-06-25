@@ -289,6 +289,7 @@ export default function HomePage() {
               muted
               loop
               playsInline
+              preload="none"
             >
               <source src="/images/content/veide hero.mp4" type="video/mp4" />
               {/* Fallback estático se o browser não suportar vídeo */}
@@ -487,6 +488,7 @@ export default function HomePage() {
                   loop
                   controls
                   playsInline
+                  preload="none"
                 >
                   <source src="/images/content/video st vans.mp4" type="video/mp4" />
                   <img
