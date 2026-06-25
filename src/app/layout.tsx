@@ -61,9 +61,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5GVMZZQJ');`,
           }}
         />
-        {/* Google Ads */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18160577429" />
+        {/* Google Ads — carregado com defer para não bloquear renderização */}
+        <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-18160577429" />
         <script
+          defer
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -174,6 +175,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               ]
             })
           }}
+        />
+        {/* Preload LCP — hero poster (mobile e desktop) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/content/hero site mobile.webp"
+          type="image/webp"
+          // @ts-ignore
+          media="(max-width: 639px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/content/hero site.webp"
+          type="image/webp"
+          // @ts-ignore
+          media="(min-width: 640px)"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

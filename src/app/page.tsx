@@ -296,6 +296,9 @@ export default function HomePage() {
                 src="/images/content/hero site.webp"
                 alt="ST Executive — Transporte executivo em Brasília"
                 className="w-full h-full object-cover object-center"
+                fetchPriority="high"
+                width={1920}
+                height={1080}
               />
             </video>
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/88 via-navy-950/65 to-navy-950/80" />
@@ -412,6 +415,9 @@ export default function HomePage() {
                     src={logo.src}
                     alt={logo.alt}
                     className="h-full w-auto object-contain opacity-40 brightness-200 grayscale hover:opacity-65 transition-opacity duration-300"
+                    loading="lazy"
+                    width={160}
+                    height={28}
                   />
                 </div>
               ))}
@@ -487,6 +493,9 @@ export default function HomePage() {
                     src="/images/content/van.webp"
                     alt="Van executiva ST Executive"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={600}
+                    height={750}
                   />
                 </video>
               </div>
@@ -548,6 +557,9 @@ export default function HomePage() {
                       src={v.src}
                       alt={`${v.label} — transporte executivo em Brasília`}
                       className={`w-full h-full object-cover ${v.imgPos} group-hover:scale-105 transition-transform duration-500`}
+                      loading="lazy"
+                      width={600}
+                      height={320}
                     />
                   </div>
 
@@ -806,6 +818,9 @@ export default function HomePage() {
                     src="/images/content/stquemsomos.webp"
                     alt="ST Executive — Transporte executivo em Brasília desde 2011"
                     className="w-full h-72 sm:h-96 object-cover object-center"
+                    loading="lazy"
+                    width={800}
+                    height={384}
                   />
                 </div>
                 {/* Badge sobreposto */}
