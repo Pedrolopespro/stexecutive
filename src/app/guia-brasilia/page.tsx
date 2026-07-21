@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     "viagem a trabalho brasília",
     "o que fazer em brasília",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/guia-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────

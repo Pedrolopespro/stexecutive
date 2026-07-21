@@ -39,6 +39,9 @@ export async function generateMetadata({
     title: artigo.metaTitle,
     description: artigo.metaDescription,
     keywords: artigo.keywords,
+    alternates: {
+      canonical: `https://stexecutive.com.br/guia-brasilia/${slug}/`,
+    },
     openGraph: {
       title: artigo.metaTitle,
       description: artigo.metaDescription,
