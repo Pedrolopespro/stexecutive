@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "transporte para empresas brasília",
     "transporte vip brasília",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/transporte-executivo-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────
@@ -175,6 +178,56 @@ export default function TransporteExecutivoPage() {
                 conforto e um padrão profissional no atendimento — amplamente utilizado por
                 empresas, executivos e eventos corporativos.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════
+            POR QUE BRASÍLIA — conteúdo local
+        ══════════════════════════════════ */}
+        <section className="section-padding bg-surface-white border-b border-gray-200/50">
+          <div className="container-st">
+            <div className="max-w-3xl mx-auto">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                Contexto
+              </p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-5">
+                Por que Brasília exige transporte executivo?
+              </h2>
+              <div className="flex flex-col gap-4 text-base leading-relaxed text-gray-600">
+                <p>
+                  Brasília concentra a sede dos três Poderes, mais de 80 embaixadas estrangeiras
+                  e o maior calendário de eventos corporativos e congressos do país. É uma cidade
+                  movimentada por executivos, autoridades, delegações internacionais e empresas
+                  que operam em alto padrão.
+                </p>
+                <p>
+                  Nesse ambiente, o transporte comum não atende ao nível de exigência do mercado.
+                  Empresas, embaixadas e eventos de alto padrão precisam de mobilidade que combine
+                  pontualidade rigorosa, discrição e representatividade — características que
+                  aplicativos de transporte não conseguem garantir de forma consistente.
+                </p>
+                <p>
+                  É exatamente esse o papel do transporte executivo em Brasília: cada deslocamento
+                  deve refletir o nível de quem contrata — com motorista uniformizado, veículo
+                  adequado e operação planejada do início ao fim.
+                </p>
+              </div>
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { number: "80+", label: "Embaixadas atendidas na capital" },
+                  { number: "3", label: "Poderes com demanda constante de mobilidade" },
+                  { number: "100%", label: "DF coberto pela frota ST Executive" },
+                ].map((stat, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col items-center text-center p-5 rounded-2xl border border-gold-400/20 bg-gold-400/5"
+                  >
+                    <span className="text-3xl font-extrabold text-gold-500 mb-1">{stat.number}</span>
+                    <span className="text-xs text-gray-500 leading-snug">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

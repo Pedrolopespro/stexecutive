@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   verification: {
     google: "ejiWTOXEFJ1GCK3Ezg1M6DiewNW7EbTiRWuTNddwc1Q",
   },
-  title: "Transporte Executivo em Brasília | ST Executive",
+  title: "Transporte Executivo em Brasília | SUV e Van com Motorista — ST Executive",
   description:
-    "Transporte executivo em Brasília para empresas, eventos, grupos, embaixadas e transfer aeroporto. Vans, SUVs executivas e motoristas profissionais.",
+    "Transporte executivo em Brasília com motorista profissional. SUVs e vans para empresas, embaixadas, eventos e transfer aeroporto. Solicite orçamento no WhatsApp.",
   keywords: [
     "transporte executivo brasília",
     "vans executivas brasília",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    title: "Transporte Executivo em Brasília | ST Executive",
+    title: "Transporte Executivo em Brasília | SUV e Van com Motorista — ST Executive",
     description:
-      "Transporte executivo em Brasília para empresas, eventos, grupos, embaixadas e transfer aeroporto. Vans, SUVs executivas e motoristas profissionais.",
+      "Transporte executivo em Brasília com motorista profissional. SUVs e vans para empresas, embaixadas, eventos e transfer aeroporto. Solicite orçamento no WhatsApp.",
     siteName: "ST Executive",
     images: [
       {
@@ -46,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transporte Executivo em Brasília | ST Executive",
+    title: "Transporte Executivo em Brasília | SUV e Van com Motorista — ST Executive",
     description:
-      "Transporte executivo em Brasília para empresas, eventos, grupos, embaixadas e transfer aeroporto.",
+      "Transporte executivo em Brasília com motorista profissional. SUVs e vans para empresas, embaixadas, eventos e transfer aeroporto.",
     images: ["https://stexecutive.com.br/images/content/social.jpeg"],
   },
 };

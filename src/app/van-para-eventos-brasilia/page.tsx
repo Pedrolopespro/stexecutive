@@ -16,17 +16,21 @@ import { WHATSAPP_URL } from "@/lib/constants";
 // ─────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Van para Eventos em Brasília | Transporte para Grupos — ST Executive",
+  title: "Van para Eventos em Brasília com Motorista | Grupos — ST Executive",
   description:
-    "Van para eventos em Brasília com motorista. Ideal para casamentos, shows e empresas. Solicite orçamento rápido via WhatsApp.",
+    "Van para eventos em Brasília com motorista profissional. Casamentos, eventos corporativos, shows e grupos. Orçamento rápido via WhatsApp.",
   keywords: [
     "van para eventos brasília",
+    "van com motorista brasília",
     "transporte para casamento brasília",
     "transporte para eventos DF",
     "van com motorista eventos brasília",
     "aluguel van eventos brasília",
     "transporte grupos brasília",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/van-para-eventos-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────
