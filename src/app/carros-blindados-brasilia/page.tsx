@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "transporte blindado brasília",
     "segurança executiva brasília",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/carros-blindados-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────

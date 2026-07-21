@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "van para grupos brasília",
     "van executiva com motorista",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/aluguel-de-van-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────

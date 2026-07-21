@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "ônibus executivo df",
     "transporte grandes grupos brasília",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/onibus-executivo-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────

@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "passeio brasília executivo",
     "city tour df",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/city-tour-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────

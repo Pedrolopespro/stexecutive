@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "transporte aeroporto brasília",
     "van aeroporto brasília motorista",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/transfer-aeroporto-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────

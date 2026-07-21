@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "minivan para grupos brasília",
     "minivan executiva com motorista",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/minivan-executiva-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────

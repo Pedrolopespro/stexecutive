@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "micro-ônibus executivo df",
     "transporte de grupos brasília",
   ],
+  alternates: {
+    canonical: "https://stexecutive.com.br/micro-onibus-executivo-brasilia/",
+  },
 };
 
 // ─────────────────────────────────────────────
