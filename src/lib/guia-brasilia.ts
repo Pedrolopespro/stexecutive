@@ -458,6 +458,126 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
 
   // ── Artigo 5 ────────────────────────────────
   {
+    slug: "aluguel-de-micro-onibus-em-brasilia",
+    metaTitle: "Aluguel de micro-ônibus em Brasília: como contratar para grupos e eventos",
+    metaDescription:
+      "Precisa alugar um micro-ônibus em Brasília? Veja quando usar, quantas pessoas cabem, como contratar e por que o transporte executivo é a melhor opção para grupos.",
+    keywords: [
+      "aluguel de micro-ônibus em Brasília",
+      "micro-ônibus para grupos Brasília",
+      "fretamento micro-ônibus Brasília",
+      "transporte para grupos Brasília",
+      "micro-ônibus executivo Brasília",
+      "van ou micro-ônibus Brasília",
+    ],
+    title: "Aluguel de micro-ônibus em Brasília: quando usar, capacidade e como contratar",
+    summary:
+      "Precisando transportar um grupo em Brasília? O micro-ônibus é ideal para equipes corporativas, congressos, traslados e eventos. Veja como funciona e quando vale a pena.",
+    image: "/images/content/van wild.webp",
+    imageAlt: "Micro-ônibus executivo para grupos em Brasília — ST Executive",
+    relatedSlugs: ["eventos-em-brasilia", "viagem-a-trabalho-para-brasilia", "primeira-vez-em-brasilia"],
+    relatedServiceHref: "/micro-onibus-executivo-brasilia",
+    relatedServiceLabel: "Micro-ônibus executivo em Brasília",
+    content: [
+      {
+        type: "paragraph",
+        text: "Quando o grupo tem mais de 7 pessoas, uma van já pode não ser suficiente. O micro-ônibus entra como solução intermediária: acomoda entre 15 e 25 passageiros com mais conforto e espaço do que veículos menores.",
+      },
+      {
+        type: "paragraph",
+        text: "Em Brasília, o aluguel de micro-ônibus é muito utilizado para traslados de eventos, transporte de equipes corporativas, grupos em congressos, excursões, formaturas e deslocamentos institucionais.",
+      },
+      { type: "h2", text: "Quando o micro-ônibus é a melhor opção" },
+      {
+        type: "paragraph",
+        text: "Nem sempre é fácil decidir entre van, micro-ônibus ou ônibus. Em geral, o micro-ônibus faz sentido quando:",
+      },
+      {
+        type: "list",
+        items: [
+          "O grupo tem entre 10 e 25 pessoas",
+          "A viagem exige conforto e bagagem",
+          "O destino tem acesso restrito a veículos grandes",
+          "A empresa quer manter o grupo unido durante o deslocamento",
+          "O evento exige pontualidade e imagem profissional",
+        ],
+      },
+      { type: "h2", text: "Capacidade do micro-ônibus" },
+      {
+        type: "paragraph",
+        text: "A capacidade varia conforme o modelo. Os micro-ônibus executivos mais comuns em Brasília acomodam entre 15 e 25 passageiros sentados. Alguns modelos têm ar-condicionado, poltronas reclináveis, tomadas USB e bagageiro.",
+      },
+      {
+        type: "table",
+        headers: ["Veículo", "Capacidade aproximada", "Indicado para"],
+        rows: [
+          ["Van executiva", "7 a 10 passageiros", "Grupos pequenos, traslados, aeroporto"],
+          ["Micro-ônibus", "15 a 25 passageiros", "Grupos médios, eventos, excursões corporativas"],
+          ["Ônibus executivo", "30 a 46 passageiros", "Grandes grupos, congressos, eventos"],
+        ],
+      },
+      { type: "h2", text: "Usos mais comuns em Brasília" },
+      {
+        type: "list",
+        items: [
+          "Traslado de equipes entre aeroporto e hotel",
+          "Transporte de convidados para eventos corporativos",
+          "Deslocamento de grupos durante congressos e feiras",
+          "Excursões corporativas e city tour",
+          "Transporte de alunos, colaboradores ou delegações",
+          "Recepção de palestrantes e autoridades",
+        ],
+      },
+      { type: "h2", text: "Vantagens de contratar micro-ônibus executivo" },
+      {
+        type: "paragraph",
+        text: "Usar um micro-ônibus agendado em vez de vários carros por aplicativo tem vantagens práticas: o grupo chega junto, no mesmo horário, sem risco de alguém se perder ou se atrasar. Para eventos com horário definido, isso evita imprevistos.",
+      },
+      {
+        type: "list",
+        items: [
+          "Grupo unido e no mesmo veículo",
+          "Motorista profissional e pontual",
+          "Horário agendado com antecedência",
+          "Sem dependência de aplicativo ou preço dinâmico",
+          "Mais espaço para bagagem e equipamentos",
+          "Imagem profissional para a empresa ou evento",
+        ],
+      },
+      { type: "h2", text: "Como funciona a contratação" },
+      {
+        type: "paragraph",
+        text: "Para contratar um micro-ônibus em Brasília, o ideal é entrar em contato com antecedência e informar: número de passageiros, local de saída, destino, data e horário. A empresa de transporte dimensiona o veículo ideal e confirma a disponibilidade.",
+      },
+      {
+        type: "paragraph",
+        text: "Evite deixar a contratação para última hora, especialmente em períodos de eventos ou alta temporada. A demanda por veículos para grupos pode ser alta e a disponibilidade limitada.",
+      },
+      { type: "h2", text: "Brasília e transporte de grupos" },
+      {
+        type: "paragraph",
+        text: "Brasília recebe muitos eventos nacionais que movimentam grupos vindos de vários estados. Para empresas e organizadores, contratar transporte para grupos é parte da logística do evento — e influencia diretamente a experiência dos participantes.",
+      },
+      { type: "h2", text: "Conclusão" },
+      {
+        type: "paragraph",
+        text: "O aluguel de micro-ônibus em Brasília é uma solução prática para grupos médios que precisam de conforto, pontualidade e organização. Para eventos, congressos, traslados ou deslocamentos corporativos, o micro-ônibus executivo garante que o grupo chegue junto e no horário.",
+      },
+      {
+        type: "faq",
+        items: [
+          { q: "Quantas pessoas cabem em um micro-ônibus?", a: "Em geral, entre 15 e 25 passageiros, dependendo do modelo e da configuração dos assentos." },
+          { q: "Qual a diferença entre van e micro-ônibus?", a: "A van acomoda até 10 passageiros. O micro-ônibus é maior e atende grupos entre 15 e 25 pessoas." },
+          { q: "Micro-ônibus tem bagageiro?", a: "A maioria dos modelos executivos tem espaço para bagagem. Confirme com a empresa no momento da contratação." },
+          { q: "Como contratar micro-ônibus em Brasília?", a: "Entre em contato com antecedência informando número de passageiros, origem, destino, data e horário." },
+          { q: "Micro-ônibus serve para city tour em Brasília?", a: "Sim, é muito utilizado para city tours corporativos, excursões de grupos e deslocamentos turísticos." },
+        ],
+      },
+    ],
+  },
+
+  // ── Artigo 6 ────────────────────────────────
+  {
     slug: "o-que-fazer-em-brasilia-em-poucas-horas",
     metaTitle: "O que fazer em Brasília em poucas horas: roteiro rápido para visitantes",
     metaDescription:
