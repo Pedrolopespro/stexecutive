@@ -13,6 +13,7 @@ import {
   getArtigosRelacionados,
   type ContentBlock,
 } from "@/lib/guia-brasilia";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 // ─────────────────────────────────────────────
 // Static params
@@ -496,7 +497,7 @@ export default async function GuiaArtigoPage({
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
             <a
-              href="https://wa.me/5561999999999"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               style={{
