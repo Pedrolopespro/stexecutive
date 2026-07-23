@@ -49,7 +49,7 @@ const SERVICES = [
       "Vans com motorista profissional para eventos, transfer aeroporto, empresas e deslocamentos planejados.",
     highlights: ["Grupos e equipes", "Eventos e congressos", "Transfer aeroporto"],
     ctaText: "Solicitar van executiva",
-    internalLink: "/aluguel-de-van-brasilia",
+    internalLink: "/aluguel-de-van-brasilia/",
     featured: true,
   },
   {
@@ -60,7 +60,7 @@ const SERVICES = [
       "SUVs executivas para reuniões, recepção de clientes, agendas corporativas e deslocamentos individuais.",
     highlights: ["Executivos e convidados", "Reuniões e agendas", "Atendimento individual"],
     ctaText: "Consultar SUV executiva",
-    internalLink: "/transporte-executivo-brasilia",
+    internalLink: "/transporte-executivo-brasilia/",
     featured: false,
   },
   {
@@ -71,7 +71,7 @@ const SERVICES = [
       "Serviço agendado para o Aeroporto de Brasília, com motorista profissional e planejamento de horário.",
     highlights: ["Embarques e desembarques", "Horário agendado", "Espaço para bagagens"],
     ctaText: "Solicitar transfer",
-    internalLink: "/transfer-aeroporto-brasilia",
+    internalLink: "/transfer-aeroporto-brasilia/",
     featured: false,
   },
   {
@@ -82,7 +82,7 @@ const SERVICES = [
       "Organização de ida, retorno e múltiplos deslocamentos para convidados, equipes, staff e participantes.",
     highlights: ["Eventos corporativos", "Shows e produções", "Ida e volta planejadas"],
     ctaText: "Orçar transporte para evento",
-    internalLink: "/van-para-eventos-brasilia",
+    internalLink: "/van-para-eventos-brasilia/",
     featured: false,
   },
   {
@@ -93,7 +93,7 @@ const SERVICES = [
       "Transporte executivo com foco em discrição, pontualidade e apresentação profissional.",
     highlights: ["Discrição e sigilo", "Pontualidade garantida", "Motorista preparado"],
     ctaText: "Falar com a equipe",
-    internalLink: "/transporte-executivo-brasilia",
+    internalLink: "/transporte-executivo-brasilia/",
     featured: false,
   },
   {
@@ -104,7 +104,7 @@ const SERVICES = [
       "Opções para operações com maior volume de passageiros, conforme disponibilidade e necessidade.",
     highlights: ["Grupos maiores", "Eventos e excursões", "Solução sob consulta"],
     ctaText: "Solicitar proposta",
-    internalLink: "/contato",
+    internalLink: "/contato/",
     featured: false,
   },
 ];
@@ -117,7 +117,7 @@ const FLEET = [
     capacity: "15 a 20 passageiros",
     model: "Mercedes-Benz Sprinter",
     desc: "Van executiva com motorista para grupos, transfer aeroporto, eventos corporativos e operações em Brasília.",
-    href: "/aluguel-de-van-brasilia",
+    href: "/aluguel-de-van-brasilia/",
   },
   {
     src: "/images/content/mini van.webp",
@@ -126,7 +126,7 @@ const FLEET = [
     capacity: "7 a 8 passageiros",
     model: "Mercedes-Benz Vito ou similar",
     desc: "Mini van executiva ideal para pequenos grupos, recepção de convidados e deslocamentos corporativos em Brasília.",
-    href: "/contato",
+    href: "/contato/",
   },
   {
     src: "/images/content/seda executivo.webp",
@@ -135,7 +135,7 @@ const FLEET = [
     capacity: "3 a 4 passageiros",
     model: "Toyota Corolla ou similar",
     desc: "Sedan executivo para reuniões, recepções de clientes, agendas corporativas e deslocamentos individuais em Brasília.",
-    href: "/transporte-executivo-brasilia",
+    href: "/transporte-executivo-brasilia/",
   },
   {
     src: "/images/content/commander.webp",
@@ -144,7 +144,7 @@ const FLEET = [
     capacity: "4 a 6 passageiros",
     model: "Jeep Commander ou similar",
     desc: "SUV executiva com espaço, conforto e discrição para executivos, convidados especiais e embaixadas em Brasília.",
-    href: "/transporte-executivo-brasilia",
+    href: "/transporte-executivo-brasilia/",
   },
   {
     src: "/images/content/micro onibus.webp",
@@ -153,7 +153,7 @@ const FLEET = [
     capacity: "20 a 30 passageiros",
     model: "Capacidade varia conforme configuração",
     desc: "Micro-ônibus executivo para grupos médios, eventos corporativos, excursões e operações planejadas em Brasília.",
-    href: "/van-para-eventos-brasilia",
+    href: "/van-para-eventos-brasilia/",
   },
   {
     src: "/images/content/onibus.webp",
@@ -162,7 +162,7 @@ const FLEET = [
     capacity: "42 a 56 passageiros",
     model: "Ônibus padrão ou Double Decker",
     desc: "Ônibus executivo para grandes grupos, shows, congressos e operações de alto volume de passageiros em Brasília.",
-    href: "/van-para-eventos-brasilia",
+    href: "/van-para-eventos-brasilia/",
   },
 ];
 

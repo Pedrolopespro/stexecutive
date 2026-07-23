@@ -13,6 +13,12 @@ out/
 .env.local
 .env.production
 
+# Ativos não utilizados arquivados (não versionar - só backup local)
+_archive-unused-assets/
+
+# Claude Code (config local da máquina)
+.claude/settings.local.json
+
 # OS
 .DS_Store
 Thumbs.db

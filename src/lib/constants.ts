@@ -19,20 +19,20 @@ export const NAV_LINKS = [
   { label: "Frota", href: "#frota" },
   { label: "Como funciona", href: "#como-funciona" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Contato", href: "/contato" },
-  { label: "Guia Brasília", href: "/guia-brasilia" },
+  { label: "Contato", href: "/contato/" },
+  { label: "Guia Brasília", href: "/guia-brasilia/" },
 ] as const;
 
 export const SERVICE_PAGES = {
-  vans: "/aluguel-de-van-brasilia",
-  transfer: "/transfer-aeroporto-brasilia",
-  executivo: "/transporte-executivo-brasilia",
-  eventos: "/van-para-eventos-brasilia",
-  minivan: "/minivan-executiva-brasilia",
-  microOnibus: "/micro-onibus-executivo-brasilia",
-  onibus: "/onibus-executivo-brasilia",
-  blindados: "/carros-blindados-brasilia",
-  cityTour: "/city-tour-brasilia",
+  vans: "/aluguel-de-van-brasilia/",
+  transfer: "/transfer-aeroporto-brasilia/",
+  executivo: "/transporte-executivo-brasilia/",
+  eventos: "/van-para-eventos-brasilia/",
+  minivan: "/minivan-executiva-brasilia/",
+  microOnibus: "/micro-onibus-executivo-brasilia/",
+  onibus: "/onibus-executivo-brasilia/",
+  blindados: "/carros-blindados-brasilia/",
+  cityTour: "/city-tour-brasilia/",
 } as const;
 
-export const GUIA_BRASILIA_PATH = "/guia-brasilia";
+export const GUIA_BRASILIA_PATH = "/guia-brasilia/";

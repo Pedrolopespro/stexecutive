@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
@@ -11,47 +12,47 @@ const SERVICE_LINKS = [
   {
     label: "Van Executiva",
     desc: "Grupos, equipes e transfer aeroporto.",
-    href: "/aluguel-de-van-brasilia",
+    href: "/aluguel-de-van-brasilia/",
   },
   {
     label: "Minivan Executiva",
     desc: "Pequenos grupos e deslocamentos VIP.",
-    href: "/minivan-executiva-brasilia",
+    href: "/minivan-executiva-brasilia/",
   },
   {
     label: "Sedan/SUV Executivo",
     desc: "Executivos e convidados especiais.",
-    href: "/transporte-executivo-brasilia",
+    href: "/transporte-executivo-brasilia/",
   },
   {
     label: "Carros Blindados",
     desc: "Segurança e discrição para autoridades.",
-    href: "/carros-blindados-brasilia",
+    href: "/carros-blindados-brasilia/",
   },
   {
     label: "Transfer Aeroporto",
     desc: "Embarques e desembarques pontuais.",
-    href: "/transfer-aeroporto-brasilia",
+    href: "/transfer-aeroporto-brasilia/",
   },
   {
     label: "Van para Eventos",
     desc: "Casamentos, shows e eventos corporativos.",
-    href: "/van-para-eventos-brasilia",
+    href: "/van-para-eventos-brasilia/",
   },
   {
     label: "Micro-ônibus Executivo",
     desc: "Grupos médios e excursões corporativas.",
-    href: "/micro-onibus-executivo-brasilia",
+    href: "/micro-onibus-executivo-brasilia/",
   },
   {
     label: "Ônibus Executivo",
     desc: "Grandes grupos e eventos de grande porte.",
-    href: "/onibus-executivo-brasilia",
+    href: "/onibus-executivo-brasilia/",
   },
   {
     label: "City Tour Brasília",
     desc: "Passeio pelos monumentos da capital.",
-    href: "/city-tour-brasilia",
+    href: "/city-tour-brasilia/",
   },
 ];
 
@@ -101,7 +102,7 @@ export default function Header() {
           <nav className="flex items-center justify-between h-16 lg:h-20">
 
             {/* Logo */}
-            <a href="/" className="flex items-center shrink-0">
+            <Link href="/" className="flex items-center shrink-0">
               <img
                 src={isScrolled ? "/images/logo/SVG/logo black.svg" : "/images/logo/SVG/logo white.svg"}
                 alt="ST Executive — Transporte Executivo em Brasília"
@@ -109,7 +110,7 @@ export default function Header() {
                 height={36}
                 className="h-8 lg:h-9 w-auto transition-all duration-[var(--motion-normal)]"
               />
-            </a>
+            </Link>
 
             {/* Desktop nav */}
             <ul className="hidden lg:flex items-center gap-1">
@@ -156,7 +157,7 @@ export default function Header() {
                         <div className="bg-surface-white rounded-2xl shadow-premium border border-gray-100 overflow-hidden p-2">
                           <div className="grid grid-cols-2 gap-0.5">
                             {SERVICE_LINKS.map((s) => (
-                              <a
+                              <Link
                                 key={s.href}
                                 href={s.href}
                                 onClick={() => setServicesOpen(false)}
@@ -166,7 +167,7 @@ export default function Header() {
                                   {s.label}
                                 </span>
                                 <span className="text-xs text-gray-500">{s.desc}</span>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -179,7 +180,7 @@ export default function Header() {
                 if (link.label === "Guia Brasília") {
                   return (
                     <li key={link.href}>
-                      <a
+                      <Link
                         href={link.href}
                         className={[
                           "px-3 py-2 rounded-lg text-sm font-semibold",
@@ -190,17 +191,27 @@ export default function Header() {
                         ].join(" ")}
                       >
                         Guia Brasília
+                      </Link>
+                    </li>
+                  );
+                }
+
+                // Links normais (hash = âncora na home, rota = navegação)
+                if (link.href.startsWith("#")) {
+                  return (
+                    <li key={link.href}>
+                      <a href={link.href} className={navLinkClass}>
+                        {link.label}
                       </a>
                     </li>
                   );
                 }
 
-                // Links normais
                 return (
                   <li key={link.href}>
-                    <a href={link.href} className={navLinkClass}>
+                    <Link href={link.href} className={navLinkClass}>
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

@@ -22,6 +22,9 @@ jobs:
       - name: Instalar dependências
         run: rm -f package-lock.json && npm install
 
+      - name: Injetar senha SMTP
+        run: sed -i "s/__SMTP_PASSWORD__/${{ secrets.SMTP_PASSWORD }}/" public/smtp-config.php
+
       - name: Build do site
         run: npm run build
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { AtSign, MapPin, Phone, MessageCircle } from "lucide-react";
 import { SERVICE_PAGES, GUIA_BRASILIA_PATH, WHATSAPP_URL } from "@/lib/constants";
 
@@ -37,12 +38,12 @@ export default function Footer() {
                 { label: "City Tour Brasília", href: SERVICE_PAGES.cityTour },
               ].map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className="text-sm text-white/60 hover:text-surface-white transition-colors duration-[var(--motion-fast)]"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -60,16 +61,27 @@ export default function Footer() {
                 { label: "Como funciona", href: "#como-funciona" },
                 { label: "FAQ", href: "#faq" },
                 { label: "Guia Brasília", href: GUIA_BRASILIA_PATH },
-              ].map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="text-sm text-white/60 hover:text-surface-white transition-colors duration-[var(--motion-fast)]"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              ].map((item) =>
+                item.href.startsWith("#") ? (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      className="text-sm text-white/60 hover:text-surface-white transition-colors duration-[var(--motion-fast)]"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-sm text-white/60 hover:text-surface-white transition-colors duration-[var(--motion-fast)]"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 

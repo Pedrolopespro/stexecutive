@@ -113,12 +113,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@graph": [
                 {
                   "@type": ["LocalBusiness", "TransportationService"],
-                  "@id": "https://www.stexecutive.com.br/#business",
+                  "@id": "https://stexecutive.com.br/#business",
                   "name": "ST Executive",
                   "alternateName": "ST Executive by Saulo Transportes",
-                  "url": "https://www.stexecutive.com.br",
-                  "logo": "https://www.stexecutive.com.br/og-image.svg",
-                  "image": "https://www.stexecutive.com.br/images/content/social.jpeg",
+                  "url": "https://stexecutive.com.br",
+                  "logo": "https://stexecutive.com.br/og-image.svg",
+                  "image": "https://stexecutive.com.br/images/content/social.jpeg",
                   "description": "A ST Executive é especializada em transporte executivo em Brasília e região. Todos os serviços são realizados exclusivamente com motorista profissional. Não realizamos locação de carros, SUVs, vans, minivans, micro-ônibus ou ônibus sem motorista. Atendemos empresas, embaixadas, eventos corporativos e transfer aeroporto.",
                   "telephone": "+55-61-99163-3714",
                   "email": "contato@stexecutive.com.br",
@@ -176,10 +176,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://www.stexecutive.com.br/#website",
-                  "url": "https://www.stexecutive.com.br",
+                  "@id": "https://stexecutive.com.br/#website",
+                  "url": "https://stexecutive.com.br",
                   "name": "ST Executive — Transporte Executivo em Brasília",
-                  "publisher": { "@id": "https://www.stexecutive.com.br/#business" }
+                  "publisher": { "@id": "https://stexecutive.com.br/#business" }
                 }
               ]
             })

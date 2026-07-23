@@ -1,3 +1,21 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.stexecutive\.com\.br [NC]
 RewriteRule ^(.*)$ https://stexecutive.com.br/$1 [R=301,L]
+
+# ── Segurança: headers ──────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# ── Segurança: bloquear acesso HTTP direto a arquivos sensíveis ──
+<FilesMatch "^(smtp-config\.php|composer\.json|composer\.lock)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_alias.c>
+  RedirectMatch 403 ^/vendor/
+</IfModule>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/lib/constants";
@@ -111,13 +112,13 @@ export default function ServiceCard({
             >
               {ctaText}
             </Button>
-            <a
+            <Link
               href={internalLink}
               className="inline-flex items-center gap-1.5 text-sm font-medium text-action-600 hover:text-action-500 transition-colors"
             >
               Saiba mais
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

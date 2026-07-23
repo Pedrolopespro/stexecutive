@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   X,
   Home,
@@ -29,15 +30,15 @@ const NAV_ICONS: Record<string, React.ReactNode> = {
 
 // ─── Sub-serviços ──────────────────────────────────────────────────────────
 const SERVICE_LINKS = [
-  { label: "Van Executiva",          href: "/aluguel-de-van-brasilia" },
-  { label: "Minivan Executiva",      href: "/minivan-executiva-brasilia" },
-  { label: "Sedan/SUV Executivo",    href: "/transporte-executivo-brasilia" },
-  { label: "Carros Blindados",       href: "/carros-blindados-brasilia" },
-  { label: "Transfer Aeroporto",     href: "/transfer-aeroporto-brasilia" },
-  { label: "Van para Eventos",       href: "/van-para-eventos-brasilia" },
-  { label: "Micro-ônibus Executivo", href: "/micro-onibus-executivo-brasilia" },
-  { label: "Ônibus Executivo",       href: "/onibus-executivo-brasilia" },
-  { label: "City Tour Brasília",     href: "/city-tour-brasilia" },
+  { label: "Van Executiva",          href: "/aluguel-de-van-brasilia/" },
+  { label: "Minivan Executiva",      href: "/minivan-executiva-brasilia/" },
+  { label: "Sedan/SUV Executivo",    href: "/transporte-executivo-brasilia/" },
+  { label: "Carros Blindados",       href: "/carros-blindados-brasilia/" },
+  { label: "Transfer Aeroporto",     href: "/transfer-aeroporto-brasilia/" },
+  { label: "Van para Eventos",       href: "/van-para-eventos-brasilia/" },
+  { label: "Micro-ônibus Executivo", href: "/micro-onibus-executivo-brasilia/" },
+  { label: "Ônibus Executivo",       href: "/onibus-executivo-brasilia/" },
+  { label: "City Tour Brasília",     href: "/city-tour-brasilia/" },
 ];
 
 interface MobileMenuProps {
@@ -83,13 +84,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         {/* ── Cabeçalho do painel ── */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-          <a href="/" onClick={onClose}>
+          <Link href="/" onClick={onClose}>
             <img
               src="/images/logo/SVG/logo black.svg"
               alt="ST Executive"
               className="h-8 w-auto"
             />
-          </a>
+          </Link>
           <button
             onClick={onClose}
             aria-label="Fechar menu"
@@ -138,14 +139,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       <ul className="py-2 pl-14 pr-5 flex flex-col gap-0">
                         {SERVICE_LINKS.map((s) => (
                           <li key={s.href}>
-                            <a
+                            <Link
                               href={s.href}
                               onClick={onClose}
                               className="flex items-center gap-2.5 py-2.5 text-sm font-medium text-gray-600 hover:text-blue-700 transition-colors"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
                               {s.label}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -158,7 +159,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               if (link.label === "Guia Brasília") {
                 return (
                   <li key={link.href}>
-                    <a
+                    <Link
                       href={link.href}
                       onClick={onClose}
                       className="flex items-center gap-3 px-5 py-4 bg-blue-50 hover:bg-blue-100 transition-colors"
@@ -172,22 +173,37 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       >
                         NOVO
                       </span>
+                    </Link>
+                  </li>
+                );
+              }
+
+              /* ── Links normais (hash = âncora na home, rota = navegação) ── */
+              if (link.href.startsWith("#")) {
+                return (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      onClick={onClose}
+                      className="flex items-center gap-3 px-5 py-4 text-gray-800 hover:bg-gray-50 transition-colors"
+                    >
+                      <span className="text-gray-400">{NAV_ICONS[link.label]}</span>
+                      <span className="text-base font-medium">{link.label}</span>
                     </a>
                   </li>
                 );
               }
 
-              /* ── Links normais ── */
               return (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={onClose}
                     className="flex items-center gap-3 px-5 py-4 text-gray-800 hover:bg-gray-50 transition-colors"
                   >
                     <span className="text-gray-400">{NAV_ICONS[link.label]}</span>
                     <span className="text-base font-medium">{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               );
             })}

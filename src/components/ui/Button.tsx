@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 
 type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "whatsapp";
@@ -85,6 +86,16 @@ export default function Button({
   );
 
   if (href) {
+    // Rota interna (ex: "/aluguel-de-van-brasilia/") usa next/link para
+    // navegação client-side; links externos e âncoras usam <a> normal.
+    if (href.startsWith("/")) {
+      return (
+        <Link href={href} className={baseStyles}>
+          {content}
+        </Link>
+      );
+    }
+
     return (
       <a
         href={href}

@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 
 import { GUIA_ARTIGOS } from "@/lib/guia-brasilia";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 // ─────────────────────────────────────────────
 // SEO
@@ -247,7 +248,7 @@ export default function GuiaBrasiliaPage() {
             Solicite um orçamento pelo WhatsApp e receba atendimento imediato.
           </p>
           <a
-            href="https://wa.me/5561999999999"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             style={{

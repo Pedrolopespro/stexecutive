@@ -83,16 +83,18 @@ $corpo = "
 </html>
 ";
 
+$smtpConfig = require __DIR__ . '/smtp-config.php';
+
 try {
     $mail = new PHPMailer(true);
 
     $mail->isSMTP();
-    $mail->Host       = 'smtp.hostinger.com';
+    $mail->Host       = $smtpConfig['host'];
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'contato@stexecutive.com.br';
-    $mail->Password   = 'Ddd19811**';
+    $mail->Username   = $smtpConfig['username'];
+    $mail->Password   = $smtpConfig['password'];
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = 465;
+    $mail->Port       = $smtpConfig['port'];
     $mail->CharSet    = 'UTF-8';
 
     $mail->setFrom('contato@stexecutive.com.br', 'ST Executive — Formulário');
