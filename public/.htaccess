@@ -2,6 +2,13 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.stexecutive\.com\.br [NC]
 RewriteRule ^(.*)$ https://stexecutive.com.br/$1 [R=301,L]
 
+# Artigos individuais do Guia Brasília são administrados pelo painel
+# /admin (banco de dados) via guia-brasilia/artigo.php?slug=X, mas a
+# pasta de export estático do Next.js também gera guia-brasilia/{slug}/
+# no mesmo caminho. Reescreve a URL bonita para o script PHP real,
+# mantendo a URL visível igual.
+RewriteRule ^guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1 [L,QSA]
+
 # ── Segurança: headers ──────────────────────────────────────
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
