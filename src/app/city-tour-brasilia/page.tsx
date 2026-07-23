@@ -136,8 +136,8 @@ export default function CityTourBrasiliaPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/SUV wild.webp"
-              alt="City tour em Brasília com motorista executivo — ST Executive"
+              src="/images/content/commander.webp"
+              alt="City tour em Brasília com motorista executivo — Ponte JK ao fundo — ST Executive"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/75 via-navy-950/60 to-navy-950/95" />
@@ -259,8 +259,8 @@ export default function CityTourBrasiliaPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-premium aspect-[4/3]">
                 <img
-                  src="/images/content/seda executivo.webp"
-                  alt="Veículo executivo ST Executive para city tour em Brasília"
+                  src="/images/content/comanders.webp"
+                  alt="Veículos executivos ST Executive para city tour em Brasília, com a Ponte JK ao fundo"
                   className="w-full h-full object-cover"
                 />
               </div>
