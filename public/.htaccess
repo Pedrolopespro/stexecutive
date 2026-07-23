@@ -1,3 +1,7 @@
+# Prioriza o HTML estático (Next.js export) sobre qualquer index.php
+# legado que ainda exista em alguma pasta no servidor (ex: /guia-brasilia/)
+DirectoryIndex index.html index.php
+
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.stexecutive\.com\.br [NC]
 RewriteRule ^(.*)$ https://stexecutive.com.br/$1 [R=301,L]
