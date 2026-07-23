@@ -104,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             `,
           }}
         />
-        {/* Schema.org — LocalBusiness + TransportationService */}
+        {/* Schema.org — LocalBusiness */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -112,7 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@context": "https://schema.org",
               "@graph": [
                 {
-                  "@type": ["LocalBusiness", "TransportationService"],
+                  "@type": "LocalBusiness",
                   "@id": "https://stexecutive.com.br/#business",
                   "name": "ST Executive",
                   "alternateName": "ST Executive by Saulo Transportes",
