@@ -137,18 +137,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     { "@type": "City", "name": "Brasília" },
                     { "@type": "State", "name": "Distrito Federal" }
                   ],
-                  "serviceType": [
-                    "Transfer Aeroporto Brasília",
-                    "Transporte Executivo",
-                    "Van Executiva",
-                    "Mini Van Executiva",
-                    "SUV Executiva",
-                    "Micro-ônibus Executivo",
-                    "Ônibus Executivo",
-                    "Transporte Corporativo",
-                    "Transporte para Eventos",
-                    "City Tour Brasília"
-                  ],
                   "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "Serviços de Transporte Executivo",
