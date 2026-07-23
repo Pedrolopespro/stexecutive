@@ -135,7 +135,7 @@ export default function CarrosBlinadadosBrasiliaPage() {
         <section className="relative min-h-[75vh] flex flex-col justify-end overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/content/corolla wild.webp"
+              src="/images/content/sedan blindada .webp"
               alt="Carro blindado em Brasília com motorista especializado — ST Executive"
               className="w-full h-full object-cover object-center"
             />
