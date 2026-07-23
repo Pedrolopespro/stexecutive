@@ -2,7 +2,7 @@
 // ST Executive — Project Constants
 // ============================================
 
-export const WHATSAPP_NUMBER = "556184097971";
+export const WHATSAPP_NUMBER = "5561984097971";
 
 export const WHATSAPP_MESSAGE = encodeURIComponent(
   "Olá venho do site ST Executive, gostaria de um orçamento"

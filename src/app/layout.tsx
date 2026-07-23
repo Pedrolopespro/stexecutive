@@ -120,7 +120,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "logo": "https://stexecutive.com.br/og-image.svg",
                   "image": "https://stexecutive.com.br/images/content/social.jpeg",
                   "description": "A ST Executive é especializada em transporte executivo em Brasília e região. Todos os serviços são realizados exclusivamente com motorista profissional. Não realizamos locação de carros, SUVs, vans, minivans, micro-ônibus ou ônibus sem motorista. Atendemos empresas, embaixadas, eventos corporativos e transfer aeroporto.",
-                  "telephone": "+55-61-99163-3714",
+                  "telephone": "+55-61-98409-7971",
                   "email": "contato@stexecutive.com.br",
                   "address": {
                     "@type": "PostalAddress",
