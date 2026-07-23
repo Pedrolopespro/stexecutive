@@ -303,10 +303,11 @@ export default async function GuiaArtigoPage({
               paddingBottom: "48px",
             }}
           >
-            {/* Breadcrumb */}
+            {/* Breadcrumb — <a> normal de propósito: /guia-brasilia/ é
+                servido dinamicamente por painel PHP/banco de dados */}
             <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
-              <Link
-                href="/guia-brasilia"
+              <a
+                href="/guia-brasilia/"
                 style={{
                   color: "rgba(255,255,255,0.7)",
                   fontSize: "0.8125rem",
@@ -315,7 +316,7 @@ export default async function GuiaArtigoPage({
                 }}
               >
                 Guia Brasília
-              </Link>
+              </a>
               <span style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.8125rem" }}>›</span>
               <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.8125rem" }}>
                 {artigo.title.split(":")[0]}
@@ -438,15 +439,17 @@ export default async function GuiaArtigoPage({
                     Leia também
                   </p>
                   <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                    {/* <a> normal de propósito: artigos servidos
+                        dinamicamente por painel PHP/banco de dados */}
                     {relacionados.map((r) => (
-                      <Link
+                      <a
                         key={r.slug}
-                        href={`/guia-brasilia/${r.slug}`}
+                        href={`/guia-brasilia/${r.slug}/`}
                         className="btn-guia"
                         style={{ fontSize: "0.875rem", padding: "10px 14px" }}
                       >
                         {r.title.split(":")[0].split(",")[0]}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -515,8 +518,10 @@ export default async function GuiaArtigoPage({
             >
               Falar pelo WhatsApp
             </a>
-            <Link
-              href="/guia-brasilia"
+            {/* <a> normal de propósito: /guia-brasilia/ é servido
+                dinamicamente por painel PHP/banco de dados */}
+            <a
+              href="/guia-brasilia/"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -532,7 +537,7 @@ export default async function GuiaArtigoPage({
               }}
             >
               Voltar ao Guia
-            </Link>
+            </a>
           </div>
         </div>
       </section>

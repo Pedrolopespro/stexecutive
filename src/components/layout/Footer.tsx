@@ -62,7 +62,10 @@ export default function Footer() {
                 { label: "FAQ", href: "#faq" },
                 { label: "Guia Brasília", href: GUIA_BRASILIA_PATH },
               ].map((item) =>
-                item.href.startsWith("#") ? (
+                // Hash (âncora) e /guia-brasilia/ (servido dinamicamente por
+                // painel PHP/banco de dados) usam <a> normal de propósito,
+                // forçando navegação real em vez do client-side do Next.js.
+                item.href.startsWith("#") || item.href.startsWith("/guia-brasilia") ? (
                   <li key={item.href}>
                     <a
                       href={item.href}

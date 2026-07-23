@@ -177,10 +177,14 @@ export default function Header() {
                 }
 
                 // "Guia Brasília" — destaque editorial
+                // Usa <a> normal (não Link) de propósito: a rota é servida
+                // dinamicamente por um painel PHP/banco de dados no servidor,
+                // e a navegação client-side do Next.js mostraria a versão
+                // estática desatualizada em vez de forçar uma requisição real.
                 if (link.label === "Guia Brasília") {
                   return (
                     <li key={link.href}>
-                      <Link
+                      <a
                         href={link.href}
                         className={[
                           "px-3 py-2 rounded-lg text-sm font-semibold",
@@ -191,7 +195,7 @@ export default function Header() {
                         ].join(" ")}
                       >
                         Guia Brasília
-                      </Link>
+                      </a>
                     </li>
                   );
                 }

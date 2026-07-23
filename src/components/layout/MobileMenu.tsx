@@ -155,11 +155,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 );
               }
 
-              /* ── Guia Brasília (destaque) ── */
+              /* Guia Brasília (destaque) — <a> normal de propósito: a rota é
+                 servida dinamicamente por um painel PHP/banco de dados no
+                 servidor. Navegação client-side do Next.js mostraria a
+                 versão estática antiga. */
               if (link.label === "Guia Brasília") {
                 return (
                   <li key={link.href}>
-                    <Link
+                    <a
                       href={link.href}
                       onClick={onClose}
                       className="flex items-center gap-3 px-5 py-4 bg-blue-50 hover:bg-blue-100 transition-colors"
@@ -173,7 +176,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       >
                         NOVO
                       </span>
-                    </Link>
+                    </a>
                   </li>
                 );
               }

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 
 import Header from "@/components/layout/Header";
@@ -197,9 +196,13 @@ export default function GuiaBrasiliaPage() {
                   </p>
 
                   <div style={{ paddingTop: "8px" }}>
-                    <Link href={`/guia-brasilia/${artigo.slug}`} className="btn-guia">
+                    {/* <a> normal de propósito: os artigos são servidos
+                        dinamicamente por um painel PHP/banco de dados no
+                        servidor — navegação client-side do Next.js mostraria
+                        a versão estática desatualizada. */}
+                    <a href={`/guia-brasilia/${artigo.slug}/`} className="btn-guia">
                       Ler artigo
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </article>
