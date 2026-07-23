@@ -34,7 +34,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 import ServiceCard from "@/components/sections/ServiceCard";
 
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, SERVICE_PAGES } from "@/lib/constants";
 
 // ─────────────────────────────────────────────
 // DATA
@@ -117,7 +117,7 @@ const FLEET = [
     capacity: "15 a 20 passageiros",
     model: "Mercedes-Benz Sprinter",
     desc: "Van executiva com motorista para grupos, transfer aeroporto, eventos corporativos e operações em Brasília.",
-    href: "/aluguel-de-van-brasilia/",
+    href: SERVICE_PAGES.vans,
   },
   {
     src: "/images/content/mini van.webp",
@@ -126,7 +126,7 @@ const FLEET = [
     capacity: "7 a 8 passageiros",
     model: "Mercedes-Benz Vito ou similar",
     desc: "Mini van executiva ideal para pequenos grupos, recepção de convidados e deslocamentos corporativos em Brasília.",
-    href: "/contato/",
+    href: SERVICE_PAGES.minivan,
   },
   {
     src: "/images/content/seda executivo.webp",
@@ -135,7 +135,7 @@ const FLEET = [
     capacity: "3 a 4 passageiros",
     model: "Toyota Corolla ou similar",
     desc: "Sedan executivo para reuniões, recepções de clientes, agendas corporativas e deslocamentos individuais em Brasília.",
-    href: "/transporte-executivo-brasilia/",
+    href: SERVICE_PAGES.executivo,
   },
   {
     src: "/images/content/commander.webp",
@@ -144,7 +144,7 @@ const FLEET = [
     capacity: "4 a 6 passageiros",
     model: "Jeep Commander ou similar",
     desc: "SUV executiva com espaço, conforto e discrição para executivos, convidados especiais e embaixadas em Brasília.",
-    href: "/transporte-executivo-brasilia/",
+    href: SERVICE_PAGES.executivo,
   },
   {
     src: "/images/content/micro onibus.webp",
@@ -153,7 +153,7 @@ const FLEET = [
     capacity: "20 a 30 passageiros",
     model: "Capacidade varia conforme configuração",
     desc: "Micro-ônibus executivo para grupos médios, eventos corporativos, excursões e operações planejadas em Brasília.",
-    href: "/van-para-eventos-brasilia/",
+    href: SERVICE_PAGES.microOnibus,
   },
   {
     src: "/images/content/onibus.webp",
@@ -162,7 +162,7 @@ const FLEET = [
     capacity: "42 a 56 passageiros",
     model: "Ônibus padrão ou Double Decker",
     desc: "Ônibus executivo para grandes grupos, shows, congressos e operações de alto volume de passageiros em Brasília.",
-    href: "/van-para-eventos-brasilia/",
+    href: SERVICE_PAGES.onibus,
   },
 ];
 
