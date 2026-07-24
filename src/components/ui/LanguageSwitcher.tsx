@@ -14,7 +14,9 @@ const LANGUAGES: { code: Locale; label: string; flag: string }[] = [
 // Segmento inicial de cada rota já traduzida para EN/ES. Atualizar conforme
 // novas páginas forem traduzidas — o que não estiver aqui cai na home do
 // idioma alvo em vez de gerar um link para uma página ainda inexistente.
-// Guia Brasília ainda não está traduzido (depende da Fase B).
+// Guia Brasília é servido pelo PHP (adm/guia-brasilia/index.php e
+// artigo.php), que já trata ?lang=en|es — um artigo sem tradução ainda
+// cai num 404 normal do PHP, não num link quebrado do switcher.
 const KNOWN_SEGMENTS = new Set([
   "",
   "aluguel-de-van-brasilia",
@@ -27,6 +29,7 @@ const KNOWN_SEGMENTS = new Set([
   "carros-blindados-brasilia",
   "city-tour-brasilia",
   "contato",
+  "guia-brasilia",
 ]);
 
 function mapPathToLocale(currentPath: string, targetLocale: Locale): string {
