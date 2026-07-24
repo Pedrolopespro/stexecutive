@@ -378,3 +378,64 @@ export interface HomeContentDict {
     microcopy: string;
   };
 }
+
+// ─────────────────────────────────────────────
+// Contato
+// ─────────────────────────────────────────────
+
+export interface ContatoContentDict {
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+  };
+  form: {
+    heading: string;
+    requiredNote: string;
+    requiredWord: string;
+    labels: {
+      nome: string;
+      empresa: string;
+      email: string;
+      telefone: string;
+      tipoServico: string;
+      motoristaBilingue: string;
+      localEmbarque: string;
+      localDesembarque: string;
+      observacao: string;
+    };
+    placeholders: {
+      nome: string;
+      empresa: string;
+      email: string;
+      telefone: string;
+      localEmbarque: string;
+      localDesembarque: string;
+      observacao: string;
+    };
+    selectPlaceholder: string;
+    tipoServicoOptions: { value: string; label: string }[];
+    simNaoOptions: { value: string; label: string }[];
+    submitLabel: string;
+    submitSendingLabel: string;
+    consentText: string;
+    errorMessage: string;
+    successTitle: string;
+    successMessage: string;
+    successWhatsappLabel: string;
+  };
+  sidebar: {
+    whatsappLabel: string;
+    whatsappSubtext: string;
+    phoneLabel: string;
+    phoneSubtext: string;
+    emailLabel: string;
+    emailSubtext: string;
+    noteLabel: string;
+    noteText: string;
+  };
+}

@@ -6,7 +6,8 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 import Button from "@/components/ui/Button";
 import { AtSign, Phone, MessageCircle } from "lucide-react";
-import { WHATSAPP_URL, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY } from "@/lib/constants";
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { contatoPt, navPt, footerPt, commonPt, type NavDict, type FooterDict, type CommonDict, type ContatoContentDict } from "@/lib/i18n";
 
 // ─────────────────────────────────────────────
 // TYPES
@@ -37,11 +38,27 @@ const inputBase =
 
 const labelBase = "block text-sm font-semibold text-navy-950/80 mb-1.5";
 
+interface ContatoPageProps {
+  locale?: Locale;
+  content?: ContatoContentDict;
+  navDict?: NavDict;
+  footerDict?: FooterDict;
+  commonDict?: CommonDict;
+}
+
 // ─────────────────────────────────────────────
 // PAGE
 // ─────────────────────────────────────────────
 
-export default function ContatoPage() {
+export default function ContatoPage({
+  locale = "pt",
+  content = contatoPt,
+  navDict = navPt,
+  footerDict = footerPt,
+  commonDict = commonPt,
+}: ContatoPageProps) {
+  const c = content;
+  const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [form, setForm] = useState<FormData>({
     nome: "",
@@ -99,28 +116,27 @@ export default function ContatoPage() {
 
   return (
     <>
-      <Header />
+      <Header locale={locale} dict={navDict} commonDict={commonDict} />
       <main>
 
         {/* ══════════════════════════════════
             HERO — pequeno
         ══════════════════════════════════ */}
         <section className="relative bg-navy-950 pt-32 pb-16 overflow-hidden">
-          {/* Decorativo */}
           <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-950 to-action-600/10 pointer-events-none" />
           <div className="relative z-10 container-st">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-400/40 bg-gold-400/10 backdrop-blur-sm mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
               <span className="text-xs font-semibold tracking-widest uppercase text-gold-400">
-                Fale conosco
+                {c.hero.eyebrow}
               </span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-surface-white mb-4">
-              Entre em contato
+              {c.hero.title}
             </h1>
             <div className="gold-line mb-5" />
             <p className="text-base text-white/60 max-w-xl">
-              Informe os detalhes do seu deslocamento e nossa equipe retornará com uma proposta personalizada.
+              {c.hero.subtitle}
             </p>
           </div>
         </section>
@@ -135,9 +151,11 @@ export default function ContatoPage() {
               {/* ── FORMULÁRIO ── */}
               <div className="lg:col-span-2">
                 <div className="bg-white rounded-2xl shadow-card p-8 lg:p-10">
-                  <h2 className="text-xl font-bold text-navy-950 mb-2">Solicitar orçamento</h2>
+                  <h2 className="text-xl font-bold text-navy-950 mb-2">{c.form.heading}</h2>
                   <p className="text-sm text-navy-950/50 mb-8">
-                    Campos marcados com <span className="text-red-500 font-semibold">*</span> são obrigatórios.
+                    {c.form.requiredNote.split("{req}")[0]}
+                    <span className="text-red-500 font-semibold">{c.form.requiredWord}</span>
+                    {c.form.requiredNote.split("{req}")[1]}
                   </p>
 
                   {status === "success" ? (
@@ -147,12 +165,12 @@ export default function ContatoPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <h3 className="text-lg font-bold text-navy-950">Mensagem enviada!</h3>
+                      <h3 className="text-lg font-bold text-navy-950">{c.form.successTitle}</h3>
                       <p className="text-sm text-navy-950/60 max-w-sm">
-                        Recebemos seu pedido. Nossa equipe entrará em contato em breve.
+                        {c.form.successMessage}
                       </p>
-                      <Button variant="primary" size="md" href={WHATSAPP_URL} showWhatsAppIcon>
-                        Falar pelo WhatsApp
+                      <Button variant="primary" size="md" href={whatsappUrl} showWhatsAppIcon>
+                        {c.form.successWhatsappLabel}
                       </Button>
                     </div>
                   ) : (
@@ -162,7 +180,7 @@ export default function ContatoPage() {
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
                           <label htmlFor="nome" className={labelBase}>
-                            Nome <span className="text-red-500">*</span>
+                            {c.form.labels.nome} <span className="text-red-500">*</span>
                           </label>
                           <input
                             id="nome"
@@ -171,13 +189,13 @@ export default function ContatoPage() {
                             required
                             value={form.nome}
                             onChange={handleChange}
-                            placeholder="Seu nome completo"
+                            placeholder={c.form.placeholders.nome}
                             className={inputBase}
                           />
                         </div>
                         <div>
                           <label htmlFor="empresa" className={labelBase}>
-                            Empresa
+                            {c.form.labels.empresa}
                           </label>
                           <input
                             id="empresa"
@@ -185,7 +203,7 @@ export default function ContatoPage() {
                             type="text"
                             value={form.empresa}
                             onChange={handleChange}
-                            placeholder="Nome da empresa (opcional)"
+                            placeholder={c.form.placeholders.empresa}
                             className={inputBase}
                           />
                         </div>
@@ -195,7 +213,7 @@ export default function ContatoPage() {
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
                           <label htmlFor="email" className={labelBase}>
-                            E-mail <span className="text-red-500">*</span>
+                            {c.form.labels.email} <span className="text-red-500">*</span>
                           </label>
                           <input
                             id="email"
@@ -204,13 +222,13 @@ export default function ContatoPage() {
                             required
                             value={form.email}
                             onChange={handleChange}
-                            placeholder="seu@email.com"
+                            placeholder={c.form.placeholders.email}
                             className={inputBase}
                           />
                         </div>
                         <div>
                           <label htmlFor="telefone" className={labelBase}>
-                            Telefone <span className="text-red-500">*</span>
+                            {c.form.labels.telefone} <span className="text-red-500">*</span>
                           </label>
                           <input
                             id="telefone"
@@ -219,7 +237,7 @@ export default function ContatoPage() {
                             required
                             value={form.telefone}
                             onChange={handleChange}
-                            placeholder="(61) 9 0000-0000"
+                            placeholder={c.form.placeholders.telefone}
                             className={inputBase}
                           />
                         </div>
@@ -229,7 +247,7 @@ export default function ContatoPage() {
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
                           <label htmlFor="tipoServico" className={labelBase}>
-                            Tipo de serviço <span className="text-red-500">*</span>
+                            {c.form.labels.tipoServico} <span className="text-red-500">*</span>
                           </label>
                           <select
                             id="tipoServico"
@@ -239,14 +257,15 @@ export default function ContatoPage() {
                             onChange={handleChange}
                             className={inputBase + " cursor-pointer appearance-none"}
                           >
-                            <option value="" disabled>Selecione...</option>
-                            <option value="Diária">Diária</option>
-                            <option value="Transfer">Transfer</option>
+                            <option value="" disabled>{c.form.selectPlaceholder}</option>
+                            {c.form.tipoServicoOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value}>{opt.label}</option>
+                            ))}
                           </select>
                         </div>
                         <div>
                           <label htmlFor="motoristaBilingue" className={labelBase}>
-                            Motorista bilíngue <span className="text-red-500">*</span>
+                            {c.form.labels.motoristaBilingue} <span className="text-red-500">*</span>
                           </label>
                           <select
                             id="motoristaBilingue"
@@ -256,9 +275,10 @@ export default function ContatoPage() {
                             onChange={handleChange}
                             className={inputBase + " cursor-pointer appearance-none"}
                           >
-                            <option value="" disabled>Selecione...</option>
-                            <option value="Sim">Sim</option>
-                            <option value="Não">Não</option>
+                            <option value="" disabled>{c.form.selectPlaceholder}</option>
+                            {c.form.simNaoOptions.map((opt) => (
+                              <option key={opt.value} value={opt.value}>{opt.label}</option>
+                            ))}
                           </select>
                         </div>
                       </div>
@@ -267,7 +287,7 @@ export default function ContatoPage() {
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div>
                           <label htmlFor="localEmbarque" className={labelBase}>
-                            Local de embarque
+                            {c.form.labels.localEmbarque}
                           </label>
                           <input
                             id="localEmbarque"
@@ -275,13 +295,13 @@ export default function ContatoPage() {
                             type="text"
                             value={form.localEmbarque}
                             onChange={handleChange}
-                            placeholder="Ex: Aeroporto de Brasília, Hotel X..."
+                            placeholder={c.form.placeholders.localEmbarque}
                             className={inputBase}
                           />
                         </div>
                         <div>
                           <label htmlFor="localDesembarque" className={labelBase}>
-                            Local de desembarque
+                            {c.form.labels.localDesembarque}
                           </label>
                           <input
                             id="localDesembarque"
@@ -289,7 +309,7 @@ export default function ContatoPage() {
                             type="text"
                             value={form.localDesembarque}
                             onChange={handleChange}
-                            placeholder="Ex: Centro de convenções, Empresa Y..."
+                            placeholder={c.form.placeholders.localDesembarque}
                             className={inputBase}
                           />
                         </div>
@@ -298,7 +318,7 @@ export default function ContatoPage() {
                       {/* Observação */}
                       <div>
                         <label htmlFor="observacao" className={labelBase}>
-                          Observações
+                          {c.form.labels.observacao}
                         </label>
                         <textarea
                           id="observacao"
@@ -306,7 +326,7 @@ export default function ContatoPage() {
                           rows={4}
                           value={form.observacao}
                           onChange={handleChange}
-                          placeholder="Data, horário, número de passageiros, necessidades especiais..."
+                          placeholder={c.form.placeholders.observacao}
                           className={inputBase + " resize-none"}
                         />
                       </div>
@@ -314,7 +334,7 @@ export default function ContatoPage() {
                       {/* Erro */}
                       {status === "error" && (
                         <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">
-                          Ocorreu um erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.
+                          {c.form.errorMessage}
                         </p>
                       )}
 
@@ -327,10 +347,10 @@ export default function ContatoPage() {
                           type="submit"
                           disabled={status === "sending"}
                         >
-                          {status === "sending" ? "Enviando..." : "Enviar solicitação"}
+                          {status === "sending" ? c.form.submitSendingLabel : c.form.submitLabel}
                         </Button>
                         <p className="mt-3 text-xs text-center text-navy-950/35">
-                          Ao enviar, você concorda com o contato por e-mail ou WhatsApp.
+                          {c.form.consentText}
                         </p>
                       </div>
 
@@ -344,7 +364,7 @@ export default function ContatoPage() {
 
                 {/* Card WhatsApp */}
                 <a
-                  href={WHATSAPP_URL}
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-start gap-4 bg-white rounded-2xl shadow-card p-6 hover:shadow-lg transition-shadow duration-200"
@@ -353,11 +373,11 @@ export default function ContatoPage() {
                     <MessageCircle className="w-5 h-5 text-[#25D366]" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">WhatsApp</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">{c.sidebar.whatsappLabel}</p>
                     <p className="text-base font-bold text-navy-950 group-hover:text-action-600 transition-colors">
                       {CONTACT_PHONE_DISPLAY}
                     </p>
-                    <p className="text-xs text-navy-950/50 mt-0.5">Clique para conversar</p>
+                    <p className="text-xs text-navy-950/50 mt-0.5">{c.sidebar.whatsappSubtext}</p>
                   </div>
                 </a>
 
@@ -367,9 +387,9 @@ export default function ContatoPage() {
                     <Phone className="w-5 h-5 text-action-600" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">Telefone</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">{c.sidebar.phoneLabel}</p>
                     <p className="text-base font-bold text-navy-950">{CONTACT_PHONE_DISPLAY}</p>
-                    <p className="text-xs text-navy-950/50 mt-0.5">Seg–Sáb, das 8h às 20h</p>
+                    <p className="text-xs text-navy-950/50 mt-0.5">{c.sidebar.phoneSubtext}</p>
                   </div>
                 </div>
 
@@ -382,19 +402,19 @@ export default function ContatoPage() {
                     <AtSign className="w-5 h-5 text-gold-500" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">E-mail</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">{c.sidebar.emailLabel}</p>
                     <p className="text-sm font-bold text-navy-950 group-hover:text-action-600 transition-colors break-all">
                       {CONTACT_EMAIL}
                     </p>
-                    <p className="text-xs text-navy-950/50 mt-0.5">Resposta em até 24h</p>
+                    <p className="text-xs text-navy-950/50 mt-0.5">{c.sidebar.emailSubtext}</p>
                   </div>
                 </a>
 
                 {/* Nota */}
                 <div className="rounded-2xl border border-gold-400/30 bg-gold-400/5 p-5">
-                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-wider mb-2">Atendimento ágil</p>
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-wider mb-2">{c.sidebar.noteLabel}</p>
                   <p className="text-sm text-navy-950/65 leading-relaxed">
-                    Para respostas mais rápidas, utilize o WhatsApp informando data, trajeto e quantidade de passageiros.
+                    {c.sidebar.noteText}
                   </p>
                 </div>
 
@@ -404,8 +424,8 @@ export default function ContatoPage() {
         </section>
 
       </main>
-      <Footer />
-      <WhatsAppFloatingButton />
+      <Footer locale={locale} dict={footerDict} commonDict={commonDict} />
+      <WhatsAppFloatingButton locale={locale} dict={commonDict} />
     </>
   );
 }

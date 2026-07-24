@@ -21,6 +21,12 @@ const KNOWN_SEGMENTS = new Set([
   "transporte-executivo-brasilia",
   "transfer-aeroporto-brasilia",
   "van-para-eventos-brasilia",
+  "minivan-executiva-brasilia",
+  "micro-onibus-executivo-brasilia",
+  "onibus-executivo-brasilia",
+  "carros-blindados-brasilia",
+  "city-tour-brasilia",
+  "contato",
 ]);
 
 function mapPathToLocale(currentPath: string, targetLocale: Locale): string {

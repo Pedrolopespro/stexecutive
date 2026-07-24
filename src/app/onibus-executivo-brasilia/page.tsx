@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/onibus-executivo-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/onibus-executivo-brasilia/",
+      en: "https://stexecutive.com.br/en/onibus-executivo-brasilia/",
+      es: "https://stexecutive.com.br/es/onibus-executivo-brasilia/",
+      "x-default": "https://stexecutive.com.br/onibus-executivo-brasilia/",
+    },
   },
 };
 

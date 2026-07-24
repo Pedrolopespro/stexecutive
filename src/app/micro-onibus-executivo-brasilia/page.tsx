@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/micro-onibus-executivo-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/micro-onibus-executivo-brasilia/",
+      en: "https://stexecutive.com.br/en/micro-onibus-executivo-brasilia/",
+      es: "https://stexecutive.com.br/es/micro-onibus-executivo-brasilia/",
+      "x-default": "https://stexecutive.com.br/micro-onibus-executivo-brasilia/",
+    },
   },
 };
 

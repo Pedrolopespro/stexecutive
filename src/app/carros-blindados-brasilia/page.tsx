@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/carros-blindados-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/carros-blindados-brasilia/",
+      en: "https://stexecutive.com.br/en/carros-blindados-brasilia/",
+      es: "https://stexecutive.com.br/es/carros-blindados-brasilia/",
+      "x-default": "https://stexecutive.com.br/carros-blindados-brasilia/",
+    },
   },
 };
 

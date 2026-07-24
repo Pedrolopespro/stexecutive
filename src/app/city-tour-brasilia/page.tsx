@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/city-tour-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/city-tour-brasilia/",
+      en: "https://stexecutive.com.br/en/city-tour-brasilia/",
+      es: "https://stexecutive.com.br/es/city-tour-brasilia/",
+      "x-default": "https://stexecutive.com.br/city-tour-brasilia/",
+    },
   },
 };
 

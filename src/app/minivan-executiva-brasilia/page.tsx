@@ -29,6 +29,12 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/minivan-executiva-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/minivan-executiva-brasilia/",
+      en: "https://stexecutive.com.br/en/minivan-executiva-brasilia/",
+      es: "https://stexecutive.com.br/es/minivan-executiva-brasilia/",
+      "x-default": "https://stexecutive.com.br/minivan-executiva-brasilia/",
+    },
   },
 };
 

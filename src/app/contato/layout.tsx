@@ -6,6 +6,12 @@ export const metadata: Metadata = {
     "Entre em contato com a ST Executive para solicitar orçamento de transporte executivo em Brasília. Atendimento via WhatsApp, e-mail e formulário.",
   alternates: {
     canonical: "https://stexecutive.com.br/contato/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/contato/",
+      en: "https://stexecutive.com.br/en/contato/",
+      es: "https://stexecutive.com.br/es/contato/",
+      "x-default": "https://stexecutive.com.br/contato/",
+    },
   },
 };
 
