@@ -1,31 +1,62 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Globe } from "lucide-react";
+import { LOCALES, localePrefix, type Locale } from "@/lib/constants";
 
-const LANGUAGES = [
-  { code: "PT", label: "Português", flag: "🇧🇷" },
-  { code: "EN", label: "English",   flag: "🇺🇸" },
-  { code: "ES", label: "Español",   flag: "🇪🇸" },
-  { code: "FR", label: "Français",  flag: "🇫🇷" },
-  { code: "DE", label: "Deutsch",   flag: "🇩🇪" },
-  { code: "JA", label: "日本語",    flag: "🇯🇵" },
-  { code: "ZH", label: "中文",      flag: "🇨🇳" },
+const LANGUAGES: { code: Locale; label: string; flag: string }[] = [
+  { code: "pt", label: "Português", flag: "🇧🇷" },
+  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "es", label: "Español", flag: "🇪🇸" },
 ];
 
-interface LanguageSwitcherProps {
-  /** Quando true, adapta cores para fundo escuro (header transparente) */
-  dark?: boolean;
-  /** Quando true, exibe lista vertical em vez de dropdown (mobile menu) */
-  inline?: boolean;
+// Segmento inicial de cada rota já disponível em todos os idiomas (Fase A).
+// Guia Brasília ainda não está traduzido (depende da Fase B) — cai na home.
+const KNOWN_SEGMENTS = new Set([
+  "",
+  "aluguel-de-van-brasilia",
+  "transporte-executivo-brasilia",
+  "transfer-aeroporto-brasilia",
+  "van-para-eventos-brasilia",
+  "minivan-executiva-brasilia",
+  "micro-onibus-executivo-brasilia",
+  "onibus-executivo-brasilia",
+  "carros-blindados-brasilia",
+  "city-tour-brasilia",
+  "contato",
+]);
+
+function mapPathToLocale(currentPath: string, targetLocale: Locale): string {
+  let rest = currentPath || "/";
+  for (const l of LOCALES) {
+    const p = localePrefix(l);
+    if (p && (rest === p || rest.startsWith(`${p}/`))) {
+      rest = rest.slice(p.length) || "/";
+      break;
+    }
+  }
+  const segment = rest.split("/").filter(Boolean)[0] ?? "";
+  const targetPrefix = localePrefix(targetLocale);
+
+  if (!KNOWN_SEGMENTS.has(segment)) {
+    return `${targetPrefix}/`;
+  }
+  return rest === "/" ? `${targetPrefix}/` : `${targetPrefix}${rest}`;
 }
 
-export default function LanguageSwitcher({ dark = false, inline = false }: LanguageSwitcherProps) {
-  const [current, setCurrent] = useState(LANGUAGES[0]);
+interface LanguageSwitcherProps {
+  dark?: boolean;
+  inline?: boolean;
+  currentLocale?: Locale;
+}
+
+export default function LanguageSwitcher({ dark = false, inline = false, currentLocale = "pt" }: LanguageSwitcherProps) {
+  const pathname = usePathname() ?? "/";
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const current = LANGUAGES.find((l) => l.code === currentLocale) ?? LANGUAGES[0];
 
-  // Fecha ao clicar fora
   useEffect(() => {
     if (inline) return;
     const handler = (e: MouseEvent) => {
@@ -37,23 +68,18 @@ export default function LanguageSwitcher({ dark = false, inline = false }: Langu
     return () => document.removeEventListener("mousedown", handler);
   }, [inline]);
 
-  const select = (lang: typeof LANGUAGES[0]) => {
-    setCurrent(lang);
-    setOpen(false);
-  };
-
   /* ── Inline (mobile menu) ─────────────────────────── */
   if (inline) {
     return (
       <div className="w-full">
         <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2 px-1">
-          Idioma
+          Idioma / Language
         </p>
         <div className="flex flex-wrap gap-2">
           {LANGUAGES.map((lang) => (
-            <button
+            <a
               key={lang.code}
-              onClick={() => setCurrent(lang)}
+              href={mapPathToLocale(pathname, lang.code)}
               className={[
                 "flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors duration-150",
                 current.code === lang.code
@@ -62,8 +88,8 @@ export default function LanguageSwitcher({ dark = false, inline = false }: Langu
               ].join(" ")}
             >
               <span>{lang.flag}</span>
-              <span>{lang.code}</span>
-            </button>
+              <span>{lang.code.toUpperCase()}</span>
+            </a>
           ))}
         </div>
       </div>
@@ -89,7 +115,7 @@ export default function LanguageSwitcher({ dark = false, inline = false }: Langu
       >
         <Globe className="w-4 h-4 shrink-0" />
         <span>{current.flag}</span>
-        <span>{current.code}</span>
+        <span>{current.code.toUpperCase()}</span>
         <svg
           className={`w-3 h-3 shrink-0 transition-transform duration-150 ${open ? "rotate-180" : ""}`}
           viewBox="0 0 12 12"
@@ -103,7 +129,6 @@ export default function LanguageSwitcher({ dark = false, inline = false }: Langu
         </svg>
       </button>
 
-      {/* Dropdown panel */}
       <div
         className={[
           "absolute right-0 top-full mt-2 w-44 z-50",
@@ -117,11 +142,12 @@ export default function LanguageSwitcher({ dark = false, inline = false }: Langu
         role="listbox"
       >
         {LANGUAGES.map((lang) => (
-          <button
+          <a
             key={lang.code}
             role="option"
             aria-selected={current.code === lang.code}
-            onClick={() => select(lang)}
+            href={mapPathToLocale(pathname, lang.code)}
+            onClick={() => setOpen(false)}
             className={[
               "w-full flex items-center gap-3 px-4 py-2.5 text-sm",
               "transition-colors duration-100",
@@ -132,8 +158,8 @@ export default function LanguageSwitcher({ dark = false, inline = false }: Langu
           >
             <span className="text-base leading-none">{lang.flag}</span>
             <span className="flex-1 text-left">{lang.label}</span>
-            <span className="text-xs opacity-50">{lang.code}</span>
-          </button>
+            <span className="text-xs opacity-50">{lang.code.toUpperCase()}</span>
+          </a>
         ))}
       </div>
     </div>

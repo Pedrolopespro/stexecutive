@@ -198,3 +198,161 @@ export interface ServicePageContent {
     paragraph: string;
   };
 }
+
+// ─────────────────────────────────────────────
+// Home
+// ─────────────────────────────────────────────
+
+export interface IconedItem {
+  title: string;
+  sub: string;
+}
+
+export interface ServiceItem {
+  title: string;
+  shortText: string;
+  description: string;
+  highlights: string[];
+  ctaText: string;
+  serviceKey?: import("@/lib/constants").ServiceKey;
+  contatoFallback?: boolean;
+  featured?: boolean;
+}
+
+export interface FleetItem {
+  src: string;
+  imgPos: string;
+  label: string;
+  capacity: string;
+  model: string;
+  desc: string;
+  serviceKey: import("@/lib/constants").ServiceKey;
+}
+
+export interface TestimonialItem {
+  text: string;
+  name: string;
+  company: string;
+}
+
+export interface AudienceItem {
+  title: string;
+  text: string;
+  bullets: string[];
+}
+
+export interface HomeContentDict {
+  meta: Meta;
+
+  hero: {
+    eyebrow: string;
+    titleLine1: string;
+    titleLine2: string;
+    titleEmphasis: string;
+    subtitle: string;
+    supportText: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    ctaSecondaryMobile: string;
+    ctaPrimaryMobile: string;
+    microcopy: string;
+  };
+
+  featuresBar: IconedItem[];
+
+  clientsBar: {
+    label: string;
+  };
+
+  services: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    items: ServiceItem[];
+    moreLabel: string;
+  };
+
+  vansSection: {
+    badge: string;
+    heading: string;
+    paragraph: string;
+    bullets: string[];
+    ctaLabel: string;
+  };
+
+  fleetSection: {
+    badge: string;
+    heading: string;
+    subtitleParts: { plain: string; emphasis: string }[];
+    differentials: IconedItem[];
+    items: FleetItem[];
+    moreLabel: string;
+    ctaLabel: string;
+  };
+
+  testimonialsSection: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    stats: IconedItem[];
+    items: TestimonialItem[];
+    googleCta: {
+      title: string;
+      subtitle: string;
+      buttonLabel: string;
+    };
+  };
+
+  audienceSection: {
+    eyebrow: string;
+    heading: string;
+    subtitlePlain: string;
+    subtitleEmphasis: string;
+    items: AudienceItem[];
+  };
+
+  processSection: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    steps: ProcessStep[];
+    ctaBar: {
+      title: string;
+      subtitle: string;
+      buttonLabel: string;
+    };
+  };
+
+  aboutSection: {
+    badge: string;
+    heading: string;
+    paragraphs: string[];
+    ctaPrimary: string;
+    ctaSecondary: string;
+    yearsBadgeLine1: string;
+    yearsBadgeLine2: string;
+    differentials: IconedItem[];
+    ctaBar: {
+      title: string;
+      subtitle: string;
+      buttonLabel: string;
+    };
+  };
+
+  semanticBlock: string;
+
+  faqSection: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    buttonLabel: string;
+    items: FaqItem[];
+  };
+
+  ctaFinal: {
+    title: string;
+    subtitle: string;
+    ctaText: string;
+    microcopy: string;
+  };
+}

@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { buildNavLinks, buildServicePages, buildWhatsAppUrl, type Locale, type NavKey } from "@/lib/constants";
 import { navPt, commonPt, type NavDict, type CommonDict } from "@/lib/i18n";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
 // ─── Ícones por chave de nav (independente de idioma) ─────────────────────
 const NAV_ICONS: Record<NavKey, React.ReactNode> = {
@@ -218,6 +219,9 @@ export default function MobileMenu({
 
         {/* ── Rodapé com CTA ── */}
         <div className="px-5 py-6 border-t border-gray-100 bg-white">
+          <div className="mb-4">
+            <LanguageSwitcher inline currentLocale={locale} />
+          </div>
           <a
             href={whatsappUrl}
             target="_blank"

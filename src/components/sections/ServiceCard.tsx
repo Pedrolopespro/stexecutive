@@ -16,6 +16,8 @@ interface ServiceCardProps {
   internalLink: string;
   featured?: boolean;
   className?: string;
+  whatsappUrl?: string;
+  moreLabel?: string;
 }
 
 export default function ServiceCard({
@@ -28,6 +30,8 @@ export default function ServiceCard({
   internalLink,
   featured = false,
   className = "",
+  whatsappUrl = WHATSAPP_URL,
+  moreLabel = "Saiba mais",
 }: ServiceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 

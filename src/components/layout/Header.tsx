@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import Button from "@/components/ui/Button";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import { buildNavLinks, buildServicePages, buildWhatsAppUrl, type Locale } from "@/lib/constants";
 import { navPt, commonPt, type NavDict, type CommonDict } from "@/lib/i18n";
 import MobileMenu from "./MobileMenu";
@@ -188,6 +189,7 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
 
             {/* Desktop CTA + idioma */}
             <div className="hidden lg:flex items-center gap-3">
+              <LanguageSwitcher dark={!isScrolled} currentLocale={locale} />
               <Button variant="primary" size="sm" href={whatsappUrl} showWhatsAppIcon>
                 {dict.ctaLabel}
               </Button>
