@@ -141,10 +141,20 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} ST Executive. Todos os direitos
-            reservados.
-          </p>
+          <div className="flex items-center gap-3">
+            <img
+              src="/images/content/selo-cadastur.png"
+              alt="Selo Cadastur — Cadastro nº 13.718.289/0001-20, Ministério do Turismo"
+              className="h-14 w-auto rounded-md shrink-0"
+              loading="lazy"
+              width={101}
+              height={140}
+            />
+            <p className="text-xs text-white/40">
+              &copy; {new Date().getFullYear()} ST Executive. Todos os direitos
+              reservados.
+            </p>
+          </div>
           <p className="text-xs text-white/40">
             Mais de 15 anos de transporte executivo em Brasília.
           </p>
