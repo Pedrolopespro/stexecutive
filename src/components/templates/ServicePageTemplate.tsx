@@ -116,14 +116,48 @@ export default function ServicePageTemplate({
                   {c.fleet.paragraph}
                 </p>
 
-                <div className="grid grid-cols-2 gap-3 mb-8">
-                  {c.fleet.specs.map((item, i) => (
-                    <div key={i} className="p-3 rounded-xl bg-surface-off border border-gray-200">
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-0.5">{item.spec}</p>
-                      <p className="text-sm font-semibold text-navy-950">{item.value}</p>
+                {c.fleet.specs && (
+                  <div className="grid grid-cols-2 gap-3 mb-8">
+                    {c.fleet.specs.map((item, i) => (
+                      <div key={i} className="p-3 rounded-xl bg-surface-off border border-gray-200">
+                        <p className="text-xs text-gray-400 uppercase tracking-wider mb-0.5">{item.spec}</p>
+                        <p className="text-sm font-semibold text-navy-950">{item.value}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {c.fleet.checklist && (
+                  <ul className="flex flex-col gap-3 mb-8">
+                    {c.fleet.checklist.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+                        <span className="w-5 h-5 rounded-full bg-gold-400/15 flex items-center justify-center shrink-0 mt-0.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-gold-500" />
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {c.fleet.tags && (
+                  <div className="mb-8">
+                    {c.fleet.tagsLabel && (
+                      <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">{c.fleet.tagsLabel}</p>
+                    )}
+                    <div className="flex flex-wrap gap-2">
+                      {c.fleet.tags.map((f, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1.5 rounded-full border border-navy-950/20 bg-surface-off text-sm text-navy-950 font-medium"
+                          title={f.desc}
+                        >
+                          {f.label}
+                        </span>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </div>
+                )}
 
                 <Button variant="primary" size="md" href={whatsappUrl} showWhatsAppIcon>
                   {c.fleet.ctaLabel}
@@ -234,15 +268,84 @@ export default function ServicePageTemplate({
         {c.commonSituations && (
           <section className="section-padding bg-surface-off">
             <div className="container-st">
-              <SectionHeader eyebrow={c.commonSituations.eyebrow} title={c.commonSituations.heading} align="center" />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                {c.commonSituations.items.map((item, i) => (
-                  <div key={i} className="p-6 rounded-2xl border border-gray-200 bg-white">
-                    <span className="text-gold-500 font-bold text-sm">{item.number}</span>
-                    <p className="text-sm font-semibold text-navy-950 mt-2 mb-1.5">{item.title}</p>
-                    <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+              <div className="max-w-3xl mx-auto text-center">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">{c.commonSituations.eyebrow}</p>
+                <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-8">{c.commonSituations.heading}</h2>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {c.commonSituations.items.map((s, i) => (
+                    <span key={i} className="px-4 py-2 rounded-full border border-navy-950/20 bg-white text-sm text-navy-950 font-medium">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* COMPARISON CARDS (opcional) */}
+        {c.comparisonCards && (
+          <section className={`section-padding ${c.comparisonCards.theme === "dark" ? "bg-navy-950" : "bg-surface-white"}`}>
+            <div className="container-st">
+              <div className="max-w-3xl mx-auto">
+                <SectionHeader
+                  eyebrow={c.comparisonCards.eyebrow}
+                  title={c.comparisonCards.heading}
+                  subtitle={c.comparisonCards.subtitle}
+                  align="center"
+                  theme={c.comparisonCards.theme === "dark" ? "dark" : "light"}
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className={c.comparisonCards.theme === "dark" ? "rounded-2xl border border-gold-400/30 bg-gold-400/5 p-6" : "rounded-2xl border border-gold-400/30 bg-gold-400/5 p-6"}>
+                    <p className={`text-sm font-bold uppercase tracking-wider mb-4 ${c.comparisonCards.theme === "dark" ? "text-gold-400" : "text-gold-500"}`}>
+                      {c.comparisonCards.left.label}
+                    </p>
+                    <ul className="flex flex-col gap-3">
+                      {c.comparisonCards.left.items.map((item, i) => (
+                        <li key={i} className={`flex items-start gap-2 text-sm ${c.comparisonCards!.theme === "dark" ? "text-white/80" : "text-navy-950"}`}>
+                          <span className="text-gold-400 mt-0.5 shrink-0">✓</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                ))}
+                  <div className={c.comparisonCards.theme === "dark" ? "rounded-2xl border border-white/10 bg-white/5 p-6" : "rounded-2xl border border-gray-200 bg-surface-off p-6"}>
+                    <p className={`text-sm font-bold uppercase tracking-wider mb-4 ${c.comparisonCards.theme === "dark" ? "text-white/40" : "text-gray-400"}`}>
+                      {c.comparisonCards.right.label}
+                    </p>
+                    <ul className="flex flex-col gap-3">
+                      {c.comparisonCards.right.items.map((item, i) => (
+                        <li key={i} className={`flex items-start gap-2 text-sm ${c.comparisonCards!.theme === "dark" ? "text-white/40" : "text-gray-400"}`}>
+                          <span className="mt-0.5 shrink-0">✕</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* CONTEXT SECTION — estatísticas + parágrafos (opcional) */}
+        {c.contextSection && (
+          <section className="section-padding bg-surface-white border-b border-gray-200/50">
+            <div className="container-st">
+              <div className="max-w-3xl mx-auto">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">{c.contextSection.eyebrow}</p>
+                <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-5">{c.contextSection.heading}</h2>
+                <div className="flex flex-col gap-4 text-base leading-relaxed text-gray-600">
+                  {c.contextSection.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+                </div>
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {c.contextSection.stats.map((stat, i) => (
+                    <div key={i} className="flex flex-col items-center text-center p-5 rounded-2xl border border-gold-400/20 bg-gold-400/5">
+                      <span className="text-3xl font-extrabold text-gold-500 mb-1">{stat.number}</span>
+                      <span className="text-xs text-gray-500 leading-snug">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -255,7 +358,23 @@ export default function ServicePageTemplate({
               <div className="max-w-3xl mx-auto text-center">
                 <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">{c.price.eyebrow}</p>
                 <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">{c.price.heading}</h2>
-                <p className="text-base leading-relaxed text-gray-600">{c.price.paragraph}</p>
+                {c.price.subtitle && <p className="text-base leading-relaxed text-gray-600 mb-8">{c.price.subtitle}</p>}
+                {c.price.factors && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    {c.price.factors.map((factor, i) => (
+                      <div key={i} className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 bg-surface-off">
+                        <span className="text-gold-500 font-bold text-sm min-w-[24px]">{String(i + 1).padStart(2, "0")}</span>
+                        <span className="text-sm text-gray-700">{factor}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {c.price.note && <p className="text-sm text-gray-500 mb-6">{c.price.note}</p>}
+                {c.price.ctaLabel && (
+                  <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon>
+                    {c.price.ctaLabel}
+                  </Button>
+                )}
               </div>
             </div>
           </section>

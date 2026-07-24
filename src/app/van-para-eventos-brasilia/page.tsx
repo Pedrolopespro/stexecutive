@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/van-para-eventos-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/van-para-eventos-brasilia/",
+      en: "https://stexecutive.com.br/en/van-para-eventos-brasilia/",
+      "x-default": "https://stexecutive.com.br/van-para-eventos-brasilia/",
+    },
   },
 };
 

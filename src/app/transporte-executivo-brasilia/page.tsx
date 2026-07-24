@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/transporte-executivo-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/transporte-executivo-brasilia/",
+      en: "https://stexecutive.com.br/en/transporte-executivo-brasilia/",
+      "x-default": "https://stexecutive.com.br/transporte-executivo-brasilia/",
+    },
   },
 };
 

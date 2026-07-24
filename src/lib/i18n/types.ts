@@ -115,7 +115,10 @@ export interface ServicePageContent {
     eyebrow: string;
     heading: string;
     paragraph: string;
-    specs: SpecItem[];
+    specs?: SpecItem[];
+    checklist?: string[];
+    tagsLabel?: string;
+    tags?: LabeledItem[];
     ctaLabel: string;
   };
 
@@ -179,7 +182,7 @@ export interface ServicePageContent {
   commonSituations?: {
     eyebrow: string;
     heading: string;
-    items: NumberedItem[];
+    items: string[];
   };
   comparisonTable?: {
     eyebrow: string;
@@ -195,7 +198,26 @@ export interface ServicePageContent {
   price?: {
     eyebrow: string;
     heading: string;
-    paragraph: string;
+    subtitle?: string;
+    factors?: string[];
+    note?: string;
+    ctaLabel?: string;
+  };
+
+  comparisonCards?: {
+    eyebrow: string;
+    heading: string;
+    subtitle?: string;
+    theme?: "light" | "dark";
+    left: { label: string; items: string[] };
+    right: { label: string; items: string[] };
+  };
+
+  contextSection?: {
+    eyebrow: string;
+    heading: string;
+    paragraphs: string[];
+    stats: { number: string; label: string }[];
   };
 }
 

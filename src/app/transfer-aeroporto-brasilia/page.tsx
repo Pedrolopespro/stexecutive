@@ -29,6 +29,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://stexecutive.com.br/transfer-aeroporto-brasilia/",
+    languages: {
+      "pt-BR": "https://stexecutive.com.br/transfer-aeroporto-brasilia/",
+      en: "https://stexecutive.com.br/en/transfer-aeroporto-brasilia/",
+      "x-default": "https://stexecutive.com.br/transfer-aeroporto-brasilia/",
+    },
   },
 };
 
