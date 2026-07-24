@@ -120,11 +120,11 @@ export function buildServicePages(locale: Locale): Record<ServiceKey, string> {
 }
 
 /**
- * Guia Brasília ainda não existe traduzido (depende da Fase B — schema do
- * banco de dados do painel PHP). Para en/es, cai na home daquele idioma até lá.
+ * Guia Brasília é servido pelo PHP (adm/guia-brasilia/), que já trata
+ * ?lang=en|es via rewrite do .htaccess.
  */
 export function guiaBrasiliaPath(locale: Locale): string {
-  return locale === "pt" ? GUIA_BRASILIA_PATH : `${localePrefix(locale)}/`;
+  return `${localePrefix(locale)}${GUIA_BRASILIA_PATH}`;
 }
 
 export function buildWhatsAppUrl(message: string): string {
