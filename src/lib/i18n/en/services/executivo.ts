@@ -24,6 +24,15 @@ export const executivoEn: ServicePageContent = {
     paragraph: "Executive transportation is a mobility service designed for clients who need more than just a ride. It involves punctuality, discretion, comfort and a professional service standard — widely used by companies, executives and corporate events.",
   },
 
+  fleet: {
+    image: "/images/content/seda executivo.webp",
+    imageAlt: "ST Executive executive fleet in Brasília",
+    eyebrow: "Fleet",
+    heading: "Executive SUVs and sedans",
+    paragraph: "Executive vehicles in excellent condition, with a uniformed driver, for meetings, transfer and service to special guests.",
+    ctaLabel: "Check availability",
+  },
+
   contextSection: {
     eyebrow: "Context",
     heading: "Why does Brasília demand executive transportation?",

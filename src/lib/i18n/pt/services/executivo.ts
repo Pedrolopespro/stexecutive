@@ -24,6 +24,15 @@ export const executivoPt: ServicePageContent = {
     paragraph: "O transporte executivo é um serviço de mobilidade voltado para clientes que precisam de mais do que apenas deslocamento. Envolve pontualidade, discrição, conforto e um padrão profissional no atendimento — amplamente utilizado por empresas, executivos e eventos corporativos.",
   },
 
+  fleet: {
+    image: "/images/content/seda executivo.webp",
+    imageAlt: "Frota executiva ST Executive em Brasília",
+    eyebrow: "Frota",
+    heading: "SUVs e sedans executivos",
+    paragraph: "Veículos executivos em ótimo estado, com motorista uniformizado, para reuniões, transfer e atendimento a convidados especiais.",
+    ctaLabel: "Consultar disponibilidade",
+  },
+
   contextSection: {
     eyebrow: "Contexto",
     heading: "Por que Brasília exige transporte executivo?",
