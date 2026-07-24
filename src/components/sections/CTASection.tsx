@@ -7,6 +7,7 @@ interface CTASectionProps {
   subtitle?: string;
   microcopy?: string;
   ctaText?: string;
+  whatsappUrl?: string;
   className?: string;
 }
 
@@ -15,6 +16,7 @@ export default function CTASection({
   subtitle,
   microcopy,
   ctaText = "Solicitar orçamento pelo WhatsApp",
+  whatsappUrl = WHATSAPP_URL,
   className = "",
 }: CTASectionProps) {
   return (
@@ -37,7 +39,7 @@ export default function CTASection({
             <Button
               variant="whatsapp"
               size="lg"
-              href={WHATSAPP_URL}
+              href={whatsappUrl}
               showWhatsAppIcon
             >
               {ctaText}

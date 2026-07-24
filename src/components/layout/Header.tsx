@@ -4,63 +4,26 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
+import { buildNavLinks, buildServicePages, buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { navPt, commonPt, type NavDict, type CommonDict } from "@/lib/i18n";
 import MobileMenu from "./MobileMenu";
 
-// ─── Páginas de serviço ────────────────────────────────────────────────────
-const SERVICE_LINKS = [
-  {
-    label: "Van Executiva",
-    desc: "Grupos, equipes e transfer aeroporto.",
-    href: "/aluguel-de-van-brasilia/",
-  },
-  {
-    label: "Minivan Executiva",
-    desc: "Pequenos grupos e deslocamentos VIP.",
-    href: "/minivan-executiva-brasilia/",
-  },
-  {
-    label: "Sedan/SUV Executivo",
-    desc: "Executivos e convidados especiais.",
-    href: "/transporte-executivo-brasilia/",
-  },
-  {
-    label: "Carros Blindados",
-    desc: "Segurança e discrição para autoridades.",
-    href: "/carros-blindados-brasilia/",
-  },
-  {
-    label: "Transfer Aeroporto",
-    desc: "Embarques e desembarques pontuais.",
-    href: "/transfer-aeroporto-brasilia/",
-  },
-  {
-    label: "Van para Eventos",
-    desc: "Casamentos, shows e eventos corporativos.",
-    href: "/van-para-eventos-brasilia/",
-  },
-  {
-    label: "Micro-ônibus Executivo",
-    desc: "Grupos médios e excursões corporativas.",
-    href: "/micro-onibus-executivo-brasilia/",
-  },
-  {
-    label: "Ônibus Executivo",
-    desc: "Grandes grupos e eventos de grande porte.",
-    href: "/onibus-executivo-brasilia/",
-  },
-  {
-    label: "City Tour Brasília",
-    desc: "Passeio pelos monumentos da capital.",
-    href: "/city-tour-brasilia/",
-  },
-];
+interface HeaderProps {
+  locale?: Locale;
+  dict?: NavDict;
+  commonDict?: CommonDict;
+}
 
-export default function Header() {
+export default function Header({ locale = "pt", dict = navPt, commonDict = commonPt }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLLIElement>(null);
+
+  const navLinks = buildNavLinks(locale);
+  const servicePages = buildServicePages(locale);
+  const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
+  const homeHref = locale === "pt" ? "/" : `/${locale}/`;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -102,7 +65,7 @@ export default function Header() {
           <nav className="flex items-center justify-between h-16 lg:h-20">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center shrink-0">
+            <Link href={homeHref} className="flex items-center shrink-0">
               <img
                 src={isScrolled ? "/images/logo/SVG/logo black.svg" : "/images/logo/SVG/logo white.svg"}
                 alt="ST Executive — Transporte Executivo em Brasília"
@@ -114,11 +77,13 @@ export default function Header() {
 
             {/* Desktop nav */}
             <ul className="hidden lg:flex items-center gap-1">
-              {NAV_LINKS.map((link) => {
+              {navLinks.map((link) => {
+                const label = dict.labels[link.key];
+
                 // Item "Serviços" vira dropdown
-                if (link.label === "Serviços") {
+                if (link.key === "services") {
                   return (
-                    <li key={link.href} ref={servicesRef} className="relative">
+                    <li key={link.key} ref={servicesRef} className="relative">
                       <button
                         onClick={() => setServicesOpen(!servicesOpen)}
                         onMouseEnter={() => setServicesOpen(true)}
@@ -129,7 +94,7 @@ export default function Header() {
                         aria-haspopup="true"
                         aria-expanded={servicesOpen}
                       >
-                        Serviços
+                        {dict.servicesDropdownLabel}
                         <svg
                           className={`w-3.5 h-3.5 shrink-0 transition-transform duration-150 ${servicesOpen ? "rotate-180" : ""}`}
                           viewBox="0 0 12 12"
@@ -156,10 +121,10 @@ export default function Header() {
                       >
                         <div className="bg-surface-white rounded-2xl shadow-premium border border-gray-100 overflow-hidden p-2">
                           <div className="grid grid-cols-2 gap-0.5">
-                            {SERVICE_LINKS.map((s) => (
+                            {dict.serviceLinks.map((s) => (
                               <Link
-                                key={s.href}
-                                href={s.href}
+                                key={s.key}
+                                href={servicePages[s.key]}
                                 onClick={() => setServicesOpen(false)}
                                 className="flex flex-col gap-0.5 px-4 py-3 rounded-xl hover:bg-gray-50 transition-colors duration-100 group"
                               >
@@ -181,9 +146,9 @@ export default function Header() {
                 // dinamicamente por um painel PHP/banco de dados no servidor,
                 // e a navegação client-side do Next.js mostraria a versão
                 // estática desatualizada em vez de forçar uma requisição real.
-                if (link.label === "Guia Brasília") {
+                if (link.key === "guia_brasilia") {
                   return (
-                    <li key={link.href}>
+                    <li key={link.key}>
                       <a
                         href={link.href}
                         className={[
@@ -194,7 +159,7 @@ export default function Header() {
                             : "text-gold-300 hover:text-surface-white hover:bg-white/10 border border-gold-300/30",
                         ].join(" ")}
                       >
-                        Guia Brasília
+                        {label}
                       </a>
                     </li>
                   );
@@ -203,18 +168,18 @@ export default function Header() {
                 // Links normais (hash = âncora na home, rota = navegação)
                 if (link.href.startsWith("#")) {
                   return (
-                    <li key={link.href}>
+                    <li key={link.key}>
                       <a href={link.href} className={navLinkClass}>
-                        {link.label}
+                        {label}
                       </a>
                     </li>
                   );
                 }
 
                 return (
-                  <li key={link.href}>
+                  <li key={link.key}>
                     <Link href={link.href} className={navLinkClass}>
-                      {link.label}
+                      {label}
                     </Link>
                   </li>
                 );
@@ -223,8 +188,8 @@ export default function Header() {
 
             {/* Desktop CTA + idioma */}
             <div className="hidden lg:flex items-center gap-3">
-              <Button variant="primary" size="sm" href={WHATSAPP_URL} showWhatsAppIcon>
-                Solicitar orçamento
+              <Button variant="primary" size="sm" href={whatsappUrl} showWhatsAppIcon>
+                {dict.ctaLabel}
               </Button>
             </div>
 
@@ -238,7 +203,7 @@ export default function Header() {
                   ? "text-navy-950 hover:bg-gray-100"
                   : "text-surface-white hover:bg-white/10",
               ].join(" ")}
-              aria-label="Abrir menu"
+              aria-label={dict.openMenuAriaLabel}
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -247,7 +212,13 @@ export default function Header() {
       </header>
 
       {/* Mobile menu */}
-      <MobileMenu isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)} />
+      <MobileMenu
+        isOpen={isMobileOpen}
+        onClose={() => setIsMobileOpen(false)}
+        locale={locale}
+        dict={dict}
+        commonDict={commonDict}
+      />
     </>
   );
 }

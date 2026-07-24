@@ -1,9 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import { AtSign, MapPin, Phone, MessageCircle } from "lucide-react";
-import { SERVICE_PAGES, GUIA_BRASILIA_PATH, WHATSAPP_URL } from "@/lib/constants";
+import { buildServicePages, guiaBrasiliaPath, buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { footerPt, commonPt, type FooterDict, type CommonDict } from "@/lib/i18n";
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY } from "@/lib/constants";
 
-export default function Footer() {
+interface FooterProps {
+  locale?: Locale;
+  dict?: FooterDict;
+  commonDict?: CommonDict;
+}
+
+export default function Footer({ locale = "pt", dict = footerPt, commonDict = commonPt }: FooterProps) {
+  const servicePages = buildServicePages(locale);
+  const guiaPath = guiaBrasiliaPath(locale);
+  const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
+
   return (
     <footer className="bg-navy-950 text-white/80">
       <div className="container-st section-padding">
@@ -14,8 +26,7 @@ export default function Footer() {
               ST Executive
             </span>
             <p className="mt-3 text-sm leading-relaxed text-white/60 max-w-xs">
-              Transporte executivo em Brasília para empresas, eventos, grupos e
-              transfer aeroporto.
+              {dict.brandDescription}
             </p>
             <div className="gold-line mt-4" />
           </div>
@@ -23,23 +34,13 @@ export default function Footer() {
           {/* Col 2 — Serviços */}
           <div>
             <h3 className="text-sm font-semibold text-surface-white uppercase tracking-wider mb-4">
-              Serviços
+              {dict.sectionHeaders.services}
             </h3>
             <ul className="flex flex-col gap-2.5">
-              {[
-                { label: "Aluguel de Van em Brasília", href: SERVICE_PAGES.vans },
-                { label: "Transporte Executivo", href: SERVICE_PAGES.executivo },
-                { label: "Transfer Aeroporto", href: SERVICE_PAGES.transfer },
-                { label: "Van para Eventos", href: SERVICE_PAGES.eventos },
-                { label: "Minivan Executiva", href: SERVICE_PAGES.minivan },
-                { label: "Micro-ônibus Executivo", href: SERVICE_PAGES.microOnibus },
-                { label: "Ônibus Executivo", href: SERVICE_PAGES.onibus },
-                { label: "Carros Blindados", href: SERVICE_PAGES.blindados },
-                { label: "City Tour Brasília", href: SERVICE_PAGES.cityTour },
-              ].map((item) => (
-                <li key={item.href}>
+              {dict.serviceLinks.map((item) => (
+                <li key={item.key}>
                   <Link
-                    href={item.href}
+                    href={servicePages[item.key]}
                     className="text-sm text-white/60 hover:text-surface-white transition-colors duration-[var(--motion-fast)]"
                   >
                     {item.label}
@@ -52,73 +53,68 @@ export default function Footer() {
           {/* Col 3 — Empresa */}
           <div>
             <h3 className="text-sm font-semibold text-surface-white uppercase tracking-wider mb-4">
-              Empresa
+              {dict.sectionHeaders.company}
             </h3>
             <ul className="flex flex-col gap-2.5">
-              {[
-                { label: "Sobre", href: "#sobre" },
-                { label: "Frota", href: "#frota" },
-                { label: "Como funciona", href: "#como-funciona" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Guia Brasília", href: GUIA_BRASILIA_PATH },
-              ].map((item) =>
-                // Hash (âncora) e /guia-brasilia/ (servido dinamicamente por
+              {dict.companyLinks.map((item) => {
+                const href = item.key === "guia_brasilia" ? guiaPath : item.href;
+                // Hash (âncora) e guia-brasilia (servido dinamicamente por
                 // painel PHP/banco de dados) usam <a> normal de propósito,
                 // forçando navegação real em vez do client-side do Next.js.
-                item.href.startsWith("#") || item.href.startsWith("/guia-brasilia") ? (
-                  <li key={item.href}>
+                return href.startsWith("#") || item.key === "guia_brasilia" ? (
+                  <li key={item.key}>
                     <a
-                      href={item.href}
+                      href={href}
                       className="text-sm text-white/60 hover:text-surface-white transition-colors duration-[var(--motion-fast)]"
                     >
                       {item.label}
                     </a>
                   </li>
                 ) : (
-                  <li key={item.href}>
+                  <li key={item.key}>
                     <Link
-                      href={item.href}
+                      href={href}
                       className="text-sm text-white/60 hover:text-surface-white transition-colors duration-[var(--motion-fast)]"
                     >
                       {item.label}
                     </Link>
                   </li>
-                )
-              )}
+                );
+              })}
             </ul>
           </div>
 
           {/* Col 4 — Contact */}
           <div>
             <h3 className="text-sm font-semibold text-surface-white uppercase tracking-wider mb-4">
-              Contato
+              {dict.sectionHeaders.contact}
             </h3>
             <ul className="flex flex-col gap-3">
               <li className="flex items-center gap-2 text-sm text-white/60">
                 <MessageCircle className="w-4 h-4 text-gold-500 shrink-0" />
                 <a
-                  href={WHATSAPP_URL}
+                  href={whatsappUrl}
                   className="hover:text-surface-white transition-colors"
                 >
-                  WhatsApp
+                  {dict.contact.whatsapp}
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/60">
                 <Phone className="w-4 h-4 text-gold-500 shrink-0" />
-                <span>(61) 9 8409-7971</span>
+                <span>{CONTACT_PHONE_DISPLAY}</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/60">
                 <AtSign className="w-4 h-4 text-gold-500 shrink-0" />
                 <a
-                  href="mailto:stexecutivebsb@hotmail.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="hover:text-surface-white transition-colors"
                 >
-                  stexecutivebsb@hotmail.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
-                <span>Brasília — DF</span>
+                <span>{dict.contact.address}</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/60">
                 <svg className="w-4 h-4 text-gold-500 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -151,12 +147,11 @@ export default function Footer() {
               height={140}
             />
             <p className="text-xs text-white/40">
-              &copy; {new Date().getFullYear()} ST Executive. Todos os direitos
-              reservados.
+              &copy; {new Date().getFullYear()} {dict.copyright}
             </p>
           </div>
           <p className="text-xs text-white/40">
-            Mais de 15 anos de transporte executivo em Brasília.
+            {dict.tagline}
           </p>
         </div>
       </div>

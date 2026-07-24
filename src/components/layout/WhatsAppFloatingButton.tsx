@@ -1,11 +1,17 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MessageCircle } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { commonPt, type CommonDict } from "@/lib/i18n";
 
-export default function WhatsAppFloatingButton() {
+interface WhatsAppFloatingButtonProps {
+  locale?: Locale;
+  dict?: CommonDict;
+}
+
+export default function WhatsAppFloatingButton({ dict = commonPt }: WhatsAppFloatingButtonProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const whatsappUrl = buildWhatsAppUrl(dict.whatsappMessage);
 
   useEffect(() => {
     const handleScroll = () => setIsVisible(window.scrollY > 300);
@@ -28,10 +34,10 @@ export default function WhatsAppFloatingButton() {
       <span className="absolute inset-0 rounded-full bg-[#4ade80] opacity-40 animate-ping" />
 
       <a
-        href={WHATSAPP_URL}
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Solicitar orçamento no WhatsApp"
+        aria-label={dict.whatsappFloatingAriaLabel}
         className={[
           "relative flex items-center gap-2",
           "bg-[#25D366] text-surface-white",
@@ -44,7 +50,7 @@ export default function WhatsAppFloatingButton() {
       >
         <img src="/images/icons/whatsapp.svg" alt="WhatsApp" className="w-5 h-5 shrink-0" />
         <span className="text-sm font-semibold">
-          Atendimento imediato
+          {dict.whatsappFloatingLabel}
         </span>
       </a>
     </div>

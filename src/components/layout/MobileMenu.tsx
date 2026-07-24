@@ -15,39 +15,41 @@ import {
   ChevronDown,
   MessageCircle,
 } from "lucide-react";
-import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
+import { buildNavLinks, buildServicePages, buildWhatsAppUrl, type Locale, type NavKey } from "@/lib/constants";
+import { navPt, commonPt, type NavDict, type CommonDict } from "@/lib/i18n";
 
-// ─── Ícones por link ───────────────────────────────────────────────────────
-const NAV_ICONS: Record<string, React.ReactNode> = {
-  "Início":        <Home        className="w-5 h-5" />,
-  "Serviços":      <Briefcase   className="w-5 h-5" />,
-  "Frota":         <Car         className="w-5 h-5" />,
-  "Como funciona": <CircleCheck className="w-5 h-5" />,
-  "Sobre":         <User        className="w-5 h-5" />,
-  "Contato":       <Phone       className="w-5 h-5" />,
-  "Guia Brasília": <BookOpen    className="w-5 h-5" />,
+// ─── Ícones por chave de nav (independente de idioma) ─────────────────────
+const NAV_ICONS: Record<NavKey, React.ReactNode> = {
+  home: <Home className="w-5 h-5" />,
+  services: <Briefcase className="w-5 h-5" />,
+  fleet: <Car className="w-5 h-5" />,
+  how_it_works: <CircleCheck className="w-5 h-5" />,
+  about: <User className="w-5 h-5" />,
+  contato: <Phone className="w-5 h-5" />,
+  guia_brasilia: <BookOpen className="w-5 h-5" />,
 };
-
-// ─── Sub-serviços ──────────────────────────────────────────────────────────
-const SERVICE_LINKS = [
-  { label: "Van Executiva",          href: "/aluguel-de-van-brasilia/" },
-  { label: "Minivan Executiva",      href: "/minivan-executiva-brasilia/" },
-  { label: "Sedan/SUV Executivo",    href: "/transporte-executivo-brasilia/" },
-  { label: "Carros Blindados",       href: "/carros-blindados-brasilia/" },
-  { label: "Transfer Aeroporto",     href: "/transfer-aeroporto-brasilia/" },
-  { label: "Van para Eventos",       href: "/van-para-eventos-brasilia/" },
-  { label: "Micro-ônibus Executivo", href: "/micro-onibus-executivo-brasilia/" },
-  { label: "Ônibus Executivo",       href: "/onibus-executivo-brasilia/" },
-  { label: "City Tour Brasília",     href: "/city-tour-brasilia/" },
-];
 
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  locale?: Locale;
+  dict?: NavDict;
+  commonDict?: CommonDict;
 }
 
-export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+export default function MobileMenu({
+  isOpen,
+  onClose,
+  locale = "pt",
+  dict = navPt,
+  commonDict = commonPt,
+}: MobileMenuProps) {
   const [servicesExpanded, setServicesExpanded] = useState(false);
+
+  const navLinks = buildNavLinks(locale);
+  const servicePages = buildServicePages(locale);
+  const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
+  const homeHref = locale === "pt" ? "/" : `/${locale}/`;
 
   // Bloqueia scroll do body
   useEffect(() => {
@@ -84,7 +86,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       >
         {/* ── Cabeçalho do painel ── */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-          <Link href="/" onClick={onClose}>
+          <Link href={homeHref} onClick={onClose}>
             <img
               src="/images/logo/SVG/logo black.svg"
               alt="ST Executive"
@@ -93,7 +95,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           </Link>
           <button
             onClick={onClose}
-            aria-label="Fechar menu"
+            aria-label={dict.closeMenuAriaLabel}
             className="p-2 rounded-xl text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors"
           >
             <X className="w-5 h-5" />
@@ -103,12 +105,13 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* ── Nav links ── */}
         <nav className="flex-1 overflow-y-auto">
           <ul className="divide-y divide-gray-100">
-            {NAV_LINKS.map((link) => {
+            {navLinks.map((link) => {
+              const label = dict.labels[link.key];
 
               /* ── Serviços (expansível) ── */
-              if (link.label === "Serviços") {
+              if (link.key === "services") {
                 return (
-                  <li key={link.href}>
+                  <li key={link.key}>
                     <button
                       onClick={() => setServicesExpanded(!servicesExpanded)}
                       className={[
@@ -118,9 +121,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       ].join(" ")}
                     >
                       <span className={servicesExpanded ? "text-blue-600" : "text-gray-400"}>
-                        {NAV_ICONS["Serviços"]}
+                        {NAV_ICONS.services}
                       </span>
-                      <span className="flex-1 text-base font-semibold">Serviços</span>
+                      <span className="flex-1 text-base font-semibold">{label}</span>
                       <ChevronDown
                         className={[
                           "w-4 h-4 transition-transform duration-200",
@@ -137,10 +140,10 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                       ].join(" ")}
                     >
                       <ul className="py-2 pl-14 pr-5 flex flex-col gap-0">
-                        {SERVICE_LINKS.map((s) => (
-                          <li key={s.href}>
+                        {dict.serviceLinks.map((s) => (
+                          <li key={s.key}>
                             <Link
-                              href={s.href}
+                              href={servicePages[s.key]}
                               onClick={onClose}
                               className="flex items-center gap-2.5 py-2.5 text-sm font-medium text-gray-600 hover:text-blue-700 transition-colors"
                             >
@@ -159,22 +162,22 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                  servida dinamicamente por um painel PHP/banco de dados no
                  servidor. Navegação client-side do Next.js mostraria a
                  versão estática antiga. */
-              if (link.label === "Guia Brasília") {
+              if (link.key === "guia_brasilia") {
                 return (
-                  <li key={link.href}>
+                  <li key={link.key}>
                     <a
                       href={link.href}
                       onClick={onClose}
                       className="flex items-center gap-3 px-5 py-4 bg-blue-50 hover:bg-blue-100 transition-colors"
                     >
-                      <span className="text-blue-600">{NAV_ICONS["Guia Brasília"]}</span>
+                      <span className="text-blue-600">{NAV_ICONS.guia_brasilia}</span>
                       <span className="flex-1 text-base font-semibold text-blue-700">
-                        Guia Brasília
+                        {label}
                       </span>
                       <span
                         className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-600 text-white tracking-wide"
                       >
-                        NOVO
+                        {dict.newBadge}
                       </span>
                     </a>
                   </li>
@@ -184,28 +187,28 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               /* ── Links normais (hash = âncora na home, rota = navegação) ── */
               if (link.href.startsWith("#")) {
                 return (
-                  <li key={link.href}>
+                  <li key={link.key}>
                     <a
                       href={link.href}
                       onClick={onClose}
                       className="flex items-center gap-3 px-5 py-4 text-gray-800 hover:bg-gray-50 transition-colors"
                     >
-                      <span className="text-gray-400">{NAV_ICONS[link.label]}</span>
-                      <span className="text-base font-medium">{link.label}</span>
+                      <span className="text-gray-400">{NAV_ICONS[link.key]}</span>
+                      <span className="text-base font-medium">{label}</span>
                     </a>
                   </li>
                 );
               }
 
               return (
-                <li key={link.href}>
+                <li key={link.key}>
                   <Link
                     href={link.href}
                     onClick={onClose}
                     className="flex items-center gap-3 px-5 py-4 text-gray-800 hover:bg-gray-50 transition-colors"
                   >
-                    <span className="text-gray-400">{NAV_ICONS[link.label]}</span>
-                    <span className="text-base font-medium">{link.label}</span>
+                    <span className="text-gray-400">{NAV_ICONS[link.key]}</span>
+                    <span className="text-base font-medium">{label}</span>
                   </Link>
                 </li>
               );
@@ -216,17 +219,17 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         {/* ── Rodapé com CTA ── */}
         <div className="px-5 py-6 border-t border-gray-100 bg-white">
           <a
-            href={WHATSAPP_URL}
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-[#25D366] text-white font-bold text-base shadow-md active:scale-[0.98] transition-transform"
           >
             <MessageCircle className="w-5 h-5 fill-white" />
-            Falar no WhatsApp
+            {dict.whatsappButtonLabel}
           </a>
           <p className="flex items-center justify-center gap-1.5 text-xs text-gray-400 mt-3">
             <Shield className="w-3.5 h-3.5" />
-            Transporte executivo em Brasília
+            {dict.whatsappSubtext}
           </p>
         </div>
       </div>
