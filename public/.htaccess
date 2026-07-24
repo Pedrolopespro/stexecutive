@@ -12,6 +12,14 @@ RewriteRule ^(.*)$ https://stexecutive.com.br/$1 [R=301,L]
 # senão cairiam num "artigo não encontrado" do PHP.
 RewriteRule ^guia-brasilia/(?!primeira-vez-em-brasilia|onde-ficar-em-brasilia|viagem-a-trabalho-para-brasilia|eventos-em-brasilia|o-que-fazer-em-brasilia-em-poucas-horas)([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1 [L,QSA]
 
+# Guia Brasília em inglês/espanhol — sempre via PHP (não existe versão
+# estática Next.js para nenhum artigo nesses idiomas ainda, então não há
+# exclusão de slugs aqui como na regra em português acima).
+RewriteRule ^en/guia-brasilia/?$ /guia-brasilia/index.php?lang=en [L,QSA]
+RewriteRule ^en/guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1&lang=en [L,QSA]
+RewriteRule ^es/guia-brasilia/?$ /guia-brasilia/index.php?lang=es [L,QSA]
+RewriteRule ^es/guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1&lang=es [L,QSA]
+
 # ── Segurança: headers ──────────────────────────────────────
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
