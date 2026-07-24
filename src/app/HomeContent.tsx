@@ -168,19 +168,29 @@ const FLEET = [
 
 const TESTIMONIALS = [
   {
-    text: "Precisávamos transportar convidados com pontualidade e organização. A operação foi tranquila do início ao fim.",
-    name: "Gestor de Eventos",
-    company: "Empresa de Eventos Corporativos",
+    text: "Ótima experiência com a ST Executive. Serviço pontual, conforto, segurança e atendimento de qualidade. Recomendo para transfer, eventos e transporte corporativo.",
+    name: "Bolivas Burguer Artesanal",
+    company: "Avaliação no Google",
   },
   {
-    text: "Atendimento profissional, veículo confortável e motorista preparado. Foi exatamente o padrão que nossa empresa precisava.",
-    name: "Empresa Corporativa",
-    company: "Setor de Tecnologia",
+    text: "Excelente atendimento! Tanto a equipe administrativa, sempre atenciosa e eficiente, quanto os motoristas, que demonstram profissionalismo, educação e cordialidade no dia a dia.",
+    name: "Fernanda Carvalho",
+    company: "Avaliação no Google",
   },
   {
-    text: "A ST Executive nos ajudou a organizar o transporte do grupo sem atrasos e sem imprevistos.",
-    name: "Produtora de Eventos",
-    company: "Produção de Shows e Concertos",
+    text: "Empresa séria, pontual e com atendimento diferenciado em Brasília. Excelente para transfer aeroporto, eventos, viagens e transporte executivo. Recomendo!",
+    name: "Silvio Ferreira",
+    company: "Avaliação no Google",
+  },
+  {
+    text: "Servicio excelente, vehículos limpios y modernos. Conductor André muy profesional. Recomendable.",
+    name: "Belen Callegari",
+    company: "Avaliação no Google",
+  },
+  {
+    text: "A empresa foi extremamente pontual, organizada e muito profissional durante todo o atendimento. Demonstraram muita honestidade, responsabilidade e cuidado. Recomendo com tranquilidade.",
+    name: "Maria Eustáquia Liotto",
+    company: "Avaliação no Google",
   },
 ];
 
