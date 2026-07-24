@@ -192,6 +192,11 @@ const TESTIMONIALS = [
     name: "Maria Eustáquia Liotto",
     company: "Avaliação no Google",
   },
+  {
+    text: "Prestação de serviço nota 10, motoristas educados, simpáticos, recomendo.",
+    name: "Oscar Martins",
+    company: "Avaliação no Google",
+  },
 ];
 
 const AUDIENCE = [
