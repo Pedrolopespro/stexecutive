@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import Button from "@/components/ui/Button";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
-import { buildNavLinks, buildServicePages, buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { buildNavLinks, buildServicePages, buildWhatsAppUrl, guiaBrasiliaPath, type Locale } from "@/lib/constants";
 import { navPt, commonPt, type NavDict, type CommonDict } from "@/lib/i18n";
 import MobileMenu from "./MobileMenu";
 
@@ -151,7 +151,7 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
                   return (
                     <li key={link.key}>
                       <a
-                        href={link.href}
+                        href={guiaBrasiliaPath(locale)}
                         className={[
                           "px-3 py-2 rounded-lg text-sm font-semibold",
                           "transition-colors duration-[var(--motion-fast)]",

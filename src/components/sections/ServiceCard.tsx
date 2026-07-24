@@ -111,7 +111,7 @@ export default function ServiceCard({
             <Button
               variant="primary"
               size="sm"
-              href={WHATSAPP_URL}
+              href={whatsappUrl}
               showWhatsAppIcon
             >
               {ctaText}
@@ -120,7 +120,7 @@ export default function ServiceCard({
               href={internalLink}
               className="inline-flex items-center gap-1.5 text-sm font-medium text-action-600 hover:text-action-500 transition-colors"
             >
-              Saiba mais
+              {moreLabel}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

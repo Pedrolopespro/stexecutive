@@ -15,7 +15,7 @@ import {
   ChevronDown,
   MessageCircle,
 } from "lucide-react";
-import { buildNavLinks, buildServicePages, buildWhatsAppUrl, type Locale, type NavKey } from "@/lib/constants";
+import { buildNavLinks, buildServicePages, buildWhatsAppUrl, guiaBrasiliaPath, type Locale, type NavKey } from "@/lib/constants";
 import { navPt, commonPt, type NavDict, type CommonDict } from "@/lib/i18n";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 
@@ -167,7 +167,7 @@ export default function MobileMenu({
                 return (
                   <li key={link.key}>
                     <a
-                      href={link.href}
+                      href={guiaBrasiliaPath(locale)}
                       onClick={onClose}
                       className="flex items-center gap-3 px-5 py-4 bg-blue-50 hover:bg-blue-100 transition-colors"
                     >
