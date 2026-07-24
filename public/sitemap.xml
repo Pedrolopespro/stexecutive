@@ -1,79 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- Home -->
   <url>
     <loc>https://stexecutive.com.br/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/"/>
   </url>
 
-  <!-- Serviços principais -->
+  <!-- Aluguel de Van -->
   <url>
     <loc>https://stexecutive.com.br/aluguel-de-van-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/aluguel-de-van-brasilia/"/>
   </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/aluguel-de-van-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/aluguel-de-van-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/aluguel-de-van-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/aluguel-de-van-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/aluguel-de-van-brasilia/"/>
+  </url>
+
+  <!-- Transporte Executivo -->
   <url>
     <loc>https://stexecutive.com.br/transporte-executivo-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/transporte-executivo-brasilia/"/>
   </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/transporte-executivo-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/transporte-executivo-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/transporte-executivo-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/transporte-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/transporte-executivo-brasilia/"/>
+  </url>
+
+  <!-- Transfer Aeroporto -->
   <url>
     <loc>https://stexecutive.com.br/transfer-aeroporto-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/transfer-aeroporto-brasilia/"/>
   </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/transfer-aeroporto-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/transfer-aeroporto-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/transfer-aeroporto-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/transfer-aeroporto-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/transfer-aeroporto-brasilia/"/>
+  </url>
+
+  <!-- Van para Eventos -->
   <url>
     <loc>https://stexecutive.com.br/van-para-eventos-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/van-para-eventos-brasilia/"/>
   </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/van-para-eventos-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/van-para-eventos-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/van-para-eventos-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/van-para-eventos-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/van-para-eventos-brasilia/"/>
+  </url>
+
+  <!-- Minivan Executiva -->
   <url>
     <loc>https://stexecutive.com.br/minivan-executiva-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/minivan-executiva-brasilia/"/>
   </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/minivan-executiva-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/minivan-executiva-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/minivan-executiva-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/minivan-executiva-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/minivan-executiva-brasilia/"/>
+  </url>
+
+  <!-- Micro-ônibus Executivo -->
   <url>
     <loc>https://stexecutive.com.br/micro-onibus-executivo-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/micro-onibus-executivo-brasilia/"/>
   </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/micro-onibus-executivo-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/micro-onibus-executivo-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/micro-onibus-executivo-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/micro-onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/micro-onibus-executivo-brasilia/"/>
+  </url>
+
+  <!-- Ônibus Executivo -->
   <url>
     <loc>https://stexecutive.com.br/onibus-executivo-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/onibus-executivo-brasilia/"/>
   </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/onibus-executivo-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/onibus-executivo-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/onibus-executivo-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/onibus-executivo-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/onibus-executivo-brasilia/"/>
+  </url>
+
+  <!-- Carros Blindados -->
   <url>
     <loc>https://stexecutive.com.br/carros-blindados-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/carros-blindados-brasilia/"/>
   </url>
   <url>
-    <loc>https://stexecutive.com.br/city-tour-brasilia/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <loc>https://stexecutive.com.br/en/carros-blindados-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/carros-blindados-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/carros-blindados-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/carros-blindados-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/carros-blindados-brasilia/"/>
+  </url>
+
+  <!-- City Tour -->
+  <url>
+    <loc>https://stexecutive.com.br/city-tour-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/city-tour-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/city-tour-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/city-tour-brasilia/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/city-tour-brasilia/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/city-tour-brasilia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/city-tour-brasilia/"/>
   </url>
 
   <!-- Contato -->
   <url>
     <loc>https://stexecutive.com.br/contato/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/contato/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/contato/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/contato/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/en/contato/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/contato/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/contato/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/contato/"/>
+  </url>
+  <url>
+    <loc>https://stexecutive.com.br/es/contato/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://stexecutive.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stexecutive.com.br/en/contato/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://stexecutive.com.br/es/contato/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stexecutive.com.br/contato/"/>
   </url>
 
-  <!-- Guia Brasília -->
+  <!-- Guia Brasília (ainda só em português — Fase B) -->
   <url>
     <loc>https://stexecutive.com.br/guia-brasilia/</loc>
     <lastmod>2026-07-22</lastmod>
