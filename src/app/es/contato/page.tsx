@@ -1,11 +1,9 @@
-"use client";
-
-import ContatoPage from "@/app/contato/page";
+import ContatoTemplate from "@/components/templates/ContatoTemplate";
 import { contatoEs, navEs, footerEs, commonEs } from "@/lib/i18n";
 
 export default function EsContatoPage() {
   return (
-    <ContatoPage
+    <ContatoTemplate
       locale="es"
       content={contatoEs}
       navDict={navEs}
