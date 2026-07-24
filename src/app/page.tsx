@@ -7,6 +7,7 @@ export const metadata: Metadata = {
     languages: {
       "pt-BR": "https://stexecutive.com.br/",
       en: "https://stexecutive.com.br/en/",
+      es: "https://stexecutive.com.br/es/",
       "x-default": "https://stexecutive.com.br/",
     },
   },

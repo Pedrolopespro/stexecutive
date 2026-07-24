@@ -11,20 +11,16 @@ const LANGUAGES: { code: Locale; label: string; flag: string }[] = [
   { code: "es", label: "Español", flag: "🇪🇸" },
 ];
 
-// Segmento inicial de cada rota já disponível em todos os idiomas (Fase A).
-// Guia Brasília ainda não está traduzido (depende da Fase B) — cai na home.
+// Segmento inicial de cada rota já traduzida para EN/ES. Atualizar conforme
+// novas páginas forem traduzidas — o que não estiver aqui cai na home do
+// idioma alvo em vez de gerar um link para uma página ainda inexistente.
+// Guia Brasília ainda não está traduzido (depende da Fase B).
 const KNOWN_SEGMENTS = new Set([
   "",
   "aluguel-de-van-brasilia",
   "transporte-executivo-brasilia",
   "transfer-aeroporto-brasilia",
   "van-para-eventos-brasilia",
-  "minivan-executiva-brasilia",
-  "micro-onibus-executivo-brasilia",
-  "onibus-executivo-brasilia",
-  "carros-blindados-brasilia",
-  "city-tour-brasilia",
-  "contato",
 ]);
 
 function mapPathToLocale(currentPath: string, targetLocale: Locale): string {

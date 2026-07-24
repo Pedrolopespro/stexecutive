@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
-import { executivoEn, navEn, footerEn, commonEn } from "@/lib/i18n";
+import { executivoEs, navEs, footerEs, commonEs } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: executivoEn.meta.title,
-  description: executivoEn.meta.description,
-  keywords: executivoEn.meta.keywords,
+  title: executivoEs.meta.title,
+  description: executivoEs.meta.description,
+  keywords: executivoEs.meta.keywords,
   alternates: {
-    canonical: `https://stexecutive.com.br/${executivoEn.canonicalPath}`,
+    canonical: `https://stexecutive.com.br/${executivoEs.canonicalPath}`,
     languages: {
       "pt-BR": "https://stexecutive.com.br/transporte-executivo-brasilia/",
       en: "https://stexecutive.com.br/en/transporte-executivo-brasilia/",
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EnTransporteExecutivoPage() {
+export default function EsTransporteExecutivoPage() {
   return (
     <ServicePageTemplate
-      content={executivoEn}
-      locale="en"
-      navDict={navEn}
-      footerDict={footerEn}
-      commonDict={commonEn}
+      content={executivoEs}
+      locale="es"
+      navDict={navEs}
+      footerDict={footerEs}
+      commonDict={commonEs}
     />
   );
 }

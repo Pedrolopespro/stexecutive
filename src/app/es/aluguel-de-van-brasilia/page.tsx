@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
-import { vansEn, navEn, footerEn, commonEn } from "@/lib/i18n";
+import { vansEs, navEs, footerEs, commonEs } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: vansEn.meta.title,
-  description: vansEn.meta.description,
-  keywords: vansEn.meta.keywords,
+  title: vansEs.meta.title,
+  description: vansEs.meta.description,
+  keywords: vansEs.meta.keywords,
   alternates: {
-    canonical: `https://stexecutive.com.br/${vansEn.canonicalPath}`,
+    canonical: `https://stexecutive.com.br/${vansEs.canonicalPath}`,
     languages: {
       "pt-BR": "https://stexecutive.com.br/aluguel-de-van-brasilia/",
       en: "https://stexecutive.com.br/en/aluguel-de-van-brasilia/",
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EnAluguelDeVanBrasiliaPage() {
+export default function EsAluguelDeVanBrasiliaPage() {
   return (
     <ServicePageTemplate
-      content={vansEn}
-      locale="en"
-      navDict={navEn}
-      footerDict={footerEn}
-      commonDict={commonEn}
+      content={vansEs}
+      locale="es"
+      navDict={navEs}
+      footerDict={footerEs}
+      commonDict={commonEs}
     />
   );
 }

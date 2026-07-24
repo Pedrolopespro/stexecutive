@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import HomeContent from "@/app/HomeContent";
-import { homeEn, navEn, footerEn, commonEn } from "@/lib/i18n";
+import { homeEs, navEs, footerEs, commonEs } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: homeEn.meta.title,
-  description: homeEn.meta.description,
-  keywords: homeEn.meta.keywords,
+  title: homeEs.meta.title,
+  description: homeEs.meta.description,
+  keywords: homeEs.meta.keywords,
   alternates: {
-    canonical: "https://stexecutive.com.br/en/",
+    canonical: "https://stexecutive.com.br/es/",
     languages: {
       "pt-BR": "https://stexecutive.com.br/",
       en: "https://stexecutive.com.br/en/",
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EnHomePage() {
+export default function EsHomePage() {
   return (
     <HomeContent
-      locale="en"
-      content={homeEn}
-      navDict={navEn}
-      footerDict={footerEn}
-      commonDict={commonEn}
+      locale="es"
+      content={homeEs}
+      navDict={navEs}
+      footerDict={footerEs}
+      commonDict={commonEs}
     />
   );
 }

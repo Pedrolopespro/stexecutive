@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       "pt-BR": "https://stexecutive.com.br/aluguel-de-van-brasilia/",
       en: "https://stexecutive.com.br/en/aluguel-de-van-brasilia/",
+      es: "https://stexecutive.com.br/es/aluguel-de-van-brasilia/",
       "x-default": "https://stexecutive.com.br/aluguel-de-van-brasilia/",
     },
   },

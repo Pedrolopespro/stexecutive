@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
-import { transferEn, navEn, footerEn, commonEn } from "@/lib/i18n";
+import { transferEs, navEs, footerEs, commonEs } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: transferEn.meta.title,
-  description: transferEn.meta.description,
-  keywords: transferEn.meta.keywords,
+  title: transferEs.meta.title,
+  description: transferEs.meta.description,
+  keywords: transferEs.meta.keywords,
   alternates: {
-    canonical: `https://stexecutive.com.br/${transferEn.canonicalPath}`,
+    canonical: `https://stexecutive.com.br/${transferEs.canonicalPath}`,
     languages: {
       "pt-BR": "https://stexecutive.com.br/transfer-aeroporto-brasilia/",
       en: "https://stexecutive.com.br/en/transfer-aeroporto-brasilia/",
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EnTransferAeroportoPage() {
+export default function EsTransferAeroportoPage() {
   return (
     <ServicePageTemplate
-      content={transferEn}
-      locale="en"
-      navDict={navEn}
-      footerDict={footerEn}
-      commonDict={commonEn}
+      content={transferEs}
+      locale="es"
+      navDict={navEs}
+      footerDict={footerEs}
+      commonDict={commonEs}
     />
   );
 }
