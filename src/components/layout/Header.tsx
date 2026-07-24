@@ -195,20 +195,23 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
               </Button>
             </div>
 
-            {/* Mobile toggle */}
-            <button
-              onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className={[
-                "lg:hidden p-2 rounded-lg",
-                "transition-colors duration-[var(--motion-fast)]",
-                isScrolled
-                  ? "text-navy-950 hover:bg-gray-100"
-                  : "text-surface-white hover:bg-white/10",
-              ].join(" ")}
-              aria-label={dict.openMenuAriaLabel}
-            >
-              <Menu className="w-6 h-6" />
-            </button>
+            {/* Mobile: idioma + toggle */}
+            <div className="flex items-center gap-1 lg:hidden">
+              <LanguageSwitcher dark={!isScrolled} currentLocale={locale} />
+              <button
+                onClick={() => setIsMobileOpen(!isMobileOpen)}
+                className={[
+                  "p-2 rounded-lg",
+                  "transition-colors duration-[var(--motion-fast)]",
+                  isScrolled
+                    ? "text-navy-950 hover:bg-gray-100"
+                    : "text-surface-white hover:bg-white/10",
+                ].join(" ")}
+                aria-label={dict.openMenuAriaLabel}
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
           </nav>
         </div>
       </header>
