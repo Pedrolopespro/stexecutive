@@ -145,9 +145,6 @@ export default function CityTourBrasiliaPage() {
               src="/images/content/commander.webp"
               alt="City tour em Brasília com motorista executivo — Ponte JK ao fundo — ST Executive"
               className="w-full h-full object-cover object-center"
-              width={1920}
-              height={1080}
-              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/75 via-navy-950/60 to-navy-950/95" />
           </div>
@@ -271,9 +268,6 @@ export default function CityTourBrasiliaPage() {
                   src="/images/content/comanders.webp"
                   alt="Veículos executivos ST Executive para city tour em Brasília, com a Ponte JK ao fundo"
                   className="w-full h-full object-cover"
-                  width={800}
-                  height={600}
-                  loading="lazy"
                 />
               </div>
 

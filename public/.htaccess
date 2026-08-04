@@ -10,17 +10,7 @@ RewriteRule ^(.*)$ https://stexecutive.com.br/$1 [R=301,L]
 # Exclui os 5 artigos que ainda não foram cadastrados no banco (mais
 # antigos que o painel admin) — esses continuam vindo do HTML estático,
 # senão cairiam num "artigo não encontrado" do PHP.
-# A condição abaixo só manda para o PHP quando NÃO existe HTML estático do
-# artigo. Assim, se o banco de dados cair, o Guia Brasília continua no ar pela
-# versão estática em vez de devolver "Erro de conexão com o banco de dados".
-# Contrapartida: para os artigos que têm versão estática, o que aparece é o
-# conteúdo do último build, não o do painel admin.
-RewriteCond %{DOCUMENT_ROOT}/guia-brasilia/$1/index.html !-f
 RewriteRule ^guia-brasilia/(?!primeira-vez-em-brasilia|onde-ficar-em-brasilia|viagem-a-trabalho-para-brasilia|eventos-em-brasilia|o-que-fazer-em-brasilia-em-poucas-horas)([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1 [L,QSA]
-
-# Mesma ideia para a listagem /guia-brasilia/: prefere o index.html do build
-# ao index.php. Onde não há index.html (ex.: /admin/), cai no index.php normal.
-DirectoryIndex index.html index.php
 
 # Guia Brasília em inglês/espanhol — sempre via PHP (não existe versão
 # estática Next.js para nenhum artigo nesses idiomas ainda, então não há

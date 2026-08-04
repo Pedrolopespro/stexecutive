@@ -92,8 +92,6 @@ export default function MobileMenu({
               src="/images/logo/SVG/logo black.svg"
               alt="ST Executive"
               className="h-8 w-auto"
-              width={130}
-              height={36}
             />
           </Link>
           <button
