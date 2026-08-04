@@ -6,4 +6,7 @@
   <sitemap>
     <loc>https://stexecutive.com.br/sitemap-articles.xml</loc>
   </sitemap>
+  <sitemap>
+    <loc>https://stexecutive.com.br/image-sitemap.xml</loc>
+  </sitemap>
 </sitemapindex>
