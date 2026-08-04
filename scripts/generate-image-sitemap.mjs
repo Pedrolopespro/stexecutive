@@ -246,11 +246,46 @@ function buildXml(pages, imagePageCount, totalPages) {
 
 // ── Main ───────────────────────────────────────────────────────────────────
 
+/**
+ * sitemap-articles.xml de base, com os artigos do Guia Brasília que o build
+ * gerou. Serve para o índice nunca apontar para um arquivo inexistente.
+ * Quando admin/sitemap-generator.php roda no servidor, ele sobrescreve este
+ * arquivo com a versão do banco — que é mais rica (traduções + hreflang +
+ * imagem de destaque de cada artigo).
+ */
+async function writeArticlesSitemap() {
+  const files = await walkHtml(path.join(OUT_DIR, "guia-brasilia"));
+  const today = new Date().toISOString().slice(0, 10);
+
+  const slugs = files
+    .map(fileToUrlPath)
+    .filter(Boolean)
+    .filter((u) => u !== "/guia-brasilia/")
+    .sort();
+
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n';
+  for (const urlPath of slugs) {
+    xml += "  <url>\n";
+    xml += `    <loc>${xmlEscape(SITE + urlPath)}</loc>\n`;
+    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += "    <changefreq>monthly</changefreq>\n";
+    xml += "    <priority>0.7</priority>\n";
+    xml += "  </url>\n";
+  }
+  xml += "\n</urlset>\n";
+
+  await writeFile(path.join(OUT_DIR, "sitemap-articles.xml"), xml, "utf8");
+  return slugs.length;
+}
+
 async function main() {
   const { pages, skipped, imagePageCount } = await collect();
   const { xml, imageCount, chromeDeduped } = buildXml(pages, imagePageCount, pages.length);
 
   await writeFile(path.join(OUT_DIR, "image-sitemap.xml"), xml, "utf8");
+  const articleCount = await writeArticlesSitemap();
+  console.log(`sitemap-articles.xml (base): ${articleCount} artigos`);
 
   console.log("─── image-sitemap.xml gerado ───");
   console.log(`Páginas com imagens : ${pages.length}`);
