@@ -27,7 +27,6 @@ import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import SectionHeader from "@/components/ui/SectionHeader";
-import LazyVideo from "@/components/ui/LazyVideo";
 
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
@@ -125,12 +124,16 @@ export default function HomeContent({
         ══════════════════════════════════ */}
         <section className="relative min-h-[62vh] sm:min-h-screen flex flex-col overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
-            <LazyVideo
+            <video
               className="w-full h-full object-cover object-bottom sm:object-center"
               poster="/images/content/hero site mobile.webp"
-              src="/images/content/veide hero.mp4"
-              strategy="idle"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
             >
+              <source src="/images/content/veide hero.mp4" type="video/mp4" />
               <img
                 src="/images/content/hero site.webp"
                 alt="ST Executive — Transporte executivo em Brasília"
@@ -139,7 +142,7 @@ export default function HomeContent({
                 width={1920}
                 height={1080}
               />
-            </LazyVideo>
+            </video>
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/88 via-navy-950/65 to-navy-950/80" />
           </div>
 
@@ -312,13 +315,17 @@ export default function HomeContent({
               </div>
 
               <div className="relative rounded-2xl overflow-hidden shadow-premium bg-navy-950" style={{ aspectRatio: "4/5" }}>
-                <LazyVideo
+                <video
                   className="w-full h-full object-cover"
                   poster="/images/content/van.webp"
-                  src="/images/content/video st vans.mp4"
-                  strategy="visible"
+                  autoPlay
+                  muted
+                  loop
                   controls
+                  playsInline
+                  preload="none"
                 >
+                  <source src="/images/content/video st vans.mp4" type="video/mp4" />
                   <img
                     src="/images/content/van.webp"
                     alt="Van executiva ST Executive"
@@ -327,7 +334,7 @@ export default function HomeContent({
                     width={600}
                     height={750}
                   />
-                </LazyVideo>
+                </video>
               </div>
             </div>
           </div>
