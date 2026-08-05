@@ -131,9 +131,6 @@ export default function TransporteExecutivoPage() {
               src="/images/content/SUV wild.webp"
               alt="Transporte executivo em Brasília — ST Executive"
               className="w-full h-full object-cover object-center"
-              width={1920}
-              height={1080}
-              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/65 to-navy-950/95" />
           </div>
@@ -305,9 +302,6 @@ export default function TransporteExecutivoPage() {
                   src="/images/content/seda executivo.webp"
                   alt="Frota executiva ST Executive em Brasília"
                   className="w-full h-full object-cover"
-                  width={800}
-                  height={600}
-                  loading="lazy"
                 />
               </div>
               <div>

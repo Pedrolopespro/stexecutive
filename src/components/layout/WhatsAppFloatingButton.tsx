@@ -48,7 +48,7 @@ export default function WhatsAppFloatingButton({ dict = commonPt }: WhatsAppFloa
           "px-5 py-3.5",
         ].join(" ")}
       >
-        <img src="/images/icons/whatsapp.svg" alt="WhatsApp" className="w-5 h-5 shrink-0" width={20} height={20} />
+        <img src="/images/icons/whatsapp.svg" alt="WhatsApp" className="w-5 h-5 shrink-0" />
         <span className="text-sm font-semibold">
           {dict.whatsappFloatingLabel}
         </span>

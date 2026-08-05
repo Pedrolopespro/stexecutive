@@ -14,11 +14,9 @@ const LANGUAGES: { code: Locale; label: string; flag: string }[] = [
 // Segmento inicial de cada rota já traduzida para EN/ES. Atualizar conforme
 // novas páginas forem traduzidas — o que não estiver aqui cai na home do
 // idioma alvo em vez de gerar um link para uma página ainda inexistente.
-//
-// "guia-brasilia" NÃO entra aqui: /en/guia-brasilia/ e /es/guia-brasilia/
-// dependem dos PHP com suporte a idioma, que ainda não estão no servidor.
-// Com o segmento listado, o switcher gerava um link para cada artigo em
-// EN e ES — 60 links quebrados a partir das páginas do guia.
+// Guia Brasília é servido pelo PHP (adm/guia-brasilia/index.php e
+// artigo.php), que já trata ?lang=en|es — um artigo sem tradução ainda
+// cai num 404 normal do PHP, não num link quebrado do switcher.
 const KNOWN_SEGMENTS = new Set([
   "",
   "aluguel-de-van-brasilia",
@@ -31,6 +29,7 @@ const KNOWN_SEGMENTS = new Set([
   "carros-blindados-brasilia",
   "city-tour-brasilia",
   "contato",
+  "guia-brasilia",
 ]);
 
 function mapPathToLocale(currentPath: string, targetLocale: Locale): string {

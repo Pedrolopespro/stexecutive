@@ -139,7 +139,7 @@ export default function Footer({ locale = "pt", dict = footerPt, commonDict = co
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <img
-              src="/images/content/selo-cadastur.webp"
+              src="/images/content/selo-cadastur.png"
               alt="Selo Cadastur — Cadastro nº 13.718.289/0001-20, Ministério do Turismo"
               className="h-14 w-auto rounded-md shrink-0"
               loading="lazy"

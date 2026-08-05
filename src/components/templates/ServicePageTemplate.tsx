@@ -41,9 +41,6 @@ export default function ServicePageTemplate({
               src={c.hero.image}
               alt={c.hero.imageAlt}
               className="w-full h-full object-cover object-center"
-              width={1920}
-              height={1080}
-              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/75 via-navy-950/60 to-navy-950/95" />
           </div>
@@ -105,9 +102,6 @@ export default function ServicePageTemplate({
                   src={c.fleet.image}
                   alt={c.fleet.imageAlt}
                   className="w-full h-full object-cover"
-                  width={800}
-                  height={600}
-                  loading="lazy"
                 />
               </div>
 
@@ -450,9 +444,6 @@ export default function ServicePageTemplate({
                       src={img.src}
                       alt={img.alt}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      width={900}
-                      height={675}
-                      loading="lazy"
                     />
                   </div>
                 ))}

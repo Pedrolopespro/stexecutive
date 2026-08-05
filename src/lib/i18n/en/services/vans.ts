@@ -96,9 +96,9 @@ export const vansEn: ServicePageContent = {
     eyebrow: "Operation",
     heading: "Executive transportation in action",
     images: [
-      { src: "/van executiva content/van 02.webp", alt: "ST Executive executive van in Brasília" },
+      { src: "/van executiva content/van 02.jpeg", alt: "ST Executive executive van in Brasília" },
       { src: "/images/content/van 06.webp", alt: "Executive transportation for groups in Brasília" },
-      { src: "/van executiva content/van 04.webp", alt: "Van with professional driver in Brasília" },
+      { src: "/van executiva content/van 04.jpeg", alt: "Van with professional driver in Brasília" },
     ],
   },
 

@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/generate-image-sitemap.mjs",
-    "audit:images": "node scripts/audit-images.mjs",
     "start": "next start"
   },
   "dependencies": {
