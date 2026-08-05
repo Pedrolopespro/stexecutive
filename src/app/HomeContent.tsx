@@ -212,13 +212,13 @@ export default function HomeContent({
         <div className="relative z-20 -mt-[6vh] sm:mt-0">
           <div className="bg-navy-950 border-t border-white/10">
             <div className="container-st py-4">
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
                 {c.featuresBar.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 lg:px-6 first:lg:pl-0 last:lg:pr-0">
                     <div className="text-gold-400 shrink-0">{FEATURES_ICONS[i]}</div>
-                    <div className="min-w-0">
-                      <p className="text-sm font-semibold text-surface-white leading-tight break-words hyphens-auto">{item.title}</p>
-                      <p className="text-xs text-white/50 mt-0.5 break-words hyphens-auto">{item.sub}</p>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-semibold text-surface-white leading-tight break-words hyphens-none">{item.title}</p>
+                      <p className="text-xs text-white/50 mt-0.5 break-words hyphens-none">{item.sub}</p>
                     </div>
                   </div>
                 ))}
@@ -365,7 +365,7 @@ export default function HomeContent({
               </p>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 mb-10">
               {c.fleetSection.differentials.map((item, i) => (
                 <div
                   key={i}
@@ -374,9 +374,9 @@ export default function HomeContent({
                   <div className="w-10 h-10 rounded-xl bg-gold-400/10 flex items-center justify-center text-gold-400 shrink-0">
                     {FLEET_DIFFERENTIALS_ICONS[i]}
                   </div>
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold text-surface-white leading-tight break-words hyphens-auto">{item.title}</p>
-                    <p className="text-xs text-white/45 mt-0.5 break-words hyphens-auto">{item.sub}</p>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-semibold text-surface-white leading-tight break-words hyphens-none">{item.title}</p>
+                    <p className="text-xs text-white/45 mt-0.5 break-words hyphens-none">{item.sub}</p>
                   </div>
                 </div>
               ))}
@@ -450,15 +450,15 @@ export default function HomeContent({
               subtitle={c.testimonialsSection.subtitle}
             />
 
-            <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-200/70 border border-gray-200/70 rounded-2xl overflow-hidden bg-white shadow-soft">
+            <div className="mt-10 grid grid-cols-1 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-gray-200/70 border border-gray-200/70 rounded-2xl overflow-hidden bg-white shadow-soft">
               {c.testimonialsSection.stats.map((s, i) => (
                 <div key={i} className="flex items-center gap-3 px-5 py-4">
                   <div className="text-gold-500 shrink-0">
                     {TESTIMONIAL_STATS_ICONS[i]}
                   </div>
-                  <div className="min-w-0">
-                    <p className="text-sm font-bold text-navy-950 leading-tight break-words hyphens-auto">{s.title}</p>
-                    <p className="text-xs text-gray-400 mt-0.5 break-words hyphens-auto">{s.sub}</p>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold text-navy-950 leading-tight break-words hyphens-none">{s.title}</p>
+                    <p className="text-xs text-gray-400 mt-0.5 break-words hyphens-none">{s.sub}</p>
                   </div>
                 </div>
               ))}
@@ -659,12 +659,14 @@ export default function HomeContent({
               </div>
             </div>
 
-            <div className="mt-10 grid grid-cols-2 lg:grid-cols-5 gap-3">
+            <div className="mt-10 grid grid-cols-1 lg:grid-cols-5 gap-3">
               {c.aboutSection.differentials.map((f, i) => (
-                <div key={i} className="flex flex-col gap-2 bg-white border border-gray-200/70 rounded-2xl px-4 py-4 shadow-soft">
-                  <div className="text-gold-500">{ABOUT_DIFFERENTIALS_ICONS[i]}</div>
-                  <p className="text-sm font-bold text-navy-950 leading-tight">{f.title}</p>
-                  <p className="text-xs text-gray-400 leading-snug">{f.sub}</p>
+                <div key={i} className="flex items-center lg:items-start gap-3 lg:gap-2 lg:flex-col bg-white border border-gray-200/70 rounded-2xl px-4 py-4 shadow-soft">
+                  <div className="text-gold-500 shrink-0">{ABOUT_DIFFERENTIALS_ICONS[i]}</div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-bold text-navy-950 leading-tight break-words hyphens-none">{f.title}</p>
+                    <p className="text-xs text-gray-400 leading-snug mt-0.5 break-words hyphens-none">{f.sub}</p>
+                  </div>
                 </div>
               ))}
             </div>
