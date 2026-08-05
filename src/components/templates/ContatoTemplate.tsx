@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 import Button from "@/components/ui/Button";
 import { AtSign, Phone, MessageCircle } from "lucide-react";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, buildWhatsAppUrl, type Locale } from "@/lib/constants";
@@ -425,7 +424,9 @@ export default function ContatoTemplate({
 
       </main>
       <Footer locale={locale} dict={footerDict} commonDict={commonDict} />
-      <WhatsAppFloatingButton locale={locale} dict={commonDict} />
+      {/* Sem botão flutuante aqui: esta página já é o canal de contato (tem
+          formulário e CTAs de WhatsApp próprios) e, no mobile, o flutuante
+          se sobrepunha ao botão "Enviar solicitação". */}
     </>
   );
 }

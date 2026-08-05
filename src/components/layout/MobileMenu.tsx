@@ -196,8 +196,8 @@ export default function MobileMenu({
                       onClick={onClose}
                       className="flex items-center gap-3 px-5 py-4 text-gray-800 hover:bg-gray-50 transition-colors"
                     >
-                      <span className="text-gray-400">{NAV_ICONS[link.key]}</span>
-                      <span className="text-base font-medium">{label}</span>
+                      <span className="text-gray-400 shrink-0">{NAV_ICONS[link.key]}</span>
+                      <span className="text-base font-medium min-w-0 break-words">{label}</span>
                     </a>
                   </li>
                 );
@@ -210,8 +210,8 @@ export default function MobileMenu({
                     onClick={onClose}
                     className="flex items-center gap-3 px-5 py-4 text-gray-800 hover:bg-gray-50 transition-colors"
                   >
-                    <span className="text-gray-400">{NAV_ICONS[link.key]}</span>
-                    <span className="text-base font-medium">{label}</span>
+                    <span className="text-gray-400 shrink-0">{NAV_ICONS[link.key]}</span>
+                    <span className="text-base font-medium min-w-0 break-words">{label}</span>
                   </Link>
                 </li>
               );

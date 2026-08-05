@@ -48,10 +48,12 @@ const variantStyles: Record<ButtonVariant, string> = {
   ].join(" "),
 };
 
+// Em telas muito estreitas (~320px) dois botões lado a lado não cabem com o
+// padding cheio, então ele começa menor e cresce a partir de sm.
 const sizeStyles: Record<ButtonSize, string> = {
   sm: "px-4 py-2 text-sm gap-1.5",
-  md: "px-5 py-3 text-[15px] gap-2",
-  lg: "px-6 py-3.5 text-base gap-2.5",
+  md: "px-4 sm:px-5 py-3 text-[15px] gap-2",
+  lg: "px-4 sm:px-6 py-3.5 text-base gap-2 sm:gap-2.5",
 };
 
 export default function Button({
@@ -81,7 +83,9 @@ export default function Button({
     <>
       {showWhatsAppIcon && <MessageCircle className="w-4 h-4 shrink-0" />}
       {icon && !showWhatsAppIcon && <span className="shrink-0">{icon}</span>}
-      <span>{children}</span>
+      {/* min-w-0 deixa o texto encolher dentro de um botão flex-1; sem isso o
+          min-width:auto do flexbox faz o rótulo transbordar em telas estreitas. */}
+      <span className="min-w-0">{children}</span>
     </>
   );
 
