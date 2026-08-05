@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Instalar dependências
@@ -29,7 +29,7 @@ jobs:
         run: npm run build
 
       - name: Deploy via FTP para Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: 82.25.73.204
           username: u863651118.stexecutive.com.br
@@ -38,3 +38,7 @@ jobs:
           local-dir: ./out/
           server-dir: /public_html/
           dangerous-clean-slate: false
+          # O padrão de 30s vinha estourando no handshake com a Hostinger
+          # ("Timeout (control socket)"), derrubando o deploy sem que nada
+          # do código estivesse errado.
+          timeout: 120000
