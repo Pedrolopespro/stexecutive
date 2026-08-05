@@ -2,6 +2,10 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.stexecutive\.com\.br [NC]
 RewriteRule ^(.*)$ https://stexecutive.com.br/$1 [R=301,L]
 
+# Página 404 do próprio site (gerada pelo build do Next.js). Sem esta linha
+# o Apache serve a página genérica da hospedagem, em inglês e sem layout.
+ErrorDocument 404 /404.html
+
 # Artigos individuais do Guia Brasília são administrados pelo painel
 # /admin (banco de dados) via guia-brasilia/artigo.php?slug=X, mas a
 # pasta de export estático do Next.js também gera guia-brasilia/{slug}/
