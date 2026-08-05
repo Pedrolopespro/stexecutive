@@ -96,9 +96,9 @@ export const vansPt: ServicePageContent = {
     eyebrow: "Operação",
     heading: "Transporte executivo em ação",
     images: [
-      { src: "/van executiva content/van 02.jpeg", alt: "Van executiva ST Executive em Brasília" },
+      { src: "/van executiva content/van 02.webp", alt: "Van executiva ST Executive em Brasília" },
       { src: "/images/content/van 06.webp", alt: "Transporte executivo para grupos em Brasília" },
-      { src: "/van executiva content/van 04.jpeg", alt: "Van com motorista profissional Brasília" },
+      { src: "/van executiva content/van 04.webp", alt: "Van com motorista profissional Brasília" },
     ],
   },
 

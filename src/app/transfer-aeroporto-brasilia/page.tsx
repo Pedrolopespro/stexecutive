@@ -126,6 +126,9 @@ export default function TransferAeroportoPage() {
               src="/images/content/aeroporto wild.webp"
               alt="Transfer aeroporto Brasília com motorista — ST Executive"
               className="w-full h-full object-cover object-center"
+              width={1920}
+              height={1080}
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/75 via-navy-950/60 to-navy-950/95" />
           </div>
@@ -335,6 +338,9 @@ export default function TransferAeroportoPage() {
                   src="/images/content/PASSAGEIRO 02.webp"
                   alt="Van executiva para transfer aeroporto Brasília"
                   className="w-full h-full object-cover"
+                  width={800}
+                  height={600}
+                  loading="lazy"
                 />
               </div>
               <div>
