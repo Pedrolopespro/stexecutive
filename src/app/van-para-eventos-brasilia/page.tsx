@@ -131,6 +131,9 @@ export default function VanParaEventosPage() {
               src="/images/content/van wild.webp"
               alt="Van para eventos em Brasília — ST Executive"
               className="w-full h-full object-cover object-center"
+              width={1920}
+              height={1080}
+              fetchPriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-navy-950/70 via-navy-950/60 to-navy-950/95" />
           </div>
@@ -292,6 +295,9 @@ export default function VanParaEventosPage() {
                   src="/images/content/van.webp"
                   alt="Van executiva para eventos em Brasília"
                   className="w-full h-full object-cover"
+                  width={800}
+                  height={600}
+                  loading="lazy"
                 />
               </div>
 

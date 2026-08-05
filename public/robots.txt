@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://stexecutive.com.br/sitemap.xml
+Sitemap: https://stexecutive.com.br/image-sitemap.xml
