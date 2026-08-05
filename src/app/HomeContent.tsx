@@ -216,9 +216,9 @@ export default function HomeContent({
                 {c.featuresBar.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 lg:px-6 first:lg:pl-0 last:lg:pr-0">
                     <div className="text-gold-400 shrink-0">{FEATURES_ICONS[i]}</div>
-                    <div>
-                      <p className="text-sm font-semibold text-surface-white leading-tight">{item.title}</p>
-                      <p className="text-xs text-white/50 mt-0.5">{item.sub}</p>
+                    <div className="min-w-0">
+                      <p className="text-sm font-semibold text-surface-white leading-tight break-words hyphens-auto">{item.title}</p>
+                      <p className="text-xs text-white/50 mt-0.5 break-words hyphens-auto">{item.sub}</p>
                     </div>
                   </div>
                 ))}
@@ -374,9 +374,9 @@ export default function HomeContent({
                   <div className="w-10 h-10 rounded-xl bg-gold-400/10 flex items-center justify-center text-gold-400 shrink-0">
                     {FLEET_DIFFERENTIALS_ICONS[i]}
                   </div>
-                  <div>
-                    <p className="text-sm font-semibold text-surface-white leading-tight">{item.title}</p>
-                    <p className="text-xs text-white/45 mt-0.5">{item.sub}</p>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-surface-white leading-tight break-words hyphens-auto">{item.title}</p>
+                    <p className="text-xs text-white/45 mt-0.5 break-words hyphens-auto">{item.sub}</p>
                   </div>
                 </div>
               ))}
@@ -456,9 +456,9 @@ export default function HomeContent({
                   <div className="text-gold-500 shrink-0">
                     {TESTIMONIAL_STATS_ICONS[i]}
                   </div>
-                  <div>
-                    <p className="text-sm font-bold text-navy-950 leading-tight">{s.title}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{s.sub}</p>
+                  <div className="min-w-0">
+                    <p className="text-sm font-bold text-navy-950 leading-tight break-words hyphens-auto">{s.title}</p>
+                    <p className="text-xs text-gray-400 mt-0.5 break-words hyphens-auto">{s.sub}</p>
                   </div>
                 </div>
               ))}
@@ -474,9 +474,9 @@ export default function HomeContent({
                     <div className="w-10 h-10 rounded-full bg-navy-950 flex items-center justify-center shrink-0">
                       <Users className="w-5 h-5 text-gold-400" />
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-navy-950 leading-tight">{t.name}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{t.company}</p>
+                    <div className="min-w-0">
+                      <p className="text-sm font-bold text-navy-950 leading-tight break-words">{t.name}</p>
+                      <p className="text-xs text-gray-400 mt-0.5 break-words">{t.company}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-1">

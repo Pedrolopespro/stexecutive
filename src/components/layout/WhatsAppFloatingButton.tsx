@@ -45,11 +45,13 @@ export default function WhatsAppFloatingButton({ dict = commonPt }: WhatsAppFloa
           "transition-all duration-[var(--motion-slow)] ease-[var(--ease-premium)]",
           "hover:bg-[#20BD5A] hover:shadow-card hover:scale-105",
           "active:scale-95",
-          "px-5 py-3.5",
+          // No mobile fica só o ícone: com o rótulo, a pílula tem ~217px e
+          // chega a cobrir o botão "Enviar" do formulário de contato.
+          "p-4 sm:px-5 sm:py-3.5",
         ].join(" ")}
       >
         <img src="/images/icons/whatsapp.svg" alt="WhatsApp" className="w-5 h-5 shrink-0" width={20} height={20} />
-        <span className="text-sm font-semibold">
+        <span className="hidden sm:inline text-sm font-semibold">
           {dict.whatsappFloatingLabel}
         </span>
       </a>

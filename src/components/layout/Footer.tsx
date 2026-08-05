@@ -146,7 +146,7 @@ export default function Footer({ locale = "pt", dict = footerPt, commonDict = co
               width={101}
               height={140}
             />
-            <p className="text-xs text-white/40">
+            <p className="text-xs text-white/40 min-w-0 break-words">
               &copy; {new Date().getFullYear()} {dict.copyright}
             </p>
           </div>
