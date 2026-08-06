@@ -17,7 +17,8 @@ export default function Footer({ locale = "pt", dict = footerPt, commonDict = co
   const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
 
   return (
-    <footer className="bg-navy-950 text-white/80">
+    // pb da safe area: no iPhone o rodapé não fica atrás da barra do Safari
+    <footer className="bg-navy-950 text-white/80 pb-[env(safe-area-inset-bottom)]">
       <div className="container-st section-padding">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {/* Col 1 — Brand */}

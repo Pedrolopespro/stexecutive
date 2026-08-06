@@ -139,6 +139,78 @@ body {
   border-radius: 3px;
 }
 
+/* ── Primeira dobra (mobile) ──
+   Hero + barra de benefícios ocupam juntos exatamente uma tela, sem que a
+   seção seguinte apareça antes do scroll.
+
+   As três declarações são uma cascata de fallback: quem não entende a
+   unidade simplesmente ignora a linha e fica na anterior.
+     vh  → navegadores antigos (não desconta a barra do navegador)
+     svh → altura com a barra visível; garante que nada seja cortado
+     dvh → acompanha a barra do navegador ao aparecer/sumir
+
+   O padding inferior respeita a Safe Area do iPhone (indicador de home);
+   vale 0 onde não existe. Como box-sizing é border-box, ele entra dentro
+   da altura, sem esticar a dobra. A partir de sm nada disso se aplica. */
+.first-fold {
+  min-height: 100vh;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Os fallbacks precisam vir em @supports: declarações repetidas da mesma
+   propriedade são colapsadas pelo minificador, que mantém só a última e
+   descarta o fallback. Dentro de @supports cada regra sobrevive. */
+@supports (min-height: 100svh) {
+  .first-fold {
+    min-height: 100svh;
+  }
+}
+
+@supports (min-height: 100dvh) {
+  .first-fold {
+    min-height: 100dvh;
+  }
+}
+
+@media (min-width: 640px) {
+  .first-fold {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* Celulares de tela mais curta: comprime a barra de benefícios o suficiente
+   para ela ainda caber na primeira dobra, sem mexer em fontes. O limite de
+   820px cobre o conteúdo em tamanho cheio (~812px) — acima disso já cabe
+   sem compressão. Restrito a mobile: o desktop não é afetado. */
+@media (max-width: 639px) and (max-height: 820px) {
+  .features-bar-inner {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .features-bar-grid {
+    gap: 0.5rem;
+  }
+
+  /* Cards mais baixos: o que define a altura é o ícone (40px) somado ao
+     padding vertical. Reduzir os dois mantém a moldura e o alinhamento. */
+  .features-bar-grid > div {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .features-bar-grid > div > div:first-child {
+    width: 2.125rem;
+    height: 2.125rem;
+  }
+
+  /* Menos respiro entre os botões do Hero e os benefícios. */
+  .hero-inner {
+    padding-bottom: 1.25rem;
+  }
+}
+
 /* ── Container utility ── */
 .container-st {
   width: 100%;

@@ -122,7 +122,11 @@ export default function HomeContent({
         {/* ══════════════════════════════════
             1. HERO
         ══════════════════════════════════ */}
-        <section className="relative min-h-[62vh] sm:min-h-screen flex flex-col overflow-hidden bg-navy-950">
+        {/* No mobile o Hero e a barra de benefícios dividem uma tela inteira:
+            o wrapper define a altura e o Hero cresce para ocupar o que sobra.
+            A partir de sm volta ao fluxo normal (desktop inalterado). */}
+        <div className="first-fold flex flex-col sm:block">
+        <section className="relative flex-1 sm:flex-none sm:min-h-screen flex flex-col overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             <video
               className="w-full h-full object-cover object-bottom sm:object-center"
@@ -149,7 +153,7 @@ export default function HomeContent({
           <div className="relative z-10 flex-1 flex flex-col container-st">
             <div className="h-20 lg:h-24 shrink-0" />
 
-            <div className="flex-1 flex flex-col justify-between sm:justify-center pb-7 sm:py-12 lg:py-16">
+            <div className="hero-inner flex-1 flex flex-col justify-between sm:justify-center pb-10 sm:py-12 lg:py-16">
 
               <div className="max-w-2xl lg:max-w-3xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-400/40 bg-gold-400/10 backdrop-blur-sm mb-5">
@@ -198,9 +202,8 @@ export default function HomeContent({
                     {c.hero.ctaPrimaryMobile}
                   </Button>
                 </div>
-                <p className="mt-3 text-xs text-white/35">
-                  {c.hero.microcopy}
-                </p>
+                {/* O microcopy fica só no desktop (bloco acima): no celular
+                    ele competia com os benefícios pela primeira dobra. */}
               </div>
 
             </div>
@@ -208,14 +211,25 @@ export default function HomeContent({
 
         </section>
 
-        {/* ── Barra de features ── */}
-        <div className="relative z-20 -mt-[6vh] sm:mt-0">
+        {/* ── Barra de features ──
+            Sem margem negativa: ela cobria o texto "Informe data, horário…". */}
+        <div className="relative z-20 shrink-0">
           <div className="bg-navy-950 border-t border-white/10">
-            <div className="container-st py-4">
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+            <div className="container-st py-4 features-bar-inner">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10 features-bar-grid">
+                {/* No mobile cada item vira um card (mesmo padrão dos
+                    diferenciais da Frota); no desktop volta a ser coluna
+                    simples separada por divisória, como antes. */}
                 {c.featuresBar.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 lg:px-6 first:lg:pl-0 last:lg:pr-0">
-                    <div className="text-gold-400 shrink-0">{FEATURES_ICONS[i]}</div>
+                  <div
+                    key={i}
+                    /* ring em vez de border: border-0 no lg apagaria também a
+                       divisória vertical (divide-x) das colunas do desktop. */
+                    className="flex items-center gap-3 rounded-2xl ring-1 ring-white/10 bg-navy-800/60 px-4 py-3.5 lg:rounded-none lg:ring-0 lg:bg-transparent lg:px-6 lg:py-0 first:lg:pl-0 last:lg:pr-0"
+                  >
+                    <div className="w-10 h-10 shrink-0 rounded-xl bg-gold-400/10 flex items-center justify-center text-gold-400 lg:w-auto lg:h-auto lg:rounded-none lg:bg-transparent">
+                      {FEATURES_ICONS[i]}
+                    </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-semibold text-surface-white leading-tight break-words hyphens-none">{item.title}</p>
                       <p className="text-xs text-white/50 mt-0.5 break-words hyphens-none">{item.sub}</p>
@@ -225,6 +239,7 @@ export default function HomeContent({
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         {/* ══════════════════════════════════
