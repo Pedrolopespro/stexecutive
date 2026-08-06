@@ -128,8 +128,20 @@ export default function HomeContent({
         <div className="first-fold flex flex-col sm:block">
         <section className="relative flex-1 sm:flex-none sm:min-h-screen flex flex-col overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
+            {/* No celular, imagem fixa em WebP (104 KB) no lugar do vídeo de
+                2,1 MB: carrega antes, não consome dados nem bateria. O vídeo
+                segue no desktop — com preload="none" e display:none ele nem
+                chega a ser baixado no mobile. */}
+            <img
+              src="/images/content/hero site mobile.webp"
+              alt="Frota executiva da ST Executive em Brasília"
+              className="sm:hidden w-full h-full object-cover object-bottom"
+              fetchPriority="high"
+              width={1080}
+              height={1920}
+            />
             <video
-              className="w-full h-full object-cover object-bottom sm:object-center"
+              className="hidden sm:block w-full h-full object-cover object-center"
               poster="/images/content/hero site mobile.webp"
               autoPlay
               muted
@@ -142,7 +154,6 @@ export default function HomeContent({
                 src="/images/content/hero site.webp"
                 alt="ST Executive — Transporte executivo em Brasília"
                 className="w-full h-full object-cover object-center"
-                fetchPriority="high"
                 width={1920}
                 height={1080}
               />
@@ -195,7 +206,13 @@ export default function HomeContent({
 
               <div className="sm:hidden">
                 <div className="flex flex-row gap-3">
-                  <Button variant="secondary" size="lg" href={servicosHref} className="flex-1 justify-center">
+                  <Button
+                    variant="heroOutline"
+                    size="lg"
+                    href={servicosHref}
+                    icon={<BriefcaseBusiness className="w-5 h-5 text-gold-400" />}
+                    className="flex-1 justify-center"
+                  >
                     {c.hero.ctaSecondaryMobile}
                   </Button>
                   <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon className="flex-1 justify-center">

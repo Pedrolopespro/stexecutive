@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "whatsapp";
+type ButtonVariant = "primary" | "secondary" | "outline" | "ghost" | "whatsapp" | "heroOutline";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -45,6 +45,17 @@ const variantStyles: Record<ButtonVariant, string> = {
     "hover:bg-[#20BD5A] hover:-translate-y-0.5",
     "active:translate-y-0",
     "shadow-soft hover:shadow-card",
+  ].join(" "),
+  // Botão sobre a foto do Hero: fundo azul-escuro translúcido e borda
+  // dourada. Variante própria em vez de sobrescrever a "secondary" via
+  // className — duas cores de borda no mesmo elemento dependeriam da ordem
+  // do CSS gerado, não da ordem das classes.
+  heroOutline: [
+    "bg-navy-950/70 text-surface-white",
+    "border border-gold-400/70",
+    "backdrop-blur-sm",
+    "hover:bg-navy-900/85 hover:border-gold-400 hover:-translate-y-0.5",
+    "active:translate-y-0",
   ].join(" "),
 };
 
