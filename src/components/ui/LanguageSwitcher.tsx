@@ -11,6 +11,18 @@ const LANGUAGES: { code: Locale; label: string; flag: string }[] = [
   { code: "es", label: "Español", flag: "🇪🇸" },
 ];
 
+// Bandeira em SVG para o dropdown do desktop — só ali, não no menu mobile
+// (inline abaixo). O emoji 🇧🇷/🇺🇸/🇪🇸 é dois caracteres Unicode "Regional
+// Indicator" que o Windows não tem glifo de bandeira para combinar: sem
+// fonte de emoji com suporte a bandeira, o navegador mostra as duas letras
+// soltas — exatamente "BR"/"US"/"ES". Celular (iOS/Android) tem a fonte
+// certa e sempre mostrou a bandeira; por isso só o dropdown ficava errado.
+const FLAG_SRC: Record<Locale, string> = {
+  pt: "/images/icons/flag-br.svg",
+  en: "/images/icons/flag-us.svg",
+  es: "/images/icons/flag-es.svg",
+};
+
 // Segmento inicial de cada rota já traduzida para EN/ES. Atualizar conforme
 // novas páginas forem traduzidas — o que não estiver aqui cai na home do
 // idioma alvo em vez de gerar um link para uma página ainda inexistente.
@@ -120,7 +132,7 @@ export default function LanguageSwitcher({ dark = false, inline = false, current
         aria-expanded={open}
       >
         <Globe className="w-4 h-4 shrink-0" />
-        <span>{current.flag}</span>
+        <img src={FLAG_SRC[current.code]} alt="" className="w-4 h-3 rounded-[2px] object-cover shrink-0" />
         <span>{current.code.toUpperCase()}</span>
         <svg
           className={`w-3 h-3 shrink-0 transition-transform duration-150 ${open ? "rotate-180" : ""}`}
@@ -162,7 +174,7 @@ export default function LanguageSwitcher({ dark = false, inline = false, current
                 : "text-gray-700 hover:bg-gray-50",
             ].join(" ")}
           >
-            <span className="text-base leading-none">{lang.flag}</span>
+            <img src={FLAG_SRC[lang.code]} alt="" className="w-5 h-[14px] rounded-[2px] object-cover shrink-0" />
             <span className="flex-1 text-left">{lang.label}</span>
             <span className="text-xs opacity-50">{lang.code.toUpperCase()}</span>
           </a>
