@@ -114,6 +114,10 @@ export default function HomeContent({
   const servicosHref = locale === "pt" ? "#servicos" : `/${locale}/#servicos`;
   const contatoHref = locale === "pt" ? "/contato/" : `/${locale}/contato/`;
 
+  // Banner mobile: arte única que já traz logo, título, benefícios e botões.
+  // Só na home em português — EN e ES seguem com o Hero original.
+  const bannerMobile = locale === "pt";
+
   return (
     <>
       <Header locale={locale} dict={navDict} commonDict={commonDict} />
@@ -122,10 +126,47 @@ export default function HomeContent({
         {/* ══════════════════════════════════
             1. HERO
         ══════════════════════════════════ */}
+        {/* ── Banner mobile (só na home PT) ──
+            A arte já traz logo, título, benefícios e os dois botões. Por isso
+            o Hero e a barra de benefícios são escondidos por CSS no celular —
+            escondidos, não removidos: o H1 e os links continuam no HTML, que é
+            o que o Google lê (a indexação é mobile-first). */}
+        {bannerMobile && (
+          <section className="banner-mobile flex items-center justify-center sm:hidden">
+            <div className="banner-mobile__frame">
+              <img
+                src="/images/content/banner-mobile-home.webp"
+                alt="ST Executive — Transporte executivo premium em Brasília. Conforto, segurança e pontualidade em cada trajeto."
+                className="block w-full h-full"
+                width={900}
+                height={1600}
+                fetchPriority="high"
+              />
+              {/* Áreas de toque transparentes sobre os botões desenhados na
+                  arte. As medidas saíram do próprio arquivo (900x1600): os
+                  botões ocupam de 91,3% a 97,0% da altura — a faixa aqui é
+                  um pouco maior para o alvo de toque não ficar abaixo de
+                  ~44px, e a sobra cai no fundo escuro vazio. */}
+              <a
+                href={servicosHref}
+                className="banner-mobile__hit banner-mobile__hit--servicos"
+                aria-label={c.hero.ctaSecondaryMobile}
+              />
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="banner-mobile__hit banner-mobile__hit--orcamento"
+                aria-label={c.hero.ctaPrimaryMobile}
+              />
+            </div>
+          </section>
+        )}
+
         {/* No mobile o Hero e a barra de benefícios dividem uma tela inteira:
             o wrapper define a altura e o Hero cresce para ocupar o que sobra.
             A partir de sm volta ao fluxo normal (desktop inalterado). */}
-        <div className="first-fold flex flex-col sm:block">
+        <div className={bannerMobile ? "first-fold hidden sm:block" : "first-fold flex flex-col sm:block"}>
         <section className="relative flex-1 sm:flex-none sm:min-h-screen flex flex-col overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
             {/* No celular, imagem fixa em WebP (104 KB) no lugar do vídeo de

@@ -211,6 +211,77 @@ body {
   }
 }
 
+/* ══ Banner mobile da home (PT) ══
+   A arte é 900x1600 (9:16) e quase todo celular é mais estreito que isso
+   (390x844 dá 9:19,5). Encaixar pela altura cortaria as laterais — justo
+   onde ficam os ícones das pontas e a borda dos botões. Então ela é
+   encaixada pela largura, e a sobra vertical recebe um gradiente com a
+   mesma cor das bordas da arte (topo rgb(1,12,28), base rgb(2,4,8): as
+   duas pontas têm tons bem diferentes, por isso gradiente e não cor
+   única): a emenda não aparece. Nada é esticado nem cortado. */
+/* O display fica nas classes do Tailwind (flex + sm:hidden), não aqui:
+   declarado nesta regra ele venceria o sm:hidden por ordem de cascata e o
+   banner apareceria também no desktop. */
+.banner-mobile {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #010c1c, #020408);
+}
+
+/* Fallbacks em @supports pelo mesmo motivo de .first-fold: repetir a
+   propriedade faria o minificador manter só a última. */
+@supports (min-height: 100svh) {
+  .banner-mobile {
+    min-height: 100svh;
+  }
+}
+
+@supports (min-height: 100dvh) {
+  .banner-mobile {
+    min-height: 100dvh;
+  }
+}
+
+.banner-mobile__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 900 / 1600;
+  flex: none;
+  /* Trava a altura da arte na altura da tela. Só age quando a tela é mais
+     larga que alta (celular deitado); em pé nunca chega a valer. */
+  max-width: calc(100vh * 900 / 1600);
+}
+
+@supports (height: 100svh) {
+  .banner-mobile__frame {
+    max-width: calc(100svh * 900 / 1600);
+  }
+}
+
+/* Áreas de toque transparentes sobre os botões desenhados na arte.
+   Posicionadas em % do quadro — que tem exatamente a proporção do
+   arquivo — então acompanham qualquer tamanho de tela. */
+.banner-mobile__hit {
+  position: absolute;
+  display: block;
+  top: 90%;
+  height: 9.4%;
+  border-radius: 9999px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.banner-mobile__hit--servicos {
+  left: 5.22%;
+  width: 44.56%;
+}
+
+.banner-mobile__hit--orcamento {
+  left: 52.22%;
+  width: 37.11%;
+}
+
 /* ── Container utility ── */
 .container-st {
   width: 100%;
