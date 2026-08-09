@@ -115,8 +115,30 @@ export default function HomeContent({
   const contatoHref = locale === "pt" ? "/contato/" : `/${locale}/contato/`;
 
   // Banner mobile: arte única que já traz logo, título, benefícios e botões.
-  // Só na home em português — EN e ES seguem com o Hero original.
-  const bannerMobile = locale === "pt";
+  // Cada idioma agora tem sua própria arte (2026-08-09) — os textos "SERVIÇOS"/
+  // "SERVICES"/"SERVICIOS" e "ORÇAMENTO"/"GET A QUOTE"/"PRESUPUESTO" têm
+  // comprimentos diferentes, então a posição dos botões na imagem também
+  // difere um pouco entre as três; por isso bannerHits é por idioma, medido
+  // pixel a pixel em cada arquivo (ver areas de toque abaixo).
+  const bannerMobile = true;
+
+  const bannerSrc = {
+    pt: "/images/content/banner-mobile-home.webp",
+    en: "/images/content/banner-mobile-home-en.webp",
+    es: "/images/content/banner-mobile-home-es.webp",
+  }[locale];
+
+  const bannerAlt = {
+    pt: "ST Executive — Transporte executivo premium em Brasília. Conforto, segurança e pontualidade em cada trajeto.",
+    en: "ST Executive — Premium executive transportation in Brasília. Comfort, safety and punctuality on every trip.",
+    es: "ST Executive — Transporte ejecutivo premium en Brasília. Comodidad, seguridad y puntualidad en cada trayecto.",
+  }[locale];
+
+  const bannerHits = {
+    pt: { servicos: { left: "5.22%", width: "44.56%" }, orcamento: { left: "52.22%", width: "37.11%" } },
+    en: { servicos: { left: "5.33%", width: "42.33%" }, orcamento: { left: "50.44%", width: "42.33%" } },
+    es: { servicos: { left: "5.33%", width: "42.22%" }, orcamento: { left: "50.44%", width: "38.44%" } },
+  }[locale];
 
   return (
     <>
@@ -126,7 +148,7 @@ export default function HomeContent({
         {/* ══════════════════════════════════
             1. HERO
         ══════════════════════════════════ */}
-        {/* ── Banner mobile (só na home PT) ──
+        {/* ── Banner mobile (PT/EN/ES) ──
             A arte já traz logo, título, benefícios e os dois botões. Por isso
             o Hero e a barra de benefícios são escondidos por CSS no celular —
             escondidos, não removidos: o H1 e os links continuam no HTML, que é
@@ -135,28 +157,29 @@ export default function HomeContent({
           <section className="banner-mobile flex items-center justify-center sm:hidden">
             <div className="banner-mobile__frame">
               <img
-                src="/images/content/banner-mobile-home.webp"
-                alt="ST Executive — Transporte executivo premium em Brasília. Conforto, segurança e pontualidade em cada trajeto."
+                src={bannerSrc}
+                alt={bannerAlt}
                 className="block w-full h-full"
                 width={900}
                 height={1600}
                 fetchPriority="high"
               />
               {/* Áreas de toque transparentes sobre os botões desenhados na
-                  arte. As medidas saíram do próprio arquivo (900x1600): os
-                  botões ocupam de 91,3% a 97,0% da altura — a faixa aqui é
-                  um pouco maior para o alvo de toque não ficar abaixo de
-                  ~44px, e a sobra cai no fundo escuro vazio. */}
+                  arte. Posição base (top/height) vem do CSS, igual nas 3
+                  artes; left/width são por idioma (bannerHits acima), porque
+                  o texto de cada botão tem um comprimento diferente. */}
               <a
                 href={servicosHref}
-                className="banner-mobile__hit banner-mobile__hit--servicos"
+                className="banner-mobile__hit"
+                style={bannerHits.servicos}
                 aria-label={c.hero.ctaSecondaryMobile}
               />
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="banner-mobile__hit banner-mobile__hit--orcamento"
+                className="banner-mobile__hit"
+                style={bannerHits.orcamento}
                 aria-label={c.hero.ctaPrimaryMobile}
               />
             </div>

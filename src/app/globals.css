@@ -262,7 +262,10 @@ body {
 
 /* Áreas de toque transparentes sobre os botões desenhados na arte.
    Posicionadas em % do quadro — que tem exatamente a proporção do
-   arquivo — então acompanham qualquer tamanho de tela. */
+   arquivo — então acompanham qualquer tamanho de tela. top/height são
+   iguais nas 3 artes (PT/EN/ES); left/width variam por idioma (texto de
+   cada botão tem comprimento diferente) e por isso vêm via style inline
+   em HomeContent.tsx (bannerHits), não daqui. */
 .banner-mobile__hit {
   position: absolute;
   display: block;
@@ -270,16 +273,6 @@ body {
   height: 9.4%;
   border-radius: 9999px;
   -webkit-tap-highlight-color: transparent;
-}
-
-.banner-mobile__hit--servicos {
-  left: 5.22%;
-  width: 44.56%;
-}
-
-.banner-mobile__hit--orcamento {
-  left: 52.22%;
-  width: 37.11%;
 }
 
 /* ── Container utility ── */
