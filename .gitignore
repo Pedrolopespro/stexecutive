@@ -16,6 +16,12 @@ out/
 # Ativos não utilizados arquivados (não versionar - só backup local)
 _archive-unused-assets/
 
+# Guia Brasília — sistema PHP/MySQL separado, hospedado só na Hostinger.
+# Nunca deve ir para o Git: tem config.php com a senha do banco e (a
+# partir de agora) secrets.php com a chave da OpenAI. Antes disso a
+# proteção era só "ninguém deu git add" — sem garantia nenhuma.
+adm/
+
 # Claude Code (config local da máquina)
 .claude/settings.local.json
 

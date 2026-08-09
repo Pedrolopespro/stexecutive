@@ -42,3 +42,17 @@ jobs:
           # ("Timeout (control socket)"), derrubando o deploy sem que nada
           # do código estivesse errado.
           timeout: 120000
+          # sitemap.xml e sitemap-articles.xml são reescritos no servidor
+          # por admin/sitemap-generator.php (PHP do Guia) toda vez que um
+          # artigo é salvo, com uma versão mais rica (78 URLs × 3 idiomas +
+          # hreflang, e lastmod real) do que a base que o build gera aqui.
+          # Sem essa exclusão, qualquer deploy do site principal — mesmo
+          # um ajuste que nada tem a ver com o Guia — sobrescreve o
+          # arquivo do servidor com a base pobre e derruba EN/ES do
+          # sitemap. Isso já aconteceu uma vez (ver auditoria de
+          # 2026-08-09). O restante de out/ continua sendo enviado normal.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            sitemap.xml
+            sitemap-articles.xml
