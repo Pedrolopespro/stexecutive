@@ -66,14 +66,19 @@ interface NavStructureItem {
 }
 
 // Âncoras (#servicos etc.) só existem na home de cada idioma — nunca prefixadas
+//
+// A ordem deste array é a ordem exibida no menu — vale para o header do
+// desktop e para o menu hambúrguer, nos 3 idiomas, porque ambos iteram
+// sobre buildNavLinks(). O rótulo de cada item vem do dicionário pela
+// `key`, então reordenar aqui não afeta tradução nem destino.
 const NAV_STRUCTURE: NavStructureItem[] = [
+  { key: "guia_brasilia", path: "/guia-brasilia/" },
   { key: "home", path: "/" },
   { key: "services", path: "#servicos" },
   { key: "fleet", path: "#frota" },
   { key: "how_it_works", path: "#como-funciona" },
   { key: "about", path: "#sobre" },
   { key: "contato", path: "/contato/" },
-  { key: "guia_brasilia", path: "/guia-brasilia/" },
 ];
 
 export interface NavLinkBuilt {
