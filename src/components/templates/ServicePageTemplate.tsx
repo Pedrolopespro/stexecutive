@@ -69,7 +69,7 @@ export default function ServicePageTemplate({
             <div className="gold-line mt-6" />
 
             <div className="mt-8 flex flex-col items-start sm:flex-row gap-3">
-              <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon className="cta-servico">
+              <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon className="cta-servico-hero">
                 {c.hero.ctaLabel}
               </Button>
             </div>

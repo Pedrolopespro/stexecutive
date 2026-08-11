@@ -154,8 +154,8 @@ export default function TransferAeroportoPage() {
             <div className="gold-line mt-6" />
 
             <div className="mt-8 flex flex-col items-start sm:flex-row gap-3">
-              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="cta-servico">
-                Solicitar transfer no WhatsApp
+              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="cta-servico-hero">
+                Solicitar orçamento
               </Button>
             </div>
             <p className="mt-3 text-xs text-white/35">

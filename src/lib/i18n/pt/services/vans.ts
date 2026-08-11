@@ -24,7 +24,7 @@ export const vansPt: ServicePageContent = {
     titleLine2: "com Motorista",
     subtitle:
       "Van executiva para empresas, eventos, grupos e transfer aeroporto. Motorista profissional, pontualidade e atendimento em todo o Distrito Federal.",
-    ctaLabel: "Solicitar orçamento no WhatsApp",
+    ctaLabel: "Solicitar orçamento",
     microcopy: "Orçamento rápido · Atendimento para grupos e empresas",
   },
 

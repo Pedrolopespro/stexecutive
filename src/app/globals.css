@@ -300,6 +300,41 @@ body {
   }
 }
 
+/* ══ CTA principal (topo) das páginas de Serviços — só no celular ══
+   Tamanho definido pelo dono do site em 2026-08-11: mais encorpado que
+   os CTAs do meio da página, com largura fixa e centralizado, em vez de
+   acompanhar o texto.
+
+   min-height em vez de só padding: 14px de padding com fonte 17px daria
+   ~54px, abaixo da faixa de 58-62px pedida. O padding fica como
+   especificado e o min-height garante a altura; o conteúdo já é centrado
+   pelo flex do próprio botão.
+
+   Só o CTA do topo usa esta classe. Os demais botões azuis têm rótulos
+   longos ("Solicitar proposta corporativa no WhatsApp"): a 17px dentro de
+   85% da largura eles quebrariam em 2 linhas e passariam de 85px de
+   altura — por isso seguem com .cta-servico. */
+@media (max-width: 639px) {
+  a.cta-servico-hero,
+  button.cta-servico-hero {
+    width: 85%;
+    align-self: center;      /* centraliza dentro do hero, que é flex */
+    margin-left: auto;       /* e nos contextos que não são flex */
+    margin-right: auto;
+    min-height: 58px;
+    padding: 14px 22px;
+    font-size: 17px;
+    border-radius: 30px;
+  }
+
+  /* ícone proporcional à fonte maior (16px ficava pequeno ao lado de 17px) */
+  a.cta-servico-hero svg,
+  button.cta-servico-hero svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /* ── Container utility ── */
 .container-st {
   width: 100%;
