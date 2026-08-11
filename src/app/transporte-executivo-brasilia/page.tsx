@@ -158,8 +158,8 @@ export default function TransporteExecutivoPage() {
 
             <div className="gold-line mt-6" />
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
+            <div className="mt-8 flex flex-col items-start sm:flex-row gap-3">
+              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="cta-servico">
                 Solicitar atendimento no WhatsApp
               </Button>
             </div>
@@ -425,7 +425,7 @@ export default function TransporteExecutivoPage() {
               </div>
             </div>
             <div className="mt-12 text-center">
-              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
+              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="cta-servico">
                 Solicitar proposta corporativa no WhatsApp
               </Button>
             </div>
@@ -461,7 +461,7 @@ export default function TransporteExecutivoPage() {
                 Empresas podem contratar planos recorrentes com condições personalizadas.
               </p>
               <div className="text-center">
-                <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
+                <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="cta-servico">
                   Solicitar proposta corporativa
                 </Button>
               </div>

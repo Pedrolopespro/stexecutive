@@ -68,8 +68,8 @@ export default function ServicePageTemplate({
 
             <div className="gold-line mt-6" />
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon>
+            <div className="mt-8 flex flex-col items-start sm:flex-row gap-3">
+              <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon className="cta-servico">
                 {c.hero.ctaLabel}
               </Button>
             </div>
@@ -377,7 +377,7 @@ export default function ServicePageTemplate({
                 )}
                 {c.price.note && <p className="text-sm text-gray-500 mb-6">{c.price.note}</p>}
                 {c.price.ctaLabel && (
-                  <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon>
+                  <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon className="cta-servico">
                     {c.price.ctaLabel}
                   </Button>
                 )}
@@ -431,7 +431,7 @@ export default function ServicePageTemplate({
               ))}
             </div>
             <div className="mt-12 text-center">
-              <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon>
+              <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon className="cta-servico">
                 {c.process.ctaLabel}
               </Button>
             </div>

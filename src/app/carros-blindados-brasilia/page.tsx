@@ -172,8 +172,8 @@ export default function CarrosBlinadadosBrasiliaPage() {
 
             <div className="gold-line mt-6" />
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
+            <div className="mt-8 flex flex-col items-start sm:flex-row gap-3">
+              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="cta-servico">
                 Solicitar orçamento no WhatsApp
               </Button>
             </div>
@@ -331,7 +331,7 @@ export default function CarrosBlinadadosBrasiliaPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon>
+              <Button variant="primary" size="lg" href={WHATSAPP_URL} showWhatsAppIcon className="cta-servico">
                 Falar no WhatsApp
               </Button>
             </div>

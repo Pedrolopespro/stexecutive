@@ -275,6 +275,31 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* ══ CTA das páginas de Serviços — só no celular ══
+   Os rótulos desses botões são longos ("Solicitar proposta corporativa no
+   WhatsApp" mede 395px a 16px). No tamanho lg padrão eles estouravam a
+   largura útil do celular e quebravam em 2 linhas, subindo de 52px para
+   76px de altura. Reduzir um ponto de fonte e o padding vertical resolve
+   a maioria dos casos sem sacrificar legibilidade nem área de toque
+   (mínimo confortável de 44px preservado: 12+12+22,5 ≈ 47px).
+
+   Escrito como CSS puro, e não com a variante max-sm: do Tailwind, porque
+   neste projeto (v4, config CSS-first) essa variante não gera a media
+   query — as classes acabavam aplicando também no desktop.
+
+   O seletor inclui a tag (a./button.) de propósito: só ".cta-servico"
+   empata em especificidade com a utility .text-base do Tailwind, e quem
+   vence passa a depender da ordem das camadas — que não é estável aqui.
+   Com a tag, a regra ganha sempre, sem precisar de !important. */
+@media (max-width: 639px) {
+  a.cta-servico,
+  button.cta-servico {
+    font-size: 15px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
 /* ── Container utility ── */
 .container-st {
   width: 100%;
