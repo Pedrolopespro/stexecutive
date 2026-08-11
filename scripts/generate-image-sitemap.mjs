@@ -23,15 +23,13 @@ import path from "node:path";
 const SITE = "https://stexecutive.com.br";
 const OUT_DIR = path.join(process.cwd(), "out");
 
-// Mesma lista do .htaccess: artigos que NÃO foram para o banco e continuam
-// sendo servidos pelo HTML estático do Next.js.
-const STATIC_ARTICLE_SLUGS = [
-  "primeira-vez-em-brasilia",
-  "onde-ficar-em-brasilia",
-  "viagem-a-trabalho-para-brasilia",
-  "eventos-em-brasilia",
-  "o-que-fazer-em-brasilia-em-poucas-horas",
-];
+// Artigos do Guia que NÃO estão no banco e continuam sendo servidos pelo
+// HTML estático do Next.js — precisa espelhar a exceção do .htaccess.
+// Vazia desde 2026-08-09: os 5 que ainda eram estáticos foram migrados
+// para o banco (guia-migrar-5-artigos.sql), então TODO artigo do Guia
+// agora vem do PHP. Mantida como lista para o dia em que algum artigo
+// precise voltar a ser servido por HTML estático.
+const STATIC_ARTICLE_SLUGS = [];
 
 // Imagens que aparecem em quase todas as páginas (selo do rodapé, etc.)
 // são listadas só nas 3 homes, para não repetir a mesma imagem em dezenas

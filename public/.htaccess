@@ -11,10 +11,11 @@ ErrorDocument 404 /404.html
 # pasta de export estático do Next.js também gera guia-brasilia/{slug}/
 # no mesmo caminho. Reescreve a URL bonita para o script PHP real,
 # mantendo a URL visível igual.
-# Exclui os 5 artigos que ainda não foram cadastrados no banco (mais
-# antigos que o painel admin) — esses continuam vindo do HTML estático,
-# senão cairiam num "artigo não encontrado" do PHP.
-RewriteRule ^guia-brasilia/(?!primeira-vez-em-brasilia|onde-ficar-em-brasilia|viagem-a-trabalho-para-brasilia|eventos-em-brasilia|o-que-fazer-em-brasilia-em-poucas-horas)([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1 [L,QSA]
+# Até 2026-08-09 havia aqui uma exceção para 5 artigos que nunca tinham
+# ido para o banco e por isso não apareciam na listagem do Guia. Eles
+# foram migrados (guia-migrar-5-artigos.sql) e agora vêm do banco como
+# todos os outros — sem exceção nenhuma nesta regra.
+RewriteRule ^guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1 [L,QSA]
 
 # Guia Brasília em inglês/espanhol — sempre via PHP (não existe versão
 # estática Next.js para nenhum artigo nesses idiomas ainda, então não há
