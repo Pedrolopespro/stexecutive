@@ -10,6 +10,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ogDaPagina } from "@/lib/seo";
 
 // ─────────────────────────────────────────────
 // SEO
@@ -18,7 +19,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Carros Blindados em Brasília com Motorista | ST Executive",
   description:
-    "Aluguel de carro blindado em Brasília com motorista profissional. Segurança e discrição para executivos, autoridades e eventos de alto nível no DF. Solicite orçamento via WhatsApp.",
+    "Carro blindado em Brasília com motorista para executivos, autoridades, diplomatas e eventos. Segurança, discrição e atendimento premium.",
   keywords: [
     "carro blindado brasília",
     "carro blindado com motorista brasília",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     "transporte blindado brasília",
     "segurança executiva brasília",
   ],
+  openGraph: ogDaPagina("Carros Blindados em Brasília com Motorista | ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/carros-blindados-brasilia/",
     languages: {

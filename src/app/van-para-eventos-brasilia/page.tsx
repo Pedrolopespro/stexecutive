@@ -10,15 +10,17 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ogDaPagina } from "@/lib/seo";
 
 // ─────────────────────────────────────────────
 // SEO
 // ─────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Van para Eventos em Brasília com Motorista | Grupos — ST Executive",
+  title: "Van para Eventos em Brasília com Motorista | ST Executive",
   description:
     "Van para eventos em Brasília com motorista profissional. Casamentos, eventos corporativos, shows e grupos. Orçamento rápido via WhatsApp.",
+  openGraph: ogDaPagina("Van para Eventos em Brasília com Motorista | ST Executive"),
   keywords: [
     "van para eventos brasília",
     "van com motorista brasília",

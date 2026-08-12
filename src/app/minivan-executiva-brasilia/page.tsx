@@ -10,6 +10,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ogDaPagina } from "@/lib/seo";
 
 // ─────────────────────────────────────────────
 // SEO
@@ -18,7 +19,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Minivan Executiva em Brasília com Motorista | ST Executive",
   description:
-    "Minivan executiva em Brasília com motorista profissional. Ideal para pequenos grupos, transfers, reuniões e eventos corporativos. Solicite orçamento via WhatsApp.",
+    "Minivan executiva em Brasília com motorista para aeroporto, reuniões, eventos e pequenos grupos. Conforto premium e atendimento profissional.",
   keywords: [
     "minivan executiva brasília",
     "minivan com motorista brasília",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     "minivan para grupos brasília",
     "minivan executiva com motorista",
   ],
+  openGraph: ogDaPagina("Minivan Executiva em Brasília com Motorista | ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/minivan-executiva-brasilia/",
     languages: {

@@ -10,6 +10,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ogDaPagina } from "@/lib/seo";
 
 // ─────────────────────────────────────────────
 // SEO
@@ -18,7 +19,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Micro-ônibus Executivo em Brasília com Motorista | ST Executive",
   description:
-    "Micro-ônibus executivo em Brasília com motorista profissional. Para grupos médios, eventos, excursões e transporte corporativo no DF. Solicite orçamento via WhatsApp.",
+    "Micro-ônibus executivo em Brasília para grupos, eventos, excursões e empresas. Motorista profissional, conforto e pontualidade.",
   keywords: [
     "micro-ônibus executivo brasília",
     "micro ônibus com motorista brasília",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     "micro-ônibus executivo df",
     "transporte de grupos brasília",
   ],
+  openGraph: ogDaPagina("Micro-ônibus Executivo em Brasília com Motorista | ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/micro-onibus-executivo-brasilia/",
     languages: {

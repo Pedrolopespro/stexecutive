@@ -16,8 +16,9 @@ export const metadata: Metadata = {
     google: "ejiWTOXEFJ1GCK3Ezg1M6DiewNW7EbTiRWuTNddwc1Q",
   },
   title: "Transporte Executivo em Brasília | SUV e Van com Motorista — ST Executive",
+  // 161 chars truncavam no resultado de busca; esta versão fecha em 138.
   description:
-    "Transporte executivo em Brasília com motorista profissional. SUVs e vans para empresas, embaixadas, eventos e transfer aeroporto. Solicite orçamento no WhatsApp.",
+    "Transporte executivo em Brasília para empresas, aeroporto e eventos. Vans, SUVs, sedans e blindados com motorista. Solicite seu orçamento.",
   keywords: [
     "transporte executivo brasília",
     "vans executivas brasília",

@@ -10,6 +10,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ogDaPagina } from "@/lib/seo";
 
 // ─────────────────────────────────────────────
 // SEO
@@ -18,7 +19,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Ônibus Executivo em Brasília com Motorista | ST Executive",
   description:
-    "Ônibus executivo em Brasília com motorista profissional. Para grandes grupos, eventos, congressos e transporte corporativo no DF. Solicite orçamento via WhatsApp.",
+    "Ônibus executivo em Brasília para grupos, empresas, congressos e eventos. Motorista profissional e operação planejada. Solicite orçamento.",
   keywords: [
     "ônibus executivo brasília",
     "ônibus com motorista brasília",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     "ônibus executivo df",
     "transporte grandes grupos brasília",
   ],
+  openGraph: ogDaPagina("Ônibus Executivo em Brasília com Motorista | ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/onibus-executivo-brasilia/",
     languages: {

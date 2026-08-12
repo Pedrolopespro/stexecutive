@@ -10,6 +10,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ogDaPagina } from "@/lib/seo";
 
 // ─────────────────────────────────────────────
 // SEO
@@ -18,7 +19,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Transfer Aeroporto Brasília | Van com Motorista Pontual — ST Executive",
   description:
-    "Transfer para aeroporto em Brasília com motorista. Pontual, seguro e ideal para grupos. Solicite seu orçamento via WhatsApp.",
+    "Transfer para o Aeroporto de Brasília com motorista profissional, 24 horas e acompanhamento de voo. Para empresas, hotéis, famílias e grupos. Peça orçamento.",
   keywords: [
     "transfer aeroporto brasília",
     "traslado aeroporto brasília",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     "transporte aeroporto brasília",
     "van aeroporto brasília motorista",
   ],
+  openGraph: ogDaPagina("Transfer Aeroporto Brasília | Van com Motorista Pontual — ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/transfer-aeroporto-brasilia/",
     languages: {

@@ -10,6 +10,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { ogDaPagina } from "@/lib/seo";
 
 // ─────────────────────────────────────────────
 // SEO
@@ -18,7 +19,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Transporte Executivo em Brasília | Atendimento Corporativo — ST Executive",
   description:
-    "Transporte executivo em Brasília para empresas e executivos. Atendimento profissional, pontual e seguro. Solicite via WhatsApp.",
+    "Transporte executivo em Brasília com motorista para empresas, executivos, reuniões e eventos. Frota premium, pontualidade e atendimento imediato no WhatsApp.",
   keywords: [
     "transporte executivo brasília",
     "transporte corporativo df",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
     "transporte para empresas brasília",
     "transporte vip brasília",
   ],
+  openGraph: ogDaPagina("Transporte Executivo em Brasília | Atendimento Corporativo — ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/transporte-executivo-brasilia/",
     languages: {
