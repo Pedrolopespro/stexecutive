@@ -115,11 +115,10 @@ export default function HomeContent({
   const contatoHref = locale === "pt" ? "/contato/" : `/${locale}/contato/`;
 
   // Banner mobile: arte única que já traz logo, título, benefícios e botões.
-  // Cada idioma agora tem sua própria arte (2026-08-09) — os textos "SERVIÇOS"/
-  // "SERVICES"/"SERVICIOS" e "ORÇAMENTO"/"GET A QUOTE"/"PRESUPUESTO" têm
-  // comprimentos diferentes, então a posição dos botões na imagem também
-  // difere um pouco entre as três; por isso bannerHits é por idioma, medido
-  // pixel a pixel em cada arquivo (ver areas de toque abaixo).
+  // Cada idioma tem sua própria arte, porque os textos são traduzidos dentro
+  // da imagem. As áreas de toque (bannerHits, abaixo) são medidas pixel a
+  // pixel em cada arquivo — sem isso os botões desenhados na arte não
+  // respondem ao clique.
   const bannerMobile = true;
 
   const bannerSrc = {
@@ -134,10 +133,16 @@ export default function HomeContent({
     es: "ST Executive — Transporte ejecutivo premium en Brasília. Comodidad, seguridad y puntualidad en cada trayecto.",
   }[locale];
 
+  // Remedido em 2026-08-20, sobre as artes novas (foto noturna da Ponte JK).
+  // Nas artes anteriores os botões acompanhavam o comprimento do texto, e por
+  // isso cada idioma tinha coordenadas próprias. Nas novas eles têm largura
+  // fixa, então os três valores ficaram praticamente iguais — mantive o mapa
+  // por idioma mesmo assim, para não perder o encaixe se uma arte for
+  // trocada isoladamente no futuro.
   const bannerHits = {
-    pt: { servicos: { left: "5.22%", width: "44.56%" }, orcamento: { left: "52.22%", width: "37.11%" } },
-    en: { servicos: { left: "5.33%", width: "42.33%" }, orcamento: { left: "50.44%", width: "42.33%" } },
-    es: { servicos: { left: "5.33%", width: "42.22%" }, orcamento: { left: "50.44%", width: "38.44%" } },
+    pt: { servicos: { left: "5.22%", width: "44.56%" }, orcamento: { left: "52.11%", width: "43.11%" } },
+    en: { servicos: { left: "5.22%", width: "44.56%" }, orcamento: { left: "52.11%", width: "43.11%" } },
+    es: { servicos: { left: "5.67%", width: "44.11%" }, orcamento: { left: "52.11%", width: "43.11%" } },
   }[locale];
 
   return (
