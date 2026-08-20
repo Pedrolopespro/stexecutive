@@ -77,12 +77,19 @@ export default function MobileMenu({
       />
 
       {/* Panel */}
+      {/* Fechado, o painel fica encostado na borda direita (translate 100%).
+          Isso basta no Chrome, mas o Safari do iPhone conta conteúdo `fixed`
+          fora da viewport e deixa vazar uma faixa branca na direita. O
+          `invisible` tira o painel da pintura de vez; como `visibility` só
+          troca de valor no fim da transição, a animação de sair continua
+          visível. De quebra, os links do menu fechado deixam de ser
+          alcançáveis por teclado e leitor de tela. */}
       <div
         className={[
           "fixed top-0 right-0 z-50 h-full w-[88%] max-w-sm",
           "bg-white shadow-2xl overflow-y-auto flex flex-col",
-          "transition-transform duration-[var(--motion-slow)] ease-[var(--ease-premium)]",
-          isOpen ? "translate-x-0" : "translate-x-full",
+          "transition-[translate,visibility] duration-[var(--motion-slow)] ease-[var(--ease-premium)]",
+          isOpen ? "translate-x-0 visible" : "translate-x-full invisible",
         ].join(" ")}
       >
         {/* ── Cabeçalho do painel ── */}
