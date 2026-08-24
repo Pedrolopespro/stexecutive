@@ -224,7 +224,7 @@ export const homeEn: HomeContentDict = {
       emailOk: "We also logged your request by email, so nothing gets lost.",
       emailFalha: "We could not log it by email right now, but your WhatsApp request still stands.",
       abrirDeNovo: "Open WhatsApp",
-      novoPedido: "Send another request",
+      novoPedido: "Back",
     },
     messageTemplate:
       "Hello, I found ST Executive online and would like a quote.\n\nName: {nome}\nWhatsApp: {whatsapp}\nEmail: {email}\nVehicle: {veiculo}\nDetails: {descricao}",

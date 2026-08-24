@@ -224,7 +224,7 @@ export const homePt: HomeContentDict = {
       emailOk: "Também registramos o seu pedido por e-mail, então ele não se perde.",
       emailFalha: "Não conseguimos registrar por e-mail agora, mas o pedido pelo WhatsApp está valendo.",
       abrirDeNovo: "Abrir o WhatsApp",
-      novoPedido: "Fazer outro pedido",
+      novoPedido: "Voltar",
     },
     messageTemplate:
       "Olá, vim do site da ST Executive e gostaria de um orçamento.\n\nNome: {nome}\nWhatsApp: {whatsapp}\nE-mail: {email}\nVeículo: {veiculo}\nAtendimento: {descricao}",
