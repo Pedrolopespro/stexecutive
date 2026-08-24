@@ -55,7 +55,7 @@ export const contatoPt: ContatoContentDict = {
     whatsappLabel: "WhatsApp",
     whatsappSubtext: "Clique para conversar",
     phoneLabel: "Telefone",
-    phoneSubtext: "Seg–Sáb, das 8h às 20h",
+    phoneSubtext: "Atendimento 24 horas, todos os dias",
     emailLabel: "E-mail",
     emailSubtext: "Resposta em até 24h",
     noteLabel: "Atendimento ágil",

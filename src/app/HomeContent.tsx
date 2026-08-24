@@ -34,7 +34,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 import ServiceCard from "@/components/sections/ServiceCard";
 
-import { buildServicePages, buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { buildServicePages, buildWhatsAppUrl, GOOGLE_REVIEWS, type Locale } from "@/lib/constants";
 import { navPt, footerPt, commonPt, homePt, type NavDict, type FooterDict, type CommonDict, type HomeContentDict } from "@/lib/i18n";
 
 // Ícones das secções — independentes de idioma, mantidos aqui em vez do dicionário
@@ -111,6 +111,16 @@ export default function HomeContent({
   commonDict = commonPt,
 }: HomeContentProps) {
   const c = content;
+
+  // A nota e a contagem vem de um unico lugar (GOOGLE_REVIEWS em constants.ts)
+  // e os dicionarios so trazem a frase com marcadores. Isso evita o numero
+  // ficar escrito a mao em tres idiomas e desencontrado do schema — o Google
+  // exige que o aggregateRating seja igual ao numero visivel na pagina.
+  // Portugues e espanhol usam virgula decimal; ingles usa ponto. Escrever
+  // "5,0" para um leitor de ingles parece erro de digitacao.
+  const notaNoIdioma = locale === "en" ? GOOGLE_REVIEWS.nota.replace(",", ".") : GOOGLE_REVIEWS.nota;
+  const comNumeros = (texto: string) =>
+    texto.replace("{nota}", notaNoIdioma).replace("{qtd}", String(GOOGLE_REVIEWS.quantidade));
   const servicePages = buildServicePages(locale);
   const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
   const servicosHref = locale === "pt" ? "#servicos" : `/${locale}/#servicos`;
@@ -349,7 +359,7 @@ export default function HomeContent({
             visitante encontra ao rolar, em vez de ter de sair da página
             para pedir preço.
         ══════════════════════════════════ */}
-        <QuoteForm dict={c.quoteForm} locale={locale} />
+        <QuoteForm dict={c.quoteForm} />
 
         {/* ══════════════════════════════════
             2. LOGOS DE CLIENTES
@@ -605,8 +615,8 @@ export default function HomeContent({
                     {TESTIMONIAL_STATS_ICONS[i]}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold text-navy-950 leading-tight break-words hyphens-none">{s.title}</p>
-                    <p className="text-xs text-gray-400 mt-0.5 break-words hyphens-none">{s.sub}</p>
+                    <p className="text-sm font-bold text-navy-950 leading-tight break-words hyphens-none">{comNumeros(s.title)}</p>
+                    <p className="text-xs text-navy-950/70 mt-0.5 break-words hyphens-none">{comNumeros(s.sub)}</p>
                   </div>
                 </div>
               ))}
@@ -645,11 +655,22 @@ export default function HomeContent({
                 </div>
                 <div>
                   <p className="text-sm font-bold text-navy-950 leading-tight">{c.testimonialsSection.googleCta.title}</p>
-                  <p className="text-xs text-gray-400 mt-0.5">{c.testimonialsSection.googleCta.subtitle}</p>
+                  <p className="text-xs text-navy-950/70 mt-0.5">{c.testimonialsSection.googleCta.subtitle}</p>
+                  {/* Ate agora o unico link do Google levava a ESCREVER avaliacao.
+                      Quem quer conferir a reputacao antes de contratar nao tinha
+                      para onde ir. */}
+                  <a
+                    href={GOOGLE_REVIEWS.urlLeitura}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-1 text-xs font-semibold text-action-600 underline underline-offset-2 hover:text-action-500"
+                  >
+                    {comNumeros(c.testimonialsSection.googleCta.readLabel)}
+                  </a>
                 </div>
               </div>
               <a
-                href="https://g.page/r/CdcJ-Z6LD7AHEBI/review"
+                href={GOOGLE_REVIEWS.urlEscrita}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0 inline-flex items-center gap-2 bg-navy-950 hover:bg-navy-800 text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors duration-200"

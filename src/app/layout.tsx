@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { GOOGLE_REVIEWS } from "@/lib/constants";
 
 // next/font: baixa a Inter em build time e serve do próprio domínio
 // elimina a requisição externa ao Google Fonts (render-blocking)
@@ -125,9 +126,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "email": "contato@stexecutive.com.br",
                   "address": {
                     "@type": "PostalAddress",
+                    // Rua e CEP faltavam. Sao os mesmos do perfil do Google Meu Negocio;
+                    // sem eles a empresa perde forca na busca local e o schema fica
+                    // divergente do perfil.
+                    "streetAddress": "Quadra 05 Conj. G lote 47 - Sobradinho",
                     "addressLocality": "Brasília",
                     "addressRegion": "DF",
+                    "postalCode": "73030-057",
                     "addressCountry": "BR"
+                  },
+                  // Nota real do perfil, conferida em 24/08/2026 no painel do dono e na
+                  // pagina publica do Google. A diretriz do Google exige que estes
+                  // numeros sejam os MESMOS exibidos na pagina — os dois saem de
+                  // GOOGLE_REVIEWS em constants.ts.
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": GOOGLE_REVIEWS.nota.replace(",", "."),
+                    "reviewCount": GOOGLE_REVIEWS.quantidade,
+                    "bestRating": "5",
+                    "worstRating": "1"
                   },
                   "geo": {
                     "@type": "GeoCoordinates",

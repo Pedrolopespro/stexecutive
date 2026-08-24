@@ -191,41 +191,45 @@ export const homeEn: HomeContentDict = {
     eyebrow: "Quick quote",
     heading: "Get your quote in one minute",
     subtitle:
-      "Fill in your trip details and send. The chat opens on WhatsApp already filled in — you won't have to type anything twice.",
+      "Fill in your details and send. The chat opens on WhatsApp already filled in — you won't have to type anything twice.",
     labels: {
       nome: "Name",
       whatsapp: "WhatsApp",
-      data: "Date",
-      origem: "Pick-up",
-      destino: "Drop-off",
-      passageiros: "Passengers",
-      servico: "Vehicle or service",
+      email: "Email",
+      veiculo: "Vehicle",
+      descricao: "What you need",
     },
     placeholders: {
       nome: "What should we call you",
-      whatsapp: "+55 61 90000-0000",
-      origem: "Airport, hotel, address…",
-      destino: "Where you are going",
+      whatsapp: "555 000 0000",
+      email: "yourname@company.com",
+      descricao: "Date, time, pick-up, drop-off, number of passengers…",
       selecione: "Select",
     },
-    passageirosOptions: ["1 to 3", "4 to 6", "7 to 8", "9 to 15", "16 to 30", "31 or more"],
-    servicoOptions: [
-      "Executive Van (Sprinter)",
-      "Executive Minivan (Vito)",
+    dicaWhatsapp:
+      "Pick your country on the left, then type the number.",
+    veiculoOptions: [
       "Executive Sedan",
+      "Minivan",
+      "Executive Van",
       "Executive SUV",
-      "Executive Mini-Bus",
-      "Executive Bus",
-      "Airport transfer",
-      "Events and conferences",
-      "City tour",
-      "Not sure yet — I need advice",
+      "Mini-Bus",
+      "Bus",
     ],
     submitLabel: "Send via WhatsApp",
     footnote: "We reply on WhatsApp. Your details are used only to answer this request.",
+    sucesso: {
+      titulo: "Request sent",
+      texto: "We opened WhatsApp in a new tab with your details already filled in. If nothing opened, your pop-up blocker may have stopped it — use the button below.",
+      emailOk: "We also logged your request by email, so nothing gets lost.",
+      emailFalha: "We could not log it by email right now, but your WhatsApp request still stands.",
+      abrirDeNovo: "Open WhatsApp",
+      novoPedido: "Send another request",
+    },
     messageTemplate:
-      "Hello, I found ST Executive online and would like a quote.\n\nName: {nome}\nWhatsApp: {whatsapp}\nDate: {data}\nPick-up: {origem}\nDrop-off: {destino}\nPassengers: {passageiros}\nVehicle or service: {servico}",
+      "Hello, I found ST Executive online and would like a quote.\n\nName: {nome}\nWhatsApp: {whatsapp}\nEmail: {email}\nVehicle: {veiculo}\nDetails: {descricao}",
   },
+
 
   testimonialsSection: {
     eyebrow: "Testimonials",
@@ -234,7 +238,7 @@ export const homeEn: HomeContentDict = {
     stats: [
       { title: "Over 15 years", sub: "of experience" },
       { title: "Hundreds of clients", sub: "served" },
-      { title: "5-star rating", sub: "on Google" },
+      { title: "{nota} on Google", sub: "from {qtd} reviews" },
       { title: "Committed to", sub: "safety and excellence" },
     ],
     items: [
@@ -249,6 +253,7 @@ export const homeEn: HomeContentDict = {
       title: "Your experience matters",
       subtitle: "Rate ST Executive on Google and help other clients find us.",
       buttonLabel: "Leave a review",
+      readLabel: "Read all {qtd} reviews",
     },
   },
 

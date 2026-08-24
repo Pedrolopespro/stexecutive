@@ -191,41 +191,45 @@ export const homeEs: HomeContentDict = {
     eyebrow: "Presupuesto rápido",
     heading: "Pida su presupuesto en un minuto",
     subtitle:
-      "Complete los datos del trayecto y envíe. La conversación se abre en WhatsApp ya completada — no tendrá que escribir nada de nuevo.",
+      "Complete los datos y envíe. La conversación se abre en WhatsApp ya completada — no tendrá que escribir nada de nuevo.",
     labels: {
       nome: "Nombre",
       whatsapp: "WhatsApp",
-      data: "Fecha",
-      origem: "Origen",
-      destino: "Destino",
-      passageiros: "Pasajeros",
-      servico: "Vehículo o servicio",
+      email: "Correo electrónico",
+      veiculo: "Vehículo",
+      descricao: "Descripción del servicio",
     },
     placeholders: {
       nome: "¿Cómo podemos llamarle?",
-      whatsapp: "+55 61 90000-0000",
-      origem: "Aeropuerto, hotel, dirección…",
-      destino: "Adónde vamos",
+      whatsapp: "600 000 000",
+      email: "sunombre@empresa.com",
+      descricao: "Fecha, hora, origen, destino, número de pasajeros…",
       selecione: "Seleccione",
     },
-    passageirosOptions: ["1 a 3", "4 a 6", "7 a 8", "9 a 15", "16 a 30", "31 o más"],
-    servicoOptions: [
-      "Van Ejecutiva (Sprinter)",
-      "Mini Van Ejecutiva (Vito)",
+    dicaWhatsapp:
+      "Elija su país al lado y escriba el número.",
+    veiculoOptions: [
       "Sedán Ejecutivo",
+      "Minivan",
+      "Van Ejecutiva",
       "SUV Ejecutiva",
-      "Micro-ómnibus Ejecutivo",
-      "Ómnibus Ejecutivo",
-      "Transfer aeropuerto",
-      "Eventos y congresos",
-      "City tour",
-      "Todavía no lo sé — necesito orientación",
+      "Micro-ómnibus",
+      "Ómnibus",
     ],
     submitLabel: "Enviar por WhatsApp",
     footnote: "Respondemos por WhatsApp. Sus datos se usan solo para responder a esta solicitud.",
+    sucesso: {
+      titulo: "Solicitud enviada",
+      texto: "Abrimos WhatsApp en una pestaña nueva con sus datos ya completados. Si no se abrió nada, el bloqueador de ventanas emergentes puede haberlo impedido — use el botón de abajo.",
+      emailOk: "También registramos su solicitud por correo, así no se pierde.",
+      emailFalha: "No pudimos registrarla por correo ahora, pero su solicitud por WhatsApp sigue valiendo.",
+      abrirDeNovo: "Abrir WhatsApp",
+      novoPedido: "Enviar otra solicitud",
+    },
     messageTemplate:
-      "Hola, vengo del sitio de ST Executive y quisiera un presupuesto.\n\nNombre: {nome}\nWhatsApp: {whatsapp}\nFecha: {data}\nOrigen: {origem}\nDestino: {destino}\nPasajeros: {passageiros}\nVehículo o servicio: {servico}",
+      "Hola, vengo del sitio de ST Executive y quisiera un presupuesto.\n\nNombre: {nome}\nWhatsApp: {whatsapp}\nCorreo: {email}\nVehículo: {veiculo}\nDetalles: {descricao}",
   },
+
 
   testimonialsSection: {
     eyebrow: "Testimonios",
@@ -234,7 +238,7 @@ export const homeEs: HomeContentDict = {
     stats: [
       { title: "Más de 15 años", sub: "de experiencia" },
       { title: "Cientos de clientes", sub: "atendidos" },
-      { title: "Calificación 5 estrellas", sub: "en Google" },
+      { title: "{nota} en Google", sub: "de {qtd} reseñas" },
       { title: "Compromiso con", sub: "seguridad y excelencia" },
     ],
     items: [
@@ -249,6 +253,7 @@ export const homeEs: HomeContentDict = {
       title: "Su experiencia importa",
       subtitle: "Califique a ST Executive en Google y ayude a otros clientes a encontrarnos.",
       buttonLabel: "Dejar reseña",
+      readLabel: "Leer las {qtd} reseñas",
     },
   },
 

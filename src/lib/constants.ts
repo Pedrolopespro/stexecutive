@@ -21,6 +21,90 @@ export const CONTACT_PHONE_DISPLAY = "(61) 9 8409-7971";
  */
 export const CONTACT_PHONE_TEL = "+5561984097971";
 
+/**
+ * Reputacao real do perfil Google Meu Negocio da ST Executive.
+ *
+ * Conferido em 24/08/2026 de duas formas independentes: o painel do dono
+ * (print) e a propria pagina publica do perfil, que traz "5,0" e o endereco.
+ *
+ * ATENCAO AO MANTER: a diretriz do Google exige que o aggregateRating do
+ * schema seja igual ao numero EXIBIDO na pagina. Os dois saem daqui, entao
+ * basta atualizar este bloco — mas atualize os dois campos juntos, e revise
+ * a cada trimestre. Publicar nota que nao corresponde a realidade pode
+ * gerar acao manual por rich snippet enganoso.
+ */
+export const GOOGLE_REVIEWS = {
+  nota: "5,0",
+  quantidade: 40,
+  /** Abre o perfil para LER as avaliacoes. */
+  urlLeitura: "https://maps.google.com/?cid=553959846508562903",
+  /** Abre direto o formulario de escrever avaliacao. */
+  urlEscrita: "https://g.page/r/CdcJ-Z6LD7AHEBI/review",
+  conferidoEm: "2026-08-24",
+} as const;
+
+/**
+ * Endereco comercial, o mesmo publicado no perfil do Google. Entra nos dados
+ * estruturados: o LocalBusiness estava sem streetAddress e sem postalCode, o
+ * que enfraquece a empresa na busca local.
+ */
+export const ENDERECO = {
+  logradouro: "Quadra 05 Conj. G lote 47",
+  bairro: "Sobradinho",
+  cidade: "Brasília",
+  uf: "DF",
+  cep: "73030-057",
+} as const;
+
+/**
+ * Codigos de pais oferecidos no campo de WhatsApp do formulario.
+ *
+ * Cada pais aparece com o nome NA PROPRIA LINGUA dele. Isso evita ter que
+ * manter a lista traduzida em tres dicionarios e, na pratica, e mais legivel
+ * para o estrangeiro do que ver o proprio pais escrito em portugues.
+ *
+ * Sem bandeirinha de proposito: o Windows nao tem glifo de bandeira e
+ * renderiza "BR", "US" no lugar do desenho, o que fica pior que so o nome.
+ *
+ * A lista cobre o publico real da ST — embaixadas em Brasilia, turnes e
+ * congressos. Brasil vem primeiro por ser a maioria.
+ */
+export const DDI_PAISES = [
+  { ddi: "+55", nome: "Brasil" },
+  { ddi: "+1", nome: "United States / Canada" },
+  { ddi: "+54", nome: "Argentina" },
+  { ddi: "+56", nome: "Chile" },
+  { ddi: "+57", nome: "Colombia" },
+  { ddi: "+52", nome: "México" },
+  { ddi: "+51", nome: "Perú" },
+  { ddi: "+598", nome: "Uruguay" },
+  { ddi: "+595", nome: "Paraguay" },
+  { ddi: "+591", nome: "Bolivia" },
+  { ddi: "+58", nome: "Venezuela" },
+  { ddi: "+351", nome: "Portugal" },
+  { ddi: "+34", nome: "España" },
+  { ddi: "+33", nome: "France" },
+  { ddi: "+49", nome: "Deutschland" },
+  { ddi: "+39", nome: "Italia" },
+  { ddi: "+44", nome: "United Kingdom" },
+  { ddi: "+31", nome: "Nederland" },
+  { ddi: "+41", nome: "Schweiz / Suisse" },
+  { ddi: "+46", nome: "Sverige" },
+  { ddi: "+7", nome: "Россия" },
+  { ddi: "+90", nome: "Türkiye" },
+  { ddi: "+972", nome: "ישראל" },
+  { ddi: "+971", nome: "الإمارات" },
+  { ddi: "+966", nome: "السعودية" },
+  { ddi: "+91", nome: "भारत" },
+  { ddi: "+86", nome: "中国" },
+  { ddi: "+81", nome: "日本" },
+  { ddi: "+82", nome: "대한민국" },
+  { ddi: "+61", nome: "Australia" },
+  { ddi: "+27", nome: "South Africa" },
+  { ddi: "+244", nome: "Angola" },
+  { ddi: "+258", nome: "Moçambique" },
+] as const;
+
 export const NAV_LINKS = [
   { label: "Início", href: "/" },
   { label: "Serviços", href: "#servicos" },

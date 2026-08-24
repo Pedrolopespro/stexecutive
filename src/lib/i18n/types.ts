@@ -332,30 +332,44 @@ export interface HomeContentDict {
     labels: {
       nome: string;
       whatsapp: string;
-      data: string;
-      origem: string;
-      destino: string;
-      passageiros: string;
-      servico: string;
+      email: string;
+      veiculo: string;
+      descricao: string;
     };
     placeholders: {
       nome: string;
       whatsapp: string;
-      origem: string;
-      destino: string;
+      email: string;
+      descricao: string;
       selecione: string;
     };
-    passageirosOptions: string[];
-    servicoOptions: string[];
+    /**
+     * Dica sob o campo de WhatsApp. Existe porque parte do publico vem de
+     * fora do Brasil (embaixadas, turnes, congressos) e precisa saber que
+     * pode usar o numero do proprio pais.
+     */
+    dicaWhatsapp: string;
+    veiculoOptions: string[];
     submitLabel: string;
     footnote: string;
+    /** Painel mostrado depois do envio, ja que a pagina nao sai mais do ar. */
+    sucesso: {
+      titulo: string;
+      texto: string;
+      /** Confirmacao de que o pedido tambem foi registrado por e-mail. */
+      emailOk: string;
+      /** O e-mail falhou, mas o WhatsApp ja levou o pedido — nao e erro fatal. */
+      emailFalha: string;
+      abrirDeNovo: string;
+      novoPedido: string;
+    };
     /**
-     * Modelo da mensagem enviada ao WhatsApp. Cada marcador é trocado
-     * pelo valor digitado; linhas com campo vazio são removidas antes
-     * do envio.
+     * Modelo da mensagem enviada ao WhatsApp. Cada marcador e trocado pelo
+     * valor digitado; linhas com campo vazio saem antes do envio.
      */
     messageTemplate: string;
   };
+
 
   testimonialsSection: {
     eyebrow: string;
@@ -367,6 +381,8 @@ export interface HomeContentDict {
       title: string;
       subtitle: string;
       buttonLabel: string;
+      /** Link para LER as avaliacoes. O buttonLabel abre o form de escrever. */
+      readLabel: string;
     };
   };
 

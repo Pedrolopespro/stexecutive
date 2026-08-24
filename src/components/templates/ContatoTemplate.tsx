@@ -6,7 +6,8 @@ import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import { AtSign, Phone, MessageCircle } from "lucide-react";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, buildWhatsAppUrl, type Locale } from "@/lib/constants";
-import { contatoPt, navPt, footerPt, commonPt, type NavDict, type FooterDict, type CommonDict, type ContatoContentDict } from "@/lib/i18n";
+import QuoteForm from "@/components/sections/QuoteForm";
+import { contatoPt, homePt, homeEn, homeEs, navPt, footerPt, commonPt, type NavDict, type FooterDict, type CommonDict, type ContatoContentDict } from "@/lib/i18n";
 
 // ─────────────────────────────────────────────
 // TYPES
@@ -57,6 +58,8 @@ export default function ContatoTemplate({
   commonDict = commonPt,
 }: ContatoTemplateProps) {
   const c = content;
+  // O formulario e o mesmo da home; so o dicionario muda por idioma.
+  const quoteDict = (locale === "en" ? homeEn : locale === "es" ? homeEs : homePt).quoteForm;
   const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
   const [status, setStatus] = useState<FormStatus>("idle");
   const [form, setForm] = useState<FormData>({
@@ -157,204 +160,13 @@ export default function ContatoTemplate({
                     {c.form.requiredNote.split("{req}")[1]}
                   </p>
 
-                  {status === "success" ? (
-                    <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
-                      <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <h3 className="text-lg font-bold text-navy-950">{c.form.successTitle}</h3>
-                      <p className="text-sm text-navy-950/60 max-w-sm">
-                        {c.form.successMessage}
-                      </p>
-                      <Button variant="primary" size="md" href={whatsappUrl} showWhatsAppIcon>
-                        {c.form.successWhatsappLabel}
-                      </Button>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-5">
-
-                      {/* Linha 1: Nome + Empresa */}
-                      <div className="grid sm:grid-cols-2 gap-5">
-                        <div>
-                          <label htmlFor="nome" className={labelBase}>
-                            {c.form.labels.nome} <span className="text-red-500">*</span>
-                          </label>
-                          <input
-                            id="nome"
-                            name="nome"
-                            type="text"
-                            required
-                            value={form.nome}
-                            onChange={handleChange}
-                            placeholder={c.form.placeholders.nome}
-                            className={inputBase}
-                          />
-                        </div>
-                        <div>
-                          <label htmlFor="empresa" className={labelBase}>
-                            {c.form.labels.empresa}
-                          </label>
-                          <input
-                            id="empresa"
-                            name="empresa"
-                            type="text"
-                            value={form.empresa}
-                            onChange={handleChange}
-                            placeholder={c.form.placeholders.empresa}
-                            className={inputBase}
-                          />
-                        </div>
-                      </div>
-
-                      {/* Linha 2: Email + Telefone */}
-                      <div className="grid sm:grid-cols-2 gap-5">
-                        <div>
-                          <label htmlFor="email" className={labelBase}>
-                            {c.form.labels.email} <span className="text-red-500">*</span>
-                          </label>
-                          <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            required
-                            value={form.email}
-                            onChange={handleChange}
-                            placeholder={c.form.placeholders.email}
-                            className={inputBase}
-                          />
-                        </div>
-                        <div>
-                          <label htmlFor="telefone" className={labelBase}>
-                            {c.form.labels.telefone} <span className="text-red-500">*</span>
-                          </label>
-                          <input
-                            id="telefone"
-                            name="telefone"
-                            type="tel"
-                            required
-                            value={form.telefone}
-                            onChange={handleChange}
-                            placeholder={c.form.placeholders.telefone}
-                            className={inputBase}
-                          />
-                        </div>
-                      </div>
-
-                      {/* Linha 3: Tipo de serviço + Motorista bilíngue */}
-                      <div className="grid sm:grid-cols-2 gap-5">
-                        <div>
-                          <label htmlFor="tipoServico" className={labelBase}>
-                            {c.form.labels.tipoServico} <span className="text-red-500">*</span>
-                          </label>
-                          <select
-                            id="tipoServico"
-                            name="tipoServico"
-                            required
-                            value={form.tipoServico}
-                            onChange={handleChange}
-                            className={inputBase + " cursor-pointer appearance-none"}
-                          >
-                            <option value="" disabled>{c.form.selectPlaceholder}</option>
-                            {c.form.tipoServicoOptions.map((opt) => (
-                              <option key={opt.value} value={opt.value}>{opt.label}</option>
-                            ))}
-                          </select>
-                        </div>
-                        <div>
-                          <label htmlFor="motoristaBilingue" className={labelBase}>
-                            {c.form.labels.motoristaBilingue} <span className="text-red-500">*</span>
-                          </label>
-                          <select
-                            id="motoristaBilingue"
-                            name="motoristaBilingue"
-                            required
-                            value={form.motoristaBilingue}
-                            onChange={handleChange}
-                            className={inputBase + " cursor-pointer appearance-none"}
-                          >
-                            <option value="" disabled>{c.form.selectPlaceholder}</option>
-                            {c.form.simNaoOptions.map((opt) => (
-                              <option key={opt.value} value={opt.value}>{opt.label}</option>
-                            ))}
-                          </select>
-                        </div>
-                      </div>
-
-                      {/* Linha 4: Embarque + Desembarque */}
-                      <div className="grid sm:grid-cols-2 gap-5">
-                        <div>
-                          <label htmlFor="localEmbarque" className={labelBase}>
-                            {c.form.labels.localEmbarque}
-                          </label>
-                          <input
-                            id="localEmbarque"
-                            name="localEmbarque"
-                            type="text"
-                            value={form.localEmbarque}
-                            onChange={handleChange}
-                            placeholder={c.form.placeholders.localEmbarque}
-                            className={inputBase}
-                          />
-                        </div>
-                        <div>
-                          <label htmlFor="localDesembarque" className={labelBase}>
-                            {c.form.labels.localDesembarque}
-                          </label>
-                          <input
-                            id="localDesembarque"
-                            name="localDesembarque"
-                            type="text"
-                            value={form.localDesembarque}
-                            onChange={handleChange}
-                            placeholder={c.form.placeholders.localDesembarque}
-                            className={inputBase}
-                          />
-                        </div>
-                      </div>
-
-                      {/* Observação */}
-                      <div>
-                        <label htmlFor="observacao" className={labelBase}>
-                          {c.form.labels.observacao}
-                        </label>
-                        <textarea
-                          id="observacao"
-                          name="observacao"
-                          rows={4}
-                          value={form.observacao}
-                          onChange={handleChange}
-                          placeholder={c.form.placeholders.observacao}
-                          className={inputBase + " resize-none"}
-                        />
-                      </div>
-
-                      {/* Erro */}
-                      {status === "error" && (
-                        <p className="text-sm text-red-500 bg-red-50 rounded-xl px-4 py-3">
-                          {c.form.errorMessage}
-                        </p>
-                      )}
-
-                      {/* Submit */}
-                      <div className="pt-2">
-                        <Button
-                          variant="primary"
-                          size="lg"
-                          fullWidth
-                          type="submit"
-                          disabled={status === "sending"}
-                        >
-                          {status === "sending" ? c.form.submitSendingLabel : c.form.submitLabel}
-                        </Button>
-                        <p className="mt-3 text-xs text-center text-navy-950/35">
-                          {c.form.consentText}
-                        </p>
-                      </div>
-
-                    </form>
-                  )}
+                  {/* O formulario da home passou a valer aqui tambem, a pedido do dono:
+                      um so formulario no site inteiro, com os mesmos cinco campos. Ele
+                      abre o WhatsApp preenchido em vez de enviar e-mail — por isso nao
+                      existe mais estado de sucesso: a pagina navega para o WhatsApp.
+                      O gatilho de conversao do GTM continua valendo, porque e submit
+                      de <form> de verdade, que e o que o conteiner mede. */}
+                  <QuoteForm dict={quoteDict} embutido />
                 </div>
               </div>
 
