@@ -126,6 +126,9 @@ export const homePt: HomeContentDict = {
     ],
     moreLabel: "Saiba mais",
     ctaLabel: "Consultar frota disponível",
+    requestLabel: "Solicitar este veículo",
+    requestMessageTemplate:
+      "Olá, vim do site da ST Executive e gostaria de um orçamento para {veiculo} ({capacidade}).",
     items: [
       {
         src: "/images/content/van.webp",
@@ -182,6 +185,46 @@ export const homePt: HomeContentDict = {
         serviceKey: "onibus",
       },
     ],
+  },
+
+  quoteForm: {
+    eyebrow: "Orçamento rápido",
+    heading: "Peça seu orçamento em um minuto",
+    subtitle:
+      "Preencha os dados do trajeto e envie. A conversa abre no WhatsApp já com tudo preenchido — você não precisa digitar nada de novo.",
+    labels: {
+      nome: "Nome",
+      whatsapp: "WhatsApp",
+      data: "Data",
+      origem: "Origem",
+      destino: "Destino",
+      passageiros: "Passageiros",
+      servico: "Veículo ou serviço",
+    },
+    placeholders: {
+      nome: "Como podemos chamar você",
+      whatsapp: "(61) 90000-0000",
+      origem: "Aeroporto, hotel, endereço…",
+      destino: "Para onde vamos",
+      selecione: "Selecione",
+    },
+    passageirosOptions: ["1 a 3", "4 a 6", "7 a 8", "9 a 15", "16 a 30", "31 ou mais"],
+    servicoOptions: [
+      "Van Executiva (Sprinter)",
+      "Mini Van Executiva (Vito)",
+      "Sedan Executivo",
+      "SUV Executiva",
+      "Micro-ônibus Executivo",
+      "Ônibus Executivo",
+      "Transfer aeroporto",
+      "Eventos e congressos",
+      "City tour",
+      "Ainda não sei — preciso de orientação",
+    ],
+    submitLabel: "Enviar pelo WhatsApp",
+    footnote: "Resposta pelo WhatsApp. Seus dados são usados apenas para responder a este pedido.",
+    messageTemplate:
+      "Olá, vim do site da ST Executive e gostaria de um orçamento.\n\nNome: {nome}\nWhatsApp: {whatsapp}\nData: {data}\nOrigem: {origem}\nDestino: {destino}\nPassageiros: {passageiros}\nVeículo ou serviço: {servico}",
   },
 
   testimonialsSection: {

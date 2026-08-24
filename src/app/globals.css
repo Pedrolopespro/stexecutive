@@ -16,6 +16,12 @@
   --color-black-900: #0A0D12;
 
   /* ── Colors: Gold (accent only) ── */
+  /* Os três tons claros existem para uso sobre fundo ESCURO, onde brilham.
+     Sobre fundo claro nenhum deles se lê: o gold-500 dá 2,35:1 no branco,
+     metade do mínimo de 4,5:1. O gold-700 abaixo é o mesmo matiz dourado
+     escurecido até passar — 4,99:1 no branco e 4,66:1 no off-white do site.
+     Regra: fundo escuro usa 300/400/500; fundo claro usa 700. */
+  --color-gold-700: #8C6A26;
   --color-gold-500: #C8A45D;
   --color-gold-400: #D8B76F;
   --color-gold-300: #E5CB8C;

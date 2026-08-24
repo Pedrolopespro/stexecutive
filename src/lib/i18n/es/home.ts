@@ -126,6 +126,9 @@ export const homeEs: HomeContentDict = {
     ],
     moreLabel: "Saber más",
     ctaLabel: "Consultar flota disponible",
+    requestLabel: "Solicitar este vehículo",
+    requestMessageTemplate:
+      "Hola, vengo del sitio de ST Executive y quisiera un presupuesto para {veiculo} ({capacidade}).",
     items: [
       {
         src: "/images/content/van.webp",
@@ -182,6 +185,46 @@ export const homeEs: HomeContentDict = {
         serviceKey: "onibus",
       },
     ],
+  },
+
+  quoteForm: {
+    eyebrow: "Presupuesto rápido",
+    heading: "Pida su presupuesto en un minuto",
+    subtitle:
+      "Complete los datos del trayecto y envíe. La conversación se abre en WhatsApp ya completada — no tendrá que escribir nada de nuevo.",
+    labels: {
+      nome: "Nombre",
+      whatsapp: "WhatsApp",
+      data: "Fecha",
+      origem: "Origen",
+      destino: "Destino",
+      passageiros: "Pasajeros",
+      servico: "Vehículo o servicio",
+    },
+    placeholders: {
+      nome: "¿Cómo podemos llamarle?",
+      whatsapp: "+55 61 90000-0000",
+      origem: "Aeropuerto, hotel, dirección…",
+      destino: "Adónde vamos",
+      selecione: "Seleccione",
+    },
+    passageirosOptions: ["1 a 3", "4 a 6", "7 a 8", "9 a 15", "16 a 30", "31 o más"],
+    servicoOptions: [
+      "Van Ejecutiva (Sprinter)",
+      "Mini Van Ejecutiva (Vito)",
+      "Sedán Ejecutivo",
+      "SUV Ejecutiva",
+      "Micro-ómnibus Ejecutivo",
+      "Ómnibus Ejecutivo",
+      "Transfer aeropuerto",
+      "Eventos y congresos",
+      "City tour",
+      "Todavía no lo sé — necesito orientación",
+    ],
+    submitLabel: "Enviar por WhatsApp",
+    footnote: "Respondemos por WhatsApp. Sus datos se usan solo para responder a esta solicitud.",
+    messageTemplate:
+      "Hola, vengo del sitio de ST Executive y quisiera un presupuesto.\n\nNombre: {nome}\nWhatsApp: {whatsapp}\nFecha: {data}\nOrigen: {origem}\nDestino: {destino}\nPasajeros: {passageiros}\nVehículo o servicio: {servico}",
   },
 
   testimonialsSection: {

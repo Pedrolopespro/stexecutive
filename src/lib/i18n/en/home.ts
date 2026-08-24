@@ -126,6 +126,9 @@ export const homeEn: HomeContentDict = {
     ],
     moreLabel: "Learn more",
     ctaLabel: "Check available fleet",
+    requestLabel: "Request this vehicle",
+    requestMessageTemplate:
+      "Hello, I found ST Executive online and would like a quote for {veiculo} ({capacidade}).",
     items: [
       {
         src: "/images/content/van.webp",
@@ -182,6 +185,46 @@ export const homeEn: HomeContentDict = {
         serviceKey: "onibus",
       },
     ],
+  },
+
+  quoteForm: {
+    eyebrow: "Quick quote",
+    heading: "Get your quote in one minute",
+    subtitle:
+      "Fill in your trip details and send. The chat opens on WhatsApp already filled in — you won't have to type anything twice.",
+    labels: {
+      nome: "Name",
+      whatsapp: "WhatsApp",
+      data: "Date",
+      origem: "Pick-up",
+      destino: "Drop-off",
+      passageiros: "Passengers",
+      servico: "Vehicle or service",
+    },
+    placeholders: {
+      nome: "What should we call you",
+      whatsapp: "+55 61 90000-0000",
+      origem: "Airport, hotel, address…",
+      destino: "Where you are going",
+      selecione: "Select",
+    },
+    passageirosOptions: ["1 to 3", "4 to 6", "7 to 8", "9 to 15", "16 to 30", "31 or more"],
+    servicoOptions: [
+      "Executive Van (Sprinter)",
+      "Executive Minivan (Vito)",
+      "Executive Sedan",
+      "Executive SUV",
+      "Executive Mini-Bus",
+      "Executive Bus",
+      "Airport transfer",
+      "Events and conferences",
+      "City tour",
+      "Not sure yet — I need advice",
+    ],
+    submitLabel: "Send via WhatsApp",
+    footnote: "We reply on WhatsApp. Your details are used only to answer this request.",
+    messageTemplate:
+      "Hello, I found ST Executive online and would like a quote.\n\nName: {nome}\nWhatsApp: {whatsapp}\nDate: {data}\nPick-up: {origem}\nDrop-off: {destino}\nPassengers: {passageiros}\nVehicle or service: {servico}",
   },
 
   testimonialsSection: {

@@ -310,6 +310,51 @@ export interface HomeContentDict {
     items: FleetItem[];
     moreLabel: string;
     ctaLabel: string;
+    /** Rótulo do botão de orçamento dentro de cada card de veículo. */
+    requestLabel: string;
+    /**
+     * Mensagem que abre no WhatsApp a partir do card. Os marcadores
+     * {veiculo} e {capacidade} são trocados pelos dados do próprio card,
+     * para o pedido já chegar sabendo de qual veículo se trata.
+     */
+    requestMessageTemplate: string;
+  };
+
+  /**
+   * Formulário curto de orçamento, logo abaixo da primeira tela.
+   * Ao enviar, monta uma mensagem e abre o WhatsApp já preenchido —
+   * não existe backend próprio guardando o pedido.
+   */
+  quoteForm: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    labels: {
+      nome: string;
+      whatsapp: string;
+      data: string;
+      origem: string;
+      destino: string;
+      passageiros: string;
+      servico: string;
+    };
+    placeholders: {
+      nome: string;
+      whatsapp: string;
+      origem: string;
+      destino: string;
+      selecione: string;
+    };
+    passageirosOptions: string[];
+    servicoOptions: string[];
+    submitLabel: string;
+    footnote: string;
+    /**
+     * Modelo da mensagem enviada ao WhatsApp. Cada marcador é trocado
+     * pelo valor digitado; linhas com campo vazio são removidas antes
+     * do envio.
+     */
+    messageTemplate: string;
   };
 
   testimonialsSection: {

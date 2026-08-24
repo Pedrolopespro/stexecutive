@@ -13,6 +13,14 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_ME
 export const CONTACT_EMAIL = "stexecutivebsb@hotmail.com";
 export const CONTACT_PHONE_DISPLAY = "(61) 9 8409-7971";
 
+/**
+ * Mesmo número do display, no formato E.164 exigido pelo href="tel:".
+ * O número aparecia só como texto solto: no celular ninguém consegue
+ * ligar sem copiar e colar, e o comprador corporativo costuma preferir
+ * o telefone ao WhatsApp.
+ */
+export const CONTACT_PHONE_TEL = "+5561984097971";
+
 export const NAV_LINKS = [
   { label: "Início", href: "/" },
   { label: "Serviços", href: "#servicos" },

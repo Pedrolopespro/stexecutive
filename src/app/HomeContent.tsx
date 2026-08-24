@@ -25,9 +25,11 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 
 import Button from "@/components/ui/Button";
+import LazyVideo from "@/components/ui/LazyVideo";
 import Badge from "@/components/ui/Badge";
 import SectionHeader from "@/components/ui/SectionHeader";
 
+import QuoteForm from "@/components/sections/QuoteForm";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 import ServiceCard from "@/components/sections/ServiceCard";
@@ -142,7 +144,7 @@ export default function HomeContent({
   const bannerHits = {
     pt: { servicos: { left: "5.22%", width: "44.56%" }, orcamento: { left: "52.11%", width: "43.11%" } },
     en: { servicos: { left: "5.22%", width: "44.56%" }, orcamento: { left: "52.11%", width: "43.11%" } },
-    es: { servicos: { left: "5.67%", width: "44.11%" }, orcamento: { left: "52.11%", width: "43.11%" } },
+    es: { servicos: { left: "5.22%", width: "44.56%" }, orcamento: { left: "52.11%", width: "43.11%" } },
   }[locale];
 
   return (
@@ -209,16 +211,18 @@ export default function HomeContent({
               width={1080}
               height={1920}
             />
-            <video
+            {/* O poster era "hero site mobile.webp" — a arte RETRATO do celular,
+                esticada num hero paisagem. Trocado pela versão paisagem, que
+                é a que corresponde ao enquadramento. */}
+            <LazyVideo
+              src="/images/content/veide hero.mp4"
+              poster="/images/content/hero site.webp"
               className="hidden sm:block w-full h-full object-cover object-center"
-              poster="/images/content/hero site mobile.webp"
               autoPlay
               muted
               loop
               playsInline
-              preload="none"
             >
-              <source src="/images/content/veide hero.mp4" type="video/mp4" />
               <img
                 src="/images/content/hero site.webp"
                 alt="ST Executive — Transporte executivo em Brasília"
@@ -226,8 +230,14 @@ export default function HomeContent({
                 width={1920}
                 height={1080}
               />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-b from-navy-950/88 via-navy-950/65 to-navy-950/80" />
+            </LazyVideo>
+            {/* O véu escuro sobre o vídeo. A faixa do meio era 65% e é justamente
+                onde o texto assenta — com ela o apoio media 3,5:1 e o rótulo
+                2,7:1, abaixo do mínimo legível de 4,5:1. A 80% o texto passa de
+                dia e à noite, e a foto continua visível: o vídeo é claro no
+                topo (céu) e escuro embaixo, então quem perde brilho é o meio,
+                onde de todo modo há texto por cima. */}
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-950/88 via-navy-950/80 to-navy-950/85" />
           </div>
 
           <div className="relative z-10 flex-1 flex flex-col container-st">
@@ -249,16 +259,25 @@ export default function HomeContent({
                   <span className="italic text-gold-400">{c.hero.titleEmphasis}</span>
                 </h1>
 
-                <p className="hidden sm:block mt-5 text-base sm:text-lg leading-relaxed text-white/70 max-w-lg">
+                <p className="hidden sm:block mt-5 text-base sm:text-lg leading-relaxed text-white/90 max-w-lg">
                   {c.hero.subtitle}
                 </p>
 
                 <div className="hidden sm:block gold-line mt-5" />
 
-                <p className="hidden sm:block mt-4 text-sm text-white/55 max-w-md">
+                {/* Era text-white/55 — cinza claro sobre foto, ilegível com sol na
+                    tela. 80% mantém a hierarquia (continua mais discreto que o
+                    subtítulo) e passa no contraste. */}
+                <p className="hidden sm:block mt-4 text-sm text-white/80 max-w-md">
                   {c.hero.supportText}
                 </p>
 
+                {/* A microcópia "Informe data, horário, trajeto e quantidade de
+                    passageiros" saía aqui, abaixo dos botões. Foi retirada da tela
+                    a pedido do dono. As chaves `microcopy` continuam nos três
+                    dicionários de propósito: elas são obrigatórias em
+                    src/lib/i18n/types.ts e apagá-las quebraria o build sem
+                    necessidade — e mexer nas traduções está fora do escopo. */}
                 <div className="hidden sm:flex flex-row gap-3 mt-14">
                   <Button variant="primary" size="lg" href={whatsappUrl} showWhatsAppIcon>
                     {c.hero.ctaPrimary}
@@ -267,10 +286,6 @@ export default function HomeContent({
                     {c.hero.ctaSecondary}
                   </Button>
                 </div>
-
-                <p className="hidden sm:block mt-3 text-xs text-white/35">
-                  {c.hero.microcopy}
-                </p>
               </div>
 
               <div className="sm:hidden">
@@ -327,6 +342,14 @@ export default function HomeContent({
           </div>
         </div>
         </div>
+
+        {/* ══════════════════════════════════
+            1B. ORÇAMENTO RÁPIDO
+            Entra logo depois da primeira tela: é o primeiro bloco que o
+            visitante encontra ao rolar, em vez de ter de sair da página
+            para pedir preço.
+        ══════════════════════════════════ */}
+        <QuoteForm dict={c.quoteForm} locale={locale} />
 
         {/* ══════════════════════════════════
             2. LOGOS DE CLIENTES
@@ -416,17 +439,16 @@ export default function HomeContent({
               </div>
 
               <div className="relative rounded-2xl overflow-hidden shadow-premium bg-navy-950" style={{ aspectRatio: "4/5" }}>
-                <video
-                  className="w-full h-full object-cover"
+                <LazyVideo
+                  src="/images/content/video st vans.mp4"
                   poster="/images/content/van.webp"
+                  className="w-full h-full object-cover"
                   autoPlay
                   muted
                   loop
                   controls
                   playsInline
-                  preload="none"
                 >
-                  <source src="/images/content/video st vans.mp4" type="video/mp4" />
                   <img
                     src="/images/content/van.webp"
                     alt="Van executiva ST Executive"
@@ -435,7 +457,7 @@ export default function HomeContent({
                     width={600}
                     height={750}
                   />
-                </video>
+                </LazyVideo>
               </div>
             </div>
           </div>
@@ -514,14 +536,39 @@ export default function HomeContent({
                       </div>
                     </div>
 
-                    <p className="text-sm text-white/45 leading-relaxed flex-1">{v.desc}</p>
+                    {/* Era text-white/45 — 2,5:1 sobre o navy do card, ilegível.
+                        70% mantém a hierarquia e passa no contraste. */}
+                    <p className="text-sm text-white/70 leading-relaxed flex-1">{v.desc}</p>
 
-                    <div className="flex justify-end mt-2">
+                    {/* Antes o card só oferecia "Saiba mais", que leva para outra
+                        página em vez de para o orçamento. O botão de pedido vem
+                        primeiro e já abre o WhatsApp dizendo qual veículo é —
+                        assim o pedido chega qualificado, sem a ida e volta de
+                        perguntar "qual veículo?". Continua sendo um <a href>
+                        para wa.me, que é o que o GTM mede hoje. */}
+                    {/* Empilhados e em largura total: lado a lado os dois não
+                        cabem na largura do card e quebravam desalinhados. Assim
+                        também rendem alvos de toque cheios no celular. */}
+                    <div className="flex flex-col gap-2 mt-2">
+                      <Button
+                        variant="primary"
+                        size="sm"
+                        href={buildWhatsAppUrl(
+                          c.fleetSection.requestMessageTemplate
+                            .replace("{veiculo}", v.label)
+                            .replace("{capacidade}", v.capacity)
+                        )}
+                        showWhatsAppIcon
+                        className="w-full justify-center"
+                      >
+                        {c.fleetSection.requestLabel}
+                      </Button>
                       <Button
                         variant="secondary"
                         size="sm"
                         href={servicePages[v.serviceKey]}
                         icon={<ArrowRight className="w-4 h-4" />}
+                        className="w-full justify-center"
                       >
                         {c.fleetSection.moreLabel}
                       </Button>

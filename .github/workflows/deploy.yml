@@ -51,8 +51,19 @@ jobs:
           # arquivo do servidor com a base pobre e derruba EN/ES do
           # sitemap. Isso já aconteceu uma vez (ver auditoria de
           # 2026-08-09). O restante de out/ continua sendo enviado normal.
+          #
+          # O mesmo vale para o diretorio do Guia. O build do Next gera 62
+          # arquivos em out/guia-brasilia/ a partir de src/lib/guia-brasilia.ts —
+          # uma copia congelada e desatualizada dos artigos. Eles eram enviados
+          # para dentro de /public_html/guia-brasilia/, que e o diretorio servido
+          # pelo PHP a partir do banco. Hoje o rewrite do .htaccess intercepta e o
+          # PHP ganha, entao o efeito e nulo — mas qualquer mexida futura no
+          # .htaccess exporia 29 paginas duplicadas e velhas. O Guia e sistema
+          # separado: o deploy do site principal nao tem o que escrever ali.
           exclude: |
             **/.git*
             **/.git*/**
             sitemap.xml
             sitemap-articles.xml
+            guia-brasilia/**
+            **/guia-brasilia/**

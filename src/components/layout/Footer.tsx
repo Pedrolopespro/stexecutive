@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { AtSign, MapPin, Phone, MessageCircle } from "lucide-react";
-import { buildServicePages, guiaBrasiliaPath, buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { buildServicePages, guiaBrasiliaPath, buildWhatsAppUrl, type Locale, CONTACT_PHONE_TEL } from "@/lib/constants";
 import { footerPt, commonPt, type FooterDict, type CommonDict } from "@/lib/i18n";
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY } from "@/lib/constants";
 
@@ -100,9 +100,15 @@ export default function Footer({ locale = "pt", dict = footerPt, commonDict = co
                   {dict.contact.whatsapp}
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-sm text-white/60">
+              <li className="flex items-center gap-2 text-sm text-white/75">
                 <Phone className="w-4 h-4 text-gold-500 shrink-0" />
-                <span>{CONTACT_PHONE_DISPLAY}</span>
+                {/* Era um <span> solto: no celular o numero nao discava. */}
+                <a
+                  href={`tel:${CONTACT_PHONE_TEL}`}
+                  className="hover:text-surface-white transition-colors"
+                >
+                  {CONTACT_PHONE_DISPLAY}
+                </a>
               </li>
               <li className="flex items-center gap-2 text-sm text-white/60">
                 <AtSign className="w-4 h-4 text-gold-500 shrink-0" />

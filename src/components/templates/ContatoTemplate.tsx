@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import { AtSign, Phone, MessageCircle } from "lucide-react";
-import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, buildWhatsAppUrl, type Locale } from "@/lib/constants";
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, buildWhatsAppUrl, type Locale } from "@/lib/constants";
 import { contatoPt, navPt, footerPt, commonPt, type NavDict, type FooterDict, type CommonDict, type ContatoContentDict } from "@/lib/i18n";
 
 // ─────────────────────────────────────────────
@@ -386,9 +386,14 @@ export default function ContatoTemplate({
                     <Phone className="w-5 h-5 text-action-600" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">{c.sidebar.phoneLabel}</p>
-                    <p className="text-base font-bold text-navy-950">{CONTACT_PHONE_DISPLAY}</p>
-                    <p className="text-xs text-navy-950/50 mt-0.5">{c.sidebar.phoneSubtext}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/70 mb-1">{c.sidebar.phoneLabel}</p>
+                    <a
+                        href={`tel:${CONTACT_PHONE_TEL}`}
+                        className="text-base font-bold text-navy-950 hover:text-action-600 transition-colors"
+                      >
+                        {CONTACT_PHONE_DISPLAY}
+                      </a>
+                    <p className="text-xs text-navy-950/70 mt-0.5">{c.sidebar.phoneSubtext}</p>
                   </div>
                 </div>
 
