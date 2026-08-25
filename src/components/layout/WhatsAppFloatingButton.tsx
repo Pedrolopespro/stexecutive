@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { buildWhatsAppUrl, type Locale } from "@/lib/constants";
 import { commonPt, type CommonDict } from "@/lib/i18n";
+import { registrarConversao } from "@/lib/analytics";
 
 interface WhatsAppFloatingButtonProps {
   locale?: Locale;
@@ -34,13 +35,14 @@ export default function WhatsAppFloatingButton({ dict = commonPt }: WhatsAppFloa
       ].join(" ")}
     >
       {/* Anel pulsante */}
-      <span className="absolute inset-0 rounded-full bg-[#4ade80] opacity-40 animate-ping" />
+      <span aria-hidden="true" className="absolute inset-0 rounded-full bg-[#4ade80] anel-pulso" />
 
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={dict.whatsappFloatingAriaLabel}
+        onClick={() => registrarConversao("whatsapp_flutuante")}
         className={[
           "relative flex items-center gap-2",
           "bg-[#25D366] text-surface-white",

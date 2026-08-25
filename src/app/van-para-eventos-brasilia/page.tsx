@@ -178,7 +178,7 @@ export default function VanParaEventosPage() {
         <section className="section-padding bg-surface-off border-b border-gray-200/50">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 O serviço
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">
@@ -211,7 +211,7 @@ export default function VanParaEventosPage() {
                   key={i}
                   className="flex flex-col gap-2 p-5 rounded-2xl border border-gray-200 bg-surface-off hover:border-gold-400/50 hover:bg-white transition-all duration-200"
                 >
-                  <span className="text-[13px] font-semibold uppercase tracking-wider text-gold-500">
+                  <span className="text-[13px] font-semibold uppercase tracking-wider text-gold-700">
                     {type.label}
                   </span>
                   <p className="text-sm leading-relaxed text-gray-600">{type.desc}</p>
@@ -305,7 +305,7 @@ export default function VanParaEventosPage() {
 
               {/* Texto */}
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                   Frota
                 </p>
                 <h2 className="text-[24px] sm:text-[32px] font-bold text-navy-950 leading-snug mb-4">
@@ -359,7 +359,7 @@ export default function VanParaEventosPage() {
                     key={i}
                     className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 bg-surface-off"
                   >
-                    <span className="text-gold-500 font-bold text-sm min-w-[24px]">
+                    <span className="text-gold-700 font-bold text-sm min-w-[24px]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="text-sm text-gray-700">{factor}</span>
@@ -447,7 +447,7 @@ export default function VanParaEventosPage() {
         <section className="section-padding bg-surface-off">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 Situações
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-8">
@@ -473,7 +473,7 @@ export default function VanParaEventosPage() {
         <section className="section-padding bg-surface-white">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 Cobertura
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">

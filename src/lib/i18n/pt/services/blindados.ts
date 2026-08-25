@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const blindadosPt: ServicePageContent = {
   meta: {
     title: "Carros Blindados em Brasília com Motorista | ST Executive",
-    description: "Aluguel de carro blindado em Brasília com motorista profissional. Segurança e discrição para executivos, autoridades e eventos de alto nível no DF. Solicite orçamento via WhatsApp.",
+    description: "Aluguel de carro blindado em Brasília com motorista profissional. Segurança e discrição para executivos, autoridades e eventos no DF.",
     keywords: ["carro blindado brasília", "carro blindado com motorista brasília", "aluguel carro blindado brasília", "sedan blindado brasília", "transporte blindado brasília", "segurança executiva brasília"],
   },
   canonicalPath: "carros-blindados-brasilia/",

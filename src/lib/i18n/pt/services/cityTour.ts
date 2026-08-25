@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const cityTourPt: ServicePageContent = {
   meta: {
     title: "City Tour em Brasília com Motorista Guia | ST Executive",
-    description: "City tour em Brasília com motorista e veículo executivo. Conheça os principais pontos turísticos e monumentos da capital com conforto e pontualidade. Solicite orçamento via WhatsApp.",
+    description: "City tour em Brasília com motorista e veículo executivo. Conheça os principais monumentos da capital com conforto e pontualidade.",
     keywords: ["city tour brasília", "passeio turístico brasília", "tour brasília com motorista", "pontos turísticos brasília transporte", "passeio brasília executivo", "city tour df"],
   },
   canonicalPath: "city-tour-brasilia/",

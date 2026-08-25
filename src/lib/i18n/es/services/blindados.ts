@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const blindadosEs: ServicePageContent = {
   meta: {
     title: "Autos Blindados en Brasília con Chofer | ST Executive",
-    description: "Alquiler de auto blindado en Brasília con chofer profesional. Seguridad y discreción para ejecutivos, autoridades y eventos de alto nivel en el DF. Solicite presupuesto por WhatsApp.",
+    description: "Alquiler de auto blindado en Brasília con chofer profesional. Seguridad y discreción para ejecutivos, autoridades y eventos en el DF.",
     keywords: ["auto blindado brasilia", "auto blindado con chofer brasilia", "alquiler auto blindado brasilia", "sedan blindado brasilia", "transporte blindado brasilia", "seguridad ejecutiva brasilia"],
   },
   canonicalPath: "es/carros-blindados-brasilia/",

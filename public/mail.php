@@ -37,10 +37,20 @@ $nome              = htmlspecialchars(trim($data["nome"]               ?? ""));
 $email             = filter_var(trim($data["email"] ?? ""), FILTER_VALIDATE_EMAIL);
 $telefone          = htmlspecialchars(trim($data["telefone"]           ?? ""));
 $tipoServico       = htmlspecialchars(trim($data["tipoServico"]        ?? ""));
-$motoristaBilingue = htmlspecialchars(trim($data["motoristaBilingue"]  ?? ""));
 $observacao        = htmlspecialchars(trim($data["observacao"]         ?? "—"));
 
-if (!$nome || !$email || !$telefone || !$tipoServico || !$motoristaBilingue) {
+// Data e hora do pedido, no fuso de Brasilia. O cabecalho do e-mail ja traz
+// o horario, mas quem encaminha a mensagem ou a imprime perdia esse dado.
+date_default_timezone_set("America/Sao_Paulo");
+$recebidoEm = date("d/m/Y") . " às " . date("H:i");
+
+// "Motorista bilingue" saiu em 25/08/2026: o formulario nao pergunta isso
+// desde a reforma, e chegava em todo pedido com o texto fixo "Nao perguntado
+// neste formulario", ocupando uma linha do e-mail sem informar nada.
+// A validacao deixou de exigi-lo ANTES de o site parar de envia-lo, para que
+// as duas versoes convivam durante a publicacao — se o campo ainda vier, e
+// simplesmente ignorado.
+if (!$nome || !$email || !$telefone || !$tipoServico) {
     http_response_code(422);
     echo json_encode(["ok" => false, "message" => "Campos obrigatórios ausentes."]);
     exit();
@@ -69,7 +79,7 @@ $corpo = "
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>E-mail</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$email</td></tr>
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Telefone</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$telefone</td></tr>
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Tipo de serviço</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$tipoServico</td></tr>
-        <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Motorista bilíngue</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$motoristaBilingue</td></tr>
+        <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Recebido em</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$recebidoEm</td></tr>
         <tr><td style='padding:10px 0;color:#666;vertical-align:top;'>Observações</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$observacao</td></tr>
       </table>
     </div>

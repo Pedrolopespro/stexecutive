@@ -158,7 +158,7 @@ export default function ContatoTemplate({
                       quando nao ha mais formulario na tela. */}
                   <div data-titulo-formulario>
                     <h2 className="text-xl font-bold text-navy-950 mb-2">{c.form.heading}</h2>
-                    <p className="text-sm text-navy-950/50 mb-8">
+                    <p className="text-sm text-navy-950/60 mb-8">
                       {c.form.requiredNote.split("{req}")[0]}
                       <span className="text-red-500 font-semibold">{c.form.requiredWord}</span>
                       {c.form.requiredNote.split("{req}")[1]}
@@ -189,11 +189,11 @@ export default function ContatoTemplate({
                     <MessageCircle className="w-5 h-5 text-[#25D366]" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">{c.sidebar.whatsappLabel}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/60 mb-1">{c.sidebar.whatsappLabel}</p>
                     <p className="text-base font-bold text-navy-950 group-hover:text-action-600 transition-colors">
                       {CONTACT_PHONE_DISPLAY}
                     </p>
-                    <p className="text-xs text-navy-950/50 mt-0.5">{c.sidebar.whatsappSubtext}</p>
+                    <p className="text-xs text-navy-950/60 mt-0.5">{c.sidebar.whatsappSubtext}</p>
                   </div>
                 </a>
 
@@ -223,17 +223,17 @@ export default function ContatoTemplate({
                     <AtSign className="w-5 h-5 text-gold-500" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/40 mb-1">{c.sidebar.emailLabel}</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-navy-950/60 mb-1">{c.sidebar.emailLabel}</p>
                     <p className="text-sm font-bold text-navy-950 group-hover:text-action-600 transition-colors break-all">
                       {CONTACT_EMAIL}
                     </p>
-                    <p className="text-xs text-navy-950/50 mt-0.5">{c.sidebar.emailSubtext}</p>
+                    <p className="text-xs text-navy-950/60 mt-0.5">{c.sidebar.emailSubtext}</p>
                   </div>
                 </a>
 
                 {/* Nota */}
                 <div className="rounded-2xl border border-gold-400/30 bg-gold-400/5 p-5">
-                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-wider mb-2">{c.sidebar.noteLabel}</p>
+                  <p className="text-xs font-semibold text-gold-700 uppercase tracking-wider mb-2">{c.sidebar.noteLabel}</p>
                   <p className="text-sm text-navy-950/65 leading-relaxed">
                     {c.sidebar.noteText}
                   </p>

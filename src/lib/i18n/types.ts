@@ -335,6 +335,12 @@ export interface HomeContentDict {
       email: string;
       veiculo: string;
       descricao: string;
+      /**
+       * Rotulo so para leitor de tela no seletor de pais. Sem ele o campo
+       * anunciava "WhatsApp", igual ao campo do numero ao lado, e quem
+       * navega por audio ouvia duas vezes a mesma coisa.
+       */
+      ddi: string;
     };
     placeholders: {
       nome: string;

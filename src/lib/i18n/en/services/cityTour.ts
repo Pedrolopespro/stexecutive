@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const cityTourEn: ServicePageContent = {
   meta: {
     title: "Brasília City Tour with Driver Guide | ST Executive",
-    description: "City tour in Brasília with a driver and executive vehicle. Visit the capital's main landmarks and monuments with comfort and punctuality. Request a quote via WhatsApp.",
+    description: "City tour in Brasília with a driver and executive vehicle. Visit the capital's main landmarks in comfort and on schedule.",
     keywords: ["city tour brasilia", "sightseeing tour brasilia", "brasilia tour with driver", "brasilia landmarks transportation", "executive brasilia tour", "city tour df"],
   },
   canonicalPath: "en/city-tour-brasilia/",

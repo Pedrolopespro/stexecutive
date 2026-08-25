@@ -2,7 +2,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 
 export const executivoEn: ServicePageContent = {
   meta: {
-    title: "Executive Transportation in Brasília | Corporate Service — ST Executive",
+    title: "Corporate Executive Transport in Brasília — ST Executive",
     description: "Executive transportation in Brasília for companies and executives. Professional, punctual and safe service. Request via WhatsApp.",
     keywords: ["executive transportation brasilia", "corporate transportation df", "executive driver brasilia", "executive suv brasilia", "transportation for companies brasilia", "vip transportation brasilia"],
   },

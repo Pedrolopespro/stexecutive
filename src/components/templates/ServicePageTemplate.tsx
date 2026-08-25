@@ -83,7 +83,7 @@ export default function ServicePageTemplate({
         <section className="section-padding bg-surface-off border-b border-gray-200/50">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 {c.whatIs.eyebrow}
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">
@@ -112,7 +112,7 @@ export default function ServicePageTemplate({
               </div>
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                   {c.fleet.eyebrow}
                 </p>
                 <h2 className="text-[24px] sm:text-[32px] font-bold text-navy-950 leading-snug mb-4">
@@ -188,7 +188,7 @@ export default function ServicePageTemplate({
                   key={i}
                   className="p-5 rounded-2xl border border-gray-200 bg-white hover:border-gold-400/50 hover:shadow-soft transition-all duration-200"
                 >
-                  <p className="text-sm font-semibold text-gold-600 uppercase tracking-wider mb-2">
+                  <p className="text-sm font-semibold text-gold-700 uppercase tracking-wider mb-2">
                     {item.label}
                   </p>
                   <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
@@ -211,7 +211,7 @@ export default function ServicePageTemplate({
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {c.eventTypes.items.map((item, i) => (
                   <div key={i} className="p-5 rounded-2xl border border-gray-200 bg-white">
-                    <p className="text-sm font-semibold text-gold-600 uppercase tracking-wider mb-2">{item.label}</p>
+                    <p className="text-sm font-semibold text-gold-700 uppercase tracking-wider mb-2">{item.label}</p>
                     <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
                   </div>
                 ))}
@@ -232,7 +232,7 @@ export default function ServicePageTemplate({
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {c.companyBenefits.items.map((item, i) => (
                   <div key={i} className="p-5 rounded-2xl border border-gray-200 bg-white">
-                    <p className="text-sm font-semibold text-gold-600 uppercase tracking-wider mb-2">{item.label}</p>
+                    <p className="text-sm font-semibold text-gold-700 uppercase tracking-wider mb-2">{item.label}</p>
                     <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
                   </div>
                 ))}
@@ -275,7 +275,7 @@ export default function ServicePageTemplate({
           <section className="section-padding bg-surface-off">
             <div className="container-st">
               <div className="max-w-3xl mx-auto text-center">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">{c.commonSituations.eyebrow}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">{c.commonSituations.eyebrow}</p>
                 <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-8">{c.commonSituations.heading}</h2>
                 <div className="flex flex-wrap justify-center gap-3">
                   {c.commonSituations.items.map((s, i) => (
@@ -303,7 +303,7 @@ export default function ServicePageTemplate({
                 />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className={c.comparisonCards.theme === "dark" ? "rounded-2xl border border-gold-400/30 bg-gold-400/5 p-6" : "rounded-2xl border border-gold-400/30 bg-gold-400/5 p-6"}>
-                    <p className={`text-sm font-bold uppercase tracking-wider mb-4 ${c.comparisonCards.theme === "dark" ? "text-gold-400" : "text-gold-500"}`}>
+                    <p className={`text-sm font-bold uppercase tracking-wider mb-4 ${c.comparisonCards.theme === "dark" ? "text-gold-400" : "text-gold-700"}`}>
                       {c.comparisonCards.left.label}
                     </p>
                     <ul className="flex flex-col gap-3">
@@ -339,7 +339,7 @@ export default function ServicePageTemplate({
           <section className="section-padding bg-surface-white border-b border-gray-200/50">
             <div className="container-st">
               <div className="max-w-3xl mx-auto">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">{c.contextSection.eyebrow}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">{c.contextSection.eyebrow}</p>
                 <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-5">{c.contextSection.heading}</h2>
                 <div className="flex flex-col gap-4 text-base leading-relaxed text-gray-600">
                   {c.contextSection.paragraphs.map((p, i) => <p key={i}>{p}</p>)}
@@ -347,7 +347,7 @@ export default function ServicePageTemplate({
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {c.contextSection.stats.map((stat, i) => (
                     <div key={i} className="flex flex-col items-center text-center p-5 rounded-2xl border border-gold-400/20 bg-gold-400/5">
-                      <span className="text-3xl font-extrabold text-gold-500 mb-1">{stat.number}</span>
+                      <span className="text-3xl font-extrabold text-gold-700 mb-1">{stat.number}</span>
                       <span className="text-xs text-gray-500 leading-snug">{stat.label}</span>
                     </div>
                   ))}
@@ -362,14 +362,14 @@ export default function ServicePageTemplate({
           <section className="section-padding bg-surface-white">
             <div className="container-st">
               <div className="max-w-3xl mx-auto text-center">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">{c.price.eyebrow}</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">{c.price.eyebrow}</p>
                 <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">{c.price.heading}</h2>
                 {c.price.subtitle && <p className="text-base leading-relaxed text-gray-600 mb-8">{c.price.subtitle}</p>}
                 {c.price.factors && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     {c.price.factors.map((factor, i) => (
                       <div key={i} className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 bg-surface-off">
-                        <span className="text-gold-500 font-bold text-sm min-w-[24px]">{String(i + 1).padStart(2, "0")}</span>
+                        <span className="text-gold-700 font-bold text-sm min-w-[24px]">{String(i + 1).padStart(2, "0")}</span>
                         <span className="text-sm text-gray-700">{factor}</span>
                       </div>
                     ))}
@@ -466,7 +466,7 @@ export default function ServicePageTemplate({
           <section className="section-padding bg-surface-white">
             <div className="container-st">
               <div className="max-w-3xl mx-auto text-center">
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                   {c.coverage.eyebrow}
                 </p>
                 <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">

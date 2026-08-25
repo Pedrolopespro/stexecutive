@@ -103,6 +103,16 @@ interface HomeContentProps {
   commonDict?: CommonDict;
 }
 
+/**
+ * GIF transparente de 1x1 (43 bytes). Entra no <source> da faixa de largura em
+ * que a imagem NAO deve existir — sem isso o navegador baixaria as duas artes.
+ *
+ * E um arquivo, e nao um data URI, por um motivo especifico: `srcset` separa
+ * candidatos por virgula, e todo base64 tem virgula. O navegador leria o data
+ * URI como varias URLs quebradas e descartaria a fonte inteira.
+ */
+const VAZIO = "/images/vazio.gif";
+
 export default function HomeContent({
   locale = "pt",
   content = homePt,
@@ -173,14 +183,20 @@ export default function HomeContent({
         {bannerMobile && (
           <section className="banner-mobile flex items-center justify-center sm:hidden">
             <div className="banner-mobile__frame">
-              <img
-                src={bannerSrc}
-                alt={bannerAlt}
-                className="block w-full h-full"
-                width={900}
-                height={1600}
-                fetchPriority="high"
-              />
+              {/* A secao inteira e sm:hidden, entao no computador esta arte
+                  nunca aparece — mas era baixada assim mesmo (101 KB). O
+                  <source> de 640px para cima entrega o pixel vazio e resolve. */}
+              <picture>
+                <source media="(min-width: 640px)" srcSet={VAZIO} />
+                <img
+                  src={bannerSrc}
+                  alt={bannerAlt}
+                  className="block w-full h-full"
+                  width={900}
+                  height={1600}
+                  fetchPriority="high"
+                />
+              </picture>
               {/* Áreas de toque transparentes sobre os botões desenhados na
                   arte. Posição base (top/height) vem do CSS, igual nas 3
                   artes; left/width são por idioma (bannerHits acima), porque
@@ -209,38 +225,51 @@ export default function HomeContent({
         <div className={bannerMobile ? "first-fold hidden sm:block" : "first-fold flex flex-col sm:block"}>
         <section className="relative flex-1 sm:flex-none sm:min-h-screen flex flex-col overflow-hidden bg-navy-950">
           <div className="absolute inset-0 z-0">
-            {/* No celular, imagem fixa em WebP (104 KB) no lugar do vídeo de
-                2,1 MB: carrega antes, não consome dados nem bateria. O vídeo
-                segue no desktop — com preload="none" e display:none ele nem
-                chega a ser baixado no mobile. */}
-            <img
-              src="/images/content/hero site mobile.webp"
-              alt="Frota executiva da ST Executive em Brasília"
-              className="sm:hidden w-full h-full object-cover object-bottom"
-              fetchPriority="high"
-              width={1080}
-              height={1920}
-            />
-            {/* O poster era "hero site mobile.webp" — a arte RETRATO do celular,
-                esticada num hero paisagem. Trocado pela versão paisagem, que
-                é a que corresponde ao enquadramento. */}
+            {/* Uma imagem de fundo so, escolhida pelo navegador ANTES de
+                baixar:
+                  - a partir de 640px, a arte paisagem (a mesma que o vídeo
+                    usava de pôster);
+                  - abaixo disso, a arte retrato do celular — ou nada, quando
+                    existe banner mobile, porque aí este bloco inteiro está
+                    escondido e a arte nunca apareceria.
+                O enquadramento continua igual: object-bottom no celular,
+                object-center no computador. */}
+            <picture>
+              {/* O <source> cuida do celular; o <img> e a arte de computador.
+                  A ordem importa: `srcset` usa ESPACO como separador entre a
+                  URL e o descritor, entao "/images/content/hero site.webp"
+                  ali dentro viraria a URL "/images/content/hero" com o
+                  descritor "site.webp" — invalido, e o navegador descartava a
+                  fonte em silencio. No `src` do <img> o espaco e aceito
+                  normalmente, por isso a arte com espaco no nome fica nele. */}
+              <source
+                media="(max-width: 639.98px)"
+                srcSet={bannerMobile ? VAZIO : "/images/content/hero%20site%20mobile.webp"}
+              />
+              <img
+                src="/images/content/hero site.webp"
+                alt="Frota executiva da ST Executive em Brasília"
+                className="w-full h-full object-cover object-bottom sm:object-center"
+                fetchPriority="high"
+                width={1672}
+                height={941}
+              />
+            </picture>
+            {/* O vídeo entra POR CIMA dessa imagem e sem pôster próprio: o
+                pôster era "hero site.webp" e fazia o computador baixar o
+                arquivo duas vezes — e o celular baixá-lo à toa, já que aqui é
+                hidden sm:block. Enquanto o vídeo não carrega ele é
+                transparente, então quem aparece é a imagem de baixo, que é a
+                mesma arte. Nada pisca. */}
             <LazyVideo
               src="/images/content/veide hero.mp4"
-              poster="/images/content/hero site.webp"
-              className="hidden sm:block w-full h-full object-cover object-center"
+              poster={VAZIO}
+              className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
               autoPlay
               muted
               loop
               playsInline
-            >
-              <img
-                src="/images/content/hero site.webp"
-                alt="ST Executive — Transporte executivo em Brasília"
-                className="w-full h-full object-cover object-center"
-                width={1920}
-                height={1080}
-              />
-            </LazyVideo>
+            />
             {/* O véu escuro sobre o vídeo. A faixa do meio era 65% e é justamente
                 onde o texto assenta — com ela o apoio media 3,5:1 e o rótulo
                 2,7:1, abaixo do mínimo legível de 4,5:1. A 80% o texto passa de
@@ -366,7 +395,7 @@ export default function HomeContent({
         ══════════════════════════════════ */}
         <section className="bg-navy-900 border-t border-white/8 py-8">
           <div className="container-st">
-            <p className="text-center text-xs font-medium tracking-widest uppercase text-white/30 mb-6">
+            <p className="text-center text-xs font-medium tracking-widest uppercase text-white/50 mb-6">
               {c.clientsBar.label}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
@@ -807,7 +836,7 @@ export default function HomeContent({
               </div>
 
               <div>
-                <Badge variant="gold">{c.aboutSection.badge}</Badge>
+                <Badge variant="goldLight">{c.aboutSection.badge}</Badge>
                 <h2 className="mt-4 text-[28px] sm:text-[36px] font-extrabold leading-tight tracking-tight text-navy-950">
                   {c.aboutSection.heading}
                 </h2>

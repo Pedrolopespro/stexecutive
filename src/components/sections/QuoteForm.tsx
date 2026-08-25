@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "@/components/ui/Button";
 import { buildWhatsAppUrl, DDI_PAISES, type Locale } from "@/lib/constants";
+import { registrarConversao } from "@/lib/analytics";
 import type { HomeContentDict } from "@/lib/i18n";
 
 /**
@@ -122,6 +123,11 @@ export default function QuoteForm({
     // ar, o que mantem o formulario, a confirmacao e o registro visiveis.
     window.open(url, "_blank", "noopener,noreferrer");
 
+    // Conversao do Google Ads + evento no GTM. Fica DEPOIS do window.open
+    // para nao atrasar o gesto do usuario, e antes do fetch porque nao
+    // depende do e-mail ter sido registrado: o pedido ja saiu pelo WhatsApp.
+    registrarConversao("orcamento_enviado", { veiculo: v("veiculo") });
+
     setEnviado(true);
     setEmailOk(null);
 
@@ -132,14 +138,14 @@ export default function QuoteForm({
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        // Nomes exatamente como public/mail.php ja espera, para nao
-        // precisar alterar o PHP. `motoristaBilingue` e obrigatorio la
-        // e este formulario nao pergunta isso, entao vai explicito.
+        // Nomes exatamente como public/mail.php espera.
+        // `motoristaBilingue` saiu em 25/08/2026: o PHP deixou de exigi-lo e
+        // de imprimi-lo, entao nao ha mais por que mandar o texto fixo
+        // "Nao perguntado neste formulario" em todo pedido.
         nome: v("nome"),
         email: v("email"),
         telefone,
         tipoServico: v("veiculo"),
-        motoristaBilingue: "Não perguntado neste formulário",
         observacao: v("descricao"),
       }),
     })
@@ -233,7 +239,7 @@ export default function QuoteForm({
           <select
             name="ddi"
             defaultValue="+55"
-            aria-label={dict.labels.whatsapp}
+            aria-label={dict.labels.ddi}
             className={base + " w-[8.5rem] shrink-0 px-3"}
           >
             {DDI_PAISES.map((p) => (

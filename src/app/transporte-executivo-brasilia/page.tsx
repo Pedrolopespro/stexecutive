@@ -17,7 +17,7 @@ import { ogDaPagina } from "@/lib/seo";
 // ─────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Transporte Executivo em Brasília | Atendimento Corporativo — ST Executive",
+  title: "Transporte Executivo Corporativo em Brasília — ST Executive",
   description:
     "Transporte executivo em Brasília com motorista para empresas, executivos, reuniões e eventos. Frota premium, pontualidade e atendimento imediato no WhatsApp.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "transporte para empresas brasília",
     "transporte vip brasília",
   ],
-  openGraph: ogDaPagina("Transporte Executivo em Brasília | Atendimento Corporativo — ST Executive"),
+  openGraph: ogDaPagina("Transporte Executivo Corporativo em Brasília — ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/transporte-executivo-brasilia/",
     languages: {
@@ -177,7 +177,7 @@ export default function TransporteExecutivoPage() {
         <section className="section-padding bg-surface-off border-b border-gray-200/50">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 O serviço
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">
@@ -199,7 +199,7 @@ export default function TransporteExecutivoPage() {
         <section className="section-padding bg-surface-white border-b border-gray-200/50">
           <div className="container-st">
             <div className="max-w-3xl mx-auto">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 Contexto
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-5">
@@ -234,7 +234,7 @@ export default function TransporteExecutivoPage() {
                     key={i}
                     className="flex flex-col items-center text-center p-5 rounded-2xl border border-gold-400/20 bg-gold-400/5"
                   >
-                    <span className="text-3xl font-extrabold text-gold-500 mb-1">{stat.number}</span>
+                    <span className="text-3xl font-extrabold text-gold-700 mb-1">{stat.number}</span>
                     <span className="text-xs text-gray-500 leading-snug">{stat.label}</span>
                   </div>
                 ))}
@@ -260,7 +260,7 @@ export default function TransporteExecutivoPage() {
                   key={i}
                   className="p-5 rounded-2xl border border-gray-200 bg-surface-off hover:border-gold-400/50 hover:bg-white transition-all duration-200"
                 >
-                  <p className="text-sm font-semibold text-gold-600 uppercase tracking-wider mb-2">
+                  <p className="text-sm font-semibold text-gold-700 uppercase tracking-wider mb-2">
                     {item.label}
                   </p>
                   <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
@@ -313,7 +313,7 @@ export default function TransporteExecutivoPage() {
                 />
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                   Para empresas
                 </p>
                 <h2 className="text-[24px] sm:text-[32px] font-bold text-navy-950 leading-snug mb-4">
@@ -452,7 +452,7 @@ export default function TransporteExecutivoPage() {
                     key={i}
                     className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 bg-surface-off"
                   >
-                    <span className="text-gold-500 font-bold text-sm min-w-[24px]">
+                    <span className="text-gold-700 font-bold text-sm min-w-[24px]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="text-sm text-gray-700">{factor}</span>
@@ -477,7 +477,7 @@ export default function TransporteExecutivoPage() {
         <section className="section-padding bg-surface-off">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 Cobertura
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">

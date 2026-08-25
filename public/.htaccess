@@ -25,6 +25,38 @@ RewriteRule ^en/guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1&
 RewriteRule ^es/guia-brasilia/?$ /guia-brasilia/index.php?lang=es [L,QSA]
 RewriteRule ^es/guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1&lang=es [L,QSA]
 
+# ── Originais que o site nao usa ────────────────────────────
+# O site inteiro e servido em .webp. Os .png e .jpg em /images/ sao os
+# arquivos de origem, e nenhuma pagina aponta para eles.
+#
+# Isto nao e arrumacao: em 25/08/2026 descobriu-se que
+# /images/content/sedan blindada .png ficava publicamente baixavel COM A
+# PLACA DO CARRO LEGIVEL — a placa so havia sido apagada na versao .webp que
+# aparece no site. Apagar do repositorio nao resolve sozinho, porque o deploy
+# roda com dangerous-clean-slate:false e nao remove nada que ja esteja no
+# servidor. Esta regra e o que fecha a porta hoje.
+#
+# O que NAO e bloqueado, de proposito:
+#   .jpeg  -> /images/content/social.jpeg e a imagem de compartilhamento,
+#             usada inclusive pelo Guia Brasilia;
+#   .mp4 em /images/  -> "veide hero.mp4" e "video st vans.mp4" rodam no site;
+#   /icon.png  -> favicon, fica na raiz e nao em /images/;
+#   .webp  -> tudo que o site e o Guia realmente mostram.
+RewriteRule ^images/.*\.(png|jpg)$ - [F,L]
+RewriteRule ^van.executiva.content/.*\.(mp4|png|jpe?g)$ - [F,L]
+# Unico .jpeg de /images/ que o site nao usa (a versao publicada e a .webp).
+RewriteRule ^images/content/stquemsomos\.jpeg$ - [F,L]
+
+# ── Cache dos arquivos versionados ──────────────────────────
+# Tudo em /_next/static/ carrega um codigo no proprio nome, trocado a cada
+# publicacao. Nao ha como servir versao velha, entao um ano de cache e seguro
+# e evita rebaixar o mesmo JS a cada 7 dias. Vale SO para esse caminho: as
+# paginas do Guia Brasilia continuam com o no-store que o PHP define.
+<IfModule mod_headers.c>
+  SetEnvIf Request_URI "^/_next/static/" ARQUIVO_VERSIONADO=1
+  Header always set Cache-Control "public, max-age=31536000, immutable" env=ARQUIVO_VERSIONADO
+</IfModule>
+
 # ── Segurança: headers ──────────────────────────────────────
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"

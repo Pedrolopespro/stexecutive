@@ -2,7 +2,7 @@ import type { HomeContentDict } from "@/lib/i18n/types";
 
 export const homeEs: HomeContentDict = {
   meta: {
-    title: "Transporte Ejecutivo en Brasília | SUV y Van con Chofer — ST Executive",
+    title: "Transporte Ejecutivo en Brasília | Van y SUV — ST Executive",
     description:
       "Transporte ejecutivo en Brasília con chofer profesional. SUVs y vans para empresas, embajadas, eventos y transfer aeropuerto. Solicite presupuesto por WhatsApp.",
     keywords: [
@@ -198,6 +198,7 @@ export const homeEs: HomeContentDict = {
       email: "Correo electrónico",
       veiculo: "Vehículo",
       descricao: "Descripción del servicio",
+      ddi: "Código del país",
     },
     placeholders: {
       nome: "¿Cómo podemos llamarle?",

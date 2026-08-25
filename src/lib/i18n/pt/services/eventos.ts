@@ -2,7 +2,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 
 export const eventosPt: ServicePageContent = {
   meta: {
-    title: "Van para Eventos em Brasília com Motorista | Grupos — ST Executive",
+    title: "Van para Eventos em Brasília com Motorista — ST Executive",
     description: "Van para eventos em Brasília com motorista profissional. Casamentos, eventos corporativos, shows e grupos. Orçamento rápido via WhatsApp.",
     keywords: ["van para eventos brasília", "van com motorista brasília", "transporte para casamento brasília", "transporte para eventos DF", "van com motorista eventos brasília", "aluguel van eventos brasília", "transporte grupos brasília"],
   },

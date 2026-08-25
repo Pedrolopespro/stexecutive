@@ -24,7 +24,7 @@ export default function NotFound() {
 
       <main className="min-h-[70vh] flex items-center justify-center bg-surface-off">
         <div className="container-st py-32 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
             Erro 404
           </p>
           <h1 className="text-[28px] sm:text-[40px] font-bold text-navy-950 leading-snug mb-4">

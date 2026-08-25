@@ -191,7 +191,7 @@ export default function MinivanExecutivaBrasiliaPage() {
         <section className="section-padding bg-surface-off border-b border-gray-200/50">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 O serviço
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">
@@ -225,7 +225,7 @@ export default function MinivanExecutivaBrasiliaPage() {
               </div>
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                   Frota
                 </p>
                 <h2 className="text-[24px] sm:text-[32px] font-bold text-navy-950 leading-snug mb-4">
@@ -271,7 +271,7 @@ export default function MinivanExecutivaBrasiliaPage() {
                   key={i}
                   className="p-5 rounded-2xl border border-gray-200 bg-white hover:border-gold-400/50 hover:shadow-soft transition-all duration-200"
                 >
-                  <p className="text-sm font-semibold text-gold-600 uppercase tracking-wider mb-2">
+                  <p className="text-sm font-semibold text-gold-700 uppercase tracking-wider mb-2">
                     {item.label}
                   </p>
                   <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
@@ -346,7 +346,7 @@ export default function MinivanExecutivaBrasiliaPage() {
         <section className="section-padding bg-surface-off">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 Cobertura
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">

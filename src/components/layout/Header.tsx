@@ -129,7 +129,7 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
                                 onClick={() => setServicesOpen(false)}
                                 className="flex flex-col gap-0.5 px-4 py-3 rounded-xl hover:bg-gray-50 transition-colors duration-100 group"
                               >
-                                <span className="text-sm font-semibold text-navy-950 group-hover:text-gold-600 transition-colors">
+                                <span className="text-sm font-semibold text-navy-950 group-hover:text-gold-700 transition-colors">
                                   {s.label}
                                 </span>
                                 <span className="text-xs text-gray-500">{s.desc}</span>
@@ -155,8 +155,12 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
                         className={[
                           "px-3 py-2 rounded-lg text-sm font-semibold",
                           "transition-colors duration-[var(--motion-fast)]",
+                          // Com o cabeçalho branco o dourado claro dava 2,35:1
+                          // de contraste — ilegível. O 700 é o tom criado
+                          // para fundo claro e mede 4,99:1. Sobre a foto do
+                          // topo o 300 continua certo.
                           isScrolled
-                            ? "text-gold-500 hover:text-navy-950 hover:bg-gray-100 border border-gold-500/30"
+                            ? "text-gold-700 hover:text-navy-950 hover:bg-gray-100 border border-gold-700/30"
                             : "text-gold-300 hover:text-surface-white hover:bg-white/10 border border-gold-300/30",
                         ].join(" ")}
                       >

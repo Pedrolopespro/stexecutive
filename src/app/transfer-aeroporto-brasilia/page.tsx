@@ -17,7 +17,7 @@ import { ogDaPagina } from "@/lib/seo";
 // ─────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Transfer Aeroporto Brasília | Van com Motorista Pontual — ST Executive",
+  title: "Transfer Aeroporto Brasília com Motorista — ST Executive",
   description:
     "Transfer para o Aeroporto de Brasília com motorista profissional, 24 horas e acompanhamento de voo. Para empresas, hotéis, famílias e grupos. Peça orçamento.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "transporte aeroporto brasília",
     "van aeroporto brasília motorista",
   ],
-  openGraph: ogDaPagina("Transfer Aeroporto Brasília | Van com Motorista Pontual — ST Executive"),
+  openGraph: ogDaPagina("Transfer Aeroporto Brasília com Motorista — ST Executive"),
   alternates: {
     canonical: "https://stexecutive.com.br/transfer-aeroporto-brasilia/",
     languages: {
@@ -172,7 +172,7 @@ export default function TransferAeroportoPage() {
         <section className="section-padding bg-surface-off border-b border-gray-200/50">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 O serviço
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">
@@ -205,7 +205,7 @@ export default function TransferAeroportoPage() {
                   key={i}
                   className="p-5 rounded-2xl border border-gray-200 bg-surface-off hover:border-gold-400/50 hover:bg-white transition-all duration-200"
                 >
-                  <p className="text-sm font-semibold text-gold-600 uppercase tracking-wider mb-2">
+                  <p className="text-sm font-semibold text-gold-700 uppercase tracking-wider mb-2">
                     {item.label}
                   </p>
                   <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
@@ -256,7 +256,7 @@ export default function TransferAeroportoPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Transfer */}
                 <div className="rounded-2xl border border-gold-400/30 bg-gold-400/5 p-6">
-                  <p className="text-sm font-bold text-gold-500 uppercase tracking-wider mb-4">
+                  <p className="text-sm font-bold text-gold-700 uppercase tracking-wider mb-4">
                     Transfer ST Executive
                   </p>
                   <ul className="flex flex-col gap-3">
@@ -346,7 +346,7 @@ export default function TransferAeroportoPage() {
                 />
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                   Frota
                 </p>
                 <h2 className="text-[24px] sm:text-[32px] font-bold text-navy-950 leading-snug mb-4">
@@ -398,7 +398,7 @@ export default function TransferAeroportoPage() {
                     key={i}
                     className="flex items-center gap-3 p-4 rounded-xl border border-gray-200 bg-white"
                   >
-                    <span className="text-gold-500 font-bold text-sm min-w-[24px]">
+                    <span className="text-gold-700 font-bold text-sm min-w-[24px]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="text-sm text-gray-700">{factor}</span>
@@ -420,7 +420,7 @@ export default function TransferAeroportoPage() {
         <section className="section-padding bg-surface-white">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 Cobertura
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">

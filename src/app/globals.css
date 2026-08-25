@@ -21,7 +21,13 @@
      metade do mínimo de 4,5:1. O gold-700 abaixo é o mesmo matiz dourado
      escurecido até passar — 4,99:1 no branco e 4,66:1 no off-white do site.
      Regra: fundo escuro usa 300/400/500; fundo claro usa 700. */
-  --color-gold-700: #8C6A26;
+  /* Dourado para FUNDO CLARO. Ajustado de #8C6A26 para #856524 em
+     25/08/2026: o valor anterior passava sobre branco puro (4,99:1) mas
+     ficava em 4,15:1 sobre o creme da secao Sobre e 4,47:1 sobre o
+     branco translucido do cabecalho rolado. Este passa dos 4,5:1 em
+     todos eles, com uma diferenca de luminancia de 1,6 ponto que nao se
+     percebe a olho. */
+  --color-gold-700: #856524;
   --color-gold-500: #C8A45D;
   --color-gold-400: #D8B76F;
   --color-gold-300: #E5CB8C;
@@ -515,4 +521,37 @@ body.formulario-enviado [data-titulo-formulario] {
    atrapalha. */
 body.orcamento-a-vista [data-whatsapp-flutuante] {
   display: none !important;
+}
+
+/* Anel pulsante do botão flutuante do WhatsApp.
+
+   Antes usava `animate-ping`, do Tailwind, que dobra o tamanho do elemento.
+   Numa tela de 1440px a pílula de ~166px virava 332px e a ponta do anel
+   chegava a 1474px — 34px além da borda direita. Não gerava rolagem lateral,
+   porque o elemento é `fixed`, mas a animação aparecia cortada.
+
+   Este pulso cresce 8%, o que cabe folgado na margem de 24px do canto, tanto
+   na pílula do computador quanto no botão só de ícone do celular. */
+@keyframes pulso-anel {
+  0% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  70%,
+  100% {
+    transform: scale(1.08);
+    opacity: 0;
+  }
+}
+
+.anel-pulso {
+  animation: pulso-anel 1.6s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Quem pede menos movimento no sistema não recebe o pulso. */
+@media (prefers-reduced-motion: reduce) {
+  .anel-pulso {
+    animation: none;
+    opacity: 0.35;
+  }
 }

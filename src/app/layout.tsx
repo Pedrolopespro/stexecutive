@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   verification: {
     google: "ejiWTOXEFJ1GCK3Ezg1M6DiewNW7EbTiRWuTNddwc1Q",
   },
-  title: "Transporte Executivo em Brasília | SUV e Van com Motorista — ST Executive",
+  title: "Transporte Executivo em Brasília | Van e SUV — ST Executive",
   // 161 chars truncavam no resultado de busca; esta versão fecha em 138.
   description:
     "Transporte executivo em Brasília para empresas, aeroporto e eventos. Vans, SUVs, sedans e blindados com motorista. Solicite seu orçamento.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    title: "Transporte Executivo em Brasília | SUV e Van com Motorista — ST Executive",
+    title: "Transporte Executivo em Brasília | Van e SUV — ST Executive",
     description:
       "Transporte executivo em Brasília com motorista profissional. SUVs e vans para empresas, embaixadas, eventos e transfer aeroporto. Solicite orçamento no WhatsApp.",
     siteName: "ST Executive",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Transporte Executivo em Brasília | SUV e Van com Motorista — ST Executive",
+    title: "Transporte Executivo em Brasília | Van e SUV — ST Executive",
     description:
       "Transporte executivo em Brasília com motorista profissional. SUVs e vans para empresas, embaixadas, eventos e transfer aeroporto.",
     images: ["https://stexecutive.com.br/images/content/social.jpeg"],
@@ -191,13 +191,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             })
           }}
         />
-        {/* Preload LCP — poster do vídeo hero (usado em todos os tamanhos de tela) */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/content/hero site mobile.webp"
-          type="image/webp"
-        />
+        {/* Aqui havia um preload fixo de "hero site mobile.webp".
+            Ele valia para TODAS as paginas do site, inclusive as que nao tem
+            capa nenhuma — /contato/ baixava 104 KB de uma imagem que nunca
+            aparece. E na home ele anulava o <picture> novo, porque preload
+            baixa antes de o navegador avaliar o media query.
+            A prioridade agora vem do fetchPriority="high" no proprio <img>
+            dentro do <picture>, que respeita a largura da tela. */}
       </head>
       <body className="min-h-full flex flex-col antialiased" suppressHydrationWarning>
         {/* Google Tag Manager (noscript) */}

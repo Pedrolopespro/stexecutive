@@ -2,7 +2,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 
 export const transferEs: ServicePageContent = {
   meta: {
-    title: "Transfer Aeropuerto Brasília | Van con Chofer Puntual — ST Executive",
+    title: "Transfer Aeropuerto Brasília con Chofer — ST Executive",
     description: "Transfer al aeropuerto en Brasília con chofer. Puntual, seguro e ideal para grupos. Solicite su presupuesto por WhatsApp.",
     keywords: ["transfer aeropuerto brasilia", "traslado aeropuerto brasilia", "van al aeropuerto brasilia", "transfer aeropuerto df", "transporte aeropuerto brasilia", "van aeropuerto brasilia chofer"],
   },

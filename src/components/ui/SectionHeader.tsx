@@ -27,7 +27,7 @@ export default function SectionHeader({
   return (
     <div className={`max-w-2xl ${alignClass} mb-10 md:mb-14 ${className}`}>
       {eyebrow && (
-        <Badge variant={theme === "dark" ? "gold" : "gold"} className="mb-4">
+        <Badge variant={theme === "dark" ? "gold" : "goldLight"} className="mb-4">
           {eyebrow}
         </Badge>
       )}

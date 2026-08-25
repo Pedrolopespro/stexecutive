@@ -2,7 +2,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 
 export const transferPt: ServicePageContent = {
   meta: {
-    title: "Transfer Aeroporto Brasília | Van com Motorista Pontual — ST Executive",
+    title: "Transfer Aeroporto Brasília com Motorista — ST Executive",
     description:
       "Transfer para aeroporto em Brasília com motorista. Pontual, seguro e ideal para grupos. Solicite seu orçamento via WhatsApp.",
     keywords: [

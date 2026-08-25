@@ -2,7 +2,7 @@ import type { HomeContentDict } from "@/lib/i18n/types";
 
 export const homeEn: HomeContentDict = {
   meta: {
-    title: "Executive Transportation in Brasília | SUV and Van with Driver — ST Executive",
+    title: "Executive Transport in Brasília | Van and SUV — ST Executive",
     description:
       "Executive transportation in Brasília with a professional driver. SUVs and vans for companies, embassies, events and airport transfer. Request a quote on WhatsApp.",
     keywords: [
@@ -198,6 +198,7 @@ export const homeEn: HomeContentDict = {
       email: "Email",
       veiculo: "Vehicle",
       descricao: "What you need",
+      ddi: "Country code",
     },
     placeholders: {
       nome: "What should we call you",

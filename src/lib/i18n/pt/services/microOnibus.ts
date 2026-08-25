@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const microOnibusPt: ServicePageContent = {
   meta: {
     title: "Micro-ônibus Executivo em Brasília com Motorista | ST Executive",
-    description: "Micro-ônibus executivo em Brasília com motorista profissional. Para grupos médios, eventos, excursões e transporte corporativo no DF. Solicite orçamento via WhatsApp.",
+    description: "Micro-ônibus executivo em Brasília com motorista profissional. Para grupos médios, eventos, excursões e transporte corporativo no DF.",
     keywords: ["micro-ônibus executivo brasília", "micro ônibus com motorista brasília", "aluguel micro-ônibus brasília", "micro-ônibus para eventos brasília", "micro-ônibus executivo df", "transporte de grupos brasília"],
   },
   canonicalPath: "micro-onibus-executivo-brasilia/",

@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const microOnibusEn: ServicePageContent = {
   meta: {
     title: "Executive Mini-Bus in Brasília with Driver | ST Executive",
-    description: "Executive mini-bus in Brasília with a professional driver. For mid-size groups, events, excursions and corporate transportation in the DF. Request a quote via WhatsApp.",
+    description: "Executive mini-bus in Brasília with a professional driver. For mid-size groups, events, excursions and corporate transport in the DF.",
     keywords: ["executive mini-bus brasilia", "mini-bus with driver brasilia", "mini-bus rental brasilia", "mini-bus for events brasilia", "executive mini-bus df", "group transportation brasilia"],
   },
   canonicalPath: "en/micro-onibus-executivo-brasilia/",

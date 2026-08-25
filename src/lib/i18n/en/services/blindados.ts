@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const blindadosEn: ServicePageContent = {
   meta: {
     title: "Armored Cars in Brasília with Driver | ST Executive",
-    description: "Armored car rental in Brasília with a professional driver. Security and discretion for executives, authorities and high-level events in the DF. Request a quote via WhatsApp.",
+    description: "Armored car rental in Brasília with a professional driver. Security and discretion for executives, authorities and events in the DF.",
     keywords: ["armored car brasilia", "armored car with driver brasilia", "armored car rental brasilia", "armored sedan brasilia", "armored transportation brasilia", "executive security brasilia"],
   },
   canonicalPath: "en/carros-blindados-brasilia/",

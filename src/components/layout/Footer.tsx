@@ -130,7 +130,7 @@ export default function Footer({ locale = "pt", dict = footerPt, commonDict = co
                   <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
                 </svg>
                 <a
-                  href="https://instagram.com/stexecutive"
+                  href="https://www.instagram.com/stexecutive"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-surface-white transition-colors"

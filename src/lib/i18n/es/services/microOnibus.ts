@@ -3,7 +3,7 @@ import type { ServicePageContent } from "@/lib/i18n/types";
 export const microOnibusEs: ServicePageContent = {
   meta: {
     title: "Micro-ómnibus Ejecutivo en Brasília con Chofer | ST Executive",
-    description: "Micro-ómnibus ejecutivo en Brasília con chofer profesional. Para grupos medianos, eventos, excursiones y transporte corporativo en el DF. Solicite presupuesto por WhatsApp.",
+    description: "Micro-ómnibus ejecutivo en Brasília con chofer profesional. Para grupos medianos, eventos, excursiones y transporte corporativo en el DF.",
     keywords: ["micro-ómnibus ejecutivo brasilia", "micro ómnibus con chofer brasilia", "alquiler micro-ómnibus brasilia", "micro-ómnibus para eventos brasilia", "micro-ómnibus ejecutivo df", "transporte de grupos brasilia"],
   },
   canonicalPath: "es/micro-onibus-executivo-brasilia/",

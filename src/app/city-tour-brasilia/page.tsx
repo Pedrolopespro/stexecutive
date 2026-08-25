@@ -18,7 +18,7 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "City Tour em Brasília com Motorista Guia | ST Executive",
   description:
-    "City tour em Brasília com motorista e veículo executivo. Conheça os principais pontos turísticos e monumentos da capital com conforto e pontualidade. Solicite orçamento via WhatsApp.",
+    "City tour em Brasília com motorista e veículo executivo. Conheça os principais monumentos da capital com conforto e pontualidade.",
   keywords: [
     "city tour brasília",
     "passeio turístico brasília",
@@ -190,7 +190,7 @@ export default function CityTourBrasiliaPage() {
         <section className="section-padding bg-surface-off border-b border-gray-200/50">
           <div className="container-st">
             <div className="max-w-3xl mx-auto text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                 O serviço
               </p>
               <h2 className="text-[22px] sm:text-[28px] font-bold text-navy-950 leading-snug mb-4">
@@ -224,7 +224,7 @@ export default function CityTourBrasiliaPage() {
                   key={i}
                   className="p-5 rounded-2xl border border-gray-200 bg-white hover:border-gold-400/50 hover:shadow-soft transition-all duration-200"
                 >
-                  <p className="text-sm font-semibold text-gold-600 uppercase tracking-wider mb-2">
+                  <p className="text-sm font-semibold text-gold-700 uppercase tracking-wider mb-2">
                     {item.label}
                   </p>
                   <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
@@ -278,7 +278,7 @@ export default function CityTourBrasiliaPage() {
               </div>
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-gold-500 mb-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gold-700 mb-3">
                   O veículo
                 </p>
                 <h2 className="text-[24px] sm:text-[32px] font-bold text-navy-950 leading-snug mb-4">
