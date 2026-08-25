@@ -42,7 +42,13 @@ RewriteRule ^es/guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1&
 #   .mp4 em /images/  -> "veide hero.mp4" e "video st vans.mp4" rodam no site;
 #   /icon.png  -> favicon, fica na raiz e nao em /images/;
 #   .webp  -> tudo que o site e o Guia realmente mostram.
-RewriteRule ^images/.*\.(png|jpg)$ - [F,L]
+# ATENCAO ao mexer aqui: o .jpg de /images/ NAO pode ser bloqueado.
+# O Guia Brasilia gera um JPEG irmao de cada .webp usado como og:image
+# (o WhatsApp falha em silencio com WebP) e o grava nesta mesma pasta.
+# A primeira versao desta regra incluia jpg e derrubou a previa de link
+# de 5 artigos do Guia — corrigido em 25/08/2026, no mesmo dia.
+# O arquivo com a placa legivel e .png, entao continua bloqueado.
+RewriteRule ^images/.*\.png$ - [F,L]
 RewriteRule ^van.executiva.content/.*\.(mp4|png|jpe?g)$ - [F,L]
 # Unico .jpeg de /images/ que o site nao usa (a versao publicada e a .webp).
 RewriteRule ^images/content/stquemsomos\.jpeg$ - [F,L]
