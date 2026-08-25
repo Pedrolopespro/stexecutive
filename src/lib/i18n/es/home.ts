@@ -216,6 +216,13 @@ export const homeEs: HomeContentDict = {
       "Micro-ómnibus",
       "Ómnibus",
     ],
+    tituloMobile: "Solicite su cotización",
+    subtituloMobile: "Complete los datos abajo y reciba su presupuesto personalizado.",
+    diferenciais: [
+      { linha1: "Atención", linha2: "rápida y segura" },
+      { linha1: "Respuesta en", linha2: "hasta 1 minuto" },
+      { linha1: "Excelencia en", linha2: "cada detalle" },
+    ],
     submitLabel: "Enviar por WhatsApp",
     footnote: "Respondemos por WhatsApp. Sus datos se usan solo para responder a esta solicitud.",
     sucesso: {

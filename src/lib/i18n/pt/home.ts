@@ -216,6 +216,13 @@ export const homePt: HomeContentDict = {
       "Micro-ônibus",
       "Ônibus",
     ],
+    tituloMobile: "Solicite sua cotação",
+    subtituloMobile: "Preencha os dados abaixo e receba seu orçamento personalizado.",
+    diferenciais: [
+      { linha1: "Atendimento", linha2: "rápido e seguro" },
+      { linha1: "Resposta em", linha2: "até 1 minuto" },
+      { linha1: "Excelência em", linha2: "cada detalhe" },
+    ],
     submitLabel: "Enviar pelo WhatsApp",
     footnote: "Resposta pelo WhatsApp. Seus dados são usados apenas para responder a este pedido.",
     sucesso: {

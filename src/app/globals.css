@@ -505,3 +505,14 @@ body.formulario-enviado [data-whatsapp-flutuante],
 body.formulario-enviado [data-titulo-formulario] {
   display: none !important;
 }
+
+/* Enquanto a seção de orçamento está na tela, o botão flutuante sai do
+   caminho — em QUALQUER largura.
+   Eu havia limitado isto ao celular, achando que no computador não havia
+   choque. Havia: em 1920px o cartão do formulário encosta na borda direita
+   e o flutuante cobre o campo "Descrição do atendimento". A seção já tem um
+   botão de WhatsApp grande e próprio; o flutuante ali é redundante e só
+   atrapalha. */
+body.orcamento-a-vista [data-whatsapp-flutuante] {
+  display: none !important;
+}

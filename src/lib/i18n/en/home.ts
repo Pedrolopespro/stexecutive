@@ -216,6 +216,13 @@ export const homeEn: HomeContentDict = {
       "Mini-Bus",
       "Bus",
     ],
+    tituloMobile: "Request your quote",
+    subtituloMobile: "Fill in the details below and get a quote made for you.",
+    diferenciais: [
+      { linha1: "Service that is", linha2: "fast and safe" },
+      { linha1: "Reply within", linha2: "one minute" },
+      { linha1: "Excellence in", linha2: "every detail" },
+    ],
     submitLabel: "Send via WhatsApp",
     footnote: "We reply on WhatsApp. Your details are used only to answer this request.",
     sucesso: {

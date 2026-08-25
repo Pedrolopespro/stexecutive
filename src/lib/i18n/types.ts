@@ -350,6 +350,11 @@ export interface HomeContentDict {
      */
     dicaWhatsapp: string;
     veiculoOptions: string[];
+    /** Titulo e subtitulo usados so no celular, onde nao ha o painel lateral. */
+    tituloMobile: string;
+    subtituloMobile: string;
+    /** Tres diferenciais exibidos sobre a imagem, no painel do desktop. */
+    diferenciais: { linha1: string; linha2: string }[];
     submitLabel: string;
     footnote: string;
     /** Tela mostrada depois do envio, no lugar do formulario. */
