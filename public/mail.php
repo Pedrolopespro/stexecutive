@@ -29,14 +29,15 @@ if (!$data) {
 }
 
 // ── Campos ───────────────────────────────────────────────────
+// Empresa, Local de embarque e Local de desembarque sairam em 24/08/2026:
+// o formulario novo nao pergunta mais esses tres, e eles chegavam sempre
+// como "—", ocupando linha no e-mail sem dizer nada. Origem, destino e
+// data agora vem dentro de Observacoes.
 $nome              = htmlspecialchars(trim($data["nome"]               ?? ""));
-$empresa           = htmlspecialchars(trim($data["empresa"]            ?? "—"));
 $email             = filter_var(trim($data["email"] ?? ""), FILTER_VALIDATE_EMAIL);
 $telefone          = htmlspecialchars(trim($data["telefone"]           ?? ""));
 $tipoServico       = htmlspecialchars(trim($data["tipoServico"]        ?? ""));
 $motoristaBilingue = htmlspecialchars(trim($data["motoristaBilingue"]  ?? ""));
-$localEmbarque     = htmlspecialchars(trim($data["localEmbarque"]      ?? "—"));
-$localDesembarque  = htmlspecialchars(trim($data["localDesembarque"]   ?? "—"));
 $observacao        = htmlspecialchars(trim($data["observacao"]         ?? "—"));
 
 if (!$nome || !$email || !$telefone || !$tipoServico || !$motoristaBilingue) {
@@ -65,13 +66,10 @@ $corpo = "
     <div style='padding:28px 32px;'>
       <table style='width:100%;border-collapse:collapse;font-size:14px;'>
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;width:45%;'>Nome</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$nome</td></tr>
-        <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Empresa</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$empresa</td></tr>
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>E-mail</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$email</td></tr>
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Telefone</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$telefone</td></tr>
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Tipo de serviço</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$tipoServico</td></tr>
         <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Motorista bilíngue</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$motoristaBilingue</td></tr>
-        <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Local de embarque</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$localEmbarque</td></tr>
-        <tr style='border-bottom:1px solid #eee;'><td style='padding:10px 0;color:#666;'>Local de desembarque</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$localDesembarque</td></tr>
         <tr><td style='padding:10px 0;color:#666;vertical-align:top;'>Observações</td><td style='padding:10px 0;font-weight:600;color:#0a1628;'>$observacao</td></tr>
       </table>
     </div>

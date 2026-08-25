@@ -97,7 +97,7 @@ export default function QuoteForm({
         email: v("email"),
         telefone,
         tipoServico: v("veiculo"),
-        motoristaBilingue: "Nao perguntado neste formulario",
+        motoristaBilingue: "Não perguntado neste formulário",
         observacao: v("descricao"),
       }),
     })
