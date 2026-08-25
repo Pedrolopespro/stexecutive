@@ -495,3 +495,13 @@ body {
 .btn-guia:hover::after {
   transform: translateX(3px);
 }
+
+/* ── Tela de confirmação do formulário ──
+   Enquanto ela está no ar, o botão flutuante do WhatsApp some: a tela já
+   traz um botão "Abrir WhatsApp" grande, e dois botões verdes na mesma
+   dobra se sobrepõem e disputam o toque no celular. A classe é posta e
+   removida pelo próprio formulário (QuoteForm). */
+body.formulario-enviado [data-whatsapp-flutuante],
+body.formulario-enviado [data-titulo-formulario] {
+  display: none !important;
+}

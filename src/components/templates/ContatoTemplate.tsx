@@ -153,12 +153,17 @@ export default function ContatoTemplate({
               {/* ── FORMULÁRIO ── */}
               <div className="lg:col-span-2">
                 <div className="bg-white rounded-2xl shadow-card p-8 lg:p-10">
-                  <h2 className="text-xl font-bold text-navy-950 mb-2">{c.form.heading}</h2>
-                  <p className="text-sm text-navy-950/50 mb-8">
-                    {c.form.requiredNote.split("{req}")[0]}
-                    <span className="text-red-500 font-semibold">{c.form.requiredWord}</span>
-                    {c.form.requiredNote.split("{req}")[1]}
-                  </p>
+                  {/* Some quando o formulario da lugar a tela de confirmacao: um titulo
+                      "Solicitar orcamento" com "campos obrigatorios" nao faz sentido
+                      quando nao ha mais formulario na tela. */}
+                  <div data-titulo-formulario>
+                    <h2 className="text-xl font-bold text-navy-950 mb-2">{c.form.heading}</h2>
+                    <p className="text-sm text-navy-950/50 mb-8">
+                      {c.form.requiredNote.split("{req}")[0]}
+                      <span className="text-red-500 font-semibold">{c.form.requiredWord}</span>
+                      {c.form.requiredNote.split("{req}")[1]}
+                    </p>
+                  </div>
 
                   {/* O formulario da home passou a valer aqui tambem, a pedido do dono:
                       um so formulario no site inteiro, com os mesmos cinco campos. Ele
@@ -166,7 +171,7 @@ export default function ContatoTemplate({
                       existe mais estado de sucesso: a pagina navega para o WhatsApp.
                       O gatilho de conversao do GTM continua valendo, porque e submit
                       de <form> de verdade, que e o que o conteiner mede. */}
-                  <QuoteForm dict={quoteDict} embutido />
+                  <QuoteForm dict={quoteDict} locale={locale} embutido />
                 </div>
               </div>
 

@@ -352,17 +352,24 @@ export interface HomeContentDict {
     veiculoOptions: string[];
     submitLabel: string;
     footnote: string;
-    /** Painel mostrado depois do envio, ja que a pagina nao sai mais do ar. */
+    /** Tela mostrada depois do envio, no lugar do formulario. */
     sucesso: {
-      titulo: string;
-      texto: string;
+      tituloLinha1: string;
+      tituloLinha2: string;
+      itemWhatsapp: string;
+      itemToque: string;
+      itemEmail: string;
+      proximoRotulo: string;
+      proximoTexto: string;
+      abrirWhatsapp: string;
+      novoPedido: string;
+      voltarSite: string;
       /** Confirmacao de que o pedido tambem foi registrado por e-mail. */
       emailOk: string;
-      /** O e-mail falhou, mas o WhatsApp ja levou o pedido — nao e erro fatal. */
+      /** O e-mail falhou, mas o WhatsApp ja levou o pedido. */
       emailFalha: string;
-      abrirDeNovo: string;
-      novoPedido: string;
     };
+
     /**
      * Modelo da mensagem enviada ao WhatsApp. Cada marcador e trocado pelo
      * valor digitado; linhas com campo vazio saem antes do envio.

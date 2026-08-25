@@ -359,7 +359,7 @@ export default function HomeContent({
             visitante encontra ao rolar, em vez de ter de sair da página
             para pedir preço.
         ══════════════════════════════════ */}
-        <QuoteForm dict={c.quoteForm} />
+        <QuoteForm dict={c.quoteForm} locale={locale} />
 
         {/* ══════════════════════════════════
             2. LOGOS DE CLIENTES

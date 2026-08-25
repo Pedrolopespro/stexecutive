@@ -22,6 +22,9 @@ export default function WhatsAppFloatingButton({ dict = commonPt }: WhatsAppFloa
 
   return (
     <div
+      // Marcador usado pela tela de confirmacao do formulario para esconder
+      // este botao. Ver a regra em globals.css e o efeito em QuoteForm.
+      data-whatsapp-flutuante
       className={[
         "fixed z-40 bottom-6 right-6",
         "transition-all duration-[var(--motion-slow)] ease-[var(--ease-premium)]",
