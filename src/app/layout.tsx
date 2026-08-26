@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { GOOGLE_REVIEWS } from "@/lib/constants";
+import { GOOGLE_REVIEWS, CONTACT_EMAIL } from "@/lib/constants";
 
 // next/font: baixa a Inter em build time e serve do próprio domínio
 // elimina a requisição externa ao Google Fonts (render-blocking)
@@ -123,7 +123,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "image": "https://stexecutive.com.br/images/content/social.jpeg",
                   "description": "A ST Executive é especializada em transporte executivo em Brasília e região. Todos os serviços são realizados exclusivamente com motorista profissional. Não realizamos locação de carros, SUVs, vans, minivans, micro-ônibus ou ônibus sem motorista. Atendemos empresas, embaixadas, eventos corporativos e transfer aeroporto.",
                   "telephone": "+55-61-98409-7971",
-                  "email": "contato@stexecutive.com.br",
+                  // Vem da mesma constante que o site exibe. O schema dizia
+                  // contato@stexecutive.com.br enquanto o rodape e a pagina de
+                  // contato mostravam stexecutivebsb@hotmail.com — e e nesta que
+                  // os pedidos realmente chegam (ver addAddress em mail.php).
+                  // O contato@ continua sendo o REMETENTE do mail.php, que e
+                  // outra coisa: quem envia, nao quem recebe.
+                  "email": CONTACT_EMAIL,
                   "address": {
                     "@type": "PostalAddress",
                     // Rua e CEP faltavam. Sao os mesmos do perfil do Google Meu Negocio;
