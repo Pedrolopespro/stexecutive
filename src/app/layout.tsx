@@ -145,18 +145,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   // pagina publica do Google. A diretriz do Google exige que estes
                   // numeros sejam os MESMOS exibidos na pagina — os dois saem de
                   // GOOGLE_REVIEWS em constants.ts.
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": GOOGLE_REVIEWS.nota.replace(",", "."),
-                    "reviewCount": GOOGLE_REVIEWS.quantidade,
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": -15.7801,
-                    "longitude": -47.9292
-                  },
                   "areaServed": [
                     { "@type": "City", "name": "Brasília" },
                     { "@type": "State", "name": "Distrito Federal" }

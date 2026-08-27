@@ -135,6 +135,11 @@ export default function HomeContent({
   const whatsappUrl = buildWhatsAppUrl(commonDict.whatsappMessage);
   const servicosHref = locale === "pt" ? "#servicos" : `/${locale}/#servicos`;
   const contatoHref = locale === "pt" ? "/contato/" : `/${locale}/contato/`;
+  // URL absoluta desta Home, para o @id do FAQPage. Cada idioma tem a
+  // sua, senao os tres apontariam para o mesmo no.
+  const urlDaHome = locale === "pt"
+    ? "https://stexecutive.com.br/"
+    : `https://stexecutive.com.br/${locale}/`;
 
   // Banner mobile: arte única que já traz logo, título, benefícios e botões.
   // Cada idioma tem sua própria arte, porque os textos são traduzidos dentro
@@ -901,6 +906,39 @@ export default function HomeContent({
         {/* ══════════════════════════════════
             11. FAQ
         ══════════════════════════════════ */}
+        {/* Dados estruturados das perguntas frequentes.
+
+            Vive aqui, e nao no layout.tsx, porque o layout vale para TODAS as
+            paginas — e declarar FAQPage onde nao ha FAQ visivel e marcacao
+            enganosa pelas regras do Google.
+
+            As perguntas saem de c.faqSection.items, a MESMA lista que o
+            acordeao abaixo renderiza. Nao ha texto repetido: se alguem editar
+            uma pergunta no dicionario, a tela e o schema mudam juntos, e nunca
+            divergem. Vale para os tres idiomas, cada um com sua URL.
+
+            Observacao: desde 2026 o Google nao mostra mais resultado rico de
+            FAQ. Isto fica pela leitura de maquina do conteudo, nao por
+            aparencia na busca. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "@id": `${urlDaHome}#faq`,
+              "inLanguage": locale === "pt" ? "pt-BR" : locale,
+              "mainEntity": c.faqSection.items.map((item) => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.answer,
+                },
+              })),
+            }),
+          }}
+        />
         <section id="faq" className="section-padding bg-surface-off">
           <div className="container-st">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
