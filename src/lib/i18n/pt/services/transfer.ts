@@ -123,7 +123,7 @@ export const transferPt: ServicePageContent = {
       { question: "O transfer para aeroporto é pontual?", answer: "Sim. O serviço é planejado com antecedência para garantir chegada no horário do voo." },
       { question: "Vocês monitoram o voo?", answer: "Sim. Acompanhamos o status do voo para ajustar o horário em caso de atraso." },
       { question: "Atendem desembarque?", answer: "Sim. Buscamos no aeroporto e levamos até o seu destino final." },
-      { question: "Quantas pessoas cabem na van?", answer: "Em média até 15 passageiros, com espaço adequado para bagagens." },
+      { question: "Quantas pessoas cabem na van?", answer: "De 15 a 18 passageiros, com espaço adequado para bagagens." },
       { question: "Como contratar?", answer: "Pelo WhatsApp, informando data, horário do voo e endereço de origem ou destino." },
     ],
   },

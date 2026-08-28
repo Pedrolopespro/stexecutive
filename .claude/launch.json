@@ -3,9 +3,15 @@
   "configurations": [
     {
       "name": "st-executive-dev",
-      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeExecutable": "C:/Program Files/nodejs/node.exe",
       "runtimeArgs": ["node_modules/next/dist/bin/next", "dev"],
       "port": 3000
+    },
+    {
+      "name": "st-executive-out",
+      "runtimeExecutable": "C:/Program Files/nodejs/node.exe",
+      "runtimeArgs": ["scripts/servir-out.mjs", "4000"],
+      "port": 4000
     }
   ]
 }

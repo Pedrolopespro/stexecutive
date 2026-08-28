@@ -79,7 +79,7 @@ const DIFFERENTIALS = [
 ];
 
 const FLEET_SPECS = [
-  { spec: "Categoria", value: "Sedan executivo blindado" },
+  { spec: "Categoria", value: "Mercedes-Benz E250 blindado" },
   { spec: "Blindagem", value: "Certificada" },
   { spec: "Motorista", value: "Especializado incluso" },
   { spec: "Discrição", value: "Operação discreta" },
@@ -215,8 +215,8 @@ export default function CarrosBlinadadosBrasiliaPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden shadow-premium aspect-[4/3]">
                 <img
-                  src="/images/content/sedan blindada .webp"
-                  alt="Sedan blindado ST Executive Brasília"
+                  src="/images/content/mercedes-e250.webp"
+                  alt="Mercedes-Benz E250 blindado da ST Executive em Brasília"
                   className="w-full h-full object-cover"
                   width={800}
                   height={600}
@@ -229,7 +229,7 @@ export default function CarrosBlinadadosBrasiliaPage() {
                   Frota
                 </p>
                 <h2 className="text-[24px] sm:text-[32px] font-bold text-navy-950 leading-snug mb-4">
-                  Sedan blindado com operação completa
+                  Mercedes-Benz E250 blindado com operação completa
                 </h2>
                 <p className="text-sm sm:text-base leading-relaxed text-gray-600 mb-6">
                   Veículos com blindagem certificada, motorista especializado e operação planejada

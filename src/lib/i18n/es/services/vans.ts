@@ -32,7 +32,7 @@ export const vansEs: ServicePageContent = {
     heading: "Van ejecutiva con todo incluido",
     paragraph: "Vehículos adecuados para grupos, con chofer profesional y espacio para la comodidad de todos los pasajeros.",
     specs: [
-      { spec: "Capacidad", value: "Hasta 15 pasajeros" },
+      { spec: "Capacidad", value: "15 a 18 pasajeros" },
       { spec: "Climatización", value: "Aire acondicionado" },
       { spec: "Chofer", value: "Profesional incluido" },
       { spec: "Maletero", value: "Espacio para equipaje" },
@@ -103,7 +103,7 @@ export const vansEs: ServicePageContent = {
     heading: "Preguntas frecuentes",
     items: [
       { question: "¿El alquiler de van incluye chofer?", answer: "Sí. Todos los servicios de ST Executive incluyen chofer profesional." },
-      { question: "¿Cuántas personas caben en la van ejecutiva?", answer: "En promedio hasta 15 pasajeros, con espacio cómodo para equipaje." },
+      { question: "¿Cuántas personas caben en la van ejecutiva?", answer: "De 15 a 18 pasajeros, con espacio cómodo para equipaje." },
       { question: "¿Atienden empresas y eventos corporativos?", answer: "Sí. Atendemos empresas, congresos, eventos, equipos y traslados corporativos." },
       { question: "¿Hacen transfer al Aeropuerto de Brasília?", answer: "Sí. El servicio puede programarse para llegadas y salidas con planificación de horario." },
       { question: "¿Atienden en todo el DF?", answer: "Sí. Atendemos toda Brasília y el Distrito Federal, incluyendo hoteles y espacios de eventos." },

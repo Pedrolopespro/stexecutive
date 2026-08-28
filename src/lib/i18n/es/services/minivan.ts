@@ -96,7 +96,7 @@ export const minivanEs: ServicePageContent = {
       { question: "¿Cuántas personas caben en la minivan ejecutiva?", answer: "En promedio hasta 7 pasajeros, con espacio cómodo para equipaje." },
       { question: "¿Atienden empresas y eventos corporativos?", answer: "Sí. Atendemos empresas, congresos, eventos, equipos y traslados corporativos." },
       { question: "¿Hacen transfer al Aeropuerto de Brasília?", answer: "Sí. El servicio puede programarse para llegadas y salidas con planificación de horario." },
-      { question: "¿Cuál es la diferencia entre minivan y van ejecutiva?", answer: "La minivan es ideal para grupos más pequeños, de hasta 7 personas, con más comodidad individual. La van ejecutiva atiende grupos más grandes, de hasta 15 pasajeros." },
+      { question: "¿Cuál es la diferencia entre minivan y van ejecutiva?", answer: "La minivan es ideal para grupos más pequeños, de hasta 7 personas, con más comodidad individual. La van ejecutiva atiende grupos más grandes, de 15 a 18 pasajeros." },
       { question: "¿Cómo solicito un presupuesto?", answer: "Por WhatsApp, indicando fecha, horario, trayecto y cantidad de pasajeros." },
     ],
   },

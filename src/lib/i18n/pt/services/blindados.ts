@@ -26,13 +26,13 @@ export const blindadosPt: ServicePageContent = {
   },
 
   fleet: {
-    image: "/images/content/sedan blindada .webp",
-    imageAlt: "Sedan blindado ST Executive Brasília",
+    image: "/images/content/mercedes-e250.webp",
+    imageAlt: "Mercedes-Benz E250 blindado da ST Executive em Brasília",
     eyebrow: "Frota",
-    heading: "Sedan blindado com operação completa",
+    heading: "Mercedes-Benz E250 blindado com operação completa",
     paragraph: "Veículos com blindagem certificada, motorista especializado e operação planejada para cada missão com total confidencialidade.",
     specs: [
-      { spec: "Categoria", value: "Sedan executivo blindado" },
+      { spec: "Categoria", value: "Mercedes-Benz E250 blindado" },
       { spec: "Blindagem", value: "Certificada" },
       { spec: "Motorista", value: "Especializado incluso" },
       { spec: "Discrição", value: "Operação discreta" },

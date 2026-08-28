@@ -144,7 +144,7 @@ export const transferEn: ServicePageContent = {
       { question: "Is the airport transfer punctual?", answer: "Yes. The service is planned in advance to guarantee arrival in time for your flight." },
       { question: "Do you track the flight?", answer: "Yes. We monitor the flight status to adjust the time in case of delay." },
       { question: "Do you handle arrivals?", answer: "Yes. We pick you up at the airport and take you to your final destination." },
-      { question: "How many people fit in the van?", answer: "Up to 15 passengers on average, with adequate luggage space." },
+      { question: "How many people fit in the van?", answer: "15 to 18 passengers, with adequate luggage space." },
       { question: "How do I book?", answer: "Via WhatsApp, sharing the date, flight time and origin or destination address." },
     ],
   },

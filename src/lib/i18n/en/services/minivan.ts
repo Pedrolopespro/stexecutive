@@ -96,7 +96,7 @@ export const minivanEn: ServicePageContent = {
       { question: "How many people fit in the executive minivan?", answer: "Up to 7 passengers on average, with comfortable luggage space." },
       { question: "Do you serve companies and corporate events?", answer: "Yes. We serve companies, conferences, events, teams and corporate travel." },
       { question: "Do you do transfer to Brasília Airport?", answer: "Yes. The service can be scheduled for arrivals and departures with time planning." },
-      { question: "What's the difference between a minivan and an executive van?", answer: "The minivan is ideal for smaller groups, up to 7 people, with more individual comfort. The executive van serves larger groups, up to 15 passengers." },
+      { question: "What's the difference between a minivan and an executive van?", answer: "The minivan is ideal for smaller groups, up to 7 people, with more individual comfort. The executive van serves larger groups, 15 to 18 passengers." },
       { question: "How do I request a quote?", answer: "Via WhatsApp, sharing the date, time, route and number of passengers." },
     ],
   },

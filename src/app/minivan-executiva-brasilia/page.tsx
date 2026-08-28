@@ -119,7 +119,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "Qual a diferença entre minivan e van executiva?",
-    answer: "A minivan é ideal para grupos menores, de até 7 pessoas, com mais conforto individual. A van executiva atende grupos maiores, de até 15 passageiros.",
+    answer: "A minivan é ideal para grupos menores, de até 7 pessoas, com mais conforto individual. A van executiva atende grupos maiores, de 15 a 18 passageiros.",
   },
   {
     question: "Como solicitar orçamento?",

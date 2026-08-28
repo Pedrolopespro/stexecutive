@@ -22,7 +22,7 @@ export const onibusEs: ServicePageContent = {
   whatIs: {
     eyebrow: "El servicio",
     heading: "¿Qué es el ómnibus ejecutivo con chofer?",
-    paragraph: "El ómnibus ejecutivo con chofer es un servicio de transporte para grupos grandes que necesitan capacidad, organización y puntualidad. ST Executive ofrece este servicio en Brasília y el Distrito Federal para empresas, eventos de gran escala, excursiones y operaciones que requieren capacidad para hasta 50 pasajeros.",
+    paragraph: "El ómnibus ejecutivo con chofer es un servicio de transporte para grupos grandes que necesitan capacidad, organización y puntualidad. ST Executive ofrece este servicio en Brasília y el Distrito Federal para empresas, eventos de gran escala, excursiones y operaciones que requieren capacidad de 42 a 60 pasajeros.",
   },
 
   fleet: {
@@ -32,7 +32,7 @@ export const onibusEs: ServicePageContent = {
     heading: "Ómnibus ejecutivo con todo incluido",
     paragraph: "Vehículos de gran capacidad para grupos numerosos, con chofer profesional y espacio para el equipaje de todos los pasajeros.",
     specs: [
-      { spec: "Capacidad", value: "Hasta 50 pasajeros" },
+      { spec: "Capacidad", value: "42 a 60 pasajeros" },
       { spec: "Climatización", value: "Aire acondicionado" },
       { spec: "Chofer", value: "Profesional incluido" },
       { spec: "Maletero", value: "Compartimento inferior" },
@@ -93,7 +93,7 @@ export const onibusEs: ServicePageContent = {
     heading: "Preguntas frecuentes",
     items: [
       { question: "¿El ómnibus ejecutivo incluye chofer?", answer: "Sí. Todos los servicios de ST Executive incluyen chofer profesional." },
-      { question: "¿Cuántas personas caben en el ómnibus ejecutivo?", answer: "En promedio hasta 50 pasajeros, con compartimento de equipaje inferior." },
+      { question: "¿Cuántas personas caben en el ómnibus ejecutivo?", answer: "De 42 a 60 pasajeros, con compartimento de equipaje inferior." },
       { question: "¿Atienden grandes eventos y congresos en Brasília?", answer: "Sí. Atendemos eventos corporativos, congresos, ferias y cualquier operación que necesite logística de transporte para grandes grupos." },
       { question: "¿Hacen transfer en grupo al Aeropuerto de Brasília?", answer: "Sí. Coordinamos el transporte de grandes grupos con planificación de horario para llegadas y salidas." },
       { question: "¿Es posible contratar más de un ómnibus para el mismo evento?", answer: "Sí. Atendemos operaciones de mayor escala con múltiples vehículos coordinados. Indique la demanda total por WhatsApp." },
@@ -101,7 +101,7 @@ export const onibusEs: ServicePageContent = {
     ],
   },
 
-  semanticBlock: "ST Executive ofrece ómnibus ejecutivo en Brasília con chofer profesional. Atiende empresas, grandes eventos, congresos, excursiones y grupos de hasta 50 pasajeros en todo el Distrito Federal, con puntualidad, comodidad y vehículos climatizados.",
+  semanticBlock: "ST Executive ofrece ómnibus ejecutivo en Brasília con chofer profesional. Atiende empresas, grandes eventos, congresos, excursiones y grupos de 42 a 60 pasajeros en todo el Distrito Federal, con puntualidad, comodidad y vehículos climatizados.",
 
   cta: {
     title: "¿Necesita un ómnibus ejecutivo en Brasília?",

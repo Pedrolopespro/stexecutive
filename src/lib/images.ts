@@ -30,7 +30,7 @@ export const IMAGES = {
     van: "/images/content/van.webp",
     miniVan: "/images/content/mini van.webp",
     bus: "/images/content/onibus.webp",
-    sedanBlindada: "/images/content/sedan blindada .webp",
+    sedanBlindada: "/images/content/mercedes-e250.webp",
     sedaExecutivo: "/images/content/seda executivo.webp",
     royalTulip: "/images/content/roayl tulip.webp",
     commanders: "/images/content/commander.webp",

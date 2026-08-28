@@ -43,7 +43,7 @@ export const vansPt: ServicePageContent = {
     paragraph:
       "Veículos adequados para grupos, com motorista profissional e espaço para conforto de todos os passageiros.",
     specs: [
-      { spec: "Capacidade", value: "Até 15 passageiros" },
+      { spec: "Capacidade", value: "15 a 18 passageiros" },
       { spec: "Climatização", value: "Ar-condicionado" },
       { spec: "Motorista", value: "Profissional incluso" },
       { spec: "Bagageiro", value: "Espaço para bagagens" },
@@ -119,7 +119,7 @@ export const vansPt: ServicePageContent = {
     heading: "Perguntas frequentes",
     items: [
       { question: "O aluguel de van inclui motorista?", answer: "Sim. Todos os serviços da ST Executive são realizados com motorista profissional incluso." },
-      { question: "Quantas pessoas cabem na van executiva?", answer: "Em média até 15 passageiros, com espaço confortável para bagagens." },
+      { question: "Quantas pessoas cabem na van executiva?", answer: "De 15 a 18 passageiros, com espaço confortável para bagagens." },
       { question: "Atendem empresas e eventos corporativos?", answer: "Sim. Atendemos empresas, congressos, eventos, equipes e deslocamentos corporativos." },
       { question: "Fazem transfer para o Aeroporto de Brasília?", answer: "Sim. O serviço pode ser agendado para embarques e desembarques com planejamento de horário." },
       { question: "Atendem em todo o DF?", answer: "Sim. Atendemos em toda Brasília e Distrito Federal, incluindo hotéis e espaços de eventos." },

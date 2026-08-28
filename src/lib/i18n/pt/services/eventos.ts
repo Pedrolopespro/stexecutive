@@ -84,7 +84,7 @@ export const eventosPt: ServicePageContent = {
     eyebrow: "Frota",
     heading: "Vans executivas para o seu evento",
     paragraph: "Veículos adequados para grupos, com conforto, ar-condicionado e espaço para todos os passageiros.",
-    checklist: ["Vans executivas climatizadas", "Capacidade média de até 15 passageiros", "Espaço para bagagens e pertences", "Motorista profissional e uniformizado"],
+    checklist: ["Vans executivas climatizadas", "Capacidade de 15 a 18 passageiros", "Espaço para bagagens e pertences", "Motorista profissional e uniformizado"],
     ctaLabel: "Consultar disponibilidade",
   },
 
@@ -131,7 +131,7 @@ export const eventosPt: ServicePageContent = {
     items: [
       { question: "Atendem casamentos?", answer: "Sim. Realizamos transporte de convidados e noivos com conforto e pontualidade." },
       { question: "Fazem transporte ida e volta?", answer: "Sim. Planejamos ida, retorno e múltiplos deslocamentos conforme a necessidade do evento." },
-      { question: "Quantas pessoas cabem na van?", answer: "Em média até 15 passageiros, com espaço para conforto e bagagens." },
+      { question: "Quantas pessoas cabem na van?", answer: "De 15 a 18 passageiros, com espaço para conforto e bagagens." },
       { question: "Atendem eventos corporativos?", answer: "Sim. Atendemos empresas, congressos, feiras e qualquer evento empresarial." },
       { question: "Como contratar?", answer: "Via WhatsApp com atendimento rápido. Informe data, trajeto e número de passageiros." },
     ],

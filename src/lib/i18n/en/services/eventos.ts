@@ -84,7 +84,7 @@ export const eventosEn: ServicePageContent = {
     eyebrow: "Fleet",
     heading: "Executive vans for your event",
     paragraph: "Vehicles suited for groups, with comfort, air conditioning and space for every passenger.",
-    checklist: ["Air-conditioned executive vans", "Average capacity of up to 15 passengers", "Space for luggage and belongings", "Professional, uniformed driver"],
+    checklist: ["Air-conditioned executive vans", "Capacity of 15 to 18 passengers", "Space for luggage and belongings", "Professional, uniformed driver"],
     ctaLabel: "Check availability",
   },
 
@@ -131,7 +131,7 @@ export const eventosEn: ServicePageContent = {
     items: [
       { question: "Do you serve weddings?", answer: "Yes. We provide transportation for guests and the couple with comfort and punctuality." },
       { question: "Do you do round trips?", answer: "Yes. We plan outbound, return and multiple trips based on the event's needs." },
-      { question: "How many people fit in the van?", answer: "Up to 15 passengers on average, with room for comfort and luggage." },
+      { question: "How many people fit in the van?", answer: "15 to 18 passengers, with room for comfort and luggage." },
       { question: "Do you serve corporate events?", answer: "Yes. We serve companies, conferences, trade shows and any business event." },
       { question: "How do I book?", answer: "Via WhatsApp with fast service. Share the date, route and number of passengers." },
     ],

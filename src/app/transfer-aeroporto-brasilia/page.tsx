@@ -101,7 +101,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "Quantas pessoas cabem na van?",
-    answer: "Em média até 15 passageiros, com espaço adequado para bagagens.",
+    answer: "De 15 a 18 passageiros, com espaço adequado para bagagens.",
   },
   {
     question: "Como contratar?",

@@ -115,7 +115,7 @@ export const transferEs: ServicePageContent = {
       { question: "¿El transfer al aeropuerto es puntual?", answer: "Sí. El servicio se planifica con antelación para garantizar la llegada a tiempo para el vuelo." },
       { question: "¿Hacen seguimiento del vuelo?", answer: "Sí. Monitoreamos el estado del vuelo para ajustar el horario en caso de retraso." },
       { question: "¿Atienden llegadas?", answer: "Sí. Lo recogemos en el aeropuerto y lo llevamos hasta su destino final." },
-      { question: "¿Cuántas personas caben en la van?", answer: "En promedio hasta 15 pasajeros, con espacio adecuado para equipaje." },
+      { question: "¿Cuántas personas caben en la van?", answer: "De 15 a 18 pasajeros, con espacio adecuado para equipaje." },
       { question: "¿Cómo contrato el servicio?", answer: "Por WhatsApp, indicando fecha, horario del vuelo y dirección de origen o destino." },
     ],
   },

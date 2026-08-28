@@ -101,7 +101,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "Quantas pessoas cabem na van?",
-    answer: "Em média até 15 passageiros, com espaço para conforto e bagagens.",
+    answer: "De 15 a 18 passageiros, com espaço para conforto e bagagens.",
   },
   {
     question: "Atendem eventos corporativos?",
@@ -319,7 +319,7 @@ export default function VanParaEventosPage() {
                 <ul className="flex flex-col gap-3 mb-8">
                   {[
                     "Vans executivas climatizadas",
-                    "Capacidade média de até 15 passageiros",
+                    "Capacidade de 15 a 18 passageiros",
                     "Espaço para bagagens e pertences",
                     "Motorista profissional e uniformizado",
                   ].map((item, i) => (

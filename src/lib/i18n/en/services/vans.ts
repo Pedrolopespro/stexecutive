@@ -43,7 +43,7 @@ export const vansEn: ServicePageContent = {
     paragraph:
       "Vehicles suited for groups, with a professional driver and enough space for every passenger's comfort.",
     specs: [
-      { spec: "Capacity", value: "Up to 15 passengers" },
+      { spec: "Capacity", value: "15 to 18 passengers" },
       { spec: "Air conditioning", value: "Included" },
       { spec: "Driver", value: "Professional included" },
       { spec: "Luggage", value: "Space for bags" },
@@ -119,7 +119,7 @@ export const vansEn: ServicePageContent = {
     heading: "Frequently asked questions",
     items: [
       { question: "Does the van rental include a driver?", answer: "Yes. All ST Executive services include a professional driver." },
-      { question: "How many people fit in the executive van?", answer: "Up to 15 passengers on average, with comfortable luggage space." },
+      { question: "How many people fit in the executive van?", answer: "15 to 18 passengers, with comfortable luggage space." },
       { question: "Do you serve companies and corporate events?", answer: "Yes. We serve companies, conferences, events, teams and corporate travel." },
       { question: "Do you do airport transfer in Brasília?", answer: "Yes. The service can be scheduled for arrivals and departures with time planning." },
       { question: "Do you cover the whole Federal District?", answer: "Yes. We serve all of Brasília and the Federal District, including hotels and event venues." },

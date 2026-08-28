@@ -481,7 +481,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     content: [
       {
         type: "paragraph",
-        text: "Quando o grupo tem mais de 7 pessoas, uma van já pode não ser suficiente. O micro-ônibus entra como solução intermediária: acomoda entre 15 e 25 passageiros com mais conforto e espaço do que veículos menores.",
+        text: "Quando o grupo tem mais de 7 pessoas, uma van já pode não ser suficiente. O micro-ônibus entra como solução intermediária: acomoda até 25 passageiros com mais conforto e espaço do que veículos menores.",
       },
       {
         type: "paragraph",
@@ -505,15 +505,15 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
       { type: "h2", text: "Capacidade do micro-ônibus" },
       {
         type: "paragraph",
-        text: "A capacidade varia conforme o modelo. Os micro-ônibus executivos mais comuns em Brasília acomodam entre 15 e 25 passageiros sentados. Alguns modelos têm ar-condicionado, poltronas reclináveis, tomadas USB e bagageiro.",
+        text: "A capacidade varia conforme o modelo. Os micro-ônibus executivos mais comuns em Brasília acomodam até 25 passageiros sentados. Alguns modelos têm ar-condicionado, poltronas reclináveis, tomadas USB e bagageiro.",
       },
       {
         type: "table",
         headers: ["Veículo", "Capacidade aproximada", "Indicado para"],
         rows: [
-          ["Van executiva", "7 a 10 passageiros", "Grupos pequenos, traslados, aeroporto"],
-          ["Micro-ônibus", "15 a 25 passageiros", "Grupos médios, eventos, excursões corporativas"],
-          ["Ônibus executivo", "30 a 46 passageiros", "Grandes grupos, congressos, eventos"],
+          ["Van executiva", "15 a 18 passageiros", "Grupos pequenos, traslados, aeroporto"],
+          ["Micro-ônibus", "Até 25 passageiros", "Grupos médios, eventos, excursões corporativas"],
+          ["Ônibus executivo", "42 a 60 passageiros", "Grandes grupos, congressos, eventos"],
         ],
       },
       { type: "h2", text: "Usos mais comuns em Brasília" },
@@ -566,8 +566,8 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
       {
         type: "faq",
         items: [
-          { q: "Quantas pessoas cabem em um micro-ônibus?", a: "Em geral, entre 15 e 25 passageiros, dependendo do modelo e da configuração dos assentos." },
-          { q: "Qual a diferença entre van e micro-ônibus?", a: "A van acomoda até 10 passageiros. O micro-ônibus é maior e atende grupos entre 15 e 25 pessoas." },
+          { q: "Quantas pessoas cabem em um micro-ônibus?", a: "Até 25 passageiros, dependendo do modelo e da configuração dos assentos." },
+          { q: "Qual a diferença entre van e micro-ônibus?", a: "A van acomoda de 15 a 18 passageiros. O micro-ônibus é maior e atende grupos de até 25 pessoas." },
           { q: "Micro-ônibus tem bagageiro?", a: "A maioria dos modelos executivos tem espaço para bagagem. Confirme com a empresa no momento da contratação." },
           { q: "Como contratar micro-ônibus em Brasília?", a: "Entre em contato com antecedência informando número de passageiros, origem, destino, data e horário." },
           { q: "Micro-ônibus serve para city tour em Brasília?", a: "Sim, é muito utilizado para city tours corporativos, excursões de grupos e deslocamentos turísticos." },
@@ -628,8 +628,8 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         headers: ["Tamanho do grupo", "Veículo recomendado"],
         rows: [
           ["Até 7 pessoas", "SUV executivo ou sedan"],
-          ["8 a 15 pessoas", "Van executiva"],
-          ["16 a 25 pessoas", "Micro-ônibus"],
+          ["8 a 18 pessoas", "Van executiva"],
+          ["Até 25 pessoas", "Micro-ônibus"],
           ["Acima de 25 pessoas", "Ônibus executivo"],
         ],
       },
@@ -748,7 +748,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     ],
     title: "Aluguel de van em Brasília: tudo o que você precisa saber antes de contratar",
     summary:
-      "O aluguel de van em Brasília é ideal para grupos de 7 a 15 pessoas. Saiba os tipos disponíveis, quando usar, como contratar e o que verificar antes de fechar.",
+      "O aluguel de van em Brasília é ideal para grupos de 7 a 18 pessoas. Saiba os tipos disponíveis, quando usar, como contratar e o que verificar antes de fechar.",
     image: "/images/content/van wild.webp",
     imageAlt: "Van executiva para grupos em Brasília — ST Executive",
     relatedSlugs: ["aluguel-de-micro-onibus-em-brasilia", "eventos-em-brasilia", "van-executiva-chapada-dos-veadeiros"],
@@ -765,8 +765,8 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         headers: ["Tipo", "Capacidade", "Indicado para"],
         rows: [
           ["Minivan (Mercedes Vito)", "Até 7 passageiros", "Grupos pequenos, executivos, transfer"],
-          ["Van executiva (Sprinter)", "Até 15 passageiros", "Grupos médios, eventos, congressos"],
-          ["Van de luxo", "Até 10 passageiros", "Eventos premium, autoridades, VIPs"],
+          ["Van executiva (Sprinter)", "15 a 18 passageiros", "Grupos médios, eventos, congressos"],
+          ["Van de luxo", "15 a 18 passageiros", "Eventos premium, autoridades, VIPs"],
         ],
       },
       { type: "h2", text: "Quando o aluguel de van faz sentido" },
@@ -806,7 +806,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
       {
         type: "faq",
         items: [
-          { q: "Quantas pessoas cabem em uma van executiva?", a: "As vans executivas como a Sprinter acomodam até 15 passageiros, dependendo do modelo." },
+          { q: "Quantas pessoas cabem em uma van executiva?", a: "As vans executivas como a Sprinter acomodam de 15 a 18 passageiros, dependendo do modelo." },
           { q: "O aluguel de van em Brasília inclui motorista?", a: "Na maioria dos serviços executivos, sim. Confirme com a empresa no momento da contratação." },
           { q: "Dá para alugar van para viagem entre cidades?", a: "Sim. A ST Executive realiza traslados para Pirenópolis, Chapada dos Veadeiros, Goiânia e outras cidades." },
           { q: "Com quanto de antecedência devo reservar a van?", a: "O ideal é reservar com pelo menos 48 horas de antecedência, especialmente em temporadas de eventos." },
@@ -899,7 +899,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     slug: "aluguel-sprinter-brasilia",
     metaTitle: "Aluguel de Sprinter em Brasília: conforto e transporte executivo premium",
     metaDescription:
-      "Aluguel de Sprinter em Brasília com motorista para grupos de até 15 pessoas. Ideal para eventos, traslados, viagens e recepção de convidados especiais.",
+      "Aluguel de Sprinter em Brasília com motorista para grupos de 15 a 18 pessoas. Ideal para eventos, traslados, viagens e recepção de convidados especiais.",
     keywords: [
       "aluguel de Sprinter em Brasília",
       "Sprinter executiva Brasília",
@@ -910,7 +910,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     ],
     title: "Aluguel de Sprinter em Brasília com conforto e transporte executivo premium",
     summary:
-      "A Sprinter é a van executiva mais utilizada em Brasília para grupos de até 15 pessoas. Ideal para aeroporto, eventos, congressos e viagens com padrão premium.",
+      "A Sprinter é a van executiva mais utilizada em Brasília para grupos de 15 a 18 pessoas. Ideal para aeroporto, eventos, congressos e viagens com padrão premium.",
     image: "/images/content/transfer wild.webp",
     imageAlt: "Sprinter executiva para grupos em Brasília — ST Executive",
     relatedSlugs: ["aluguel-van-brasilia", "aluguel-de-micro-onibus-em-brasilia", "transporte-congressos-brasilia"],
@@ -919,13 +919,13 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     content: [
       {
         type: "paragraph",
-        text: "A Mercedes-Benz Sprinter é a van mais utilizada para transporte executivo de grupos em Brasília. Com capacidade para até 15 passageiros, interior amplo, ar-condicionado, bagageiro e conforto superior, é a escolha preferida para eventos, traslados e viagens corporativas.",
+        text: "A Mercedes-Benz Sprinter é a van mais utilizada para transporte executivo de grupos em Brasília. Com capacidade de 15 a 18 passageiros, interior amplo, ar-condicionado, bagageiro e conforto superior, é a escolha preferida para eventos, traslados e viagens corporativas.",
       },
       { type: "h2", text: "Por que a Sprinter é a van mais escolhida" },
       {
         type: "list",
         items: [
-          "Capacidade de até 15 passageiros sentados",
+          "Capacidade de 15 a 18 passageiros sentados",
           "Interior alto, que permite ficar em pé",
           "Ar-condicionado eficiente",
           "Espaço generoso para bagagem",
@@ -953,12 +953,12 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
       { type: "h2", text: "Conclusão" },
       {
         type: "paragraph",
-        text: "Para grupos de até 15 pessoas em Brasília, a Sprinter executiva é a solução que combina conforto, capacidade e padrão profissional. Reserve com antecedência para garantir disponibilidade.",
+        text: "Para grupos de 15 a 18 pessoas em Brasília, a Sprinter executiva é a solução que combina conforto, capacidade e padrão profissional. Reserve com antecedência para garantir disponibilidade.",
       },
       {
         type: "faq",
         items: [
-          { q: "Quantas pessoas cabem na Sprinter executiva?", a: "Até 15 passageiros, dependendo da configuração dos assentos." },
+          { q: "Quantas pessoas cabem na Sprinter executiva?", a: "De 15 a 18 passageiros, dependendo da configuração dos assentos." },
           { q: "A Sprinter tem ar-condicionado?", a: "Sim. Todos os veículos da ST Executive são climatizados." },
           { q: "É possível alugar Sprinter para viagem interestadual?", a: "Sim. Realizamos viagens para cidades próximas a Brasília como Goiânia, Pirenópolis e Chapada dos Veadeiros." },
           { q: "Como reservar Sprinter em Brasília?", a: "Entre em contato informando data, horário, número de passageiros e destino." },
@@ -1001,9 +1001,9 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         rows: [
           ["Sedã ou SUV executivo", "Noivos, pais, padrinhos", "Até 4 pessoas"],
           ["Minivan", "Grupos pequenos de familiares", "Até 7 pessoas"],
-          ["Van Sprinter", "Grupos de convidados", "Até 15 pessoas"],
+          ["Van Sprinter", "Grupos de convidados", "15 a 18 pessoas"],
           ["Micro-ônibus", "Grupos maiores", "Até 25 pessoas"],
-          ["Ônibus executivo", "Grupos acima de 25 pessoas", "Até 46 pessoas"],
+          ["Ônibus executivo", "Grupos acima de 25 pessoas", "42 a 60 pessoas"],
         ],
       },
       { type: "h2", text: "Como organizar o transporte de convidados" },
@@ -1044,7 +1044,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     slug: "van-executiva-chapada-dos-veadeiros",
     metaTitle: "Van executiva para Chapada dos Veadeiros saindo de Brasília",
     metaDescription:
-      "Van executiva de Brasília para a Chapada dos Veadeiros para grupos de 7 a 15 pessoas. Conforto, segurança e motorista profissional para sua aventura.",
+      "Van executiva de Brasília para a Chapada dos Veadeiros para grupos de 7 a 18 pessoas. Conforto, segurança e motorista profissional para sua aventura.",
     keywords: [
       "van para Chapada dos Veadeiros",
       "transporte Brasília Chapada dos Veadeiros",
@@ -1107,7 +1107,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
       {
         type: "faq",
         items: [
-          { q: "Quantas pessoas cabem na van para a Chapada?", a: "As vans Sprinter acomodam até 15 passageiros. Para grupos maiores, micro-ônibus ou ônibus executivo." },
+          { q: "Quantas pessoas cabem na van para a Chapada?", a: "As vans Sprinter acomodam de 15 a 18 passageiros. Para grupos maiores, micro-ônibus ou ônibus executivo." },
           { q: "O motorista aguarda durante as trilhas?", a: "Sim. O motorista acompanha o grupo e aguarda nos pontos combinados durante o dia." },
           { q: "Dá para fazer Brasília-Chapada em apenas um dia?", a: "Sim, é comum fazer a excursão de um dia. O ideal é sair cedo e retornar à noite." },
           { q: "A van tem bagageiro para equipamentos?", a: "Sim. As vans executivas têm espaço adequado para bagagem e equipamentos de trilha." },
@@ -1351,7 +1351,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     slug: "aluguel-onibus-executivo-brasilia",
     metaTitle: "Aluguel de ônibus executivo em Brasília para eventos, viagens e grupos",
     metaDescription:
-      "Aluguel de ônibus executivo em Brasília com motorista. Para grandes grupos, congressos, excursões e eventos com até 46 pessoas. Frota premium e atendimento profissional.",
+      "Aluguel de ônibus executivo em Brasília com motorista. Para grandes grupos, congressos, excursões e eventos de 42 a 60 pessoas. Frota premium e atendimento profissional.",
     keywords: [
       "aluguel de ônibus executivo Brasília",
       "ônibus para grupos Brasília",
@@ -1371,7 +1371,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     content: [
       {
         type: "paragraph",
-        text: "Para grandes grupos em Brasília, o ônibus executivo é a opção que une capacidade, conforto e custo-benefício. Com capacidade de até 46 passageiros, é a escolha certa para congressos, eventos corporativos, excursões, formaturas e traslados de grande porte.",
+        text: "Para grandes grupos em Brasília, o ônibus executivo é a opção que une capacidade, conforto e custo-benefício. Com capacidade de 42 a 60 passageiros, é a escolha certa para congressos, eventos corporativos, excursões, formaturas e traslados de grande porte.",
       },
       { type: "h2", text: "Quando alugar ônibus executivo em Brasília" },
       {
@@ -1390,9 +1390,9 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         type: "table",
         headers: ["Veículo", "Capacidade", "Melhor uso"],
         rows: [
-          ["Van Sprinter", "Até 15 pessoas", "Grupos pequenos, traslados"],
-          ["Micro-ônibus", "15 a 25 pessoas", "Congressos, excursões médias"],
-          ["Ônibus executivo", "30 a 46 pessoas", "Grandes grupos, eventos"],
+          ["Van Sprinter", "15 a 18 pessoas", "Grupos pequenos, traslados"],
+          ["Micro-ônibus", "Até 25 pessoas", "Congressos, excursões médias"],
+          ["Ônibus executivo", "42 a 60 pessoas", "Grandes grupos, eventos"],
         ],
       },
       { type: "h2", text: "Diferenciais do ônibus executivo" },
@@ -1415,7 +1415,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
       {
         type: "faq",
         items: [
-          { q: "Quantas pessoas cabem no ônibus executivo?", a: "Em geral, entre 30 e 46 passageiros dependendo do modelo e configuração." },
+          { q: "Quantas pessoas cabem no ônibus executivo?", a: "De 42 a 60 passageiros, dependendo do modelo e configuração." },
           { q: "O ônibus executivo tem banheiro?", a: "Alguns modelos de longa distância têm banheiro. Informe a necessidade no momento da contratação." },
           { q: "Posso contratar ônibus executivo para viagem interestadual?", a: "Sim. Atendemos viagens para Goiânia, Pirenópolis, Chapada dos Veadeiros e outros destinos." },
           { q: "É possível fazer mais de uma viagem no mesmo dia com o ônibus?", a: "Sim. Para eventos com múltiplos horários, podemos fazer várias viagens no mesmo dia." },
@@ -1472,10 +1472,10 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         type: "table",
         headers: ["Veículo", "Capacidade", "Ideal para"],
         rows: [
-          ["Sedã executivo", "Até 3 passageiros", "Viagem individual ou dupla"],
-          ["SUV executivo", "Até 5 passageiros", "Grupos pequenos com bagagem"],
-          ["Van Sprinter", "Até 15 passageiros", "Equipes e grupos médios"],
-          ["Ônibus executivo", "Até 46 passageiros", "Grandes grupos e delegações"],
+          ["Sedã executivo", "Até 4 passageiros", "Viagem individual ou dupla"],
+          ["SUV executivo", "4 a 6 passageiros", "Grupos pequenos com bagagem"],
+          ["Van Sprinter", "15 a 18 passageiros", "Equipes e grupos médios"],
+          ["Ônibus executivo", "42 a 60 passageiros", "Grandes grupos e delegações"],
         ],
       },
       { type: "h2", text: "A viagem de avião vale a pena?" },
@@ -1543,7 +1543,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         rows: [
           ["Até 5 pessoas", "SUV executivo", "Conforto para grupos pequenos"],
           ["6 a 15 pessoas", "Van Sprinter", "Ideal para equipes pequenas"],
-          ["16 a 25 pessoas", "Micro-ônibus", "Grupos médios, eventos"],
+          ["Até 25 pessoas", "Micro-ônibus", "Grupos médios, eventos"],
           ["Acima de 25 pessoas", "Ônibus executivo", "Grandes grupos corporativos"],
         ],
       },
@@ -1712,7 +1712,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         type: "faq",
         items: [
           { q: "Dá para conhecer Pirenópolis em um dia saindo de Brasília?", a: "Sim. Muita gente faz a excursão de um dia, saindo cedo e retornando à noite." },
-          { q: "Qual veículo é melhor para ir a Pirenópolis?", a: "Para grupos de até 5 pessoas, SUV. Para grupos maiores, van Sprinter ou micro-ônibus." },
+          { q: "Qual veículo é melhor para ir a Pirenópolis?", a: "Para grupos de até 6 pessoas, SUV. Para grupos maiores, van Sprinter ou micro-ônibus." },
           { q: "O motorista aguarda em Pirenópolis?", a: "Sim. O motorista aguarda pelo tempo combinado durante a visita." },
           { q: "A estrada para Pirenópolis é boa?", a: "Em geral, sim. A GO-139 e a BR-060 têm boa condição na maior parte do percurso." },
         ],
@@ -1815,8 +1815,8 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
     title: "Transporte executivo para embaixadas em Brasília com discrição e pontualidade",
     summary:
       "A ST Executive oferece transporte especializado para embaixadas em Brasília. Veículos executivos e blindados com motoristas profissionais e discrição absoluta.",
-    image: "/images/content/sedan blindada .webp",
-    imageAlt: "Veículo executivo para embaixadas em Brasília — ST Executive",
+    image: "/images/content/mercedes-e250.webp",
+    imageAlt: "Mercedes-Benz E250 blindado para embaixadas em Brasília — ST Executive",
     relatedSlugs: ["jeep-commander-blindada-brasilia", "mercedes-vito-executiva-blindada-7-passageiros-brasilia", "carro-executivo-com-motorista-brasilia"],
     relatedServiceHref: "/carros-blindados-brasilia",
     relatedServiceLabel: "Carros blindados em Brasília",
@@ -1987,8 +1987,8 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         headers: ["Número de convidados", "Veículo"],
         rows: [
           ["Até 7 pessoas", "Minivan Mercedes Vito"],
-          ["8 a 15 pessoas", "Van Sprinter executiva"],
-          ["16 a 25 pessoas", "Micro-ônibus"],
+          ["8 a 18 pessoas", "Van Sprinter executiva"],
+          ["Até 25 pessoas", "Micro-ônibus"],
           ["Acima de 25 pessoas", "Ônibus executivo"],
         ],
       },
@@ -2093,7 +2093,7 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         items: [
           { q: "A Vito tem espaço para bagagem?", a: "Sim. Há espaço no porta-malas para bagagem de mão e malas de viagem." },
           { q: "A Mercedes Vito é blindada?", a: "A ST Executive dispõe de Vito na versão blindada. Solicite ao fazer a reserva." },
-          { q: "Qual a diferença entre a Vito e a Sprinter?", a: "A Vito acomoda até 7 passageiros, a Sprinter até 15. A Vito é mais compacta e ágil no trânsito urbano." },
+          { q: "Qual a diferença entre a Vito e a Sprinter?", a: "A Vito acomoda até 7 passageiros, a Sprinter de 15 a 18. A Vito é mais compacta e ágil no trânsito urbano." },
           { q: "A Vito está disponível para viagens intermunicipais?", a: "Sim. Realizamos viagens para outras cidades com a Vito executiva." },
         ],
       },
@@ -2233,10 +2233,10 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         type: "table",
         headers: ["Veículo", "Capacidade", "Ideal para"],
         rows: [
-          ["Sedã executivo", "Até 3 passageiros", "Individual ou dupla"],
-          ["SUV executivo", "Até 5 passageiros", "Grupo com bagagem"],
+          ["Sedã executivo", "Até 4 passageiros", "Individual ou dupla"],
+          ["SUV executivo", "4 a 6 passageiros", "Grupo com bagagem"],
           ["Minivan Vito", "Até 7 passageiros", "Grupos pequenos"],
-          ["Van Sprinter", "Até 15 passageiros", "Equipes e grupos médios"],
+          ["Van Sprinter", "15 a 18 passageiros", "Equipes e grupos médios"],
         ],
       },
       { type: "h2", text: "Conclusão" },
@@ -2298,8 +2298,8 @@ export const GUIA_ARTIGOS: GuiaArtigo[] = [
         headers: ["Passageiros", "Veículo indicado"],
         rows: [
           ["Até 7", "Minivan Mercedes Vito"],
-          ["8 a 15", "Van Sprinter"],
-          ["16 a 25", "Micro-ônibus"],
+          ["8 a 18", "Van Sprinter"],
+          ["Até 25", "Micro-ônibus"],
           ["Acima de 25", "Ônibus executivo"],
         ],
       },

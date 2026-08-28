@@ -96,7 +96,7 @@ export const minivanPt: ServicePageContent = {
       { question: "Quantas pessoas cabem na minivan executiva?", answer: "Em média até 7 passageiros, com espaço confortável para bagagens." },
       { question: "Atendem empresas e eventos corporativos?", answer: "Sim. Atendemos empresas, congressos, eventos, equipes e deslocamentos corporativos." },
       { question: "Fazem transfer para o Aeroporto de Brasília?", answer: "Sim. O serviço pode ser agendado para embarques e desembarques com planejamento de horário." },
-      { question: "Qual a diferença entre minivan e van executiva?", answer: "A minivan é ideal para grupos menores, de até 7 pessoas, com mais conforto individual. A van executiva atende grupos maiores, de até 15 passageiros." },
+      { question: "Qual a diferença entre minivan e van executiva?", answer: "A minivan é ideal para grupos menores, de até 7 pessoas, com mais conforto individual. A van executiva atende grupos maiores, de 15 a 18 passageiros." },
       { question: "Como solicitar orçamento?", answer: "Pelo WhatsApp, informando data, horário, trajeto e quantidade de passageiros." },
     ],
   },

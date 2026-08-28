@@ -22,7 +22,7 @@ export const onibusPt: ServicePageContent = {
   whatIs: {
     eyebrow: "O serviço",
     heading: "O que é ônibus executivo com motorista?",
-    paragraph: "O ônibus executivo com motorista é um serviço de transporte para grandes grupos que precisam de capacidade, organização e pontualidade. A ST Executive oferece esse serviço em Brasília e no Distrito Federal para empresas, eventos de grande porte, excursões e operações que demandam capacidade para até 50 passageiros.",
+    paragraph: "O ônibus executivo com motorista é um serviço de transporte para grandes grupos que precisam de capacidade, organização e pontualidade. A ST Executive oferece esse serviço em Brasília e no Distrito Federal para empresas, eventos de grande porte, excursões e operações que demandam capacidade de 42 a 60 passageiros.",
   },
 
   fleet: {
@@ -32,7 +32,7 @@ export const onibusPt: ServicePageContent = {
     heading: "Ônibus executivo com tudo incluído",
     paragraph: "Veículos de grande capacidade para grupos numerosos, com motorista profissional e espaço para bagagens de todos os passageiros.",
     specs: [
-      { spec: "Capacidade", value: "Até 50 passageiros" },
+      { spec: "Capacidade", value: "42 a 60 passageiros" },
       { spec: "Climatização", value: "Ar-condicionado" },
       { spec: "Motorista", value: "Profissional incluso" },
       { spec: "Bagageiro", value: "Compartimento inferior" },
@@ -93,7 +93,7 @@ export const onibusPt: ServicePageContent = {
     heading: "Perguntas frequentes",
     items: [
       { question: "O ônibus executivo inclui motorista?", answer: "Sim. Todos os serviços da ST Executive são realizados com motorista profissional incluso." },
-      { question: "Quantas pessoas cabem no ônibus executivo?", answer: "Em média até 50 passageiros, com compartimento de bagagem inferior." },
+      { question: "Quantas pessoas cabem no ônibus executivo?", answer: "De 42 a 60 passageiros, com compartimento de bagagem inferior." },
       { question: "Atendem grandes eventos e congressos em Brasília?", answer: "Sim. Atendemos eventos corporativos, congressos, feiras e qualquer operação que precise de logística de transporte para grandes grupos." },
       { question: "Fazem transfer em grupo para o Aeroporto de Brasília?", answer: "Sim. Coordenamos o transporte de grandes grupos com planejamento de horário para embarques e desembarques." },
       { question: "É possível contratar mais de um ônibus para o mesmo evento?", answer: "Sim. Atendemos operações de maior escala com múltiplos veículos coordenados. Informe a demanda total no WhatsApp." },
@@ -101,7 +101,7 @@ export const onibusPt: ServicePageContent = {
     ],
   },
 
-  semanticBlock: "A ST Executive oferece ônibus executivo em Brasília com motorista profissional. Atende empresas, grandes eventos, congressos, excursões e grupos de até 50 passageiros em todo o Distrito Federal. Serviço com pontualidade, conforto e veículos climatizados.",
+  semanticBlock: "A ST Executive oferece ônibus executivo em Brasília com motorista profissional. Atende empresas, grandes eventos, congressos, excursões e grupos de 42 a 60 passageiros em todo o Distrito Federal. Serviço com pontualidade, conforto e veículos climatizados.",
 
   cta: {
     title: "Precisa de ônibus executivo em Brasília?",

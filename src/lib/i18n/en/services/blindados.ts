@@ -26,13 +26,13 @@ export const blindadosEn: ServicePageContent = {
   },
 
   fleet: {
-    image: "/images/content/sedan blindada .webp",
-    imageAlt: "ST Executive armored sedan in Brasília",
+    image: "/images/content/mercedes-e250.webp",
+    imageAlt: "ST Executive armored Mercedes-Benz E250 in Brasília",
     eyebrow: "Fleet",
-    heading: "Armored sedan with a full operation",
+    heading: "Armored Mercedes-Benz E250 with a full operation",
     paragraph: "Vehicles with certified armor plating, a specialized driver and a planned operation for every mission with total confidentiality.",
     specs: [
-      { spec: "Category", value: "Armored executive sedan" },
+      { spec: "Category", value: "Armored Mercedes-Benz E250" },
       { spec: "Armor", value: "Certified" },
       { spec: "Driver", value: "Specialized, included" },
       { spec: "Discretion", value: "Discreet operation" },

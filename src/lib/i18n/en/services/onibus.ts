@@ -22,7 +22,7 @@ export const onibusEn: ServicePageContent = {
   whatIs: {
     eyebrow: "The service",
     heading: "What is an executive bus with driver?",
-    paragraph: "The executive bus with driver is a transportation service for large groups that need capacity, organization and punctuality. ST Executive offers this service in Brasília and the Federal District for companies, large-scale events, excursions and operations requiring capacity for up to 50 passengers.",
+    paragraph: "The executive bus with driver is a transportation service for large groups that need capacity, organization and punctuality. ST Executive offers this service in Brasília and the Federal District for companies, large-scale events, excursions and operations requiring capacity for 42 to 60 passengers.",
   },
 
   fleet: {
@@ -32,7 +32,7 @@ export const onibusEn: ServicePageContent = {
     heading: "Executive bus, everything included",
     paragraph: "High-capacity vehicles for large groups, with a professional driver and luggage space for every passenger.",
     specs: [
-      { spec: "Capacity", value: "Up to 50 passengers" },
+      { spec: "Capacity", value: "42 to 60 passengers" },
       { spec: "Air conditioning", value: "Included" },
       { spec: "Driver", value: "Professional included" },
       { spec: "Luggage", value: "Under-bus compartment" },
@@ -93,7 +93,7 @@ export const onibusEn: ServicePageContent = {
     heading: "Frequently asked questions",
     items: [
       { question: "Does the executive bus include a driver?", answer: "Yes. All ST Executive services include a professional driver." },
-      { question: "How many people fit on the executive bus?", answer: "Up to 50 passengers on average, with an under-bus luggage compartment." },
+      { question: "How many people fit on the executive bus?", answer: "42 to 60 passengers, with an under-bus luggage compartment." },
       { question: "Do you serve large events and conferences in Brasília?", answer: "Yes. We serve corporate events, conferences, trade shows and any operation that needs transportation logistics for large groups." },
       { question: "Do you do group transfer to Brasília Airport?", answer: "Yes. We coordinate transportation for large groups with time planning for arrivals and departures." },
       { question: "Can I hire more than one bus for the same event?", answer: "Yes. We handle larger-scale operations with multiple coordinated vehicles. Share the total demand on WhatsApp." },
@@ -101,7 +101,7 @@ export const onibusEn: ServicePageContent = {
     ],
   },
 
-  semanticBlock: "ST Executive offers an executive bus in Brasília with a professional driver. It serves companies, large events, conferences, excursions and groups of up to 50 passengers across the whole Federal District, with punctuality, comfort and air-conditioned vehicles.",
+  semanticBlock: "ST Executive offers an executive bus in Brasília with a professional driver. It serves companies, large events, conferences, excursions and groups of 42 to 60 passengers across the whole Federal District, with punctuality, comfort and air-conditioned vehicles.",
 
   cta: {
     title: "Need an executive bus in Brasília?",

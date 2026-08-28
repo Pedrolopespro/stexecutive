@@ -84,7 +84,7 @@ export const eventosEs: ServicePageContent = {
     eyebrow: "Flota",
     heading: "Vans ejecutivas para su evento",
     paragraph: "Vehículos adecuados para grupos, con comodidad, aire acondicionado y espacio para todos los pasajeros.",
-    checklist: ["Vans ejecutivas climatizadas", "Capacidad promedio de hasta 15 pasajeros", "Espacio para equipaje y pertenencias", "Chofer profesional y uniformado"],
+    checklist: ["Vans ejecutivas climatizadas", "Capacidad de 15 a 18 pasajeros", "Espacio para equipaje y pertenencias", "Chofer profesional y uniformado"],
     ctaLabel: "Consultar disponibilidad",
   },
 
@@ -131,7 +131,7 @@ export const eventosEs: ServicePageContent = {
     items: [
       { question: "¿Atienden bodas?", answer: "Sí. Realizamos transporte de invitados y novios con comodidad y puntualidad." },
       { question: "¿Hacen transporte de ida y vuelta?", answer: "Sí. Planificamos ida, vuelta y múltiples traslados según la necesidad del evento." },
-      { question: "¿Cuántas personas caben en la van?", answer: "En promedio hasta 15 pasajeros, con espacio para comodidad y equipaje." },
+      { question: "¿Cuántas personas caben en la van?", answer: "De 15 a 18 pasajeros, con espacio para comodidad y equipaje." },
       { question: "¿Atienden eventos corporativos?", answer: "Sí. Atendemos empresas, congresos, ferias y cualquier evento empresarial." },
       { question: "¿Cómo contrato el servicio?", answer: "Por WhatsApp con atención rápida. Indique fecha, trayecto y cantidad de pasajeros." },
     ],

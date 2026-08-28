@@ -79,7 +79,7 @@ const DIFFERENTIALS = [
 ];
 
 const FLEET_SPECS = [
-  { spec: "Capacidade", value: "Até 50 passageiros" },
+  { spec: "Capacidade", value: "42 a 60 passageiros" },
   { spec: "Climatização", value: "Ar-condicionado" },
   { spec: "Motorista", value: "Profissional incluso" },
   { spec: "Bagageiro", value: "Compartimento inferior" },
@@ -107,7 +107,7 @@ const FAQ_ITEMS = [
   },
   {
     question: "Quantas pessoas cabem no ônibus executivo?",
-    answer: "Em média até 50 passageiros, com compartimento de bagagem inferior.",
+    answer: "De 42 a 60 passageiros, com compartimento de bagagem inferior.",
   },
   {
     question: "Atendem grandes eventos e congressos em Brasília?",
@@ -201,7 +201,7 @@ export default function OnibusExecutivoBrasiliaPage() {
                 O ônibus executivo com motorista é um serviço de transporte para grandes grupos
                 que precisam de capacidade, organização e pontualidade. A ST Executive oferece esse
                 serviço em Brasília e no Distrito Federal para empresas, eventos de grande porte,
-                excursões e operações que demandam capacidade para até 50 passageiros.
+                excursões e operações que demandam capacidade de 42 a 60 passageiros.
               </p>
             </div>
           </div>
@@ -388,7 +388,7 @@ export default function OnibusExecutivoBrasiliaPage() {
 
         <div className="sr-only" aria-hidden="true">
           A ST Executive oferece ônibus executivo em Brasília com motorista profissional.
-          Atende empresas, grandes eventos, congressos, excursões e grupos de até 50 passageiros
+          Atende empresas, grandes eventos, congressos, excursões e grupos de 42 a 60 passageiros
           em todo o Distrito Federal. Serviço com pontualidade, conforto e veículos climatizados.
         </div>
 
