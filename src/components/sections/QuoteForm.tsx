@@ -167,6 +167,9 @@ export default function QuoteForm({
     "transition-colors duration-150";
   const campo = base + " w-full";
   const comIcone = campo + " pl-12";
+  // O campo do telefone divide a linha com o seletor de DDI, entao e o unico
+  // que fica apertado: no celular ganha 4px de recuo a menos.
+  const comIconeTel = campo + " pl-11 lg:pl-12";
   const rotulo = "block text-[15px] font-bold text-navy-950 mb-2 lg:mb-1.5";
 
   /** Envolve um campo e desenha o ícone dentro dele, à esquerda. */
@@ -240,7 +243,7 @@ export default function QuoteForm({
             name="ddi"
             defaultValue="+55"
             aria-label={dict.labels.ddi}
-            className={base + " w-[8.5rem] shrink-0 px-3"}
+            className={base + " w-[8rem] lg:w-[8.5rem] shrink-0 px-3"}
           >
             {DDI_PAISES.map((p) => (
               <option key={p.ddi} value={p.ddi}>{`${p.ddi}  ${p.nome}`}</option>
@@ -255,7 +258,7 @@ export default function QuoteForm({
               inputMode="tel" autoComplete="tel"
               aria-describedby="of-whatsapp-dica"
               placeholder={dict.placeholders.whatsapp}
-              className={comIcone}
+              className={comIconeTel}
             />
           </div>
         </div>
@@ -428,8 +431,10 @@ export default function QuoteForm({
 
   if (embutido) return conteudo;
 
+  // scroll-mt compensa o cabecalho fixo: sem isto, quem chega pelo link novo
+  // do hero (#orcamento) via o titulo 25px atras do cabecalho.
   return (
-    <section id="orcamento" ref={secaoRef} className="relative overflow-hidden bg-white lg:bg-navy-950">
+      <section id="orcamento" ref={secaoRef} className="relative overflow-hidden bg-white lg:bg-navy-950 scroll-mt-20 lg:scroll-mt-24">
       {/* A foto é o fundo da SEÇÃO INTEIRA e o cartão flutua sobre ela — não
           uma coluna ao lado. No celular ela não aparece: foto grande atrás de
           formulário atrapalha a leitura e empurra os campos para baixo. */}
@@ -504,7 +509,7 @@ export default function QuoteForm({
                 aqui. No computador ele já está sobre a imagem. */}
             {!enviado && (
               <div className="lg:hidden">
-                <h2 className="text-[28px] font-extrabold leading-tight tracking-tight text-navy-950">
+                <h2 className="text-[24px] font-extrabold leading-tight tracking-tight text-navy-950">
                   {dict.tituloMobile}
                 </h2>
                 <p className="mt-2 text-[15px] leading-relaxed text-navy-950/70">{dict.subtituloMobile}</p>

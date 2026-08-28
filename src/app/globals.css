@@ -116,6 +116,12 @@
 /* ── Base styles ── */
 html {
   scroll-behavior: smooth;
+  /* Sem isto o Safari do iPhone aumenta o texto por conta propria em algumas
+     telas: o titulo do formulario cresce, o subtitulo quebra em duas linhas e
+     o placeholder do telefone chega a ser cortado. Na emulacao nada disso
+     aparece, porque so o Safari faz esse ajuste. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {

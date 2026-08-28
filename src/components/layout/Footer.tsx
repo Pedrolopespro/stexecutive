@@ -147,15 +147,23 @@ export default function Footer({ locale = "pt", dict = footerPt, commonDict = co
           <div className="flex items-center gap-3">
             <img
               src="/images/content/selo-cadastur.webp"
-              alt="Selo Cadastur — Cadastro nº 13.718.289/0001-20, Ministério do Turismo"
-              className="h-14 w-auto rounded-md shrink-0"
+              alt={dict.cadastur.imageAlt}
+              className="h-20 w-auto rounded-md shrink-0"
               loading="lazy"
               width={101}
               height={140}
             />
-            <p className="text-xs text-white/40 min-w-0 break-words">
-              &copy; {new Date().getFullYear()} {dict.copyright}
-            </p>
+            {/* O numero sai de dentro do alt e vira texto na tela. E o
+                contraponto direto a secao de regularizacao do concorrente, e
+                nao custa dado novo: ja estava publicado, so ilegivel. */}
+            <div className="min-w-0">
+              <p className="text-xs font-semibold text-white/75 break-words">
+                {dict.cadastur.label}
+              </p>
+              <p className="text-xs text-white/40 mt-1 break-words">
+                &copy; {new Date().getFullYear()} {dict.copyright}
+              </p>
+            </div>
           </div>
           <p className="text-xs text-white/40">
             {dict.tagline}

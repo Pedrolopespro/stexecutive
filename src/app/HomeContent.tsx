@@ -330,6 +330,18 @@ export default function HomeContent({
                     {c.hero.ctaSecondary}
                   </Button>
                 </div>
+
+                {/* Caminho ate o formulario. Ate aqui `#orcamento` existia e
+                    nenhum link do site inteiro levava ate ele — so achava quem
+                    rolasse a pagina. Entra como link, e nao como terceiro
+                    botao, para nao competir com o CTA de WhatsApp, que e a
+                    maior vantagem de conversao do site. */}
+                <a
+                  href="#orcamento"
+                  className="hidden sm:inline-block mt-5 text-sm text-white/75 underline underline-offset-4 decoration-white/30 hover:text-white hover:decoration-white/70 transition-colors"
+                >
+                  {c.hero.ctaFormulario}
+                </a>
               </div>
 
               <div className="sm:hidden">

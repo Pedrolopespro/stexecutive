@@ -28,6 +28,11 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    // Avalia uma vez ao montar. Sem isto, quem recarrega a pagina no meio,
+    // volta pelo historico ou chega por um link com ancora fica com o
+    // cabecalho transparente sobre conteudo claro — logo branco sobre fundo
+    // branco, invisivel — ate rolar a pagina.
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -57,8 +62,10 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
         className={[
           "fixed top-0 left-0 right-0 z-50",
           "transition-all duration-[var(--motion-normal)] ease-[var(--ease-premium)]",
+          // No celular o cabecalho rolado passou a ser azul-marinho; no
+          // computador continua branco, sem alteracao nenhuma.
           isScrolled
-            ? "bg-surface-white/95 backdrop-blur-md shadow-soft border-b border-gray-200/50"
+            ? "bg-navy-950/95 lg:bg-surface-white/95 backdrop-blur-md shadow-soft border-b border-white/10 lg:border-gray-200/50"
             : "bg-transparent",
         ].join(" ")}
       >
@@ -67,12 +74,24 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
 
             {/* Logo */}
             <Link href={homeHref} className="flex items-center shrink-0">
+              {/* Duas versoes do mesmo logo: no celular o fundo agora e
+                  sempre escuro, entao vale o branco; no computador continua
+                  trocando conforme a rolagem. O segundo fica oculto para
+                  leitor de tela, senao o nome da marca seria lido duas vezes. */}
               <img
-                src={isScrolled ? "/images/logo/SVG/logo black.svg" : "/images/logo/SVG/logo white.svg"}
+                src="/images/logo/SVG/logo white.svg"
                 alt="ST Executive — Transporte Executivo em Brasília"
                 width={130}
                 height={36}
-                className="h-8 lg:h-9 w-auto transition-all duration-[var(--motion-normal)]"
+                className="h-8 w-auto lg:hidden"
+              />
+              <img
+                src={isScrolled ? "/images/logo/SVG/logo black.svg" : "/images/logo/SVG/logo white.svg"}
+                alt=""
+                aria-hidden="true"
+                width={130}
+                height={36}
+                className="hidden lg:block h-9 w-auto transition-all duration-[var(--motion-normal)]"
               />
             </Link>
 
@@ -201,15 +220,16 @@ export default function Header({ locale = "pt", dict = navPt, commonDict = commo
 
             {/* Mobile: idioma + toggle */}
             <div className="flex items-center gap-1 lg:hidden">
-              <LanguageSwitcher dark={!isScrolled} currentLocale={locale} />
+              {/* Este bloco so existe no celular, e ali o fundo e escuro tanto
+                  sobre o hero quanto depois de rolar — entao seletor e
+                  hamburguer ficam claros sempre. */}
+              <LanguageSwitcher dark currentLocale={locale} />
               <button
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
                 className={[
                   "p-2 rounded-lg",
                   "transition-colors duration-[var(--motion-fast)]",
-                  isScrolled
-                    ? "text-navy-950 hover:bg-gray-100"
-                    : "text-surface-white hover:bg-white/10",
+                  "text-surface-white hover:bg-white/10",
                 ].join(" ")}
                 aria-label={dict.openMenuAriaLabel}
               >

@@ -73,8 +73,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5GVMZZQJ');`,
           }}
         />
-        {/* Google Ads */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18160577429" />
+        {/* Google Ads.
+
+            Aqui havia tambem <script async src=".../gtag/js?id=AW-18160577429">.
+            Era duplicata: o conteiner GTM-5GVMZZQJ acima ja carrega o mesmo
+            gtag/js para o mesmo ID de Ads, entao o arquivo vinha duas vezes —
+            372 KB por visita de celular, sem contrapartida nenhuma.
+
+            Verificado em tres execucoes, comparando os sinais enviados com e
+            sem a tag: remover nao altera nada no Ads nem no GA4. O
+            `gtag('config', ...)` abaixo empilha no dataLayer, e o gtag/js que
+            o GTM carrega processa normalmente. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `

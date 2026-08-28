@@ -23,6 +23,13 @@ export interface NavDict {
 }
 
 export interface FooterDict {
+  /** Selo do Ministerio do Turismo. O numero ja era publicado, mas so
+      dentro do alt e impresso numa arte exibida a 56px: o Google lia,
+      a pessoa nao. */
+  cadastur: {
+    label: string;
+    imageAlt: string;
+  };
   brandDescription: string;
   sectionHeaders: {
     services: string;
@@ -277,6 +284,9 @@ export interface HomeContentDict {
     ctaSecondary: string;
     ctaSecondaryMobile: string;
     ctaPrimaryMobile: string;
+    /** Link discreto para a secao do formulario. Existe porque ate agora
+        nenhum link do site apontava para `#orcamento`. */
+    ctaFormulario: string;
     microcopy: string;
   };
 

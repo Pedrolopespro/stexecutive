@@ -28,6 +28,7 @@ export const homeEn: HomeContentDict = {
     ctaSecondary: "See our services",
     ctaSecondaryMobile: "Services",
     ctaPrimaryMobile: "Quote",
+    ctaFormulario: "I'd rather send it in writing",
     microcopy: "Share the date, time, route and number of passengers.",
   },
 

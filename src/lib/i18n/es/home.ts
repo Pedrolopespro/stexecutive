@@ -28,6 +28,7 @@ export const homeEs: HomeContentDict = {
     ctaSecondary: "Conocer servicios",
     ctaSecondaryMobile: "Servicios",
     ctaPrimaryMobile: "Presupuesto",
+    ctaFormulario: "Prefiero enviarlo por escrito",
     microcopy: "Indique fecha, horario, trayecto y cantidad de pasajeros.",
   },
 

@@ -1,6 +1,10 @@
 import type { FooterDict } from "@/lib/i18n/types";
 
 export const footerEn: FooterDict = {
+  cadastur: {
+    label: "Cadastur no. 13.718.289/0001-20 — Brazilian Ministry of Tourism",
+    imageAlt: "Cadastur seal from the Brazilian Ministry of Tourism — registration no. 13.718.289/0001-20",
+  },
   brandDescription:
     "Executive transportation in Brasília for companies, events, groups and airport transfer.",
   sectionHeaders: {
