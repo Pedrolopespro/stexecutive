@@ -40,7 +40,9 @@ RewriteRule ^es/guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1&
 #   .jpeg  -> /images/content/social.jpeg e a imagem de compartilhamento,
 #             usada inclusive pelo Guia Brasilia;
 #   .mp4 em /images/  -> "veide hero.mp4" e "video st vans.mp4" rodam no site;
-#   /icon.png  -> favicon, fica na raiz e nao em /images/;
+#   favicon.ico, favicon-48x48.png, apple-touch-icon.png, icon-192.png e
+#   icon-512.png -> icones do site, ficam na raiz e nao em /images/,
+#             entao a regra de .png abaixo nao os alcanca;
 #   .webp  -> tudo que o site e o Guia realmente mostram.
 # ATENCAO ao mexer aqui: o .jpg de /images/ NAO pode ser bloqueado.
 # O Guia Brasilia gera um JPEG irmao de cada .webp usado como og:image

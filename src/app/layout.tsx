@@ -13,6 +13,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  // Icones do site. Ficam em public/ com endereco fixo, e nao pela convencao
+  // de arquivo do Next (src/app/favicon.ico e src/app/icon.png), que gerava
+  // URL com hash e servia o PNG em 1664x1663 — 41 KB para uma aba. Os dois
+  // arquivos de convencao foram removidos: se ficassem, o Next emitiria as
+  // duas versoes e a pagina teria referencia duplicada.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   verification: {
     google: "ejiWTOXEFJ1GCK3Ezg1M6DiewNW7EbTiRWuTNddwc1Q",
   },
