@@ -260,28 +260,67 @@ export default function HomeContent({
                 height={941}
               />
             </picture>
-            {/* O vídeo entra POR CIMA dessa imagem e sem pôster próprio: o
-                pôster era "hero site.webp" e fazia o computador baixar o
-                arquivo duas vezes — e o celular baixá-lo à toa, já que aqui é
-                hidden sm:block. Enquanto o vídeo não carrega ele é
-                transparente, então quem aparece é a imagem de baixo, que é a
-                mesma arte. Nada pisca. */}
+            {/* O vídeo entra POR CIMA da imagem acima, que é a MESMA arte —
+                é ela quem segura a tela do primeiro instante até o vídeo ter
+                quadro. Três detalhes fazem a frota aparecer na hora:
+
+                `poster` volta a ser "hero site.webp". Não custa download: é a
+                mesma URL do <img> logo acima, então o navegador serve do
+                cache. Ele é a rede de segurança — se por algum motivo o vídeo
+                aparecer antes de ter quadro, o que se vê é a frota, não preto.
+
+                `posterInativo` guarda o celular: abaixo de 640px o pôster é o
+                pixel vazio, senão o celular baixaria os 128 KB da arte de
+                computador, que ali nunca aparece.
+
+                `imediato` + `somenteAcimaDe={640}` trocam o IntersectionObserver
+                por uma trava de largura. O Hero está no topo da tela: esperar
+                o observador só adiava o primeiro quadro. E abaixo de 640px a
+                fonte nunca entra, então o MP4 não é baixado no celular —
+                `hidden sm:block` esconde o elemento, mas esconder não impede
+                o download.
+
+                `revelarComPrimeiroQuadro` é o que mata a tela escura: entre
+                pedir o vídeo e decodificar o primeiro quadro, o navegador
+                pinta o elemento de preto. Com ele o vídeo nasce transparente
+                e só surge com quadro pronto — até lá, a imagem da frota. */}
             <LazyVideo
               src="/images/content/veide hero.mp4"
-              poster={VAZIO}
+              poster="/images/content/hero site.webp"
+              posterInativo={VAZIO}
+              imediato
+              somenteAcimaDe={640}
+              revelarComPrimeiroQuadro
               className="hidden sm:block absolute inset-0 w-full h-full object-cover object-center"
               autoPlay
               muted
               loop
               playsInline
             />
-            {/* O véu escuro sobre o vídeo. A faixa do meio era 65% e é justamente
-                onde o texto assenta — com ela o apoio media 3,5:1 e o rótulo
-                2,7:1, abaixo do mínimo legível de 4,5:1. A 80% o texto passa de
-                dia e à noite, e a foto continua visível: o vídeo é claro no
-                topo (céu) e escuro embaixo, então quem perde brilho é o meio,
-                onde de todo modo há texto por cima. */}
-            <div className="absolute inset-0 bg-gradient-to-b from-navy-950/88 via-navy-950/80 to-navy-950/85" />
+            {/* ── Os dois véus sobre o vídeo ──
+                O véu existe por um motivo só: o texto é branco e a foto tem
+                céu claro atrás, então sem ele o subtítulo e o apoio caem
+                abaixo do mínimo legível (4,5:1). Antes isso era resolvido
+                escurecendo a tela inteira a 88/80/85% — e aí o título media
+                10,8:1 contra um mínimo de 3,0. Sobrava escuro de monte, e
+                quem pagava a conta era a frota: o brilho médio do lado
+                direito ficava em 29 de 255.
+
+                O texto ocupa só a metade esquerda (`max-w-2xl lg:max-w-3xl`).
+                Então o escuro passa a ser dividido em dois: um véu vertical
+                fraco, que segura o contraste geral, e um véu lateral que
+                escurece a esquerda e some antes do meio da tela. Do meio
+                para a direita, onde estão as vans, quase não sobra nada.
+
+                Medido no build, com o texto escondido para não sujar a
+                amostra: título 3,8:1 (mín. 3,0), subtítulo 4,7:1 e apoio
+                5,9:1 (mín. 4,5). Brilho da frota: 55, quase o dobro.
+
+                Isto é só do computador. No celular a primeira tela é a arte
+                única do banner, com o texto desenhado dentro — o bloco
+                inteiro aqui é `hidden sm:block` e nunca chega a aparecer. */}
+            <div className="absolute inset-0 bg-gradient-to-b from-navy-950/58 via-navy-950/40 to-navy-950/52" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy-950/68 via-navy-950/37 via-38% to-transparent" />
           </div>
 
           <div className="relative z-10 flex-1 flex flex-col container-st">

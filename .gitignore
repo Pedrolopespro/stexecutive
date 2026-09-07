@@ -31,3 +31,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Backup local do vídeo do Hero (não versionar)
+backup-hero/
