@@ -39,7 +39,8 @@ RewriteRule ^es/guia-brasilia/([a-z0-9-]+)/?$ /guia-brasilia/artigo.php?slug=$1&
 # O que NAO e bloqueado, de proposito:
 #   .jpeg  -> /images/content/social.jpeg e a imagem de compartilhamento,
 #             usada inclusive pelo Guia Brasilia;
-#   .mp4 em /images/  -> "veide hero.mp4" e "video st vans.mp4" rodam no site;
+#   .mp4 em /images/  -> "veide hero.mp4" e "video-st-vans-v2-*.mp4" rodam no
+#             site ("video st vans.mp4" fica como copia para reverter);
 #   favicon.ico, favicon-48x48.png, apple-touch-icon.png, icon-192.png e
 #   icon-512.png -> icones do site, ficam na raiz e nao em /images/,
 #             entao a regra de .png abaixo nao os alcanca;
@@ -62,6 +63,9 @@ RewriteRule ^images/content/stquemsomos\.jpeg$ - [F,L]
 # paginas do Guia Brasilia continuam com o no-store que o PHP define.
 <IfModule mod_headers.c>
   SetEnvIf Request_URI "^/_next/static/" ARQUIVO_VERSIONADO=1
+  # Video das vans v2: a versao esta no nome do arquivo ("-v2-"). Um video
+  # novo entra com outro nome (v3...), entao o cache longo e seguro.
+  SetEnvIf Request_URI "^/images/content/video-st-vans-v2-" ARQUIVO_VERSIONADO=1
   Header always set Cache-Control "public, max-age=31536000, immutable" env=ARQUIVO_VERSIONADO
 </IfModule>
 

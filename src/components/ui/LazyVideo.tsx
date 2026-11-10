@@ -27,9 +27,16 @@ import React, { useEffect, useRef, useState } from "react";
  * o primeiro quadro decodificado, o navegador pinta o elemento de preto. Com
  * essa opção o vídeo nasce transparente e só aparece quando há quadro de
  * verdade — até lá quem se vê é a imagem que estiver atrás dele.
+ *
+ * `srcCelular` é uma segunda versão, mais leve, para telas estreitas. A
+ * escolha acontece UMA vez, no momento em que a fonte entra, e só a versão
+ * escolhida vai para o <source> — então o navegador nunca baixa as duas.
+ * Sem `srcCelular`, nada muda: todo mundo recebe `src`.
  */
 export default function LazyVideo({
   src,
+  srcCelular,
+  celularAte = 767.98,
   poster,
   posterInativo,
   className,
@@ -42,6 +49,10 @@ export default function LazyVideo({
   ...props
 }: {
   src: string;
+  /** Versão leve para celular (opcional). */
+  srcCelular?: string;
+  /** Largura máxima, em px, em que `srcCelular` é usada. */
+  celularAte?: number;
   poster: string;
   /** Pôster usado enquanto a trava de largura não liberar o vídeo. Serve
    *  para o celular não baixar uma arte que ele nunca vai mostrar. */
@@ -144,6 +155,19 @@ export default function LazyVideo({
 
   const posterAtual = !liberado && posterInativo ? posterInativo : poster;
 
+  // Fonte congelada na primeira vez que o vídeo é liberado: girar o celular
+  // ou redimensionar a janela depois disso não troca o arquivo nem baixa o
+  // segundo. Só roda no navegador, porque `ativo` é sempre false no servidor.
+  const fonteEscolhida = useRef<string | null>(null);
+  if (ativo && fonteEscolhida.current === null) {
+    const ehCelular =
+      !!srcCelular &&
+      typeof window !== "undefined" &&
+      !!window.matchMedia &&
+      window.matchMedia(`(max-width: ${celularAte}px)`).matches;
+    fonteEscolhida.current = ehCelular && srcCelular ? srcCelular : src;
+  }
+
   return (
     <video
       ref={ref}
@@ -159,7 +183,7 @@ export default function LazyVideo({
       preload={ativo && imediato ? "auto" : "none"}
       {...props}
     >
-      {ativo && <source src={src} type="video/mp4" />}
+      {ativo && <source src={fonteEscolhida.current ?? src} type="video/mp4" />}
       {children}
     </video>
   );

@@ -26,6 +26,7 @@ import WhatsAppFloatingButton from "@/components/layout/WhatsAppFloatingButton";
 
 import Button from "@/components/ui/Button";
 import LazyVideo from "@/components/ui/LazyVideo";
+import VideoComSom from "@/components/ui/VideoComSom";
 import Badge from "@/components/ui/Badge";
 import SectionHeader from "@/components/ui/SectionHeader";
 
@@ -534,25 +535,31 @@ export default function HomeContent({
               </div>
 
               <div className="relative rounded-2xl overflow-hidden shadow-premium bg-navy-950" style={{ aspectRatio: "4/5" }}>
-                <LazyVideo
-                  src="/images/content/video st vans.mp4"
-                  poster="/images/content/van.webp"
+                {/* Vídeo v2 (nov/2026). Arquivos já no enquadramento 4:5 deste
+                    quadro, em duas versões: 1080×1350 para computador e
+                    720×900 para celular — só uma é baixada (ver LazyVideo).
+                    O anterior ("video st vans.mp4" + "van.webp") continua na
+                    pasta para reverter na hora, se preciso. */}
+                <VideoComSom
+                  locale={locale}
+                  src="/images/content/video-st-vans-v2-desktop.mp4"
+                  srcCelular="/images/content/video-st-vans-v2-celular.mp4"
+                  poster="/images/content/video-st-vans-v2-poster.webp"
                   className="w-full h-full object-cover"
                   autoPlay
                   muted
                   loop
-                  controls
                   playsInline
                 >
                   <img
-                    src="/images/content/van.webp"
+                    src="/images/content/video-st-vans-v2-poster.webp"
                     alt="Van executiva ST Executive"
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width={600}
                     height={750}
                   />
-                </LazyVideo>
+                </VideoComSom>
               </div>
             </div>
           </div>
