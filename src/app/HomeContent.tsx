@@ -534,7 +534,10 @@ export default function HomeContent({
                 </div>
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden shadow-premium bg-navy-950" style={{ aspectRatio: "4/5" }}>
+              {/* id="video-institucional" é o destino do link compartilhado
+                  (/video/ → /?video=1#video-institucional). scroll-mt desconta
+                  o cabeçalho fixo, para o vídeo não ficar escondido sob ele. */}
+              <div id="video-institucional" className="relative rounded-2xl overflow-hidden shadow-premium bg-navy-950 scroll-mt-24 sm:scroll-mt-28" style={{ aspectRatio: "4/5" }}>
                 {/* Vídeo v2 (nov/2026). Arquivos já no enquadramento 4:5 deste
                     quadro, em duas versões: 1080×1350 para computador e
                     720×900 para celular — só uma é baixada (ver LazyVideo).
