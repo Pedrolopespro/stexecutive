@@ -69,6 +69,24 @@ RewriteRule ^images/content/stquemsomos\.jpeg$ - [F,L]
   Header always set Cache-Control "public, max-age=31536000, immutable" env=ARQUIVO_VERSIONADO
 </IfModule>
 
+# ── Paginas: sempre conferir se ha versao nova ─────────────
+# Sem esta regra o servidor nao dizia nada sobre cache nas paginas, e o
+# navegador decidia sozinho: o Safari do iPhone chegou a mostrar por dias a
+# Home antiga depois da troca do video (10/11/2026), porque a pagina anterior
+# tinha ficado 2 meses sem mudar.
+# "no-cache" NAO e "nao guardar": o navegador guarda, mas pergunta ao servidor
+# antes de usar. Se nada mudou, a resposta e um 304 vazio e a pagina abre da
+# copia guardada — custo de uma ida e volta, sem baixar de novo. Tambem nao
+# atrapalha o botao "voltar" instantaneo (isso so o "no-store" impede).
+# Vale so para .html e para os .txt que o Next usa na navegacao entre paginas.
+# Imagens, videos, CSS e JS seguem como estao. As paginas PHP do Guia Brasilia
+# continuam com o no-store que o proprio PHP define.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html?|txt)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
 # ── Segurança: headers ──────────────────────────────────────
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
